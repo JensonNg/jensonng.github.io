@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=content-widht, initial-scale=1.0">
+  <meta name="description" content="A blog on machine learning, deep learning and their applications">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Blogs | neuraltalks.io</title>
+  <link rel="icon" href="images/neuraltalks.ico">
+  <!-- <link rel="stylesheet" href="/build/vendor.css"> -->
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBPFJRPY24"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-EBPFJRPY24');
+  </script>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 xl:max-w-5xl xl:px-0">
+    <header class="flex justify-between items-center py-10">
+      <div class="flex items-center">
+        <a href="index.html" class="block">
+          <object data="images/logo.svg" alt="neuraltalks.io" type="image/svg+xml"
+            style="width:auto; height: 22px;"></object>
+        </a>
+      </div>
+      <div class="text-base leading-5">
+        <a href="#" class="font-medium text-gray-700 hover:text-gray-700">Blog</a>
+        <a href="resume.html" class="font-medium text-gray-500 hover:text-gray-700 pl-4">About</a>
+      </div>
+    </header>
+  </div>
+  <!-- ./HEADER -->
+  <!-- CONTENT LIST -->
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 xl:max-w-5xl xl:px-0">
+    <main>
+      <ul class="divide-y divide-gray-200">
+        <li class="py-12">
+          <article class="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
+            <dl>
+              <dt class="sr-only">Published on</dt>
+              <dd class="text-base leading-6 font-medium text-gray-600">
+                December 18, 2020
+              </dd>
+              <dd class="text-base">
+                <a href="20201218-autoencoders-101.html">
+                  <div class="pr-4 lg:pr-6">
+                    <img src="images/202012/20201218_Autoencoders.png" class="max-w-full">
+                  </div>
+                </a>
+              </dd>
+            </dl>
+            <div class="space-y-5 xl:col-span-3">
+              <div class="space-y-6">
+                <h2 class="text-2xl leading-8 font-semibold tracking-tight">Introduction to Autoencoders</h2>
+                <div class="prose max-w-none text-gray-600">
+                  <p>Autoencoders are unsupervised learning technique in which we leverage neural networks for the task
+                    of representation learning. Specifically, we'll design a network archiecture such that we impose a
+                    bottleneck in the network which forces a compressed knowledge representation of the original input.
+                  </p>
+                </div>
+
+                <div class="text-base leading-6 font-medium">
+                  <a href="20201218-autoencoders-101.html" class="text-red-500 hover:text-red-600">Read more
+                    &rarr;</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </li>
+      </ul>
+    </main>
+  </div>
+  <!-- CONTENT LIST -->
+  <!-- PAGINATION -->
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 xl:max-w-5xl py-8 flex justify-center">
+    <nav class="relative z-0 inline-flex shadow-sm">
+      <a href="#"
+        class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm leading-5 font-medium text-gray-500 hover:text-gray-400 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-500 transition ease-in-out duration-150"
+        aria-label="Previous">
+        <!-- Heroicon name: chevron-left -->
+        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd"
+            d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+            clip-rule="evenodd" />
+        </svg>
+      </a>
+      <a href="#"
+        class="-ml-px relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm leading-5 font-medium text-gray-700 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150">
+        1
+      </a>
+      <a href="#"
+        class="-ml-px relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm leading-5 font-medium text-gray-700 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150">
+        2
+      </a>
+      <a href="#"
+        class="hidden md:inline-flex -ml-px relative items-center px-4 py-2 border border-gray-300 bg-white text-sm leading-5 font-medium text-gray-700 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150">
+        3
+      </a>
+      <span
+        class="-ml-px relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm leading-5 font-medium text-gray-700">
+        ...
+      </span>
+      <a href="#"
+        class="hidden md:inline-flex -ml-px relative items-center px-4 py-2 border border-gray-300 bg-white text-sm leading-5 font-medium text-gray-700 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150">
+        8
+      </a>
+      <a href="#"
+        class="-ml-px relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm leading-5 font-medium text-gray-700 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150">
+        9
+      </a>
+      <a href="#"
+        class="-ml-px relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm leading-5 font-medium text-gray-700 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150">
+        10
+      </a>
+      <a href="#"
+        class="-ml-px relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm leading-5 font-medium text-gray-500 hover:text-gray-400 focus:z-10 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-100 active:text-gray-500 transition ease-in-out duration-150"
+        aria-label="Next">
+        <!-- Heroicon name: chevron-right -->
+        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd"
+            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+            clip-rule="evenodd" />
+        </svg>
+      </a>
+    </nav>
+  </div>
+  <!-- ./PAGINATION -->
+</body>
+
+</html>

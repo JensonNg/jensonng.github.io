@@ -1,0 +1,20 @@
+{
+  "name": "neuraltalks-theme",
+  "version": "1.0.0",
+  "description": "A minimalistic theme for my blog",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "Erik Dao",
+  "scripts": {
+    "build": "postcss css/tailwind.css -o public/build/vendor.css"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.0.1",
+    "tailwindcss": "^1.9.6"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1",
+    "postcss": "^8.1.6",
+    "postcss-cli": "^8.2.0"
+  }
+}

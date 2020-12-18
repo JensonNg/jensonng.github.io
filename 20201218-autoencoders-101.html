@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=content-widht, initial-scale=1.0">
+  <meta name="description"
+    content="Autoencoders are unsupervised learning technique in which we design neural networks for the task of representation learning">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Facebook Content -->
+  <meta property="og:title" content="Introduction to Autoencoders | neuraltalks.io">
+  <meta property="og:image" content="images/202012/20201218_Autoencoders_FB_OG.png">
+  <title>Introduction to Autoencoders | neuraltalks.io</title>
+  <link rel="icon" href="images/neuraltalks.ico">
+  <!-- <link rel="stylesheet" href="/build/vendor.css"> -->
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBPFJRPY24"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-EBPFJRPY24');
+  </script>
+  <style>
+    .prose {
+      color: #374151;
+      max-width: 65ch;
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 xl:max-w-5xl xl:px-0">
+    <header class="flex justify-between items-center py-10">
+      <div class="flex items-center">
+        <a href="index.html" class="block">
+          <object data="images/logo.svg" alt="neuraltalks.io" type="image/svg+xml"
+            style="width:auto; height: 22px;"></object>
+        </a>
+      </div>
+      <div class="text-base leading-5">
+        <a href="index.html" class="font-medium text-gray-700 hover:text-gray-700">Blog</a>
+        <a href="resume.html" class="font-medium text-gray-500 hover:text-gray-700 pl-4">About</a>
+      </div>
+    </header>
+  </div>
+  <!-- ./HEADER -->
+  <!-- CONTENT -->
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 xl:max-w-5xl xl:px-0">
+    <main>
+      <article class="xl:divide-y xl:divide-gray-200">
+        <header class="pt-6 xl:pb-10">
+          <div class="space-y-1 text-center">
+            <dl class="space-y-10">
+              <div>
+                <dt class="sr-only">Published on</dt>
+                <dd class="text-base leading-6 font-medium text-gray-500">
+                  <time>Friday, December 18, 2020</time>
+                </dd>
+              </div>
+            </dl>
+            <div
+              class="text-3xl leading-9 font-extrabold text-gray-900 tracking-tight sm:text-4xl sm:leading-none md:text-5xl md:leading-none">
+              Introduction to Autoencoders
+            </div>
+          </div>
+        </header>
+
+        <div class="divide-y xl:divide-y-0 divide-gray-200 xl:grid xl:grid-cols-4 xl:col-gap-6 pb-16 xl:pb-20"
+          style="grid-template-rows: auto 1fr;">
+          <dl class="pt-6 pb-10 xl:pt-11 xl:border-b xl:border-gray-200">
+            <dt class="sr-only">Authors</dt>
+            <dd>
+              <ul class="flex justify-center xl:block space-x-8 sm:space-x-12 xl:space-x-0 xl:space-y-8">
+                <li class="flex items-center space-x-2">
+                  <img src="images/avatar.jpg" alt="Erik Dao" class="w-10 h-10 rounded-full">
+                  <dl class="text-sm font-medium leading-5 whitespace-no-wrap">
+                    <dt class="sr-only">Name</dt>
+                    <dd class="text-gray-900">Erik Dao</dd>
+                    <dt class="sr-only">Twitter</dt>
+                    <dd>
+                      <a href="http://twitter.com/@cuongddao" target="_blank"
+                        class="text-red-500 hover:text-red-600">@cuongddao</a>
+                    </dd>
+                  </dl>
+                </li>
+              </ul>
+            </dd>
+          </dl>
+          <div class="divide-y divide-gray-200 xl:pb-0 xl:col-span-3 xl:row-span-2">
+            <div class="prose max-w-none pt-10 pb-8">
+              <p>
+                Autoencoders are an unsupervised learning technique in which we leverage neural networks for the task of
+                representation learning. Specifically, we'll design a neural network architecture such that we impose a
+                bottleneck in the network which forces a compressed knowledge representation of the original input. If
+                the input features were each independent of one another, this compression and subsequent reconstruction
+                would be a very difficult task. However, if some sort of structure exists in the data (i.e.,
+                correlations between input features), this structure can be learned and consequently leveraged when
+                forcing the input through the network's bottleneck.
+              </p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+  </div>
+  <!-- ./CONTENT -->
+</body>
+
+</html>
