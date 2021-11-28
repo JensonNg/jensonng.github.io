@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  {% include "partials/meta-info.html" %}
+  <link rel="icon" href="/images/icons/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/global.css">
+</head>
+
+<body class="text-gray-800">
+  {% include "partials/site-header.html" %}
+
+  <main tabindex="-1" id="main-content" class="flex flex-col max-w-screen-xl mx-auto w-11/12 sm:w-10/12">
+    {% block content %} {% endblock %}
+  </main>
+
+  {% include "partials/site-footer.html" %}
+</body>
+
+</html>
