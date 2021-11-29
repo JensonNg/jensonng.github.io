@@ -1,0 +1,29 @@
+<header class="header py-12" role="banner">
+  <div class="flex items-center justify-between mx-auto w-11/12 sm:w-10/12 max-w-screen-xl">
+    <a href="/" class="flex items-center" rel="home" aria-label="Go To Homepage">
+      <img src="/images/about/profile_image.jpg" alt="Son Nguyen" class="rounded-full mr-2" width="48" height="48">
+      <span class="font-bold text-base">Son Nguyen</span>
+    </a>
+
+    <div class="flex items-center">
+      <nav class="flex items-center" role="navigation" tabindex="-1">
+        <div class="nav__content">
+          <ul id="nav-menu" class="flex p-0 m-0 list-none">
+            {% for item in navigation.items %}
+            <li class="relative">
+              <a href="{{ item.url }}" class="flex items-top relative lowercase py-2 px-3" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>
+                <span class="block mr-2 font-bold" aria-hidden="true">{{ item.order }}</span>
+                {% if helpers.isActiveLink(item.url, page.url) %}
+                <span class="border-b-4 border-amber-100 text-amber-600 bg-amber-100">{{ item.text }}</span>
+                {% else %}
+                <span class="border-b-4 border-amber-100 text-amber-600">{{ item.text }}</span>
+                {% endif %}
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>

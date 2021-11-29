@@ -1,0 +1,24 @@
+<div id="featured-projects" class="flex flex-col mb-20">
+  <h2 class="font-serif text-3xl mb-6">Featured Projects</h2>
+
+  <ul role="list" class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
+    {% for item in collections.featuredProjects %}
+    <li class="featured__item col-span-1 flex flex-col justify-between rounded-lg hover:shadow-md transition-all duration-100 bg-gray-50 cursor-pointer">
+      <div class="flex-1 flex flex-col overflow-hidden">
+        <div class="w-full block">
+          <img src="{{ item.data.socialImage }}" alt="" class="rounded-t-lg w-full item__img">
+        </div>
+        <h3 class="text-xl font-sans font-semibold leading-tight pt-4 px-4 transition-colors duration-75 text-amber-600"><a href="{{ item.url }}">{{ item.data.title }}</a></h3>
+        <div class="flex flex-col p-4 overflow-hidden">
+          <p class="block h-28 max-h-32 overflow-ellipsis font-serif text-gray-500 text-base leading-snug">{{ item.data.summary | truncate(250)}}</p>
+        </div>
+      </div>
+      <div class="p-4">
+        {% for tag in item.data.tags %}
+        <span class="uppercase text-xs mr-2 mb-2 p-2 bg-amber-100 rounded text-amber-700">{{tag}}</span>
+        {% endfor %}
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

@@ -1,0 +1,12 @@
+<section class="flex flex-col justify-center pa-4">
+  <div class="hero__inner flex flex-col pt-8 pb-12">
+    <h1 class="text-7xl leading-none mb-6 order-2 font-serif font-medium">{{ pageHeaderTitle }}</h1>
+    {% if pageHeaderSummary %}
+    <div class="text-2xl font-light leading-snug order-3">
+      <p class="m-0">
+        {{ pageHeaderSummary }}
+      </p>
+    </div>
+    {% endif %}
+  </div>
+</section>

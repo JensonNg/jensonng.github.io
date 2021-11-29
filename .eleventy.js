@@ -47,23 +47,8 @@ module.exports = config => {
     return content
   });
 
-  // Returns a collection of life posts in reverse order
-  config.addCollection('lifePosts', collection => {
-    return [...collection.getFilteredByGlob('./src/life/*.md')].reverse();
-  });
-
-  // Returns a collection of machine learning posts in reverse order
-  config.addCollection('mlPosts', collection => {
-    return [...collection.getFilteredByGlob('./src/machine-learning/*.md')].reverse();
-  });
-
-  // Returns a collection of software engineering posts in reverse order
-  config.addCollection('swePosts', collection => {
-    return [...collection.getFilteredByGlob('./src/software-engineering/*.md')].reverse();
-  });
-
-  config.addCollection('featuredPosts', collection => {
-    return sortByDisplayOrder(collection.getFilteredByGlob('./src/**/*.md')).filter(
+  config.addCollection('featuredProjects', collection => {
+    return sortByDisplayOrder(collection.getFilteredByGlob('./src/projects/*.md')).filter(
       x => x.data.featured
     );
   });
