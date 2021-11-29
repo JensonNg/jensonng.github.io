@@ -23,7 +23,7 @@
 
 {% if socialImage %}
   <meta name="image" property="og:image" content="{{ socialImage | url }}" />
-  <meta property="og:image:alt" content="Page image for {{ site.name }}" />
+  <meta name="image" property="og:image:alt" content="Page image for {{ site.name }}" />
 {% endif %}
 
 {% if metaDesc %}
