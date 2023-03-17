@@ -8,7 +8,7 @@ Thumbs.db
 .sass-cache
 .env
 .cache
-
+.DS_Store
 # Node modules and output
 node_modules/
 dist/
