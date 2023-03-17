@@ -1,0 +1,33 @@
+{% set pageTitle = title + ' | ' + site.name %}
+
+{% if site.name === title %}
+  {% set pageTitle = title %}
+{% endif %}
+
+{% set siteTitle = site.name %}
+{% set currentUrl = site.url + page.url %}
+
+{% if not metaDesc %}
+  {% set metaDesc = summary %}
+{% endif %}
+
+<meta name="HandheldFriendly" content="True">
+<meta name="referrer" content="no-referrer-when-downgrade">
+<title>{{ pageTitle }}</title>
+<link rel="canonical" href="{{ currentUrl }}" />
+
+<meta property="og:site_name" content="{{ siteTitle }}" />
+<meta property="og:title" content="{{ pageTitle }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ currentUrl }}" />
+
+{% if socialImage %}
+  <meta name="image" property="og:image" content="{{ socialImage | url }}" />
+  <meta name="image" property="og:image:alt" content="Page image for {{ site.name }}" />
+{% endif %}
+
+{% if metaDesc %}
+  <meta name="description" content="{{ metaDesc }}" />
+  <meta name="twitter:description" content="{{ metaDesc }}" />
+  <meta property="og:description" content="{{ metaDesc }}" />
+{% endif %}
