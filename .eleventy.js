@@ -47,6 +47,16 @@ module.exports = config => {
     return content
   });
 
+  // Returns a collection of blog posts in reverse order
+  config.addCollection('blogPosts', collection => {
+    return [...collection.getFilteredByGlob('./src/blog/*.md')].reverse();
+  });
+
+  // Returns a collection of blog posts in reverse order
+  config.addCollection('projectPosts', collection => {
+    return [...collection.getFilteredByGlob('./src/projects/*.md')].reverse();
+  });
+
   config.addCollection('featuredProjects', collection => {
     return sortByDisplayOrder(collection.getFilteredByGlob('./src/projects/*.md')).filter(
       x => x.data.featured

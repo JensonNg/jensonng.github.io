@@ -1,0 +1,20 @@
+{% extends "layouts/base.html" %}
+
+{% set pageHeaderTitle = title %}
+
+{% block content %}
+  <article class="post mb-20">
+    <div class="post__header text-center mb-14">
+      <h1 class="text-4xl sm:text-6xl leading-none font-sans font-medium mb-6 text-gray-800">{{ pageHeaderTitle }}</h1>
+      <div class="w-full mx-auto text-center">
+        <time datetime="{{ date | w3DateFilter }}" class="font-light text-gray-600">{{ date | dateFilter }}</time> ⋅
+        {% for tag in tags %}
+        <span class="uppercase text-gray-600 mr-2">{{ tag }}</span>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="post__content mx-auto w-11/12 sm:w-9/12 text-lg sm:text-xl text-gray-600 font-serif font-light leading-normal">
+    {{ content | latex | safe }}
+    </div>
+  </article>
+{% endblock %}

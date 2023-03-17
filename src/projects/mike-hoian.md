@@ -1,5 +1,6 @@
 ---
 title: 'Application of MIKE 21 model for assessment of Groyne use in coastal protection process in Hoi An, Quang Nam province'
+date: '2020-12-08'
 tags: ['projects']
 featured: true
 displayOrder: 2

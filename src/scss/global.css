@@ -1,3 +1,113 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+.link {
+  @apply text-rose-500;
+}
+
+.hover-link:hover {
+ @apply text-rose-600 transition-all duration-100;
+}
+
+.block-equation {
+  @apply flex justify-center py-4;
+}
+
+/*
+ * Formmat markdown post content
+ */
+.post__content h2 {
+  @apply text-2xl sm:text-3xl font-sans font-semibold mt-6 mb-4 text-rose-600;
+}
+
+.post__content h2 + .post__content h3{
+  @apply text-2xl sm:text-3xl font-sans font-semibold mt-6 mb-2 text-rose-600;
+}
+
+.post__content h3 {
+  @apply text-xl sm:text-2xl font-sans font-medium mt-6 mb-3 text-gray-700;
+}
+
+.post__content p + .post__content h2 {
+  @apply mb-0 leading-normal;
+}
+
+.post__content p {
+  @apply mb-4 leading-normal;
+}
+
+.post__content strong {
+  @apply font-bold;
+}
+
+.post__content hr {
+  @apply my-4;
+}
+
+.post__content ol, ul {
+  padding-left: 0.8rem;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.post__content ol {
+  list-style: decimal;
+}
+
+.post__content ul {
+  list-style: disc;
+}
+
+.post__content a {
+  @apply text-rose-500;
+}
+
+.post__content a:hover {
+  @apply bg-rose-500 text-white;
+}
+
+.post__content figcaption {
+  @apply text-sm font-sans text-gray-600 mt-4;
+}
+
+.post__content code {
+  font-family: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+  font-size: 0.8em;
+}
+
+.featured-article {
+  transition-duration: .15s;
+  transition-property: background,box-shadow,margin,padding;
+}
+
+.featured-article:hover {
+  background: white;
+  margin: -6px;
+  padding: 6px;
+  box-shadow: 0 3px 6px rgba(0,0,0,.15),0 2px 4px rgba(0,0,0,.12);
+}
+
+.featured__item .item__img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: grayscale(100%) contrast(.75) brightness(1.25);
+  mix-blend-mode: multiply;
+  transition-duration: .1s;
+  transition-property: background,filter;
+}
+
+.featured__item:hover .item__img {
+  filter: none;
+  mix-blend-mode: normal;
+}
+
+/* Customs for book page */
+.book-content {
+  font-family: 'EB Garamond', serif;
+}
+
+.font-book {
+  font-family: 'EB Garamond', serif;
+}

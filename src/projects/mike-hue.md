@@ -1,5 +1,6 @@
 ---
 title: 'Application of MIKE 21 Model to calculate water level in Tam Giang lagoon - Thua Thien Hue province'
+date: '2020-12-08'
 tags: ['projects']
 featured: true
 displayOrder: 3

@@ -1,5 +1,6 @@
 ---
 title: 'COVID-19 effects to Community-based organization providing HIV prevention and supporting treatment services in Vietnam'
+date: '2020-12-08'
 tags: ['projects']
 featured: true
 displayOrder: 1
