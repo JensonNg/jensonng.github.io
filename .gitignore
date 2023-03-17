@@ -13,3 +13,4 @@ Thumbs.db
 node_modules/
 
 src/_includes/assets/css
+dist/
