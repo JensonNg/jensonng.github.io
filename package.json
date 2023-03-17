@@ -4,9 +4,9 @@
   "description": "Repository for My Personal Online Resume and Blog",
   "main": ".eleventy.js",
   "scripts": {
-    "start": "npx eleventy --serve & yarn run tailwind:process",
+    "start": "eleventy --serve & yarn run tailwind:process",
     "debug": "DEBUG=Eleventy* npx @11ty/eleventy",
-    "build": "ELEVENTY_PRODUCTION=true eleventy & NODE_ENV=production postcss src/scss/global.css --o dist/global.css && cleancss dist/global.css -o dist/global.css",
+    "build": "eleventy & NODE_ENV=production postcss src/scss/global.css --o dist/global.css && cleancss dist/global.css -o dist/global.css",
     "tailwind:process": "npx postcss src/scss/global.css --o src/_includes/assets/css/global.css --watch",
     "deploy": "rm -rf dist && yarn build && rsync -avz --no-owner --no-group dist/ root@erikdao.com:/var/www/jenson.neuraltalks.io/dist/"
   },
