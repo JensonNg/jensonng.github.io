@@ -12,13 +12,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/JensonNg/jensonng.github.io"
+    "url": "git+https://github.com/JensonNg/jensonng.github.io.git"
   },
-  "author": {
-    "email": "jenson@neuraltalks.io",
-    "name": "Son Nguyen",
-    "url": "https://erikdao.com"
-  },
+  "author": "Son Nguyen <jenson@neuraltalks.io> (https://erikdao.com)",
   "license": "MIT",
   "dependencies": {
     "@11ty/eleventy": "^0.12.1",
@@ -32,5 +28,13 @@
     "moment": "^2.29.1",
     "postcss-cli": "^8.3.1",
     "tailwindcss": "^2.2.14"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/JensonNg/jensonng.github.io/issues"
+  },
+  "homepage": "https://github.com/JensonNg/jensonng.github.io#readme",
+  "directories": {
+    "doc": "docs"
+  },
+  "keywords": []
 }
