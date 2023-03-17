@@ -3,7 +3,7 @@ title: 'COVID-19 effects to Community-based organization providing HIV preventio
 date: '2020-12-08'
 tags: ['projects']
 featured: true
-displayOrder: 1
+displayOrder: 2
 summary: "Community-based organizations (CBOs) have changed all forms of service delivery to meet the needs of customers during the social distancing caused by COVID-19. CBOs transitioned from direct communication, personal or group counselling on HIV prevention, STIs to online through Blued, Grindr, ... and social networks: Facebook, Zalo. Some CBOs provide items (condoms, lubricants, syringes and needles,...) by making some special appointments to customers at a familiar location for subjects such as tree stumps, roadside... while ensuring distance 2 meters safe, wear a mask and disinfect hands after contact. The service of referral and support for HIV treatment with ARV drugs is facing many difficulties and needs to be moved from one province to another through quarantine points for medicine. Consumer factors, CBO's ability to react quickly and resources are recognized as critical influencing strategies for COVID-19 response. Social distancing is an optimal way to reduce the spread of COVID-19 but is also a significant challenge for CBOs. Their ability to react quickly and promptly is one of their most important lessons to help CBO continue to maximize the delivery of existing services to customers. Besides, connecting CBO networks not only within the province but also across the country has helped no one is left behind in the goal of repelling HIV."
 socialImage: '/images/projects/thumbnail_covid-19_effects.png'
 ---
