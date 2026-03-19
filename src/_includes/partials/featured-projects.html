@@ -6,7 +6,7 @@
     <li class="featured__item col-span-1 flex flex-col justify-between rounded-lg hover:shadow-md transition-all duration-100 bg-gray-50 cursor-pointer">
       <div class="flex-1 flex flex-col overflow-hidden">
         <div class="w-full block">
-          <img src="{{ item.data.socialImage }}" alt="" class="rounded-t-lg w-full item__img">
+          <img src="{{ item.data.socialImage }}" alt="" class="rounded-t-lg w-full item__img" loading="lazy">
         </div>
         <h3 class="text-xl font-sans font-semibold leading-tight pt-4 px-4 transition-colors duration-75 text-amber-600"><a href="{{ item.url }}">{{ item.data.title }}</a></h3>
         <div class="flex flex-col p-4 overflow-hidden">
