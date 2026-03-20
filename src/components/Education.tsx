@@ -108,7 +108,7 @@ export function Education() {
                 <Badge 
                   key={index} 
                   variant="outline" 
-                  className="border-primary/50 text-primary hover:bg-primary hover:text-white transition-colors text-xs"
+                  className="border-primary/50 text-primary hover:bg-primary hover:text-black transition-colors text-xs"
                 >
                   {cert}
                 </Badge>

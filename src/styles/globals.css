@@ -9,81 +9,82 @@
 
 :root {
   --font-size: 16px;
-  /* Dark mode as default */
-  --background: #0a0f0d;
-  --foreground: #e8f5e9;
-  --card: rgba(255, 255, 255, 0.04);
-  --card-foreground: #e8f5e9;
-  --popover: #0d1210;
-  --popover-foreground: #e8f5e9;
-  --primary: #22c55e;
-  --primary-foreground: #052e16;
-  --secondary: #16a34a;
-  --secondary-foreground: #f0fdf4;
-  --tertiary: #15803d;
-  --tertiary-foreground: #f0fdf4;
-  --quaternary: #166534;
-  --quaternary-foreground: #f0fdf4;
+
+  /* Solar Amber Design System */
+  --background: #111111;
+  --foreground: #e0e0e0;
+  --card: rgba(255, 255, 255, 0.05);
+  --card-foreground: #e0e0e0;
+  --popover: #1a1a1a;
+  --popover-foreground: #e0e0e0;
+  --primary: #f2c94c;
+  --primary-foreground: #000000;
+  --secondary: #f2994a;
+  --secondary-foreground: #000000;
+  --tertiary: #d4a843;
+  --tertiary-foreground: #000000;
+  --quaternary: #b8860b;
+  --quaternary-foreground: #ffffff;
   --muted: rgba(255, 255, 255, 0.06);
-  --muted-foreground: #94a3b8;
-  --accent: rgba(34, 197, 94, 0.1);
-  --accent-foreground: #bbf7d0;
+  --muted-foreground: #9ca3af;
+  --accent: rgba(242, 201, 76, 0.1);
+  --accent-foreground: #f2c94c;
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
-  --border: rgba(255, 255, 255, 0.08);
+  --border: rgba(255, 255, 255, 0.1);
   --input: rgba(255, 255, 255, 0.06);
-  --input-background: rgba(255, 255, 255, 0.04);
+  --input-background: rgba(255, 255, 255, 0.05);
   --switch-background: rgba(255, 255, 255, 0.15);
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --ring: rgba(34, 197, 94, 0.4);
+  --ring: rgba(242, 201, 76, 0.4);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
   --radius: 0.75rem;
-  --sidebar: rgba(10, 15, 13, 0.8);
-  --sidebar-foreground: #e8f5e9;
-  --sidebar-primary: #22c55e;
-  --sidebar-primary-foreground: #052e16;
+  --sidebar: rgba(17, 17, 17, 0.8);
+  --sidebar-foreground: #e0e0e0;
+  --sidebar-primary: #f2c94c;
+  --sidebar-primary-foreground: #000000;
   --sidebar-accent: rgba(255, 255, 255, 0.06);
-  --sidebar-accent-foreground: #e8f5e9;
-  --sidebar-border: rgba(255, 255, 255, 0.08);
-  --sidebar-ring: rgba(34, 197, 94, 0.4);
+  --sidebar-accent-foreground: #e0e0e0;
+  --sidebar-border: rgba(255, 255, 255, 0.1);
+  --sidebar-ring: rgba(242, 201, 76, 0.4);
 
-  /* Liquid glass custom properties */
-  --glass-bg: rgba(255, 255, 255, 0.03);
-  --glass-border: rgba(255, 255, 255, 0.08);
+  /* Liquid glass custom properties — Solar Amber */
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
   --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
   --glass-blur: 20px;
   --glass-highlight: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, transparent 50%, rgba(255,255,255,0.02) 100%);
 }
 
 .dark {
-  --background: #0a0f0d;
-  --foreground: #e8f5e9;
-  --card: rgba(255, 255, 255, 0.04);
-  --card-foreground: #e8f5e9;
-  --popover: rgba(10, 15, 13, 0.95);
-  --popover-foreground: #e8f5e9;
-  --primary: #22c55e;
-  --primary-foreground: #052e16;
-  --secondary: #16a34a;
-  --secondary-foreground: #f0fdf4;
-  --tertiary: #15803d;
-  --tertiary-foreground: #f0fdf4;
-  --quaternary: #166534;
-  --quaternary-foreground: #f0fdf4;
+  --background: #111111;
+  --foreground: #e0e0e0;
+  --card: rgba(255, 255, 255, 0.05);
+  --card-foreground: #e0e0e0;
+  --popover: rgba(17, 17, 17, 0.95);
+  --popover-foreground: #e0e0e0;
+  --primary: #f2c94c;
+  --primary-foreground: #000000;
+  --secondary: #f2994a;
+  --secondary-foreground: #000000;
+  --tertiary: #d4a843;
+  --tertiary-foreground: #000000;
+  --quaternary: #b8860b;
+  --quaternary-foreground: #ffffff;
   --muted: rgba(255, 255, 255, 0.06);
-  --muted-foreground: #94a3b8;
-  --accent: rgba(34, 197, 94, 0.1);
-  --accent-foreground: #bbf7d0;
+  --muted-foreground: #9ca3af;
+  --accent: rgba(242, 201, 76, 0.1);
+  --accent-foreground: #f2c94c;
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
-  --border: rgba(255, 255, 255, 0.08);
+  --border: rgba(255, 255, 255, 0.1);
   --input: rgba(255, 255, 255, 0.06);
-  --ring: rgba(34, 197, 94, 0.4);
+  --ring: rgba(242, 201, 76, 0.4);
   --font-weight-medium: 500;
   --font-weight-normal: 400;
 }
@@ -140,6 +141,11 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
   }
 }
 
@@ -170,7 +176,7 @@
   }
 
   .glass-glow {
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 40px rgba(34, 197, 94, 0.05);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 40px rgba(242, 201, 76, 0.08);
   }
 
   .glass-highlight {
@@ -189,7 +195,7 @@
 }
 
 /**
- * Base typography.
+ * Base typography — Poppins headings, Inter body.
  */
 @layer base {
   :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {

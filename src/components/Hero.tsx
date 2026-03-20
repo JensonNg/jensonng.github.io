@@ -103,9 +103,9 @@ export function Hero() {
           <div className="space-y-6">       
             <div className="space-y-6">
               <div className="space-y-4">
-                <h1 className="text-4xl md:text-6xl leading-tight">
+                <h1 className="text-4xl md:text-6xl leading-tight font-bold">
                   Xin Chào! </h1>
-                <h1 className="text-4xl md:text-6xl leading-tight"> I'm <span className="text-primary">Son Nguyen</span>
+                <h1 className="text-4xl md:text-6xl leading-tight font-bold"> I'm <span className="text-primary">Son Nguyen</span>
                 </h1>
                 
                 {/* Animated Role Section */}
@@ -162,15 +162,15 @@ export function Hero() {
                 <p className="text-sm font-medium text-foreground mb-3">Ready to explore?</p>
                 <div className="space-y-3">
                   <div className="flex gap-2">
-                    <Button 
-                      className="bg-primary hover:bg-primary/90 flex-1" 
+                    <Button
+                      className="bg-gradient-to-r from-[#f2994a] to-[#f2c94c] hover:from-[#e0893e] hover:to-[#e0b93e] text-black font-semibold shadow-[0_0_15px_rgba(242,201,76,0.3)] flex-1"
                       onClick={() => scrollToSection('creative-work')}
                     >
                       View Creative Work
                     </Button>
                     <Button 
                       variant="outline" 
-                      className="border-primary text-primary hover:bg-primary hover:text-white flex-1" 
+                      className="border-primary text-primary hover:bg-primary hover:text-black flex-1"
                       onClick={() => scrollToSection('projects')}
                     >
                       View Projects
@@ -179,7 +179,7 @@ export function Hero() {
                   <div className="flex gap-2">
                     <Button 
                       variant="outline" 
-                      className="border-secondary text-secondary hover:bg-secondary hover:text-white flex-1" 
+                      className="border-secondary text-secondary hover:bg-secondary hover:text-black flex-1" 
                       onClick={() => scrollToSection('contact')}
                     >
                       Contact Me
@@ -198,28 +198,28 @@ export function Hero() {
               {/* Social Links */}
               <div className="border-t border-primary/10 pt-4">
                 <p className="text-xs font-medium text-foreground text-center mb-3">Connect with me</p>
-                <div className="flex justify-center gap-3">
-                  <a 
-                    href="https://linkedin.com/in/soninsthlm" 
-                    target="_blank" 
+                <div className="flex justify-center gap-4">
+                  <a
+                    href="https://linkedin.com/in/soninsthlm"
+                    target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 glass hover:bg-primary hover:text-white rounded-lg transition-all"
+                    className="p-2.5 border border-primary rounded-full hover:bg-primary hover:text-black text-primary transition-all"
                     title="LinkedIn"
                   >
                     <Linkedin className="w-5 h-5" />
                   </a>
-                  <a 
+                  <a
                     href="mailto:sonngoc.nguyen@hyperisland.se"
-                    className="p-3 glass hover:bg-primary hover:text-white rounded-lg transition-all"
+                    className="p-2.5 border border-primary rounded-full hover:bg-primary hover:text-black text-primary transition-all"
                     title="Email"
                   >
                     <Mail className="w-5 h-5" />
                   </a>
-                  <a 
-                    href="https://instagram.com/foodstuckers.sthlm" 
-                    target="_blank" 
+                  <a
+                    href="https://instagram.com/foodstuckers.sthlm"
+                    target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 glass hover:bg-primary hover:text-white rounded-lg transition-all"
+                    className="p-2.5 border border-primary rounded-full hover:bg-primary hover:text-black text-primary transition-all"
                     title="Instagram @foodstuckers.sthlm"
                   >
                     <Instagram className="w-5 h-5" />

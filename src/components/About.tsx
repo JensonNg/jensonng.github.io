@@ -39,7 +39,7 @@ export function About() {
 
             <div className="space-y-4">
               <h3 className="text-xl">
-                My <span className="bg-gradient-to-r from-secondary to-tertiary bg-clip-text text-transparent">Creative Approach</span>
+                My <span className="bg-gradient-to-r from-[#f2994a] to-[#f2c94c] bg-clip-text text-transparent">Creative Approach</span>
               </h3>
               <p className="text-muted-foreground leading-relaxed">
                 I combine UX Writing principles with growth strategy to create messaging that converts and connects.
@@ -131,7 +131,7 @@ export function About() {
                 variant="outline"
                 size="sm"
                 onClick={() => expandAndScrollToSection('experience')}
-                className="w-full border-primary text-primary hover:bg-primary hover:text-white"
+                className="w-full border-primary text-primary hover:bg-primary hover:text-black"
               >
                 See My Experience <ArrowRight className="w-4 h-4 ml-2" />
               </Button>

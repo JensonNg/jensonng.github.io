@@ -47,7 +47,7 @@ export function Header() {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#0a0f0d]/95 backdrop-blur-xl border-b border-white/[0.08] shadow-lg shadow-black/20">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#111111]/95 backdrop-blur-xl border-b border-white/[0.08] shadow-lg shadow-black/20">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <button 
           onClick={() => scrollToSection('hero')}
@@ -202,7 +202,7 @@ export function Header() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-[#0a0f0d]/95 backdrop-blur-xl border-b border-white/[0.08] shadow-2xl shadow-black/30">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-[#111111]/95 backdrop-blur-xl border-b border-white/[0.08] shadow-2xl shadow-black/30">
           <nav className="container mx-auto px-4 py-4 flex flex-col space-y-2">
             {/* My Information Group */}
             <div className="border-b pb-2">
