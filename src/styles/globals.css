@@ -1,63 +1,91 @@
-@import "tailwindcss";
-
 @custom-variant dark (&:is(.dark *));
+
+/* Container configuration for Tailwind v4 */
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+  max-width: 1280px;
+}
 
 :root {
   --font-size: 16px;
-  --background: #ffffff;
-  --foreground: oklch(0.145 0 0);
-  --card: #ffffff;
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: #16a34a;
-  --primary-foreground: oklch(1 0 0);
-  --secondary: #15803d;
-  --secondary-foreground: oklch(1 0 0);
-  --tertiary: #14532d;
-  --tertiary-foreground: oklch(1 0 0);
+  /* Dark mode as default */
+  --background: #0a0f0d;
+  --foreground: #e8f5e9;
+  --card: rgba(255, 255, 255, 0.04);
+  --card-foreground: #e8f5e9;
+  --popover: #0d1210;
+  --popover-foreground: #e8f5e9;
+  --primary: #22c55e;
+  --primary-foreground: #052e16;
+  --secondary: #16a34a;
+  --secondary-foreground: #f0fdf4;
+  --tertiary: #15803d;
+  --tertiary-foreground: #f0fdf4;
   --quaternary: #166534;
-  --quaternary-foreground: oklch(1 0 0);
-  --muted: #ececf0;
-  --muted-foreground: #717182;
-  --accent: #f0fdf4;
-  --accent-foreground: #365314;
-  --destructive: #d4183d;
+  --quaternary-foreground: #f0fdf4;
+  --muted: rgba(255, 255, 255, 0.06);
+  --muted-foreground: #94a3b8;
+  --accent: rgba(34, 197, 94, 0.1);
+  --accent-foreground: #bbf7d0;
+  --destructive: #ef4444;
   --destructive-foreground: #ffffff;
-  --border: rgba(0, 0, 0, 0.1);
-  --input: transparent;
-  --input-background: #f3f3f5;
-  --switch-background: #cbced4;
+  --border: rgba(255, 255, 255, 0.08);
+  --input: rgba(255, 255, 255, 0.06);
+  --input-background: rgba(255, 255, 255, 0.04);
+  --switch-background: rgba(255, 255, 255, 0.15);
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --ring: oklch(0.708 0 0);
-  --radius: 0.625rem;
+  --ring: rgba(34, 197, 94, 0.4);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.75rem;
+  --sidebar: rgba(10, 15, 13, 0.8);
+  --sidebar-foreground: #e8f5e9;
+  --sidebar-primary: #22c55e;
+  --sidebar-primary-foreground: #052e16;
+  --sidebar-accent: rgba(255, 255, 255, 0.06);
+  --sidebar-accent-foreground: #e8f5e9;
+  --sidebar-border: rgba(255, 255, 255, 0.08);
+  --sidebar-ring: rgba(34, 197, 94, 0.4);
+
+  /* Liquid glass custom properties */
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  --glass-blur: 20px;
+  --glass-highlight: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, transparent 50%, rgba(255,255,255,0.02) 100%);
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.145 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.145 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: #16a34a;
-  --primary-foreground: oklch(1 0 0);
-  --secondary: #15803d;
-  --secondary-foreground: oklch(1 0 0);
-  --tertiary: #14532d;
-  --tertiary-foreground: oklch(1 0 0);
+  --background: #0a0f0d;
+  --foreground: #e8f5e9;
+  --card: rgba(255, 255, 255, 0.04);
+  --card-foreground: #e8f5e9;
+  --popover: rgba(10, 15, 13, 0.95);
+  --popover-foreground: #e8f5e9;
+  --primary: #22c55e;
+  --primary-foreground: #052e16;
+  --secondary: #16a34a;
+  --secondary-foreground: #f0fdf4;
+  --tertiary: #15803d;
+  --tertiary-foreground: #f0fdf4;
   --quaternary: #166534;
-  --quaternary-foreground: oklch(1 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: #15803d;
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(0.269 0 0);
-  --input: oklch(0.269 0 0);
-  --ring: oklch(0.439 0 0);
+  --quaternary-foreground: #f0fdf4;
+  --muted: rgba(255, 255, 255, 0.06);
+  --muted-foreground: #94a3b8;
+  --accent: rgba(34, 197, 94, 0.1);
+  --accent-foreground: #bbf7d0;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: rgba(255, 255, 255, 0.08);
+  --input: rgba(255, 255, 255, 0.06);
+  --ring: rgba(34, 197, 94, 0.4);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
 }
 
 @theme inline {
@@ -83,21 +111,135 @@
   --color-destructive-foreground: var(--destructive-foreground);
   --color-border: var(--border);
   --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
   --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
 }
 
 @layer base {
   * {
-    border-color: var(--border);
-    outline-color: color-mix(in oklab, var(--ring) 50%, transparent);
+    @apply border-border outline-ring/50;
   }
+
   body {
-    background-color: var(--background);
-    color: var(--foreground);
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Liquid Glass utility classes */
+@layer utilities {
+  .glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+  }
+
+  .glass-strong {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(30px) saturate(1.5);
+    -webkit-backdrop-filter: blur(30px) saturate(1.5);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  }
+
+  .glass-subtle {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  }
+
+  .glass-glow {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 40px rgba(34, 197, 94, 0.05);
+  }
+
+  .glass-highlight {
+    position: relative;
+  }
+
+  .glass-highlight::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: var(--glass-highlight);
+    pointer-events: none;
+    z-index: 1;
+  }
+}
+
+/**
+ * Base typography.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
   }
 }
 

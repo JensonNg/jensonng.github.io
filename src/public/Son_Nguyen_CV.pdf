@@ -1,0 +1,7 @@
+<!-- This is a placeholder for your actual CV PDF file.
+To use this:
+1. Replace this file with your actual CV PDF
+2. Make sure the filename matches what's referenced in the CVDownload component
+3. The file should be named: Son_Nguyen_CV.pdf
+
+The download functionality will automatically work once you place your real PDF file here. -->

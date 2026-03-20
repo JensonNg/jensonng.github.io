@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "portfolio-dev",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["/Users/sonnguyen/Claude/Portfolio for Creative Works/.claude/start-dev.sh"],
+      "port": 3000
+    }
+  ]
+}

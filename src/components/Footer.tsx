@@ -1,89 +1,91 @@
-import { Github, Linkedin, Instagram } from "lucide-react";
-
-const scrollToSection = (id: string) => {
-  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-};
+import { MapPin, Linkedin, Mail, Instagram } from "lucide-react";
+import { Logo } from "./Logo";
 
 export function Footer() {
+  const scrollToSection = (id: string) => {
+    window.location.hash = id;
+    const element = document.getElementById(id);
+    element?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <footer className="border-t border-border bg-background">
-      <div className="container mx-auto px-4 max-w-5xl py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Brand */}
-          <div>
-            <div className="flex items-center gap-2 mb-3">
-              <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold text-sm">
-                SN
-              </div>
-              <span className="font-semibold">Son Nguyen</span>
+    <footer className="glass-strong border-t border-white/[0.06]">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+          {/* Brand & Address */}
+          <div className="space-y-4">
+            <Logo size="md" />
+            <div className="flex items-start gap-2 text-muted-foreground">
+              <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
+              <address className="not-italic">
+                Vega, Handen<br />
+                13648, Stockholm<br />
+                Sweden
+              </address>
             </div>
-            <p className="text-sm text-muted-foreground">
-              Growth Marketing Strategist based in Stockholm, Sweden.
-            </p>
           </div>
 
-          {/* Quick links */}
-          <div>
-            <h3 className="font-medium text-sm mb-3">Quick Links</h3>
-            <ul className="space-y-2">
-              {[
-                { label: "About", id: "about" },
-                { label: "Experience", id: "experience" },
-                { label: "Projects", id: "projects" },
-                { label: "Contact", id: "contact" },
-              ].map((item) => (
-                <li key={item.id}>
-                  <button
-                    onClick={() => scrollToSection(item.id)}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    {item.label}
-                  </button>
-                </li>
-              ))}
-            </ul>
+          {/* Quick Links */}
+          <div className="space-y-4">
+            <h3 className="text-foreground">Quick Links</h3>
+            <nav className="flex flex-col space-y-2">
+              <button
+                onClick={() => scrollToSection('creative-work')}
+                className="text-muted-foreground hover:text-primary transition-colors text-left"
+              >
+                Content Creation
+              </button>
+              <button
+                onClick={() => scrollToSection('projects')}
+                className="text-muted-foreground hover:text-primary transition-colors text-left"
+              >
+                Projects
+              </button>
+              <button
+                onClick={() => scrollToSection('contact')}
+                className="text-muted-foreground hover:text-primary transition-colors text-left"
+              >
+                Contact
+              </button>
+            </nav>
           </div>
 
-          {/* Social */}
-          <div>
-            <h3 className="font-medium text-sm mb-3">Connect</h3>
-            <div className="flex gap-3">
-              <a
-                href="https://linkedin.com/in/son-nguyen-marketing"
-                target="_blank"
+          {/* Social Links */}
+          <div className="space-y-4">
+            <h3 className="text-foreground">Connect</h3>
+            <div className="flex items-center gap-3">
+              <a 
+                href="https://www.linkedin.com/in/soninsthlm/" 
+                target="_blank" 
                 rel="noopener noreferrer"
+                className="p-2 hover:bg-primary/10 rounded-lg transition-colors"
                 aria-label="LinkedIn"
-                className="p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
               >
-                <Linkedin className="h-4 w-4" />
+                <Linkedin className="w-5 h-5" />
               </a>
-              <a
-                href="https://github.com/JensonNg"
-                target="_blank"
+              <a 
+                href="https://instagram.com/foodstuckers.sthlm" 
+                target="_blank" 
                 rel="noopener noreferrer"
-                aria-label="GitHub"
-                className="p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
-              >
-                <Github className="h-4 w-4" />
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
+                className="p-2 hover:bg-primary/10 rounded-lg transition-colors"
                 aria-label="Instagram"
-                className="p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
               >
-                <Instagram className="h-4 w-4" />
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a 
+                href="mailto:sonngoc.nguyen@hyperisland.se"
+                className="p-2 hover:bg-primary/10 rounded-lg transition-colors"
+                aria-label="Email"
+              >
+                <Mail className="w-5 h-5" />
               </a>
             </div>
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-2">
-          <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} Son Nguyen. All rights reserved.
-          </p>
-          <p className="text-xs text-muted-foreground">Stockholm, Sweden</p>
+        {/* Bottom Bar */}
+        <div className="mt-8 pt-8 border-t border-primary/10 text-center text-muted-foreground">
+          <p>&copy; {new Date().getFullYear()} Son Nguyen. Made with Love</p>
         </div>
       </div>
     </footer>

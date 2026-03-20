@@ -1,57 +1,11 @@
-# jensonng.github.io
 
-Personal portfolio and blog website for Son Ngoc Nguyen (Jenson).
+  # Portfolio for Creative Works
 
-## Tech Stack
+  This is a code bundle for Portfolio for Creative Works. The original project is available at https://www.figma.com/design/j4F5z5S1g7JXWfJYSL6VZa/Portfolio-for-Creative-Works.
 
-- [Eleventy (11ty)](https://www.11ty.dev/) — Static site generator
-- [Tailwind CSS](https://tailwindcss.com/) — Utility-first CSS framework
-- [Nunjucks](https://mozilla.github.io/nunjucks/) — Templating engine
-- [KaTeX](https://katex.org/) — Math equation rendering
+  ## Running the code
 
-## Getting Started
+  Run `npm i` to install the dependencies.
 
-### Prerequisites
-
-- Node.js (v14+)
-- Yarn
-
-### Installation
-
-```bash
-yarn install
-```
-
-### Development
-
-Start a local dev server with live reload:
-
-```bash
-yarn start
-```
-
-### Production Build
-
-```bash
-yarn build
-```
-
-The built site will be in the `dist/` directory.
-
-## Project Structure
-
-```
-src/
-├── _data/          # Global data (site config, navigation)
-├── _includes/      # Layouts and reusable partials
-├── blog/           # Blog posts (Markdown)
-├── projects/       # Project posts (Markdown)
-├── filters/        # Custom Eleventy filters
-├── utils/          # Utility functions
-├── scss/           # Stylesheets (Tailwind + PostCSS)
-└── images/         # Static images
-```
-
-## License
-
-MIT
+  Run `npm run dev` to start the development server.
+  
