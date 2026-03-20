@@ -4,8 +4,9 @@ import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Label } from "./ui/label";
 import { Badge } from "./ui/badge";
-import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, Loader2, Shield } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -14,32 +15,50 @@ export function Contact() {
     subject: '',
     message: ''
   });
+  const [consentGiven, setConsentGiven] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<{type: 'success' | 'error' | null, message: string}>({
     type: null,
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus({ type: null, message: '' });
 
-    // Create mailto link with form data
-    const mailtoLink = `mailto:sonngoc.nguyen@hyperisland.se?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
-      `Hi Son,\n\nName: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}\n\n---\nSent from your portfolio contact form`
-    )}`;
-    
     try {
-      window.location.href = mailtoLink;
-      setSubmitStatus({ 
-        type: 'success', 
-        message: 'Email client opened! If it didn\'t open automatically, please contact me directly at sonngoc.nguyen@hyperisland.se' 
+      const response = await fetch("https://formsubmit.co/ajax/sonngoc.nguyen@hyperisland.se", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          _subject: `Portfolio Contact: ${formData.subject}`,
+          message: formData.message,
+          _template: "table",
+        }),
       });
+
+      const result = await response.json();
+
+      if (result.success === "true" || result.success === true) {
+        setSubmitStatus({
+          type: 'success',
+          message: 'Message sent successfully! I\'ll get back to you within 24 hours. 🎉'
+        });
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        setConsentGiven(false);
+      } else {
+        throw new Error("Something went wrong");
+      }
     } catch (error) {
-      setSubmitStatus({ 
-        type: 'error', 
-        message: 'Unable to open email client. Please contact me directly at sonngoc.nguyen@hyperisland.se' 
+      setSubmitStatus({
+        type: 'error',
+        message: 'Failed to send message. Please try again or email me directly at sonngoc.nguyen@hyperisland.se'
       });
     } finally {
       setIsSubmitting(false);
@@ -80,8 +99,8 @@ export function Contact() {
         <div className="space-y-6">
           <div>
             <p className="text-muted-foreground text-sm">
-              Feel free to reach out through any of these methods. I typically respond within 24 hours.
-              The contact form will open your email client to send me a direct message.
+              Feel free to reach out! Fill in the form and your message will be sent directly to me.
+              I typically respond within 24 hours.
             </p>
           </div>
 
@@ -96,8 +115,8 @@ export function Contact() {
                     <div>
                       <p className="text-xs text-muted-foreground">{info.label}</p>
                       {info.link ? (
-                        <a 
-                          href={info.link} 
+                        <a
+                          href={info.link}
                           className="font-medium text-sm hover:text-primary transition-colors"
                         >
                           {info.value}
@@ -154,7 +173,7 @@ export function Contact() {
                   />
                 </div>
               </div>
-              
+
               <div className="space-y-1">
                 <Label htmlFor="subject" className="text-xs">Subject</Label>
                 <Input
@@ -167,7 +186,7 @@ export function Contact() {
                   required
                 />
               </div>
-              
+
               <div className="space-y-1">
                 <Label htmlFor="message" className="text-xs">Message</Label>
                 <Textarea
@@ -182,28 +201,58 @@ export function Contact() {
                 />
               </div>
 
+              {/* GDPR Consent */}
+              <div className="space-y-2">
+                <label className="flex items-start gap-2 cursor-pointer group">
+                  <input
+                    type="checkbox"
+                    checked={consentGiven}
+                    onChange={(e) => setConsentGiven(e.target.checked)}
+                    className="mt-0.5 w-4 h-4 rounded border-white/20 bg-white/5 text-primary focus:ring-primary/50 accent-[#f2c94c]"
+                    required
+                  />
+                  <span className="text-[11px] text-muted-foreground leading-relaxed">
+                    I consent to Son Nguyen collecting my name and email to respond to this inquiry.
+                    My data will only be used for this purpose and will not be shared with third parties.
+                    I can request deletion of my data at any time.{" "}
+                    <Link to="/privacy" className="text-primary hover:underline">
+                      Privacy Policy
+                    </Link>
+                  </span>
+                </label>
+              </div>
+
               {submitStatus.type && (
                 <div className={`flex items-center gap-2 p-3 rounded-lg text-xs ${
-                  submitStatus.type === 'success' 
-                    ? 'bg-primary/10 text-primary' 
+                  submitStatus.type === 'success'
+                    ? 'bg-primary/10 text-primary'
                     : 'bg-destructive/10 text-destructive'
                 }`}>
                   {submitStatus.type === 'success' ? (
-                    <CheckCircle className="w-4 h-4" />
+                    <CheckCircle className="w-4 h-4 flex-shrink-0" />
                   ) : (
-                    <AlertCircle className="w-4 h-4" />
+                    <AlertCircle className="w-4 h-4 flex-shrink-0" />
                   )}
                   {submitStatus.message}
                 </div>
               )}
-              
-              <Button 
-                type="submit" 
+
+              <Button
+                type="submit"
                 className="w-full text-xs"
-                disabled={isSubmitting}
+                disabled={isSubmitting || !consentGiven}
               >
-                <Send className="w-3 h-3 mr-2" />
-                {isSubmitting ? 'Opening Email...' : 'Send Message'}
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="w-3 h-3 mr-2 animate-spin" />
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    <Send className="w-3 h-3 mr-2" />
+                    Send Message
+                  </>
+                )}
               </Button>
             </form>
           </CardContent>

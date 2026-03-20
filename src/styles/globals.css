@@ -53,7 +53,7 @@
   --sidebar-border: rgba(255, 255, 255, 0.1);
   --sidebar-ring: rgba(242, 201, 76, 0.4);
 
-  /* Liquid glass custom properties — Solar Amber */
+  /* Liquid glass custom properties – Solar Amber */
   --glass-bg: rgba(255, 255, 255, 0.05);
   --glass-border: rgba(255, 255, 255, 0.1);
   --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
@@ -195,7 +195,7 @@
 }
 
 /**
- * Base typography — Poppins headings, Inter body.
+ * Base typography – Poppins headings, Inter body.
  */
 @layer base {
   :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
