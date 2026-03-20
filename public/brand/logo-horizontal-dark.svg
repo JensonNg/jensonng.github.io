@@ -16,6 +16,6 @@
   </defs>
   <rect x="2" y="2" width="76" height="76" rx="19" fill="url(#bg)" stroke="url(#ring)" stroke-width="2"/>
   <path d="M19 6 L43 32 L19 32 L43 74" stroke="url(#gold)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-  <text x="98" y="38" fill="#F2C94C" font-family="Inter, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="2">SON</text>
-  <text x="98" y="66" fill="#CCCCCC" font-family="Inter, Helvetica, Arial, sans-serif" font-size="30" font-weight="300" letter-spacing="2">NGUYEN</text>
+  <text x="98" y="38" fill="#F2C94C" font-family="Cinzel, Georgia, serif" font-size="30" font-weight="700" letter-spacing="2">SON</text>
+  <text x="98" y="66" fill="#CCCCCC" font-family="Cinzel, Georgia, serif" font-size="30" font-weight="300" letter-spacing="2">NGUYEN</text>
 </svg>
