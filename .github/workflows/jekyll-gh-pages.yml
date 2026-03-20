@@ -1,4 +1,4 @@
-name: Deploy Eleventy site to GitHub Pages
+name: Deploy Portfolio to GitHub Pages
 
 on:
   push:
@@ -24,14 +24,14 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "18"
-          cache: "yarn"
+          node-version: "20"
+          cache: "npm"
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: npm ci
 
-      - name: Build Eleventy site
-        run: yarn build
+      - name: Build site
+        run: npm run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
