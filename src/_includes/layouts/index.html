@@ -1,30 +1,112 @@
 {% extends "layouts/base.html" %}
 
-{% set pageHeaderTitle = title %}
-{% set pageHeaderSummary = summary %}
-
 {% block content %}
-<div id="hero" class="hero fade-in flex flex-col justify-center pa-4" style="min-height: 400px;">
-  <div class="flex">
-    <img src="images/about/cover.png" alt="">
-  </div>
-  <div class="hero__inner flex flex-col pt-8 pb-12">
-    <h1 class="text-7xl leading-none mb-6 order-2 font-serif font-medium">Welcome to my world!</h1>
-    <p class="uppercase font-bold mb-4 text-xl order-1 text-amber-600">
-      Hej, My name is Son
-    </p>
-    <div class="text-2xl font-light leading-snug order-3">
-      <p class="m-0">
-        As a dynamic digital transformer who focuses on human rights, diversity, inclusion, and digital creativity, I have worked for more than six years in diverse organizations and business models. For me, communication and technology are a rope connecting people, and together we spread positivity.
+
+<!-- Hero -->
+<section id="hero" class="py-20 px-0">
+  <div class="flex flex-col lg:flex-row gap-16 items-start">
+
+    <!-- Left: Text -->
+    <div class="flex flex-col gap-6 flex-1">
+      <div class="flex flex-col gap-4">
+        <h1 class="text-6xl font-normal leading-tight text-[#e8f5e9]">Xin Chào!</h1>
+        <h1 class="text-6xl font-normal leading-tight">
+          I'm <span class="text-[#22c55e]">Son Nguyen</span>
+        </h1>
+        <!-- Animated role badge -->
+        <div class="flex items-center gap-2">
+          <span class="w-1 h-1 rounded-full bg-[#22c55e]"></span>
+          <span class="inline-flex items-center px-3 py-1 rounded-xl bg-[#22c55e] text-[#052e16] text-lg font-medium">
+            Growth Marketing Strategist
+          </span>
+        </div>
+      </div>
+
+      <p class="text-[#94a3b8] text-lg leading-relaxed max-w-lg">
+        Welcome to my journey where <strong class="text-[#22c55e] font-medium">growth marketing meets sustainable impact</strong>.
+        With a Master's in Environmental Science and expertise in UX Writing + Communications Strategy,
+        I help brands grow authentically while making a positive difference. 🌱📈
       </p>
+
+      <div class="section-card p-4">
+        <p class="text-[#e8f5e9] text-sm leading-relaxed">
+          <strong class="text-[#22c55e]">My creative toolkit?</strong>
+          From short-form video and content creation to strategic UX writing and communications,
+          I turn complex ideas into compelling brand stories. Whether it's Instagram Reels, campaign videos,
+          or conversion-focused copy – I create content that doesn't just convert, it connects. 🎬💫
+        </p>
+      </div>
+    </div>
+
+    <!-- Right: CTA card -->
+    <div class="flex flex-col gap-6 flex-1 lg:max-w-sm w-full">
+      <!-- Placeholder embed area -->
+      <div class="rounded-2xl bg-gradient-to-br from-[rgba(34,197,94,0.1)] to-[rgba(22,163,74,0.05)] h-48 flex items-center justify-center border border-[rgba(34,197,94,0.15)]">
+        <span class="text-[#94a3b8] text-sm">Content Preview</span>
+      </div>
+
+      <!-- CTA Card -->
+      <div class="section-card p-4 flex flex-col gap-4">
+        <p class="text-[#e8f5e9] text-sm font-medium text-center">Ready to explore?</p>
+        <div class="grid grid-cols-2 gap-2">
+          <a href="#creative-work" class="btn-primary text-xs py-2">View Creative Work</a>
+          <a href="/projects/" class="btn-outline text-xs py-2">View Projects</a>
+          <a href="#contact" class="btn-outline text-xs py-2">Contact Me</a>
+          <a href="/resources/Son_Nguyen_CV.pdf" class="bg-[#16a34a] text-[#f0fdf4] inline-flex items-center justify-center font-medium px-3 py-2 rounded-[10px] text-xs transition-all hover:bg-[#15803d]">Download CV</a>
+        </div>
+        <div class="border-t border-[rgba(34,197,94,0.1)] pt-4 flex flex-col gap-3">
+          <p class="text-[#e8f5e9] text-xs font-medium text-center">Connect with me</p>
+          <div class="flex items-center justify-center gap-3">
+            <a href="https://www.linkedin.com/in/jenson3006/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
+               class="flex items-center justify-center w-[46px] h-[46px] rounded-xl section-card hover:border-[rgba(34,197,94,0.3)] transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="https://www.instagram.com/foodstuckers.sthlm/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+               class="flex items-center justify-center w-[46px] h-[46px] rounded-xl section-card hover:border-[rgba(34,197,94,0.3)] transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://github.com/JensonNg" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
+               class="flex items-center justify-center w-[46px] h-[46px] rounded-xl section-card hover:border-[rgba(34,197,94,0.3)] transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
 
-{% include "partials/featured-projects.html" %}
+  <!-- Scroll indicator -->
+  <div class="flex justify-center mt-16">
+    <a href="#about" class="flex items-center justify-center w-10 h-10 rounded-full text-[#94a3b8] hover:text-[#22c55e] transition-all">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+    </a>
+  </div>
+</section>
+
+{% include "partials/about-me.html" %}
+
+{% include "partials/content-creation.html" %}
+
+{% include "partials/education.html" %}
 
 {% include "partials/experience.html" %}
 
-{% include "partials/education.html" %}
+{% include "partials/skills.html" %}
+
+{% include "partials/featured-projects.html" %}
+
+<!-- CV Download -->
+<section class="py-12 text-center">
+  <p class="text-[#94a3b8] mb-6 max-w-md mx-auto">Get the full details of my professional background, experience, and skills in one document.</p>
+  <div class="flex flex-col items-center gap-3">
+    <a href="/resources/Son_Nguyen_CV.pdf" class="btn-primary gap-2 px-6 py-2.5">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+      Download CV
+    </a>
+    <span class="text-[#94a3b8] text-xs">PDF format • Updated January 2025 • 2 pages</span>
+  </div>
+</section>
+
+{% include "partials/contact.html" %}
 
 {% endblock %}
