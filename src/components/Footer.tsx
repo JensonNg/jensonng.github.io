@@ -71,7 +71,7 @@ export function Footer() {
               <Link to="/about#cv" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                 CV & Certificates
               </Link>
-              <Link to="/brand" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              <Link to="/brand-book" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                 Brand Book
               </Link>
               <span className="text-sm text-muted-foreground/50 flex items-center gap-1.5">
