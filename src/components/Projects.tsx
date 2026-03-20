@@ -130,7 +130,7 @@ export function Projects() {
       role: "Digital Marketing & Communication",
       quote: "Building brand visibility that amplifies voices for equal rights.",
       readMoreUrl: "#",
-      featured: true,
+      featured: false,
       metrics: [
         { value: "2,000", label: "Website visitors" },
         { value: "400", label: "LinkedIn followers in 3 months" },

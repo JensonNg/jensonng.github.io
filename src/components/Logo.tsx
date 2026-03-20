@@ -77,22 +77,10 @@ function SowiloRune() {
       <path
         d="M18 8 L30 20 L18 20 L30 40"
         stroke="url(#rune-gradient)"
-        strokeWidth="3.5"
+        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
         fill="none"
-      />
-
-      {/* Subtle glow/echo stroke for depth */}
-      <path
-        d="M18 8 L30 20 L18 20 L30 40"
-        stroke="var(--color-primary)"
-        strokeWidth="1.2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        fill="none"
-        opacity="0.2"
-        transform="translate(0.8, 0.8)"
       />
 
       <defs>
