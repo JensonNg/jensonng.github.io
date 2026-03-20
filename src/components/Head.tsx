@@ -56,7 +56,7 @@ export function Head({
     // Additional meta tags for better SEO
     setMetaTag('viewport', 'width=device-width, initial-scale=1.0', false);
     setMetaTag('robots', 'index, follow', false);
-    setMetaTag('theme-color', '#0a0f0d', false);
+    setMetaTag('theme-color', '#111111', false);
 
     // Structured data for better search results
     const structuredData = {

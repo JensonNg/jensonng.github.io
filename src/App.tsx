@@ -15,12 +15,11 @@ import { SectionWrapper } from "./components/SectionWrapper";
 export default function App() {
   return (
     <div className="min-h-screen relative overflow-x-hidden">
-      {/* Ambient glow orbs for liquid glass depth */}
+      {/* Ambient glow orbs — Solar Amber radial glows */}
       <div className="fixed inset-0 pointer-events-none z-0">
-        <div className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] rounded-full bg-primary/8 blur-[120px] animate-pulse" style={{ animationDuration: '8s' }} />
-        <div className="absolute top-[30%] right-[-15%] w-[500px] h-[500px] rounded-full bg-secondary/6 blur-[100px] animate-pulse" style={{ animationDuration: '12s' }} />
-        <div className="absolute bottom-[-10%] left-[20%] w-[700px] h-[700px] rounded-full bg-tertiary/5 blur-[140px] animate-pulse" style={{ animationDuration: '10s' }} />
-        <div className="absolute top-[60%] right-[30%] w-[300px] h-[300px] rounded-full bg-primary/4 blur-[80px] animate-pulse" style={{ animationDuration: '15s' }} />
+        <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] rounded-full bg-[rgba(242,201,76,0.08)] blur-[120px] animate-pulse" style={{ animationDuration: '8s' }} />
+        <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-[rgba(242,201,76,0.05)] blur-[100px] animate-pulse" style={{ animationDuration: '12s' }} />
+        <div className="absolute top-[40%] left-[30%] w-[400px] h-[400px] rounded-full bg-[rgba(242,153,74,0.04)] blur-[140px] animate-pulse" style={{ animationDuration: '10s' }} />
       </div>
 
       <div className="relative z-10">
