@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="280" viewBox="0 0 200 280">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F2C94C"/>
+      <stop offset="50%" stop-color="#F2994A"/>
+      <stop offset="100%" stop-color="#F2C94C"/>
+    </linearGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F2C94C" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#F2994A" stop-opacity="0.3"/>
+    </linearGradient>
+    <radialGradient id="bg" cx="0.3" cy="0.3" r="0.8">
+      <stop offset="0%" stop-color="rgba(242,201,76,0.06)"/>
+      <stop offset="100%" stop-color="#111111"/>
+    </radialGradient>
+  </defs>
+  <rect x="30" y="0" width="140" height="140" rx="34" fill="url(#bg)" stroke="url(#ring)" stroke-width="2.5"/>
+  <path d="M65 11 L114 57 L65 57 L114 129" stroke="url(#gold)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <text x="100" y="174" text-anchor="middle" fill="#F2C94C" font-family="Inter, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="4">SON</text>
+  <text x="100" y="204" text-anchor="middle" fill="#CCCCCC" font-family="Inter, Helvetica, Arial, sans-serif" font-size="28" font-weight="300" letter-spacing="4">NGUYEN</text>
+  <line x1="40" y1="220" x2="160" y2="220" stroke="#F2C94C" stroke-opacity="0.3" stroke-width="1"/>
+  <text x="100" y="244" text-anchor="middle" fill="#888888" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" letter-spacing="4">GROWTH MARKETING</text>
+  <text x="100" y="260" text-anchor="middle" fill="#888888" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" letter-spacing="4">STRATEGIST</text>
+</svg>
