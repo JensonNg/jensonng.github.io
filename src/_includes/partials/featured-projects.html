@@ -1,24 +1,48 @@
-<div id="featured-projects" class="flex flex-col mb-20">
-  <h2 class="font-serif text-3xl mb-6">Featured Projects</h2>
+<section id="featured-projects" class="mb-6">
+  <div class="section-card">
+    <!-- Section Header -->
+    <div class="section-card__header">
+      <div class="flex items-center gap-6">
+        <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          <span class="badge">Projects</span>
+        </div>
+        <div>
+          <h2 class="text-2xl font-semibold text-[#e8f5e9]">Featured Projects</h2>
+          <p class="text-[#94a3b8] text-sm mt-0.5">Recent work in sustainable marketing and brand development</p>
+        </div>
+      </div>
+    </div>
 
-  <ul role="list" class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
-    {% for item in collections.featuredProjects %}
-    <li class="featured__item col-span-1 flex flex-col justify-between rounded-lg hover:shadow-md transition-all duration-100 bg-gray-50 cursor-pointer">
-      <div class="flex-1 flex flex-col overflow-hidden">
-        <div class="w-full block">
-          <img src="{{ item.data.socialImage }}" alt="" class="rounded-t-lg w-full item__img" loading="lazy">
-        </div>
-        <h3 class="text-xl font-sans font-semibold leading-tight pt-4 px-4 transition-colors duration-75 text-amber-600"><a href="{{ item.url }}">{{ item.data.title }}</a></h3>
-        <div class="flex flex-col p-4 overflow-hidden">
-          <p class="block h-28 max-h-32 overflow-ellipsis font-serif text-gray-500 text-base leading-snug">{{ item.data.summary | truncate(250)}}</p>
-        </div>
-      </div>
-      <div class="p-4">
-        {% for tag in item.data.tags %}
-        <span class="uppercase text-xs mr-2 mb-2 p-2 bg-amber-100 rounded text-amber-700">{{tag}}</span>
+    <!-- Section Body -->
+    <div class="section-card__body">
+      <ul role="list" class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {% for item in collections.featuredProjects %}
+        <li class="flex flex-col rounded-xl border border-[rgba(255,255,255,0.06)] hover:border-[rgba(34,197,94,0.2)] hover:bg-[rgba(34,197,94,0.02)] transition-all overflow-hidden group">
+          <div class="w-full overflow-hidden aspect-video bg-[rgba(255,255,255,0.02)]">
+            <img src="{{ item.data.socialImage }}" alt="{{ item.data.title }}" class="w-full h-full object-cover transition-all duration-300 filter grayscale group-hover:grayscale-0" loading="lazy">
+          </div>
+          <div class="flex flex-col gap-3 p-4 flex-1">
+            <h3 class="text-[#e8f5e9] font-medium leading-snug">
+              <a href="{{ item.url }}" class="hover:text-[#22c55e] transition-colors">{{ item.data.title }}</a>
+            </h3>
+            <p class="text-[#94a3b8] text-sm leading-relaxed line-clamp-3">{{ item.data.summary | truncate(200) }}</p>
+            <div class="flex flex-wrap gap-1.5 mt-auto">
+              {% for tag in item.data.tags %}
+              <span class="badge text-xs">{{ tag }}</span>
+              {% endfor %}
+            </div>
+          </div>
+        </li>
         {% endfor %}
+      </ul>
+
+      <div class="flex justify-center mt-6">
+        <a href="/projects/" class="btn-outline gap-2">
+          View All Projects
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
       </div>
-    </li>
-    {% endfor %}
-  </ul>
-</div>
+    </div>
+  </div>
+</section>
