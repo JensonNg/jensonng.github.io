@@ -10,7 +10,7 @@ interface HeadProps {
 export function Head({ 
   title = "Son Nguyen - Growth Marketing Manager | Sustainable Brand Growth",
   description = "Welcome to my journey where growth marketing meets sustainable impact. Expert in UX Writing & Communications Strategy, helping brands grow authentically while making a positive difference. 🌱📈",
-  image = "/images/og-thumbnail.png",
+  image = "https://jensonng.github.io/images/og-thumbnail.png",
   url = window.location.href
 }: HeadProps) {
   
