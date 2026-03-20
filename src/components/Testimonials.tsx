@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight, Quote, Linkedin } from "lucide-react";
 
 const testimonials = [
@@ -69,6 +69,26 @@ export function Testimonials() {
   const prev = () => setCurrent((c) => Math.max(0, c - 1));
   const next = () => setCurrent((c) => Math.min(maxIndex, c + 1));
 
+  // Swipe/drag support
+  const dragRef = useRef<HTMLDivElement>(null);
+  const startX = useRef(0);
+  const isDragging = useRef(false);
+
+  const handlePointerDown = (e: React.PointerEvent) => {
+    isDragging.current = true;
+    startX.current = e.clientX;
+    dragRef.current?.setPointerCapture(e.pointerId);
+  };
+
+  const handlePointerUp = (e: React.PointerEvent) => {
+    if (!isDragging.current) return;
+    isDragging.current = false;
+    const diff = startX.current - e.clientX;
+    const threshold = 50;
+    if (diff > threshold) next();
+    else if (diff < -threshold) prev();
+  };
+
   return (
     <section className="py-20 px-4">
       <div className="container mx-auto max-w-5xl">
@@ -106,10 +126,16 @@ export function Testimonials() {
           </div>
         </div>
 
-        {/* Cards */}
-        <div className="overflow-hidden">
+        {/* Cards — swipeable */}
+        <div
+          ref={dragRef}
+          className="overflow-hidden cursor-grab active:cursor-grabbing touch-pan-y"
+          onPointerDown={handlePointerDown}
+          onPointerUp={handlePointerUp}
+          onPointerCancel={handlePointerUp}
+        >
           <div
-            className="flex gap-6 transition-transform duration-500 ease-out"
+            className="flex gap-6 transition-transform duration-500 ease-out select-none"
             style={{ transform: `translateX(-${current * (isMobile ? 106 : 52.5)}%)` }}
           >
             {testimonials.map((t, i) => (
