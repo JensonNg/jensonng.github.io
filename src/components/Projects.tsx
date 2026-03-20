@@ -3,6 +3,7 @@ import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import { ExternalLink } from "lucide-react";
 import { motion } from "motion/react";
+import { useNavigate } from "react-router-dom";
 
 interface Metric {
   value: string;
@@ -39,12 +40,20 @@ function BrandLogo({ brand, size = "normal" }: { brand: LogoBrand; size?: "norma
       </div>
       {/* Logo content */}
       <div className="relative z-10 flex flex-col items-center gap-3">
-        <div
-          className="w-16 h-16 rounded-2xl flex items-center justify-center text-2xl font-bold shadow-lg border border-white/10"
-          style={{ backgroundColor: brand.color, color: '#000' }}
-        >
-          {brand.initials}
-        </div>
+        {brand.initials === 'ᛊ' ? (
+          <div className="w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg border border-primary/30 bg-[#111]">
+            <svg width="36" height="36" viewBox="0 0 48 48" fill="none">
+              <path d="M14 4 L28 20 L14 20 L28 44" stroke="#F2C94C" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+            </svg>
+          </div>
+        ) : (
+          <div
+            className="w-16 h-16 rounded-2xl flex items-center justify-center text-2xl font-bold shadow-lg border border-white/10"
+            style={{ backgroundColor: brand.color, color: '#000' }}
+          >
+            {brand.initials}
+          </div>
+        )}
         <span className="text-sm font-semibold tracking-wide text-white/90">{brand.name}</span>
       </div>
     </div>
@@ -52,7 +61,40 @@ function BrandLogo({ brand, size = "normal" }: { brand: LogoBrand; size?: "norma
 }
 
 export function Projects() {
+  const navigate = useNavigate();
+
+  const handleReadMore = (url: string) => {
+    if (url.startsWith('/')) {
+      navigate(url);
+    } else {
+      window.open(url, '_blank', 'noopener,noreferrer');
+    }
+  };
+
   const projects = [
+    {
+      title: "Personal Brand Identity - The Sowilo Mark",
+      description: "Designed a personal brand identity rooted in Norse mythology. The Sowilo rune (ᛊ) — the Elder Futhark symbol for 'S' meaning 'sun' — becomes a lightning bolt mark that bridges Vietnamese heritage with Scandinavian home. Developed a complete brand system including logo variations, color palette, typography, and brand narrative.",
+      brand: {
+        name: "Son Nguyen",
+        initials: "ᛊ",
+        color: "#F2C94C",
+        bgFrom: "#111111",
+        bgTo: "#1a1a0a",
+      } as LogoBrand,
+      technologies: ["Brand Identity", "Logo Design", "Visual System", "Brand Narrative"],
+      period: "2026",
+      organization: "Personal Brand",
+      role: "Brand Designer & Strategist",
+      quote: "A Vietnamese name initialed in Viking script — two cultures woven into one mark.",
+      readMoreUrl: "/brand-book",
+      featured: true,
+      metrics: [
+        { value: "8", label: "Logo variations" },
+        { value: "6", label: "Brand colors" },
+        { value: "4", label: "Key symbols" },
+      ] as Metric[],
+    },
     {
       title: "Final UX Design Project: Asekio Web Builder",
       description: "Collaborated on UX transformation for Asekio, an AI website builder. Enhanced onboarding via user journey mapping & prototyping, laid the foundation for their modular design system, and boosted engagement through usability testing & iterative design.",
@@ -88,7 +130,7 @@ export function Projects() {
       role: "Digital Marketing & Communication",
       quote: "Building brand visibility that amplifies voices for equal rights.",
       readMoreUrl: "#",
-      featured: true,
+      featured: false,
       metrics: [
         { value: "2,000", label: "Website visitors" },
         { value: "400", label: "LinkedIn followers in 3 months" },
@@ -335,7 +377,7 @@ export function Projects() {
                       variant="outline"
                       size="sm"
                       className="text-xs h-7 w-full hover:bg-primary hover:text-primary-foreground transition-all duration-200"
-                      onClick={() => window.open(project.readMoreUrl, '_blank', 'noopener,noreferrer')}
+                      onClick={() => handleReadMore(project.readMoreUrl)}
                     >
                       <ExternalLink className="w-3 h-3 mr-1" />
                       Read More
@@ -418,7 +460,7 @@ export function Projects() {
                       variant="outline"
                       size="sm"
                       className="text-xs h-7 w-full hover:bg-primary hover:text-primary-foreground transition-all duration-200"
-                      onClick={() => window.open(project.readMoreUrl, '_blank', 'noopener,noreferrer')}
+                      onClick={() => handleReadMore(project.readMoreUrl)}
                     >
                       <ExternalLink className="w-3 h-3 mr-1" />
                       Read More
