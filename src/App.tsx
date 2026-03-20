@@ -8,6 +8,7 @@ import { ProjectsPage } from "./pages/ProjectsPage";
 import { ContactPage } from "./pages/ContactPage";
 import { ServicesPage } from "./pages/ServicesPage";
 import { PrivacyPage } from "./pages/PrivacyPage";
+import BrandBookPage from "./pages/BrandBookPage";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -42,6 +43,7 @@ function AppContent() {
           <Route path="/cv" element={<Navigate to="/about#cv" replace />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/privacy" element={<PrivacyPage />} />
+          <Route path="/brand-book" element={<BrandBookPage />} />
         </Routes>
         <Footer />
       </div>
