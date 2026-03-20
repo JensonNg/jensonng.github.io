@@ -58,11 +58,11 @@ export function About() {
             {/* Profile Image */}
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-3xl transform rotate-3"></div>
-              <div className="relative w-full aspect-[4/5] max-h-[400px] overflow-hidden rounded-3xl shadow-lg bg-gradient-to-br from-primary/5 to-secondary/5">
+              <div className="relative w-full aspect-[4/5] overflow-hidden rounded-3xl shadow-lg bg-gradient-to-br from-primary/5 to-secondary/5">
                 <ImageWithFallback
                   src={sonProfileImage}
                   alt="Son Nguyen - Growth Marketing Strategist"
-                  className="w-full h-full object-cover rounded-3xl"
+                  className="w-full h-full object-contain rounded-3xl"
                 />
               </div>
             </div>
