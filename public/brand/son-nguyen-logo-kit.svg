@@ -1,12 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="3100" viewBox="0 0 1600 3100">
   <defs>
-    <!-- Brand Colors -->
     <linearGradient id="gold-gradient" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#F2C94C"/>
-      <stop offset="50%" stop-color="#F2994A"/>
-      <stop offset="100%" stop-color="#F2C94C"/>
-    </linearGradient>
-    <linearGradient id="gold-gradient-h" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#F2C94C"/>
       <stop offset="50%" stop-color="#F2994A"/>
       <stop offset="100%" stop-color="#F2C94C"/>
@@ -19,303 +13,268 @@
       <stop offset="0%" stop-color="rgba(242,201,76,0.06)"/>
       <stop offset="100%" stop-color="#111111"/>
     </radialGradient>
-    <radialGradient id="bg-light" cx="0.3" cy="0.3" r="0.8">
-      <stop offset="0%" stop-color="rgba(242,201,76,0.08)"/>
-      <stop offset="100%" stop-color="#FAFAFA"/>
-    </radialGradient>
   </defs>
 
   <!-- Background -->
-  <rect width="1600" height="2400" fill="#0A0A0A"/>
+  <rect width="1600" height="3100" fill="#0A0A0A"/>
 
-  <!-- ============================================ -->
   <!-- TITLE -->
-  <!-- ============================================ -->
-  <text x="800" y="80" text-anchor="middle" fill="#F2C94C" font-family="Inter, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="6">SON NGUYEN - BRAND LOGO KIT</text>
+  <text x="800" y="80" text-anchor="middle" fill="#F2C94C" font-family="Cinzel, Georgia, serif" font-size="28" font-weight="700" letter-spacing="6">Son Nguyen — Brand Logo Kit</text>
   <line x1="200" y1="100" x2="1400" y2="100" stroke="#F2C94C" stroke-opacity="0.2" stroke-width="1"/>
 
   <!-- ============================================ -->
-  <!-- 1. PRIMARY LOGO MARK (Dark BG) -->
+  <!-- 01. PRIMARY MARK (Dark) -->
   <!-- ============================================ -->
-  <text x="200" y="170" fill="#999" font-family="Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" letter-spacing="3">01 — PRIMARY MARK (DARK)</text>
+  <text x="200" y="170" fill="#999" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" letter-spacing="3">01 — PRIMARY MARK (DARK)</text>
 
-  <!-- Large primary mark -->
+  <!-- Large -->
   <g transform="translate(400, 220)">
     <rect x="0" y="0" width="200" height="200" rx="48" fill="url(#bg-dark)" stroke="url(#ring-grad)" stroke-width="3"/>
     <path d="M50 16 L110 80 L50 80 L110 184" stroke="url(#gold-gradient)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-    <path d="M50 16 L110 80 L50 80 L110 184" stroke="#F2C94C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.15" transform="translate(2, 2)"/>
   </g>
-
   <!-- Medium -->
   <g transform="translate(700, 270)">
     <rect x="0" y="0" width="120" height="120" rx="30" fill="url(#bg-dark)" stroke="url(#ring-grad)" stroke-width="2"/>
-    <path d="M30 10 L66 48 L30 48 L66 110" stroke="url(#gold-gradient)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <path d="M30 10 L66 48 L30 48 L66 110" stroke="url(#gold-gradient)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
   </g>
-
   <!-- Small -->
   <g transform="translate(900, 310)">
     <rect x="0" y="0" width="64" height="64" rx="16" fill="url(#bg-dark)" stroke="url(#ring-grad)" stroke-width="1.5"/>
-    <path d="M16 5 L35 26 L16 26 L35 59" stroke="url(#gold-gradient)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <path d="M16 5 L35 26 L16 26 L35 59" stroke="url(#gold-gradient)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
   </g>
-
-  <!-- Favicon size -->
+  <!-- Favicon -->
   <g transform="translate(1020, 330)">
     <rect x="0" y="0" width="32" height="32" rx="8" fill="url(#bg-dark)" stroke="url(#ring-grad)" stroke-width="1"/>
-    <path d="M8 3 L18 13 L8 13 L18 29" stroke="#F2C94C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <path d="M8 3 L18 13 L8 13 L18 29" stroke="#F2C94C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
   </g>
 
-  <text x="1020" y="385" fill="#666" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11">32px</text>
-  <text x="900" y="395" fill="#666" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11">64px</text>
-  <text x="700" y="410" fill="#666" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11">120px</text>
-  <text x="400" y="440" fill="#666" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11">200px</text>
+  <text x="1020" y="385" fill="#666" font-family="Inter, sans-serif" font-size="11">32px</text>
+  <text x="900" y="395" fill="#666" font-family="Inter, sans-serif" font-size="11">64px</text>
+  <text x="700" y="410" fill="#666" font-family="Inter, sans-serif" font-size="11">120px</text>
+  <text x="400" y="440" fill="#666" font-family="Inter, sans-serif" font-size="11">200px</text>
 
   <!-- ============================================ -->
-  <!-- 2. PRIMARY LOGO MARK (Light BG) -->
+  <!-- 02. PRIMARY MARK (Light) -->
   <!-- ============================================ -->
-  <text x="200" y="510" fill="#999" font-family="Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" letter-spacing="3">02 — PRIMARY MARK (LIGHT)</text>
+  <text x="200" y="510" fill="#999" font-family="Inter, sans-serif" font-size="14" font-weight="600" letter-spacing="3">02 — PRIMARY MARK (LIGHT)</text>
 
-  <!-- Light background area -->
   <rect x="200" y="530" width="1200" height="250" rx="16" fill="#F5F5F5"/>
 
   <g transform="translate(400, 560)">
-    <rect x="0" y="0" width="180" height="180" rx="44" fill="url(#bg-light)" stroke="#E0E0E0" stroke-width="2"/>
+    <rect x="0" y="0" width="180" height="180" rx="44" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="2"/>
     <path d="M45 14 L99 72 L45 72 L99 166" stroke="#1A1A1A" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-    <path d="M45 14 L99 72 L45 72 L99 166" stroke="#F2994A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.3" transform="translate(1.5, 1.5)"/>
   </g>
-
   <g transform="translate(700, 600)">
     <rect x="0" y="0" width="100" height="100" rx="24" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="1.5"/>
-    <path d="M25 8 L55 40 L25 40 L55 92" stroke="#1A1A1A" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <path d="M25 8 L55 40 L25 40 L55 92" stroke="#1A1A1A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
   </g>
-
   <g transform="translate(880, 620)">
     <rect x="0" y="0" width="64" height="64" rx="16" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="1"/>
-    <path d="M16 5 L35 26 L16 26 L35 59" stroke="#1A1A1A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <path d="M16 5 L35 26 L16 26 L35 59" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
   </g>
 
   <!-- ============================================ -->
-  <!-- 3. HORIZONTAL LOCKUP (Dark) -->
+  <!-- 03. HORIZONTAL LOCKUP (Dark) -->
   <!-- ============================================ -->
-  <text x="200" y="850" fill="#999" font-family="Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" letter-spacing="3">03 — HORIZONTAL LOCKUP (DARK)</text>
+  <text x="200" y="850" fill="#999" font-family="Inter, sans-serif" font-size="14" font-weight="600" letter-spacing="3">03 — HORIZONTAL LOCKUP (DARK)</text>
 
-  <!-- Full name lockup large -->
+  <!-- Large -->
   <g transform="translate(200, 880)">
     <rect x="0" y="0" width="80" height="80" rx="20" fill="url(#bg-dark)" stroke="url(#ring-grad)" stroke-width="2"/>
-    <path d="M20 6 L44 32 L20 32 L44 74" stroke="url(#gold-gradient)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-    <text x="100" y="40" fill="#F2C94C" font-family="Inter, Helvetica, Arial, sans-serif" font-size="32" font-weight="700" letter-spacing="2">SON</text>
-    <text x="100" y="68" fill="#CCCCCC" font-family="Inter, Helvetica, Arial, sans-serif" font-size="32" font-weight="300" letter-spacing="2">NGUYEN</text>
+    <path d="M20 6 L44 32 L20 32 L44 74" stroke="url(#gold-gradient)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <text x="100" y="40" fill="#F2C94C" font-family="Cinzel, Georgia, serif" font-size="32" font-weight="700" letter-spacing="3">SON</text>
+    <text x="100" y="68" fill="#CCCCCC" font-family="Cinzel, Georgia, serif" font-size="32" font-weight="400" letter-spacing="3">NGUYEN</text>
   </g>
 
   <!-- With tagline -->
   <g transform="translate(200, 1000)">
     <rect x="0" y="0" width="60" height="60" rx="15" fill="url(#bg-dark)" stroke="url(#ring-grad)" stroke-width="1.5"/>
-    <path d="M15 5 L33 24 L15 24 L33 55" stroke="url(#gold-gradient)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-    <text x="78" y="30" fill="#F2C94C" font-family="Inter, Helvetica, Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="1.5">SON NGUYEN</text>
-    <text x="78" y="52" fill="#888888" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" letter-spacing="3">GROWTH MARKETING STRATEGIST</text>
+    <path d="M15 5 L33 24 L15 24 L33 55" stroke="url(#gold-gradient)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <text x="78" y="30" fill="#F2C94C" font-family="Cinzel, Georgia, serif" font-size="22" font-weight="700" letter-spacing="2">SON NGUYEN</text>
+    <text x="78" y="52" fill="#888888" font-family="Inter, sans-serif" font-size="12" font-weight="400" letter-spacing="3">GROWTH MARKETING STRATEGIST</text>
   </g>
 
   <!-- Compact -->
   <g transform="translate(750, 1000)">
     <rect x="0" y="0" width="44" height="44" rx="11" fill="url(#bg-dark)" stroke="url(#ring-grad)" stroke-width="1"/>
-    <path d="M11 4 L24 18 L11 18 L24 40" stroke="url(#gold-gradient)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-    <text x="56" y="20" fill="#F2C94C" font-family="Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="1">SON</text>
-    <text x="56" y="38" fill="#CCCCCC" font-family="Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="300" letter-spacing="1">NGUYEN</text>
+    <path d="M11 4 L24 18 L11 18 L24 40" stroke="url(#gold-gradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <text x="56" y="20" fill="#F2C94C" font-family="Cinzel, Georgia, serif" font-size="16" font-weight="700" letter-spacing="1">SON</text>
+    <text x="56" y="38" fill="#CCCCCC" font-family="Cinzel, Georgia, serif" font-size="16" font-weight="400" letter-spacing="1">NGUYEN</text>
   </g>
 
   <!-- ============================================ -->
-  <!-- 4. HORIZONTAL LOCKUP (Light) -->
+  <!-- 04. HORIZONTAL LOCKUP (Light) -->
   <!-- ============================================ -->
-  <text x="200" y="1120" fill="#999" font-family="Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" letter-spacing="3">04 — HORIZONTAL LOCKUP (LIGHT)</text>
+  <text x="200" y="1120" fill="#999" font-family="Inter, sans-serif" font-size="14" font-weight="600" letter-spacing="3">04 — HORIZONTAL LOCKUP (LIGHT)</text>
 
   <rect x="200" y="1140" width="1200" height="160" rx="16" fill="#F5F5F5"/>
 
   <g transform="translate(240, 1160)">
     <rect x="0" y="0" width="80" height="80" rx="20" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="2"/>
-    <path d="M20 6 L44 32 L20 32 L44 74" stroke="#1A1A1A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-    <text x="100" y="40" fill="#1A1A1A" font-family="Inter, Helvetica, Arial, sans-serif" font-size="32" font-weight="700" letter-spacing="2">SON</text>
-    <text x="100" y="68" fill="#555555" font-family="Inter, Helvetica, Arial, sans-serif" font-size="32" font-weight="300" letter-spacing="2">NGUYEN</text>
+    <path d="M20 6 L44 32 L20 32 L44 74" stroke="#1A1A1A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <text x="100" y="40" fill="#1A1A1A" font-family="Cinzel, Georgia, serif" font-size="32" font-weight="700" letter-spacing="3">SON</text>
+    <text x="100" y="68" fill="#555555" font-family="Cinzel, Georgia, serif" font-size="32" font-weight="400" letter-spacing="3">NGUYEN</text>
   </g>
 
   <g transform="translate(700, 1175)">
     <rect x="0" y="0" width="48" height="48" rx="12" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="1"/>
-    <path d="M12 4 L26 19 L12 19 L26 44" stroke="#1A1A1A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-    <text x="60" y="22" fill="#1A1A1A" font-family="Inter, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="1.5">SON NGUYEN</text>
-    <text x="60" y="40" fill="#888888" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" letter-spacing="3">GROWTH MARKETING STRATEGIST</text>
+    <path d="M12 4 L26 19 L12 19 L26 44" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <text x="60" y="22" fill="#1A1A1A" font-family="Cinzel, Georgia, serif" font-size="18" font-weight="700" letter-spacing="2">SON NGUYEN</text>
+    <text x="60" y="40" fill="#888888" font-family="Inter, sans-serif" font-size="11" font-weight="400" letter-spacing="3">GROWTH MARKETING STRATEGIST</text>
   </g>
 
   <!-- ============================================ -->
-  <!-- 5. STACKED / VERTICAL LOCKUP -->
+  <!-- 05. STACKED / VERTICAL LOCKUP -->
   <!-- ============================================ -->
-  <text x="200" y="1380" fill="#999" font-family="Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" letter-spacing="3">05 — VERTICAL / STACKED LOCKUP</text>
+  <text x="200" y="1380" fill="#999" font-family="Inter, sans-serif" font-size="14" font-weight="600" letter-spacing="3">05 — VERTICAL / STACKED LOCKUP</text>
 
   <!-- Dark stacked -->
   <g transform="translate(300, 1420)">
     <rect x="30" y="0" width="140" height="140" rx="34" fill="url(#bg-dark)" stroke="url(#ring-grad)" stroke-width="2.5"/>
-    <path d="M65 11 L114 57 L65 57 L114 129" stroke="url(#gold-gradient)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-    <text x="100" y="172" text-anchor="middle" fill="#F2C94C" font-family="Inter, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="4">SON</text>
-    <text x="100" y="200" text-anchor="middle" fill="#CCCCCC" font-family="Inter, Helvetica, Arial, sans-serif" font-size="28" font-weight="300" letter-spacing="4">NGUYEN</text>
+    <path d="M65 11 L114 57 L65 57 L114 129" stroke="url(#gold-gradient)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <text x="100" y="172" text-anchor="middle" fill="#F2C94C" font-family="Cinzel, Georgia, serif" font-size="28" font-weight="700" letter-spacing="5">SON</text>
+    <text x="100" y="200" text-anchor="middle" fill="#CCCCCC" font-family="Cinzel, Georgia, serif" font-size="28" font-weight="400" letter-spacing="5">NGUYEN</text>
     <line x1="40" y1="216" x2="160" y2="216" stroke="#F2C94C" stroke-opacity="0.3" stroke-width="1"/>
-    <text x="100" y="236" text-anchor="middle" fill="#888888" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" letter-spacing="4">GROWTH MARKETING</text>
-    <text x="100" y="250" text-anchor="middle" fill="#888888" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" letter-spacing="4">STRATEGIST</text>
+    <text x="100" y="236" text-anchor="middle" fill="#888888" font-family="Inter, sans-serif" font-size="10" font-weight="400" letter-spacing="4">GROWTH MARKETING</text>
+    <text x="100" y="250" text-anchor="middle" fill="#888888" font-family="Inter, sans-serif" font-size="10" font-weight="400" letter-spacing="4">STRATEGIST</text>
   </g>
 
   <!-- Light stacked -->
   <rect x="620" y="1400" width="320" height="310" rx="16" fill="#F5F5F5"/>
   <g transform="translate(700, 1420)">
     <rect x="30" y="0" width="140" height="140" rx="34" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="2"/>
-    <path d="M65 11 L114 57 L65 57 L114 129" stroke="#1A1A1A" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-    <text x="100" y="172" text-anchor="middle" fill="#1A1A1A" font-family="Inter, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="4">SON</text>
-    <text x="100" y="200" text-anchor="middle" fill="#555555" font-family="Inter, Helvetica, Arial, sans-serif" font-size="28" font-weight="300" letter-spacing="4">NGUYEN</text>
+    <path d="M65 11 L114 57 L65 57 L114 129" stroke="#1A1A1A" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <text x="100" y="172" text-anchor="middle" fill="#1A1A1A" font-family="Cinzel, Georgia, serif" font-size="28" font-weight="700" letter-spacing="5">SON</text>
+    <text x="100" y="200" text-anchor="middle" fill="#555555" font-family="Cinzel, Georgia, serif" font-size="28" font-weight="400" letter-spacing="5">NGUYEN</text>
     <line x1="40" y1="216" x2="160" y2="216" stroke="#CCCCCC" stroke-width="1"/>
-    <text x="100" y="236" text-anchor="middle" fill="#999999" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" letter-spacing="4">GROWTH MARKETING</text>
-    <text x="100" y="250" text-anchor="middle" fill="#999999" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10" font-weight="400" letter-spacing="4">STRATEGIST</text>
+    <text x="100" y="236" text-anchor="middle" fill="#999999" font-family="Inter, sans-serif" font-size="10" font-weight="400" letter-spacing="4">GROWTH MARKETING</text>
+    <text x="100" y="250" text-anchor="middle" fill="#999999" font-family="Inter, sans-serif" font-size="10" font-weight="400" letter-spacing="4">STRATEGIST</text>
   </g>
 
   <!-- ============================================ -->
-  <!-- 6. MARK ONLY — FLAT / NO CONTAINER -->
+  <!-- 06. MARK ONLY -->
   <!-- ============================================ -->
-  <text x="200" y="1770" fill="#999" font-family="Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" letter-spacing="3">06 — MARK ONLY (NO CONTAINER)</text>
+  <text x="200" y="1770" fill="#999" font-family="Inter, sans-serif" font-size="14" font-weight="600" letter-spacing="3">06 — MARK ONLY (NO CONTAINER)</text>
 
-  <!-- Gold on dark -->
   <g transform="translate(300, 1800)">
-    <path d="M0 0 L50 50 L0 50 L50 130" stroke="url(#gold-gradient)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-    <text x="25" y="155" text-anchor="middle" fill="#666" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11">Gold on Dark</text>
+    <path d="M0 0 L50 50 L0 50 L50 130" stroke="url(#gold-gradient)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <text x="25" y="155" text-anchor="middle" fill="#666" font-family="Inter, sans-serif" font-size="11">Gold on Dark</text>
   </g>
-
-  <!-- White on dark -->
   <g transform="translate(500, 1800)">
-    <path d="M0 0 L50 50 L0 50 L50 130" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-    <text x="25" y="155" text-anchor="middle" fill="#666" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11">White on Dark</text>
+    <path d="M0 0 L50 50 L0 50 L50 130" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <text x="25" y="155" text-anchor="middle" fill="#666" font-family="Inter, sans-serif" font-size="11">White on Dark</text>
   </g>
-
-  <!-- Dark on light -->
   <rect x="650" y="1790" width="150" height="180" rx="12" fill="#F5F5F5"/>
   <g transform="translate(700, 1800)">
-    <path d="M0 0 L50 50 L0 50 L50 130" stroke="#1A1A1A" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-    <text x="25" y="155" text-anchor="middle" fill="#999" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11">Dark on Light</text>
+    <path d="M0 0 L50 50 L0 50 L50 130" stroke="#1A1A1A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <text x="25" y="155" text-anchor="middle" fill="#999" font-family="Inter, sans-serif" font-size="11">Dark on Light</text>
   </g>
-
-  <!-- Gold on light -->
   <rect x="880" y="1790" width="150" height="180" rx="12" fill="#F5F5F5"/>
   <g transform="translate(930, 1800)">
-    <path d="M0 0 L50 50 L0 50 L50 130" stroke="#D4A017" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-    <text x="25" y="155" text-anchor="middle" fill="#999" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11">Gold on Light</text>
+    <path d="M0 0 L50 50 L0 50 L50 130" stroke="#D4A017" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <text x="25" y="155" text-anchor="middle" fill="#999" font-family="Inter, sans-serif" font-size="11">Gold on Light</text>
   </g>
 
   <!-- ============================================ -->
-  <!-- 7. COLOR PALETTE -->
+  <!-- 07. COLOR PALETTE -->
   <!-- ============================================ -->
-  <text x="200" y="2060" fill="#999" font-family="Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" letter-spacing="3">07 — BRAND COLOR PALETTE</text>
+  <text x="200" y="2060" fill="#999" font-family="Inter, sans-serif" font-size="14" font-weight="600" letter-spacing="3">07 — BRAND COLOR PALETTE</text>
 
-  <!-- Solar Gold -->
   <rect x="200" y="2090" width="160" height="100" rx="12" fill="#F2C94C"/>
-  <text x="280" y="2130" text-anchor="middle" fill="#111111" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="700">Solar Gold</text>
-  <text x="280" y="2150" text-anchor="middle" fill="#333333" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11">#F2C94C</text>
-  <text x="280" y="2165" text-anchor="middle" fill="#333333" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10">Primary</text>
+  <text x="280" y="2130" text-anchor="middle" fill="#111" font-family="Inter, sans-serif" font-size="13" font-weight="700">Solar Gold</text>
+  <text x="280" y="2150" text-anchor="middle" fill="#333" font-family="Inter, sans-serif" font-size="11">#F2C94C</text>
+  <text x="280" y="2165" text-anchor="middle" fill="#333" font-family="Inter, sans-serif" font-size="10">Primary</text>
 
-  <!-- Amber -->
   <rect x="380" y="2090" width="160" height="100" rx="12" fill="#F2994A"/>
-  <text x="460" y="2130" text-anchor="middle" fill="#111111" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="700">Amber</text>
-  <text x="460" y="2150" text-anchor="middle" fill="#333333" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11">#F2994A</text>
-  <text x="460" y="2165" text-anchor="middle" fill="#333333" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10">Secondary</text>
+  <text x="460" y="2130" text-anchor="middle" fill="#111" font-family="Inter, sans-serif" font-size="13" font-weight="700">Amber</text>
+  <text x="460" y="2150" text-anchor="middle" fill="#333" font-family="Inter, sans-serif" font-size="11">#F2994A</text>
+  <text x="460" y="2165" text-anchor="middle" fill="#333" font-family="Inter, sans-serif" font-size="10">Secondary</text>
 
-  <!-- Warm Orange -->
   <rect x="560" y="2090" width="160" height="100" rx="12" fill="#EB5757"/>
-  <text x="640" y="2130" text-anchor="middle" fill="#FFFFFF" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="700">Warm Red</text>
-  <text x="640" y="2150" text-anchor="middle" fill="#EEEEEE" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11">#EB5757</text>
-  <text x="640" y="2165" text-anchor="middle" fill="#EEEEEE" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10">Tertiary</text>
+  <text x="640" y="2130" text-anchor="middle" fill="#FFF" font-family="Inter, sans-serif" font-size="13" font-weight="700">Warm Red</text>
+  <text x="640" y="2150" text-anchor="middle" fill="#EEE" font-family="Inter, sans-serif" font-size="11">#EB5757</text>
+  <text x="640" y="2165" text-anchor="middle" fill="#EEE" font-family="Inter, sans-serif" font-size="10">Tertiary</text>
 
-  <!-- Deep Black -->
   <rect x="740" y="2090" width="160" height="100" rx="12" fill="#111111" stroke="#333" stroke-width="1"/>
-  <text x="820" y="2130" text-anchor="middle" fill="#CCCCCC" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="700">Deep Black</text>
-  <text x="820" y="2150" text-anchor="middle" fill="#999999" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11">#111111</text>
-  <text x="820" y="2165" text-anchor="middle" fill="#999999" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10">Background</text>
+  <text x="820" y="2130" text-anchor="middle" fill="#CCC" font-family="Inter, sans-serif" font-size="13" font-weight="700">Deep Black</text>
+  <text x="820" y="2150" text-anchor="middle" fill="#999" font-family="Inter, sans-serif" font-size="11">#111111</text>
+  <text x="820" y="2165" text-anchor="middle" fill="#999" font-family="Inter, sans-serif" font-size="10">Background</text>
 
-  <!-- Off White -->
   <rect x="920" y="2090" width="160" height="100" rx="12" fill="#F5F5F5" stroke="#E0E0E0" stroke-width="1"/>
-  <text x="1000" y="2130" text-anchor="middle" fill="#333333" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="700">Off White</text>
-  <text x="1000" y="2150" text-anchor="middle" fill="#555555" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11">#F5F5F5</text>
-  <text x="1000" y="2165" text-anchor="middle" fill="#555555" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10">Light BG</text>
+  <text x="1000" y="2130" text-anchor="middle" fill="#333" font-family="Inter, sans-serif" font-size="13" font-weight="700">Off White</text>
+  <text x="1000" y="2150" text-anchor="middle" fill="#555" font-family="Inter, sans-serif" font-size="11">#F5F5F5</text>
+  <text x="1000" y="2165" text-anchor="middle" fill="#555" font-family="Inter, sans-serif" font-size="10">Light BG</text>
 
-  <!-- Muted -->
   <rect x="1100" y="2090" width="160" height="100" rx="12" fill="#888888"/>
-  <text x="1180" y="2130" text-anchor="middle" fill="#111111" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="700">Muted</text>
-  <text x="1180" y="2150" text-anchor="middle" fill="#222222" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11">#888888</text>
-  <text x="1180" y="2165" text-anchor="middle" fill="#222222" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10">Body Text</text>
+  <text x="1180" y="2130" text-anchor="middle" fill="#111" font-family="Inter, sans-serif" font-size="13" font-weight="700">Muted</text>
+  <text x="1180" y="2150" text-anchor="middle" fill="#222" font-family="Inter, sans-serif" font-size="11">#888888</text>
+  <text x="1180" y="2165" text-anchor="middle" fill="#222" font-family="Inter, sans-serif" font-size="10">Body Text</text>
 
   <!-- ============================================ -->
-  <!-- 8. BRAND STORY — THE MEANING BEHIND THE MARK -->
+  <!-- 08. BRAND STORY -->
   <!-- ============================================ -->
-  <text x="200" y="2260" fill="#999" font-family="Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" letter-spacing="3">08 — BRAND STORY</text>
+  <text x="200" y="2260" fill="#999" font-family="Inter, sans-serif" font-size="14" font-weight="600" letter-spacing="3">08 — BRAND STORY</text>
 
-  <!-- Large rune illustration -->
   <g transform="translate(200, 2290)">
-    <path d="M0 0 L60 70 L0 70 L60 160" stroke="url(#gold-gradient)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.15"/>
+    <path d="M0 0 L60 70 L0 70 L60 160" stroke="url(#gold-gradient)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.15"/>
   </g>
 
-  <!-- Title -->
-  <text x="300" y="2320" fill="#F2C94C" font-family="Inter, Helvetica, Arial, sans-serif" font-size="28" font-weight="700">The Sowilo Rune — ᛊ</text>
-  <text x="300" y="2348" fill="#CCCCCC" font-family="Inter, Helvetica, Arial, sans-serif" font-size="18" font-weight="300" font-style="italic">Old Norse: "Sol" — The Sun</text>
+  <text x="300" y="2320" fill="#F2C94C" font-family="Cinzel, Georgia, serif" font-size="28" font-weight="700">The Sowilo Rune — ᛊ</text>
+  <text x="300" y="2348" fill="#CCCCCC" font-family="Cinzel, Georgia, serif" font-size="16" font-weight="400" font-style="italic">Old Norse: "Sol" — The Sun</text>
 
-  <!-- Paragraph 1 -->
-  <text x="300" y="2395" fill="#AAAAAA" font-family="Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="400" letter-spacing="0.3">
+  <text x="300" y="2395" fill="#AAAAAA" font-family="Inter, sans-serif" font-size="15" font-weight="400" letter-spacing="0.3">
     <tspan x="300" dy="0">The mark at the heart of this identity is Sowilo (ᛊ), a rune from the Elder Futhark — the oldest</tspan>
     <tspan x="300" dy="24">runic alphabet used across Scandinavia over a thousand years ago. Sowilo represents the sun,</tspan>
     <tspan x="300" dy="24">and its angular, lightning-bolt form carries meanings of energy, victory, and forward motion.</tspan>
   </text>
 
-  <!-- Paragraph 2 -->
-  <text x="300" y="2480" fill="#AAAAAA" font-family="Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="400" letter-spacing="0.3">
+  <text x="300" y="2480" fill="#AAAAAA" font-family="Inter, sans-serif" font-size="15" font-weight="400" letter-spacing="0.3">
     <tspan x="300" dy="0">For Son, this symbol bridges two worlds. It is the letter S — his initial — rendered in the</tspan>
     <tspan x="300" dy="24">language of his adopted home, Sweden. A Vietnamese storyteller who found his creative voice</tspan>
     <tspan x="300" dy="24">in Stockholm, Son chose the Sowilo rune because it speaks to who he is: someone who brings</tspan>
     <tspan x="300" dy="24">light and momentum to every brand he touches.</tspan>
   </text>
 
-  <!-- Paragraph 3 -->
-  <text x="300" y="2585" fill="#AAAAAA" font-family="Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="400" letter-spacing="0.3">
+  <text x="300" y="2585" fill="#AAAAAA" font-family="Inter, sans-serif" font-size="15" font-weight="400" letter-spacing="0.3">
     <tspan x="300" dy="0">The shape itself tells a story of transformation — a single stroke that changes direction twice,</tspan>
     <tspan x="300" dy="24">moving upward, pivoting, and surging forward again. Much like a growth marketing career built</tspan>
     <tspan x="300" dy="24">across continents, cultures, and industries — from grassroots NGOs in Hanoi to global brands</tspan>
     <tspan x="300" dy="24">in Stockholm — the mark embodies resilience, adaptability, and the power of a well-told story.</tspan>
   </text>
 
-  <!-- Paragraph 4 -->
-  <text x="300" y="2695" fill="#AAAAAA" font-family="Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="400" letter-spacing="0.3">
+  <text x="300" y="2695" fill="#AAAAAA" font-family="Inter, sans-serif" font-size="15" font-weight="400" letter-spacing="0.3">
     <tspan x="300" dy="0">Set in Solar Gold against deep black, the Sowilo rune becomes both a personal signature and</tspan>
     <tspan x="300" dy="24">a brand promise: clarity through creativity, impact through intention, and always — forward.</tspan>
   </text>
 
-  <!-- Divider -->
   <line x1="300" y1="2760" x2="1300" y2="2760" stroke="#F2C94C" stroke-opacity="0.15" stroke-width="1"/>
 
-  <!-- Key meanings -->
-  <text x="300" y="2795" fill="#F2C94C" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" letter-spacing="2">KEY SYMBOLISM</text>
+  <text x="300" y="2795" fill="#F2C94C" font-family="Cinzel, Georgia, serif" font-size="13" font-weight="600" letter-spacing="2">KEY SYMBOLISM</text>
 
-  <text x="300" y="2825" fill="#888888" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="400">
+  <text x="300" y="2825" fill="#888" font-family="Inter, sans-serif" font-size="14" font-weight="400">
     <tspan x="300" dy="0" fill="#F2C94C">ᛊ  Sun &amp; Light</tspan>
-    <tspan x="300" dy="22" fill="#AAAAAA">Sowilo literally means "sun" — illumination, warmth, and the power to make things grow.</tspan>
+    <tspan x="300" dy="22" fill="#AAA">Sowilo literally means "sun" — illumination, warmth, and the power to make things grow.</tspan>
   </text>
-  <text x="300" y="2875" fill="#888888" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="400">
+  <text x="300" y="2875" fill="#888" font-family="Inter, sans-serif" font-size="14" font-weight="400">
     <tspan x="300" dy="0" fill="#F2C94C">⚡  Energy &amp; Momentum</tspan>
-    <tspan x="300" dy="22" fill="#AAAAAA">The angular lightning-bolt shape conveys kinetic energy — campaigns that move, content that strikes.</tspan>
+    <tspan x="300" dy="22" fill="#AAA">The angular lightning-bolt shape conveys kinetic energy — campaigns that move, content that strikes.</tspan>
   </text>
-  <text x="300" y="2925" fill="#888888" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="400">
+  <text x="300" y="2925" fill="#888" font-family="Inter, sans-serif" font-size="14" font-weight="400">
     <tspan x="300" dy="0" fill="#F2C94C">🇻🇳 → 🇸🇪  East Meets North</tspan>
-    <tspan x="300" dy="22" fill="#AAAAAA">A Vietnamese name initialed in Viking script — two cultures woven into one mark.</tspan>
+    <tspan x="300" dy="22" fill="#AAA">A Vietnamese name initialed in Viking script — two cultures woven into one mark.</tspan>
   </text>
-  <text x="300" y="2975" fill="#888888" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="400">
+  <text x="300" y="2975" fill="#888" font-family="Inter, sans-serif" font-size="14" font-weight="400">
     <tspan x="300" dy="0" fill="#F2C94C">↗  Forward Motion</tspan>
-    <tspan x="300" dy="22" fill="#AAAAAA">The stroke always resolves downward and forward — growth, progress, the next chapter.</tspan>
+    <tspan x="300" dy="22" fill="#AAA">The stroke always resolves downward and forward — growth, progress, the next chapter.</tspan>
   </text>
 
   <!-- ============================================ -->
-  <!-- 9. TYPOGRAPHY REFERENCE -->
+  <!-- 09. TYPOGRAPHY -->
   <!-- ============================================ -->
-  <text x="200" y="3040" fill="#999" font-family="Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" letter-spacing="3">09 — TYPOGRAPHY</text>
+  <text x="200" y="3040" fill="#999" font-family="Inter, sans-serif" font-size="14" font-weight="600" letter-spacing="3">09 — TYPOGRAPHY</text>
 
-  <text x="200" y="3070" fill="#F2C94C" font-family="Inter, Helvetica, Arial, sans-serif" font-size="32" font-weight="700">Inter Bold — Headlines</text>
-  <text x="200" y="3100" fill="#CCCCCC" font-family="Inter, Helvetica, Arial, sans-serif" font-size="24" font-weight="300">Inter Light — Subheadings</text>
-  <text x="200" y="3125" fill="#888888" font-family="Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="400">Inter Regular — Body copy, descriptions, and UI text</text>
+  <text x="200" y="3075" fill="#F2C94C" font-family="Cinzel, Georgia, serif" font-size="32" font-weight="700">Cinzel Bold — Display &amp; Brand Name</text>
+  <text x="200" y="3105" fill="#CCCCCC" font-family="Cinzel, Georgia, serif" font-size="22" font-weight="400">Cinzel Regular — Section Headings</text>
+  <text x="200" y="3130" fill="#888" font-family="Inter, sans-serif" font-size="15" font-weight="400">Inter Regular — Body copy, descriptions, and UI text</text>
 
 </svg>
