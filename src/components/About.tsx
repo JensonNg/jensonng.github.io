@@ -3,6 +3,7 @@ import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { ArrowRight, Target, Users, Lightbulb, Video } from "lucide-react";
+import { Link } from "react-router-dom";
 import sonProfileImage from 'figma:asset/1e960cafd215c602f918461bdf659ed69ec10c28.png';
 
 export function About() {
@@ -69,7 +70,7 @@ export function About() {
           </div>
         </div>
 
-        {/* Bottom: Stats + What Makes Me Different — full width */}
+        {/* Bottom: Stats + What Makes Me Different – full width */}
         <div className="grid md:grid-cols-2 gap-6">
           {/* Achievement Stats */}
           <div className="glass glass-highlight rounded-xl p-6">
@@ -127,14 +128,15 @@ export function About() {
             </div>
 
             <div className="border-t border-secondary/10 pt-3">
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={() => expandAndScrollToSection('experience')}
-                className="w-full border-primary text-primary hover:bg-primary hover:text-black"
-              >
-                See My Experience <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
+              <Link to="/about#experience">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="w-full border-primary text-primary hover:bg-primary hover:text-black"
+                >
+                  See My Experience <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

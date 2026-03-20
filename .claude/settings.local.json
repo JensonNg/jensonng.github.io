@@ -18,7 +18,17 @@
       "Bash(npm --version)",
       "Bash(npm install:*)",
       "Bash(chmod +x \"/Users/sonnguyen/Claude/Portfolio for Creative Works/.claude/start-dev.sh\")",
-      "Bash(npx vite:*)"
+      "Bash(npx vite:*)",
+      "Bash(gh pr:*)",
+      "Bash(gh pr:*)",
+      "Bash(npm run:*)",
+      "Bash(python3 -c \":*)",
+      "Bash(pip3 install:*)",
+      "Bash(curl -s -X POST \"https://api.web3forms.com/create\" -H \"Content-Type: application/json\" -d '{\"\"email\"\":\"\"sonngoc.nguyen@hyperisland.se\"\"}')",
+      "Bash(find /Users/sonnguyen/Desktop /Users/sonnguyen/Downloads -maxdepth 2 -name *.jpg -o -name *.jpeg -o -name *.png -o -name *.JPG -o -name *.JPEG -o -name *.PNG)",
+      "Bash(find /Users/sonnguyen -maxdepth 4 -name *portrait* -o -name *headshot* -o -name *profile* -o -name *son*nguyen* -o -name *IMG*)",
+      "Bash(grep -iE \"\\\\.\\(jpg|jpeg|png|heic\\)$\")",
+      "Bash(gh repo:*)"
     ]
   }
 }

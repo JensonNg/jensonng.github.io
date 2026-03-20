@@ -1,120 +1,217 @@
 import { CardContent } from "./ui/card";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { ExternalLink } from "lucide-react";
 import { motion } from "motion/react";
+
+interface Metric {
+  value: string;
+  label: string;
+}
+
+interface LogoBrand {
+  name: string;
+  initials: string;
+  color: string;
+  bgFrom: string;
+  bgTo: string;
+}
+
+// Consistent logo thumbnail component
+function BrandLogo({ brand, size = "normal" }: { brand: LogoBrand; size?: "normal" | "featured" }) {
+  const height = size === "featured" ? "h-[280px]" : "h-[160px]";
+  return (
+    <div className={`${height} w-full flex items-center justify-center relative overflow-hidden`}
+      style={{ background: `linear-gradient(135deg, ${brand.bgFrom}, ${brand.bgTo})` }}
+    >
+      {/* Subtle pattern overlay */}
+      <div className="absolute inset-0 opacity-[0.06]"
+        style={{
+          backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
+          backgroundSize: '24px 24px',
+        }}
+      />
+      {/* Glow effect */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="w-32 h-32 rounded-full blur-[60px] opacity-30"
+          style={{ backgroundColor: brand.color }}
+        />
+      </div>
+      {/* Logo content */}
+      <div className="relative z-10 flex flex-col items-center gap-3">
+        <div
+          className="w-16 h-16 rounded-2xl flex items-center justify-center text-2xl font-bold shadow-lg border border-white/10"
+          style={{ backgroundColor: brand.color, color: '#000' }}
+        >
+          {brand.initials}
+        </div>
+        <span className="text-sm font-semibold tracking-wide text-white/90">{brand.name}</span>
+      </div>
+    </div>
+  );
+}
 
 export function Projects() {
   const projects = [
     {
       title: "Final UX Design Project: Asekio Web Builder",
       description: "Collaborated on UX transformation for Asekio, an AI website builder. Enhanced onboarding via user journey mapping & prototyping, laid the foundation for their modular design system, and boosted engagement through usability testing & iterative design.",
-      image: "https://images.unsplash.com/photo-1676263813382-bb5ba4b63f91?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBidWlsZGVyJTIwdXglMjBkZXNpZ24lMjBhaXxlbnwxfHx8fDE3NTc3NjI3ODB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      brand: {
+        name: "Asekio",
+        initials: "A",
+        color: "#6366f1",
+        bgFrom: "#1e1b4b",
+        bgTo: "#312e81",
+      } as LogoBrand,
       technologies: ["UX Design", "Design Systems", "Usability Testing", "AI/UX Integration"],
       period: "Mar – Jun 2024",
       organization: "Team Project",
       role: "UX Designer & Strategist",
-      quote: "Structure meets story — and strategy leads both.",
+      quote: "Structure meets story – and strategy leads both.",
       readMoreUrl: "https://www.hampusdesign.com/projekt/asekio",
-      featured: true
+      featured: true,
+      metrics: [],
     },
     {
-      title: "LingoClip x K-Pop Fandom Campaign",
-      description: "Developed the 'Speak Like Your K-Pop Idol with LingoClip' campaign — a mental-health-aware, music-driven strategy to engage global Gen Z language learners. Increased engagement through K-pop-led brand storytelling and applied 3-month digital marketing analysis to boost user acquisition.",
-      image: "https://images.unsplash.com/photo-1683533439495-dd8eec14f6df?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxrcG9wJTIwbWFya2V0aW5nJTIwY2FtcGFpZ24lMjBkaWdpdGFsfGVufDF8fHx8MTc1Nzc2Mjc2Mnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      technologies: ["Digital Marketing", "Brand Storytelling", "Gen Z Engagement", "Cultural Marketing"],
-      period: "Jan – Jun 2023",
-      organization: "Linköping University",
-      role: "Creative Strategist & Digital Marketing Lead",
-      quote: "By blending cultural relevance with emotional resonance, we turned language learning into a movement.",
+      title: "RFSL Utbildning – Digital Marketing & Communication",
+      description: "Created portfolios and general offers for the company to bring to workshops and conferences. Collaborated with clients and stakeholders to get testimonials and interviews. Designed sales materials and built brand guidelines and key visuals for the products.",
+      brand: {
+        name: "RFSL Utbildning",
+        initials: "R",
+        color: "#e040a0",
+        bgFrom: "#4a0e2e",
+        bgTo: "#2d0a1e",
+      } as LogoBrand,
+      technologies: ["Digital Marketing", "Brand Guidelines", "Sales Materials", "Stakeholder Relations"],
+      period: "Aug 2022 – Jun 2023",
+      organization: "RFSL",
+      role: "Digital Marketing & Communication",
+      quote: "Building brand visibility that amplifies voices for equal rights.",
       readMoreUrl: "#",
-      featured: false
+      featured: true,
+      metrics: [
+        { value: "2,000", label: "Website visitors" },
+        { value: "400", label: "LinkedIn followers in 3 months" },
+        { value: "300", label: "Event participants" },
+      ] as Metric[],
     },
     {
-      title: "Zero Waste Academy (Vietnam)",
-      description: "Created a two-week educational initiative to inspire waste reduction in Vietnamese schools. Tackled 79M lbs of plastic waste challenges with youth-led learning and delivered a scalable education model blending leadership and systems thinking.",
-      image: "https://images.unsplash.com/photo-1669293020268-3112a1f69eec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx6ZXJvJTIwd2FzdGUlMjBhY2FkZW15JTIwZWR1Y2F0aW9uJTIwc3VzdGFpbmFiaWxpdHl8ZW58MXx8fHwxNzU3NzYyNzY5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      technologies: ["Sustainability Education", "Systems Thinking", "Youth Leadership", "Environmental Impact"],
-      period: "Feb – Mar 2024",
-      organization: "Hyper Island",
-      role: "Project Founder & Sustainability Lead",
-      quote: "A dream rooted in five years of reflection — turned into real-world action.",
+      title: "Hanoi Pride 2019 – Internal Secretary for Communication",
+      description: "Oversaw all communication activities and controlled quality of media including images, videos, and articles. Responsible for communicating with external media outlets, resulting in significant press coverage and donor engagement.",
+      brand: {
+        name: "Hanoi Pride",
+        initials: "HP",
+        color: "#f472b6",
+        bgFrom: "#831843",
+        bgTo: "#500724",
+      } as LogoBrand,
+      technologies: ["Media Relations", "PR & Press", "Event Communication", "Campaign Management"],
+      period: "Apr 2019 – Jun 2020",
+      organization: "Hanoi Pride",
+      role: "Internal Secretary for Communication",
+      quote: "164K people reached – amplifying visibility through strategic storytelling.",
       readMoreUrl: "#",
-      featured: false
+      featured: false,
+      metrics: [
+        { value: "164K", label: "People reached on Facebook" },
+        { value: "7,000", label: "Pride Parade participants" },
+        { value: "~20", label: "News articles & interviews" },
+        { value: "~20", label: "Donors & partners" },
+      ] as Metric[],
     },
     {
-      title: "UX Research: Swedish Youth & Finance Apps",
-      description: "Conducted qualitative research on how Swedish youth interact with finance apps during economic uncertainty. Mapped barriers and motivators in digital banking usage and provided design recommendations grounded in empathy and behavioral insights.",
-      image: "https://images.unsplash.com/photo-1633431871820-ca72e0da2e2b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1eCUyMHJlc2VhcmNoJTIwZmluYW5jZSUyMGFwcCUyMG1vYmlsZXxlbnwxfHx8fDE3NTc3NjI3NjR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      technologies: ["UX Research", "Behavioral Insights", "User Journey Mapping", "Qualitative Analysis"],
-      period: "Oct – Nov 2023",
-      organization: "Self-led",
-      role: "UX Researcher",
-      quote: "I designed for my own demographic — with curiosity, care, and clarity.",
+      title: "Seed Planter – Marketing Lead",
+      description: "Established and maintained Facebook fanpage and monitored campaigns. Designed and implemented strategic plans for social enterprise projects. Recruited delegates for workshops, supervised volunteers, and prepared content and press for stakeholders.",
+      brand: {
+        name: "Seed Planter",
+        initials: "SP",
+        color: "#4ade80",
+        bgFrom: "#052e16",
+        bgTo: "#14532d",
+      } as LogoBrand,
+      technologies: ["Marketing Strategy", "Social Media", "Content Creation", "Stakeholder Communication"],
+      period: "Jun 2020 – Feb 2021",
+      organization: "Seed Planter",
+      role: "Marketing Lead",
+      quote: "Revamped branding and led teams for impactful social enterprise projects.",
       readMoreUrl: "#",
-      featured: false
+      featured: false,
+      metrics: [
+        { value: "350K", label: "People reached on Facebook" },
+        { value: "6,000", label: "Organic likes & follows" },
+        { value: "1,500", label: "Event participants/year" },
+      ] as Metric[],
     },
     {
-      title: "Ethical Investment Feature for Banking App",
-      description: "Co-created an in-app feature to help users identify investment funds aligned with personal values. Applied rapid ideation (Crazy 8s) + user testing cycles and advocated for transparency and ethical decision-making in fintech UX.",
-      image: "https://images.unsplash.com/photo-1592698765727-387c9464cd7f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdXN0YWluYWJsZSUyMGludmVzdG1lbnQlMjBiYW5raW5nJTIwZXRoaWNhbHxlbnwxfHx8fDE3NTc3NjI3Njd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      technologies: ["UX Design", "Ethical Design", "Rapid Prototyping", "User Testing"],
-      period: "Nov – Dec 2023",
-      organization: "Team Design Sprint",
-      role: "UX Designer & Researcher",
-      quote: "Sustainable investing needs sustainable design thinking.",
+      title: "Hanoi Queer – Communication Team Leader",
+      description: "Allocated human resources and supported project communication. Supervised all communication activities, controlled quality of media including images, videos, and articles. Managed marketing campaigns and the organization's website.",
+      brand: {
+        name: "Hanoi Queer",
+        initials: "HQ",
+        color: "#c084fc",
+        bgFrom: "#3b0764",
+        bgTo: "#581c87",
+      } as LogoBrand,
+      technologies: ["Campaign Management", "Content Quality", "Social Media", "Website Management"],
+      period: "Communication Team",
+      organization: "Hanoi Queer",
+      role: "Communication Team Leader",
+      quote: "150K people reached – building community through strategic digital presence.",
       readMoreUrl: "#",
-      featured: false
+      featured: false,
+      metrics: [
+        { value: "150K", label: "People reached on Facebook" },
+        { value: "20,000", label: "Organic likes & follows" },
+        { value: "51", label: "Events & campaigns" },
+        { value: "1,100", label: "Event participants/year" },
+      ] as Metric[],
     },
     {
-      title: "Strategic Plan Handbook: Raoul Wallenberg Academy",
-      description: "Led the creation of a strategic sustainability playbook for the Cube Project, using experiential and participatory design. Analyzed business risks and circular economy opportunities, co-created a vision aligned with RWA's educational mission.",
-      image: "https://images.unsplash.com/photo-1587822766378-e47b139c56ad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHJhdGVnaWMlMjBwbGFubmluZyUyMGhhbmRib29rJTIwYWNhZGVteXxlbnwxfHx8fDE3NTc3NjI3NzJ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      technologies: ["Strategic Planning", "Sustainability Strategy", "Participatory Design", "Circular Economy"],
-      period: "Nov – Dec 2023",
-      organization: "Hyper Island",
-      role: "Lead Strategist",
-      quote: "Clarity, community, and circularity guided our plan.",
+      title: "GreenHub – Communication Officer",
+      description: "Allocated human resources and supported project communication for environmental initiatives. Supervised communication activities, controlled quality of media, and managed marketing campaigns while building a new website for the organization.",
+      brand: {
+        name: "GreenHub",
+        initials: "GH",
+        color: "#22d3ee",
+        bgFrom: "#042f2e",
+        bgTo: "#134e4a",
+      } as LogoBrand,
+      technologies: ["Environmental Communication", "Digital Marketing", "Website Development", "Storytelling"],
+      period: "Sep 2019 – Jul 2020",
+      organization: "GreenHub",
+      role: "Communication Officer",
+      quote: "Elevating ethnic minority start-ups through digital marketing and impactful storytelling.",
       readMoreUrl: "#",
-      featured: false
+      featured: false,
+      metrics: [
+        { value: "65K", label: "People reached on Facebook" },
+        { value: "3,000", label: "Organic likes & follows" },
+        { value: "500", label: "Event participants/year" },
+      ] as Metric[],
     },
     {
-      title: "UX Ethics Case Study: Time-Saving Bias in Foodora",
-      description: "Investigated how speed-focused UX design can unintentionally harm user trust. Used Foodora as a live case and offered ethical design guidelines to balance usability with transparency.",
-      image: "https://images.unsplash.com/photo-1581019055756-93b5361f9536?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1eCUyMGV0aGljcyUyMGNhc2UlMjBzdHVkeSUyMGRlc2lnbnxlbnwxfHx8fDE3NTc3NjI3NzR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      technologies: ["UX Ethics", "Case Study Research", "Design Analysis", "User Trust"],
-      period: "Jan – Feb 2024",
-      organization: "Independent Study",
-      role: "UX Ethics Researcher",
-      quote: "Speed should never compromise trust — but design should balance both.",
+      title: "Ara-Tay Coffee – Digital Marketing Manager",
+      description: "Created portfolios and applications to call for sponsorship. Collected stories and information from local people and stakeholders. Managed marketing campaigns and built brand guidelines and key visuals for the products.",
+      brand: {
+        name: "Ara-Tay Coffee",
+        initials: "AT",
+        color: "#f59e0b",
+        bgFrom: "#451a03",
+        bgTo: "#78350f",
+      } as LogoBrand,
+      technologies: ["Brand Guidelines", "Visual Identity", "Sponsorship", "Community Storytelling"],
+      period: "Digital Marketing",
+      organization: "Ara-Tay Coffee",
+      role: "Digital Marketing Manager",
+      quote: "Building brand identity from the ground up, rooted in local stories and community.",
       readMoreUrl: "#",
-      featured: false
+      featured: false,
+      metrics: [
+        { value: "8,000", label: "People reached on Facebook" },
+        { value: "1,681", label: "Organic likes & follows" },
+        { value: "400", label: "Event participants/year" },
+      ] as Metric[],
     },
-    {
-      title: "Data Analysis: IKEA's Life at Home",
-      description: "Analyzed IKEA's 'Life at Home' dataset using Python and Looker. Uncovered behavioral patterns and living trends, framed insights into actionable design opportunities with empathy-driven approach.",
-      image: "https://images.unsplash.com/photo-1701076814704-01670e45d46f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwYW5hbHlzaXMlMjBpa2VhJTIwaG9tZSUyMHJlc2VhcmNofGVufDF8fHx8MTc1Nzc2Mjc3N3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      technologies: ["Python", "Looker", "Data Analysis", "Behavioral Research"],
-      period: "Feb – Apr 2024",
-      organization: "Independent Research",
-      role: "Data & UX Researcher",
-      quote: "Data becomes insight when translated with empathy.",
-      readMoreUrl: "#",
-      featured: false
-    },
-    {
-      title: "Internal Comms Strategy for Sustainable Leadership",
-      description: "Created an internal communication framework for RWA's Cube Project to strengthen stakeholder alignment. Mapped internal communication flows and proposed tactical and strategic content to empower leadership.",
-      image: "https://images.unsplash.com/photo-1591202928585-ae660165f73c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbnRlcm5hbCUyMGNvbW11bmljYXRpb25zJTIwc3RyYXRlZ3l8ZW58MXx8fHwxNzU3NzYyNzgzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      technologies: ["Internal Communications", "Strategic Planning", "Stakeholder Alignment", "Leadership Development"],
-      period: "Jan – Feb 2024",
-      organization: "Raoul Wallenberg Academy",
-      role: "Communications Strategist",
-      quote: "Change starts within — communication is the catalyst.",
-      readMoreUrl: "#",
-      featured: false
-    }
   ];
 
   const containerVariants = {
@@ -128,13 +225,13 @@ export function Projects() {
   };
 
   const itemVariants = {
-    hidden: { 
-      opacity: 0, 
+    hidden: {
+      opacity: 0,
       y: 20,
       scale: 0.95
     },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       scale: 1,
       transition: {
@@ -163,7 +260,7 @@ export function Projects() {
         initial="hidden"
         animate="visible"
       >
-        {/* Featured project — full width */}
+        {/* Featured projects – full width */}
         {projects.filter(p => p.featured).map((project, index) => (
           <motion.div
             key={index}
@@ -175,18 +272,7 @@ export function Projects() {
               variants={hoverVariants}
             >
               <div className="relative overflow-hidden">
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.3 }}
-                  className="relative"
-                >
-                  <ImageWithFallback
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full object-cover transition-transform duration-500 h-[280px]"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
-                </motion.div>
+                <BrandLogo brand={project.brand} size="featured" />
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -209,6 +295,22 @@ export function Projects() {
                     </div>
                   </div>
                   <p className="text-xs text-muted-foreground leading-relaxed">{project.description}</p>
+
+                  {/* Metrics */}
+                  {project.metrics.length > 0 && (
+                    <div className="grid grid-cols-3 gap-2">
+                      {project.metrics.map((metric, i) => (
+                        <div
+                          key={i}
+                          className="text-center p-2 rounded-lg bg-primary/5 border border-primary/10"
+                        >
+                          <div className="text-sm font-bold text-primary">{metric.value}</div>
+                          <div className="text-[10px] text-muted-foreground leading-tight">{metric.label}</div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
                   <div className="space-y-2">
                     <div className="text-xs font-medium">Role: {project.role}</div>
                     <blockquote className="text-xs italic text-primary border-l-2 border-primary/30 pl-3">
@@ -227,28 +329,25 @@ export function Projects() {
                     ))}
                   </div>
                 </div>
-                <div className="flex gap-2 mt-4">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="text-xs h-7 w-full hover:bg-primary hover:text-primary-foreground transition-all duration-200"
-                    onClick={() => {
-                      if (project.readMoreUrl !== '#') {
-                        window.open(project.readMoreUrl, '_blank', 'noopener,noreferrer');
-                      }
-                    }}
-                    disabled={project.readMoreUrl === '#'}
-                  >
-                    <ExternalLink className="w-3 h-3 mr-1" />
-                    {project.readMoreUrl === '#' ? 'Coming Soon' : 'Read More'}
-                  </Button>
-                </div>
+                {project.readMoreUrl !== '#' && (
+                  <div className="flex gap-2 mt-4">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="text-xs h-7 w-full hover:bg-primary hover:text-primary-foreground transition-all duration-200"
+                      onClick={() => window.open(project.readMoreUrl, '_blank', 'noopener,noreferrer')}
+                    >
+                      <ExternalLink className="w-3 h-3 mr-1" />
+                      Read More
+                    </Button>
+                  </div>
+                )}
               </CardContent>
             </motion.div>
           </motion.div>
         ))}
 
-        {/* Non-featured projects — 2-column grid on desktop */}
+        {/* Non-featured projects – 2-column grid on desktop */}
         <div className="grid md:grid-cols-2 gap-6">
         {projects.filter(p => !p.featured).map((project, index) => (
           <motion.div
@@ -261,18 +360,7 @@ export function Projects() {
               variants={hoverVariants}
             >
               <div className="relative overflow-hidden">
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.3 }}
-                  className="relative"
-                >
-                  <ImageWithFallback
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full object-cover transition-transform duration-500 h-[160px]"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
-                </motion.div>
+                <BrandLogo brand={project.brand} size="normal" />
               </div>
 
               <CardContent className="p-4">
@@ -289,6 +377,21 @@ export function Projects() {
                     {project.description}
                   </p>
 
+                  {/* Metrics */}
+                  {project.metrics.length > 0 && (
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                      {project.metrics.map((metric, i) => (
+                        <div
+                          key={i}
+                          className="text-center p-2 rounded-lg bg-primary/5 border border-primary/10"
+                        >
+                          <div className="text-sm font-bold text-primary">{metric.value}</div>
+                          <div className="text-[10px] text-muted-foreground leading-tight">{metric.label}</div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
                   <div className="space-y-2">
                     <div className="text-xs font-medium">Role: {project.role}</div>
                     <blockquote className="text-xs italic text-primary border-l-2 border-primary/30 pl-3">
@@ -309,22 +412,19 @@ export function Projects() {
                   </div>
                 </div>
 
-                <div className="flex gap-2 mt-4">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="text-xs h-7 w-full hover:bg-primary hover:text-primary-foreground transition-all duration-200"
-                    onClick={() => {
-                      if (project.readMoreUrl !== '#') {
-                        window.open(project.readMoreUrl, '_blank', 'noopener,noreferrer');
-                      }
-                    }}
-                    disabled={project.readMoreUrl === '#'}
-                  >
-                    <ExternalLink className="w-3 h-3 mr-1" />
-                    {project.readMoreUrl === '#' ? 'Coming Soon' : 'Read More'}
-                  </Button>
-                </div>
+                {project.readMoreUrl !== '#' && (
+                  <div className="flex gap-2 mt-4">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="text-xs h-7 w-full hover:bg-primary hover:text-primary-foreground transition-all duration-200"
+                      onClick={() => window.open(project.readMoreUrl, '_blank', 'noopener,noreferrer')}
+                    >
+                      <ExternalLink className="w-3 h-3 mr-1" />
+                      Read More
+                    </Button>
+                  </div>
+                )}
               </CardContent>
             </motion.div>
           </motion.div>
