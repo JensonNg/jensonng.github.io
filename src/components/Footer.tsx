@@ -15,9 +15,7 @@ export function Footer() {
             <div className="flex items-start gap-2 text-muted-foreground">
               <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
               <address className="not-italic">
-                Vega, Handen<br />
-                13648, Stockholm<br />
-                Sweden
+                Stockholm, Sweden
               </address>
             </div>
           </div>
