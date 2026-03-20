@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2400" viewBox="0 0 1600 2400">
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="3100" viewBox="0 0 1600 3100">
   <defs>
     <!-- Brand Colors -->
     <linearGradient id="gold-gradient" x1="0" y1="0" x2="1" y2="1">
@@ -244,12 +244,78 @@
   <text x="1180" y="2165" text-anchor="middle" fill="#222222" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10">Body Text</text>
 
   <!-- ============================================ -->
-  <!-- 8. TYPOGRAPHY REFERENCE -->
+  <!-- 8. BRAND STORY — THE MEANING BEHIND THE MARK -->
   <!-- ============================================ -->
-  <text x="200" y="2260" fill="#999" font-family="Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" letter-spacing="3">08 — TYPOGRAPHY</text>
+  <text x="200" y="2260" fill="#999" font-family="Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" letter-spacing="3">08 — BRAND STORY</text>
 
-  <text x="200" y="2300" fill="#F2C94C" font-family="Inter, Helvetica, Arial, sans-serif" font-size="36" font-weight="700">Inter Bold — Headlines</text>
-  <text x="200" y="2340" fill="#CCCCCC" font-family="Inter, Helvetica, Arial, sans-serif" font-size="28" font-weight="300">Inter Light — Subheadings</text>
-  <text x="200" y="2375" fill="#888888" font-family="Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="400">Inter Regular — Body copy, descriptions, and UI text</text>
+  <!-- Large rune illustration -->
+  <g transform="translate(200, 2290)">
+    <path d="M0 0 L60 70 L0 70 L60 160" stroke="url(#gold-gradient)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.15"/>
+  </g>
+
+  <!-- Title -->
+  <text x="300" y="2320" fill="#F2C94C" font-family="Inter, Helvetica, Arial, sans-serif" font-size="28" font-weight="700">The Sowilo Rune — ᛊ</text>
+  <text x="300" y="2348" fill="#CCCCCC" font-family="Inter, Helvetica, Arial, sans-serif" font-size="18" font-weight="300" font-style="italic">Old Norse: "Sol" — The Sun</text>
+
+  <!-- Paragraph 1 -->
+  <text x="300" y="2395" fill="#AAAAAA" font-family="Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="400" letter-spacing="0.3">
+    <tspan x="300" dy="0">The mark at the heart of this identity is Sowilo (ᛊ), a rune from the Elder Futhark — the oldest</tspan>
+    <tspan x="300" dy="24">runic alphabet used across Scandinavia over a thousand years ago. Sowilo represents the sun,</tspan>
+    <tspan x="300" dy="24">and its angular, lightning-bolt form carries meanings of energy, victory, and forward motion.</tspan>
+  </text>
+
+  <!-- Paragraph 2 -->
+  <text x="300" y="2480" fill="#AAAAAA" font-family="Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="400" letter-spacing="0.3">
+    <tspan x="300" dy="0">For Son, this symbol bridges two worlds. It is the letter S — his initial — rendered in the</tspan>
+    <tspan x="300" dy="24">language of his adopted home, Sweden. A Vietnamese storyteller who found his creative voice</tspan>
+    <tspan x="300" dy="24">in Stockholm, Son chose the Sowilo rune because it speaks to who he is: someone who brings</tspan>
+    <tspan x="300" dy="24">light and momentum to every brand he touches.</tspan>
+  </text>
+
+  <!-- Paragraph 3 -->
+  <text x="300" y="2585" fill="#AAAAAA" font-family="Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="400" letter-spacing="0.3">
+    <tspan x="300" dy="0">The shape itself tells a story of transformation — a single stroke that changes direction twice,</tspan>
+    <tspan x="300" dy="24">moving upward, pivoting, and surging forward again. Much like a growth marketing career built</tspan>
+    <tspan x="300" dy="24">across continents, cultures, and industries — from grassroots NGOs in Hanoi to global brands</tspan>
+    <tspan x="300" dy="24">in Stockholm — the mark embodies resilience, adaptability, and the power of a well-told story.</tspan>
+  </text>
+
+  <!-- Paragraph 4 -->
+  <text x="300" y="2695" fill="#AAAAAA" font-family="Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="400" letter-spacing="0.3">
+    <tspan x="300" dy="0">Set in Solar Gold against deep black, the Sowilo rune becomes both a personal signature and</tspan>
+    <tspan x="300" dy="24">a brand promise: clarity through creativity, impact through intention, and always — forward.</tspan>
+  </text>
+
+  <!-- Divider -->
+  <line x1="300" y1="2760" x2="1300" y2="2760" stroke="#F2C94C" stroke-opacity="0.15" stroke-width="1"/>
+
+  <!-- Key meanings -->
+  <text x="300" y="2795" fill="#F2C94C" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" letter-spacing="2">KEY SYMBOLISM</text>
+
+  <text x="300" y="2825" fill="#888888" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="400">
+    <tspan x="300" dy="0" fill="#F2C94C">ᛊ  Sun &amp; Light</tspan>
+    <tspan x="300" dy="22" fill="#AAAAAA">Sowilo literally means "sun" — illumination, warmth, and the power to make things grow.</tspan>
+  </text>
+  <text x="300" y="2875" fill="#888888" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="400">
+    <tspan x="300" dy="0" fill="#F2C94C">⚡  Energy &amp; Momentum</tspan>
+    <tspan x="300" dy="22" fill="#AAAAAA">The angular lightning-bolt shape conveys kinetic energy — campaigns that move, content that strikes.</tspan>
+  </text>
+  <text x="300" y="2925" fill="#888888" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="400">
+    <tspan x="300" dy="0" fill="#F2C94C">🇻🇳 → 🇸🇪  East Meets North</tspan>
+    <tspan x="300" dy="22" fill="#AAAAAA">A Vietnamese name initialed in Viking script — two cultures woven into one mark.</tspan>
+  </text>
+  <text x="300" y="2975" fill="#888888" font-family="Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="400">
+    <tspan x="300" dy="0" fill="#F2C94C">↗  Forward Motion</tspan>
+    <tspan x="300" dy="22" fill="#AAAAAA">The stroke always resolves downward and forward — growth, progress, the next chapter.</tspan>
+  </text>
+
+  <!-- ============================================ -->
+  <!-- 9. TYPOGRAPHY REFERENCE -->
+  <!-- ============================================ -->
+  <text x="200" y="3040" fill="#999" font-family="Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" letter-spacing="3">09 — TYPOGRAPHY</text>
+
+  <text x="200" y="3070" fill="#F2C94C" font-family="Inter, Helvetica, Arial, sans-serif" font-size="32" font-weight="700">Inter Bold — Headlines</text>
+  <text x="200" y="3100" fill="#CCCCCC" font-family="Inter, Helvetica, Arial, sans-serif" font-size="24" font-weight="300">Inter Light — Subheadings</text>
+  <text x="200" y="3125" fill="#888888" font-family="Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="400">Inter Regular — Body copy, descriptions, and UI text</text>
 
 </svg>
