@@ -40,7 +40,7 @@ export function AboutPage() {
       <SectionWrapper
         sectionId="about"
         title="Who I Am"
-        description="Growth Marketing Strategist bridging conversion-focused copy with sustainable brand building"
+        description="Growth Marketing Manager bridging conversion-focused copy with sustainable brand building"
         badge="About"
         defaultExpanded={true}
       >

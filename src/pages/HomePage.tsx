@@ -1,4 +1,5 @@
 import { Hero } from "../components/Hero";
+import { Testimonials } from "../components/Testimonials";
 import { ContactCTA } from "../components/ContactCTA";
 import { ArrowRight, Briefcase, GraduationCap, Download, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -85,6 +86,9 @@ export function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Testimonials */}
+      <Testimonials />
 
       {/* Contact CTA */}
       <ContactCTA />

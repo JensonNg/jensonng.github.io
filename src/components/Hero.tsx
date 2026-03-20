@@ -11,7 +11,7 @@ function scrollToSection(id: string) {
 // Animated Role Text – large, bold, accent colored
 function AnimatedRoleText() {
   const roles = [
-    "Growth Marketing Strategist",
+    "Growth Marketing Manager",
     "Content Creator & Video Editor",
     "UX Writing Expert",
     "Communications Strategist",
@@ -85,7 +85,7 @@ function VideoModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
           width="100%"
           height="100%"
           src="https://www.youtube.com/embed/s7e06VN60JY?rel=0&modestbranding=1&autoplay=1"
-          title="Son Nguyen - Growth Marketing Strategist"
+          title="Son Nguyen - Growth Marketing Manager"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"

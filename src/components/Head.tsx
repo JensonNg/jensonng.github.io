@@ -8,9 +8,9 @@ interface HeadProps {
 }
 
 export function Head({ 
-  title = "Son Nguyen - Growth Marketing Strategist | Sustainable Brand Growth",
+  title = "Son Nguyen - Growth Marketing Manager | Sustainable Brand Growth",
   description = "Welcome to my journey where growth marketing meets sustainable impact. Expert in UX Writing & Communications Strategy, helping brands grow authentically while making a positive difference. 🌱📈",
-  image = "https://images.unsplash.com/photo-1748297816227-1e5f3e602a64?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtYXJrZXRpbmclMjBzdHJhdGVnaXN0JTIwcG9ydHJhaXQlMjBncmVlbnxlbnwxfHx8fDE3NTc3NzA3NDl8MA&ixlib=rb-4.1.0&q=80&w=1200",
+  image = "/images/og-thumbnail.png",
   url = window.location.href
 }: HeadProps) {
   
@@ -34,7 +34,7 @@ export function Head({
 
     // Basic meta tags
     setMetaTag('description', description, false);
-    setMetaTag('keywords', 'Growth Marketing Strategist, UX Writing, Communications Strategy, Sustainable Marketing, Brand Growth, Environmental Science, Stockholm, Son Nguyen', false);
+    setMetaTag('keywords', 'Growth Marketing Manager, UX Writing, Communications Strategy, Sustainable Marketing, Brand Growth, Environmental Science, Stockholm, Son Nguyen', false);
     setMetaTag('author', 'Son Nguyen', false);
 
     // Open Graph meta tags (Facebook, LinkedIn, etc.)
@@ -63,7 +63,7 @@ export function Head({
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Son Nguyen",
-      "jobTitle": "Growth Marketing Strategist",
+      "jobTitle": "Growth Marketing Manager",
       "description": description,
       "url": url,
       "image": image,
