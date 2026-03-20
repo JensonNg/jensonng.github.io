@@ -34,7 +34,7 @@ export function About() {
           {/* Left Side - Content */}
           <div className="space-y-6">
             <p className="text-muted-foreground text-lg leading-relaxed">
-              I'm a Growth Marketing Strategist who bridges conversion-focused copy with sustainable brand building.
+              I'm a Growth Marketing Manager who bridges conversion-focused copy with sustainable brand building.
               With expertise in UX Writing + Communications Strategy, I help purpose-driven brands scale authentically.
             </p>
 
@@ -62,7 +62,7 @@ export function About() {
               <div className="relative w-full aspect-[3/4] overflow-hidden rounded-3xl shadow-lg bg-gradient-to-br from-primary/5 to-secondary/5">
                 <ImageWithFallback
                   src={sonProfileImage}
-                  alt="Son Nguyen - Growth Marketing Strategist"
+                  alt="Son Nguyen - Growth Marketing Manager"
                   className="w-full h-full object-cover object-top rounded-3xl"
                 />
               </div>
