@@ -1,87 +1,140 @@
+import { Card, CardContent } from "./ui/card";
 import { Badge } from "./ui/badge";
-
-const stats = [
-  { label: "Years of experience", value: "3+" },
-  { label: "Brands worked with", value: "15+" },
-  { label: "Content pieces created", value: "200+" },
-  { label: "Countries reached", value: "10+" },
-];
-
-const differentiators = [
-  {
-    title: "Sustainability-first mindset",
-    description:
-      "I combine marketing expertise with a genuine passion for environmental impact, helping brands communicate their sustainability story authentically.",
-  },
-  {
-    title: "Data meets creativity",
-    description:
-      "I use analytics to inform creative decisions — ensuring every campaign is both compelling and measurable.",
-  },
-  {
-    title: "Multicultural fluency",
-    description:
-      "With roots in Vietnam and experience across Europe, I bring cross-cultural insight to global marketing strategies.",
-  },
-];
+import { Button } from "./ui/button";
+import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { ArrowRight, Target, Users, Lightbulb, Video } from "lucide-react";
+import sonProfileImage from 'figma:asset/1e960cafd215c602f918461bdf659ed69ec10c28.png';
 
 export function About() {
+  const achievements = [
+    { number: "6+", label: "Years Experience" },
+    { number: "1500+", label: "Blog Followers" },
+    { number: "8+", label: "Organizations" },
+    { number: "3", label: "Languages" }
+  ];
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    element?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const expandAndScrollToSection = (sectionId: string) => {
+    // Dispatch custom event to expand the section
+    const expandEvent = new CustomEvent('expandSection', {
+      detail: { sectionId }
+    });
+    window.dispatchEvent(expandEvent);
+  };
+
   return (
-    <div className="space-y-8">
-      {/* Bio */}
-      <div className="grid md:grid-cols-3 gap-8">
-        <div className="md:col-span-2 space-y-4">
-          <p className="text-muted-foreground leading-relaxed">
-            I'm a Growth Marketing Strategist with a background in Environmental Science and
-            Communications. I specialize in helping sustainable and purpose-driven brands build
-            meaningful connections with their audiences through strategic content, data-driven
-            campaigns, and authentic storytelling.
-          </p>
-          <p className="text-muted-foreground leading-relaxed">
-            Currently based in Stockholm, Sweden, I've worked with brands across multiple
-            industries — from clean tech startups to established sustainability-focused companies —
-            helping them grow their digital presence and convert audiences into advocates.
-          </p>
-        </div>
-        <div className="space-y-2">
-          <div className="text-sm text-muted-foreground">Based in</div>
-          <div className="font-medium">Stockholm, Sweden</div>
-          <div className="text-sm text-muted-foreground mt-4">Languages</div>
-          <div className="flex flex-wrap gap-2">
-            {["English", "Vietnamese", "Swedish (basic)"].map((lang) => (
-              <Badge key={lang} variant="outline" className="text-xs">
-                {lang}
-              </Badge>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Stats */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        {stats.map((stat) => (
-          <div key={stat.label} className="rounded-lg border border-border p-4 text-center">
-            <div className="text-2xl font-bold text-primary">{stat.value}</div>
-            <div className="text-xs text-muted-foreground mt-1">{stat.label}</div>
-          </div>
-        ))}
-      </div>
-
-      {/* Differentiators */}
-      <div>
-        <h3 className="font-semibold mb-4">What makes me different?</h3>
-        <div className="grid md:grid-cols-3 gap-4">
-          {differentiators.map((item) => (
-            <div
-              key={item.title}
-              className="rounded-lg border border-border p-4 hover:border-primary/50 transition-colors"
-            >
-              <h4 className="font-medium text-sm mb-2">{item.title}</h4>
-              <p className="text-xs text-muted-foreground leading-relaxed">{item.description}</p>
+    <div className="p-6">
+        <div className="grid md:grid-cols-2 gap-12 items-start">
+          {/* Left Side - Content */}
+          <div className="space-y-6">
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              I'm a Growth Marketing Strategist who bridges conversion-focused copy with sustainable brand building. 
+              With expertise in UX Writing + Communications Strategy, I help purpose-driven brands scale authentically.
+            </p>
+            
+            <div className="space-y-4">
+              <h3 className="text-xl">
+                My <span className="bg-gradient-to-r from-secondary to-tertiary bg-clip-text text-transparent">Creative Approach</span>
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                I combine UX Writing principles with growth strategy to create messaging that converts and connects. 
+                At Mitigram, I've built comprehensive communication hierarchies that drive user engagement while 
+                maintaining authentic brand voice across all platforms.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                My environmental science background gives me a unique lens for translating complex concepts into 
+                compelling, actionable brand stories. I specialize in sustainable growth strategies for conscious brands, 
+                leveraging user psychology to craft conversion-focused copy that resonates with purpose-driven consumers. ✨
+              </p>
             </div>
-          ))}
+          </div>
+
+          {/* Right Side - Image + Stats + CTA */}
+          <div className="space-y-6">
+            {/* Profile Image */}
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-3xl transform rotate-3"></div>
+              <div className="relative w-full aspect-[4/5] max-h-[400px] overflow-hidden rounded-3xl shadow-lg bg-gradient-to-br from-primary/5 to-secondary/5">
+                <ImageWithFallback
+                  src={sonProfileImage}
+                  alt="Son Nguyen - Growth Marketing Strategist"
+                  className="w-full h-full object-cover rounded-3xl"
+                />
+              </div>
+            </div>
+
+            {/* Achievement Stats */}
+            <div className="glass glass-highlight rounded-xl p-4">
+              <h4 className="text-sm font-medium text-foreground text-center mb-4">My Impact by Numbers</h4>
+              <div className="grid grid-cols-2 gap-4">
+                {achievements.map((achievement, index) => (
+                  <div key={index} className="text-center">
+                    <div className="text-2xl text-primary font-bold">
+                      {achievement.number}
+                    </div>
+                    <p className="text-xs text-muted-foreground">
+                      {achievement.label}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* What Makes Me Different */}
+            <div className="glass glass-highlight rounded-xl p-4 space-y-4">
+              <h4 className="text-sm font-medium text-foreground">What makes me different?</h4>
+              
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <Video className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-xs font-medium text-foreground">Content Creation & Video Editing</p>
+                    <p className="text-xs text-muted-foreground">Short-form video, Reels, and visual storytelling</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-3">
+                  <Target className="w-4 h-4 text-secondary flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-xs font-medium text-foreground">Strategic UX Writing</p>
+                    <p className="text-xs text-muted-foreground">Converting copy that connects with users</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-3">
+                  <Lightbulb className="w-4 h-4 text-tertiary flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-xs font-medium text-foreground">Sustainable Growth Focus</p>
+                    <p className="text-xs text-muted-foreground">Long-term brand building over quick wins</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-3">
+                  <Users className="w-4 h-4 text-quaternary flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-xs font-medium text-foreground">Environmental Science Background</p>
+                    <p className="text-xs text-muted-foreground">Complex ideas made simple & compelling</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border-t border-secondary/10 pt-3">
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  onClick={() => expandAndScrollToSection('experience')}
+                  className="w-full border-primary text-primary hover:bg-primary hover:text-white"
+                >
+                  See My Experience <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
     </div>
   );
 }

@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Read(//usr/local/bin/**)",
+      "Read(//usr/**)",
+      "Bash(/dev/null ls:*)",
+      "Bash(echo $PATH)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(command -v brew)",
+      "Bash(curl -fsSL https://nodejs.org/dist/v22.15.0/node-v22.15.0-darwin-x64.tar.gz -o /tmp/node.tar.gz)",
+      "Bash(mkdir -p ~/local)",
+      "Bash(tar xzf:*)",
+      "Bash(ln -sf ~/local/node-v22.15.0-darwin-x64 ~/local/node)",
+      "Bash(~/local/node/bin/node --version)",
+      "Bash(~/local/node/bin/npm --version)",
+      "Bash(export PATH=\"$HOME/local/node/bin:$PATH\")",
+      "Bash(npm --version)",
+      "Bash(npm install:*)",
+      "Bash(chmod +x \"/Users/sonnguyen/Claude/Portfolio for Creative Works/.claude/start-dev.sh\")",
+      "Bash(npx vite:*)"
+    ]
+  }
+}
