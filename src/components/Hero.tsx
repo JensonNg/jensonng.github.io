@@ -8,40 +8,16 @@ function scrollToSection(id: string) {
   element?.scrollIntoView({ behavior: 'smooth' });
 }
 
-// Animated Role Text – large, bold, accent colored
-function AnimatedRoleText() {
-  const roles = [
-    "Growth Marketing Manager",
-    "Content Creator & Video Editor",
-    "UX Writing Expert",
-    "Communications Strategist",
-  ];
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsAnimating(true);
-      setTimeout(() => {
-        setCurrentIndex((prev) => (prev + 1) % roles.length);
-        setIsAnimating(false);
-      }, 400);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
-
+// Static role title with supporting specialties
+function RoleTitle() {
   return (
-    <div className="h-[2.6em] overflow-hidden relative">
-      <span
-        className={`
-          block bg-gradient-to-r from-[#f2994a] to-[#f2c94c] bg-clip-text text-transparent
-          transition-all duration-400 ease-out
-          ${isAnimating ? 'translate-y-full opacity-0' : 'translate-y-0 opacity-100'}
-        `}
-      >
-        {roles[currentIndex]}
+    <div className="space-y-2">
+      <span className="block bg-gradient-to-r from-[#f2994a] to-[#f2c94c] bg-clip-text text-transparent">
+        Growth Marketing Manager
       </span>
+      <p className="text-sm md:text-base text-muted-foreground tracking-wide">
+        Content Strategy · UX Writing · Brand Communications
+      </p>
     </div>
   );
 }
@@ -102,7 +78,7 @@ export function Hero() {
 
   return (
     <>
-      <section id="hero" className="min-h-screen flex items-center justify-center px-4 py-20 relative">
+      <section id="hero" className="min-h-[85vh] flex items-center justify-center px-4 py-16 relative">
         {/* Subtle grid background */}
         <div className="absolute inset-0 opacity-[0.04] pointer-events-none"
           style={{
@@ -166,9 +142,9 @@ export function Hero() {
                 </h1>
               </div>
 
-              {/* Animated Role */}
+              {/* Role Title */}
               <div className="text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-bold">
-                <AnimatedRoleText />
+                <RoleTitle />
               </div>
 
               {/* Tagline */}
@@ -269,7 +245,7 @@ export function Hero() {
           </div>
 
           {/* Scroll indicator */}
-          <div className="flex justify-center mt-12">
+          <div className="flex justify-center mt-6">
             <button
               onClick={() => scrollToSection('explore')}
               className="p-2 hover:bg-muted rounded-full transition-colors animate-bounce"

@@ -1,12 +1,13 @@
 import { About } from "../components/About";
 import { Education } from "../components/Education";
 import { ExperienceTimeline } from "../components/ExperienceTimeline";
-import { Skills } from "../components/Skills";
+
 import { CVSection } from "../components/CVSection";
 import { SectionWrapper } from "../components/SectionWrapper";
 import { ContactCTA } from "../components/ContactCTA";
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
+import { ArrowRight, Zap } from "lucide-react";
 
 export function AboutPage() {
   const location = useLocation();
@@ -47,13 +48,31 @@ export function AboutPage() {
         <About />
       </SectionWrapper>
 
+      {/* Brand Book Callout */}
+      <div className="container mx-auto px-4 py-6">
+        <Link to="/brand-book" className="block">
+          <div className="glass glass-highlight rounded-2xl p-6 md:p-8 flex items-center gap-6 hover:border-primary/40 transition-all group max-w-4xl mx-auto">
+            <div className="p-3 rounded-xl bg-primary/10 text-primary flex-shrink-0">
+              <Zap className="w-6 h-6" />
+            </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="font-semibold text-lg">The Sowilo Mark — Personal Brand Identity</h3>
+              <p className="text-sm text-muted-foreground mt-1">
+                Norse mythology meets Vietnamese heritage. Explore my complete brand system with logo variations, color palette, typography, and narrative.
+              </p>
+            </div>
+            <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0" />
+          </div>
+        </Link>
+      </div>
+
       {/* Education */}
       <SectionWrapper
         sectionId="education"
         title="Education"
         description="Academic background in Environmental Science and Creative Writing"
         badge="Education"
-        defaultExpanded={true}
+        defaultExpanded={false}
       >
         <Education />
       </SectionWrapper>
@@ -64,20 +83,9 @@ export function AboutPage() {
         title="Experience"
         description="Click on each role to explore my journey in Growth Marketing and Communications"
         badge="Experience"
-        defaultExpanded={true}
+        defaultExpanded={false}
       >
         <ExperienceTimeline />
-      </SectionWrapper>
-
-      {/* Skills */}
-      <SectionWrapper
-        sectionId="skills"
-        title="Skills & Expertise"
-        description="Technical skills and creative competencies"
-        badge="Skills"
-        defaultExpanded={true}
-      >
-        <Skills />
       </SectionWrapper>
 
       {/* CV & Certificates */}
@@ -86,7 +94,7 @@ export function AboutPage() {
         title="CV & Certificates"
         description="Download my resume, cover letter, and professional certifications"
         badge="Documents"
-        defaultExpanded={true}
+        defaultExpanded={false}
       >
         <CVSection />
       </SectionWrapper>
