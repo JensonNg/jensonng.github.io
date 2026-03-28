@@ -1,5 +1,4 @@
 import { Projects } from "../components/Projects";
-import { CreativeWork } from "../components/CreativeWork";
 import { SectionWrapper } from "../components/SectionWrapper";
 import { ContactCTA } from "../components/ContactCTA";
 
@@ -13,21 +12,10 @@ export function ProjectsPage() {
             My <span className="text-primary">Work</span>
           </h1>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Marketing campaigns, content creation, food blog, documentary, and visual storytelling
+            Marketing campaigns, brand development, and sustainable growth projects
           </p>
         </div>
       </div>
-
-      {/* Creative Work */}
-      <SectionWrapper
-        sectionId="creative-work"
-        title="Content Creation"
-        description="Short-form video, content creation, and visual storytelling"
-        badge="Creative Work"
-        defaultExpanded={true}
-      >
-        <CreativeWork />
-      </SectionWrapper>
 
       {/* Projects */}
       <SectionWrapper
