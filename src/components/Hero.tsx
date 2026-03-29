@@ -78,7 +78,7 @@ export function Hero() {
 
   return (
     <>
-      <section id="hero" className="min-h-[85vh] flex items-center justify-center px-4 py-16 relative">
+      <section id="hero" className="min-h-[85vh] flex items-center justify-center px-4 pt-24 pb-16 relative">
         {/* Subtle grid background */}
         <div className="absolute inset-0 opacity-[0.04] pointer-events-none"
           style={{
