@@ -1,15 +1,21 @@
 import { Link } from "react-router-dom";
 import { useId } from "react";
-import { BlogPost, formatDate, languageLabel, readingTime } from "../../data/blogPosts";
+import { BlogPost, formatDate, isMultilingual, languageLabel, readingTime } from "../../data/blogPosts";
 
 export const display = { fontFamily: "'Cinzel', Georgia, serif" };
 
+// Letters used in Vietnamese but missing from Cinzel (ă â đ ê ô ơ ư and the tone-marked forms).
+const VIETNAMESE = /[ăâđêôơưĂÂĐÊÔƠƯ\u1EA0-\u1EF9]/;
+
 /**
- * Cinzel has no Vietnamese glyphs, so Vietnamese titles use Cormorant SC,
- * an inscription-style serif with full Vietnamese support.
+ * Cinzel has no Vietnamese glyphs, so headings in Vietnamese - or containing
+ * Vietnamese names such as "Sơn La" - use Cormorant SC, an inscription-style
+ * serif with full Vietnamese support.
  */
-export function displayFor(lang: string) {
-  return lang === "vi" ? { fontFamily: "'Cormorant SC', 'Cinzel', Georgia, serif" } : display;
+export function displayFor(lang: string, text = "") {
+  return lang === "vi" || VIETNAMESE.test(text)
+    ? { fontFamily: "'Cormorant SC', 'Cinzel', Georgia, serif" }
+    : display;
 }
 
 /** The Sowilo stroke. `gradient` uses the brand gold-amber-gold stroke. */
@@ -74,7 +80,8 @@ export function SectionHeader({
 export function PostMeta({ post, className = "" }: { post: BlogPost; className?: string }) {
   return (
     <p className={`text-[11px] tracking-[2px] text-[#808080] ${className}`}>
-      {formatDate(post.date)} · {readingTime(post)} MIN READ · {languageLabel[post.lang].toUpperCase()}
+      {formatDate(post.date)} · {readingTime(post)} MIN READ
+      {isMultilingual && ` · ${languageLabel[post.lang].toUpperCase()}`}
     </p>
   );
 }
@@ -107,7 +114,7 @@ export function PostCard({ post, number }: { post: BlogPost; number: string }) {
           </p>
           <h3
             lang={post.lang}
-            style={displayFor(post.lang)}
+            style={displayFor(post.lang, post.title)}
             className="text-xl leading-snug font-semibold text-[#cccccc] transition-colors group-hover:text-[#f2994a]"
           >
             {post.title}

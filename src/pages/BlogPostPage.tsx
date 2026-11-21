@@ -9,14 +9,14 @@ function BodyBlock({ block, lang }: { block: Block; lang: string }) {
       return <p className="m-0">{block.text}</p>;
     case "h2":
       return (
-        <h2 style={displayFor(lang)} className="mt-6 text-2xl leading-[1.3] font-bold text-[#f2c94c] md:text-[26px]">
+        <h2 style={displayFor(lang, block.text)} className="mt-6 text-2xl leading-[1.3] font-bold text-[#f2c94c] md:text-[26px]">
           {block.text}
         </h2>
       );
     case "quote":
       return (
         <blockquote className="my-4 border-l border-[rgba(242,201,76,0.5)] py-2 pl-7">
-          <p style={displayFor(lang)} className="m-0 text-2xl leading-[1.45] text-[#f2c94c] md:text-[26px]">
+          <p style={displayFor(lang, block.text)} className="m-0 text-2xl leading-[1.45] text-[#f2c94c] md:text-[26px]">
             {block.text}
           </p>
         </blockquote>
@@ -120,7 +120,7 @@ export function BlogPostPage() {
           </p>
           <h1
             lang={post.lang}
-            style={displayFor(post.lang)}
+            style={displayFor(post.lang, post.title)}
             className="text-[34px] leading-[1.15] font-bold text-[#f2c94c] md:text-5xl"
           >
             {post.title}
@@ -172,6 +172,12 @@ export function BlogPostPage() {
           lang={post.lang}
           className="mx-auto flex max-w-[760px] flex-col gap-6 px-4 pt-12 pb-8 text-[17px] leading-[30px] tracking-[0.2px] text-[#aaaaaa] md:pt-14 md:text-lg md:leading-[31px]"
         >
+          {post.translatedFrom && (
+            <p className="m-0 text-sm italic leading-6 text-[#888888]">
+              Translated from the {post.translatedFrom} original, first published{" "}
+              {new Date(post.date + "T00:00:00").toLocaleDateString("en-GB", { month: "long", year: "numeric" })}.
+            </p>
+          )}
           {post.body.map((block, i) => (
             <BodyBlock key={i} block={block} lang={post.lang} />
           ))}

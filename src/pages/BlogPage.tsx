@@ -1,5 +1,5 @@
 import { Link, useSearchParams } from "react-router-dom";
-import { BlogPost, blogPosts, languageLabel } from "../data/blogPosts";
+import { BlogPost, blogPosts, isMultilingual, languageLabel } from "../data/blogPosts";
 import { PostCard, PostMeta, SectionHeader, SowiloStroke, display, displayFor } from "../components/blog/BlogParts";
 
 const ALL = "All";
@@ -73,7 +73,7 @@ export function BlogPage() {
           </p>
           <p className="max-w-2xl text-base leading-7 tracking-[0.3px] text-[#aaaaaa] md:text-[17px]">
             I write about building trusted brands, growth that lasts, and design that starts with people -
-            and with the planet they live on. Some stories are in English, some in Vietnamese.
+            and with the planet they live on.
           </p>
         </div>
       </section>
@@ -107,7 +107,7 @@ export function BlogPage() {
                 <h2
                   id="featured-title"
                   lang={featured.lang}
-                  style={displayFor(featured.lang)}
+                  style={displayFor(featured.lang, featured.title)}
                   className="text-3xl leading-[1.15] font-bold text-[#f2c94c] transition-colors group-hover:text-[#f2994a] md:text-[38px]"
                 >
                   {featured.title}
@@ -153,6 +153,7 @@ export function BlogPage() {
             </div>
           </div>
 
+          {isMultilingual && (
           <div role="group" aria-labelledby="filter-lang" className="flex shrink-0 flex-col gap-2.5">
             <span id="filter-lang" className="text-[10px] tracking-[2px] text-[#808080]">
               LANGUAGE
@@ -168,6 +169,7 @@ export function BlogPage() {
               ))}
             </div>
           </div>
+          )}
         </div>
 
         {visible.length > 0 ? (
@@ -201,8 +203,7 @@ export function BlogPage() {
               Always - forward.
             </h2>
             <p className="text-base leading-[26px] text-[#aaaaaa]">
-              New stories land on LinkedIn first. Food reviews live on Instagram. Writing in{" "}
-              {languageLabel.en} and {languageLabel.vi}.
+              New stories land on LinkedIn first. Food reviews live on Instagram.
             </p>
           </div>
           <div className="flex flex-wrap gap-3">
