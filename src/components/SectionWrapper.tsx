@@ -54,7 +54,7 @@ export function SectionWrapper({
   return (
     <section id={sectionId} className="py-4">
       <div className="container mx-auto px-4">
-        <Card className="overflow-hidden glass glass-highlight border-white/[0.06] shadow-lg">
+        <Card className="overflow-hidden glass glass-highlight border-border shadow-lg">
           {/* Section Header - Always Visible */}
           <Button
             variant="ghost"
@@ -64,12 +64,12 @@ export function SectionWrapper({
             <div className="flex items-center gap-3 md:gap-4 min-w-0 flex-1">
               <div className="flex items-center gap-2 md:gap-3 flex-shrink-0">
                 {isExpanded ? (
-                  <ChevronDown className="w-5 h-5 text-primary" />
+                  <ChevronDown className="w-5 h-5 text-brand-ink" />
                 ) : (
                   <ChevronRight className="w-5 h-5 text-muted-foreground" />
                 )}
                 {badge && (
-                  <Badge variant="outline" className="border-primary text-primary hidden sm:inline-flex">
+                  <Badge variant="outline" className="border-primary text-brand-ink hidden sm:inline-flex">
                     {badge}
                   </Badge>
                 )}

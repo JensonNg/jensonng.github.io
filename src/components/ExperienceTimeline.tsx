@@ -479,9 +479,9 @@ export function ExperienceTimeline() {
       {/* Career summary */}
       <div className="mt-12 text-center">
         <p className="text-sm text-muted-foreground">
-          <span className="text-primary font-medium">8 years</span> across brand, content,
+          <span className="text-brand-ink font-medium">8 years</span> across brand, content,
           campaigns, PR and events in{" "}
-          <span className="text-primary font-medium">Sweden & Vietnam</span>
+          <span className="text-brand-ink font-medium">Sweden & Vietnam</span>
         </p>
       </div>
     </div>

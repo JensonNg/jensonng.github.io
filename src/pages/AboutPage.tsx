@@ -28,8 +28,8 @@ export function AboutPage() {
       <div className="container mx-auto px-4">
         {/* Page Header */}
         <div className="text-center mb-12 space-y-4">
-          <h1 className="text-4xl md:text-5xl font-bold">
-            About <span className="text-primary">Me</span>
+          <h1 className="text-4xl md:text-5xl font-medium">
+            About <span className="text-brand-ink">Me</span>
           </h1>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Brand, content, campaigns and PR – learn about my background and approach
@@ -52,7 +52,7 @@ export function AboutPage() {
       <div className="container mx-auto px-4 py-6">
         <Link to="/brand-book" className="block">
           <div className="glass glass-highlight rounded-2xl p-6 md:p-8 flex items-center gap-6 hover:border-primary/40 transition-all group max-w-4xl mx-auto">
-            <div className="p-3 rounded-xl bg-primary/10 text-primary flex-shrink-0">
+            <div className="p-3 rounded-xl bg-primary/10 text-brand-ink flex-shrink-0">
               <Zap className="w-6 h-6" />
             </div>
             <div className="flex-1 min-w-0">
@@ -61,7 +61,7 @@ export function AboutPage() {
                 Norse mythology meets Vietnamese heritage. Explore my complete brand system with logo variations, color palette, typography, and narrative.
               </p>
             </div>
-            <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0" />
+            <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-brand-ink transition-colors flex-shrink-0" />
           </div>
         </Link>
       </div>

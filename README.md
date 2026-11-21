@@ -35,6 +35,8 @@ The original design is available in [Figma](https://www.figma.com/design/j4F5z5S
 
 - Get the latest changes before you start: `git pull`
 - Edit the content in `src/components` (sections) and `src/pages` (pages)
+- Follow `DESIGN.md` for colours, fonts and layout; use token classes such as `bg-background` and `text-brand-ink`, never hex values
+- Check both themes with the sun/moon button in the header
 - Check the production build: `npm run build`
 - Publish: commit and push to `master`. GitHub Actions builds the site and deploys it to GitHub Pages automatically.
 
@@ -47,3 +49,5 @@ The original design is available in [Figma](https://www.figma.com/design/j4F5z5S
 | `src/images`, `src/assets` | Images used on the site |
 | `public` | Files served as-is (favicon, social share image) |
 | `.github/workflows` | Automatic deployment to GitHub Pages |
+| `DESIGN.md` | The design system: colour tokens, typography, components, theme and mobile rules |
+| `src/styles/globals.css` | Where the design tokens live (light values on `:root`, dark on `.dark`) |

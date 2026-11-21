@@ -138,7 +138,7 @@ export function Experience() {
 
               <div className="pt-2 border-t border-border/30">
                 <div className="text-xs">
-                  <span className="font-medium text-primary">Impact: </span>
+                  <span className="font-medium text-brand-ink">Impact: </span>
                   <span className="text-muted-foreground">{exp.impact}</span>
                 </div>
               </div>

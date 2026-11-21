@@ -1,7 +1,7 @@
-import { ArrowLeft, Download, Zap, Sun, Globe, TrendingUp, Monitor, Smartphone, ExternalLink } from "lucide-react";
+import { ArrowLeft, Download, Zap, Sun, Globe, TrendingUp, ExternalLink } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
-const cinzel = { fontFamily: "'Cinzel', serif" };
+const cinzel = { fontFamily: "var(--font-display)" };
 
 function SowiloSVG({ size = 120, stroke = "#F2C94C", strokeWidth = 8, className = "" }: {
   size?: number; stroke?: string; strokeWidth?: number; className?: string;
@@ -29,7 +29,7 @@ export default function BrandBookPage() {
       <div className="container mx-auto px-4 py-8">
         <button
           onClick={() => navigate('/projects')}
-          className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+          className="flex items-center gap-2 text-muted-foreground hover:text-brand-ink transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
           Back to Projects
@@ -48,9 +48,9 @@ export default function BrandBookPage() {
           </div>
 
           <div className="space-y-3">
-            <p className="text-primary/60 text-sm tracking-[0.4em] uppercase">Brand Identity System</p>
-            <h1 className="text-5xl md:text-6xl font-bold" style={cinzel}>
-              <span className="text-primary">Son</span>{" "}
+            <p className="text-brand-ink/60 text-sm tracking-[0.4em] uppercase">Brand Identity System</p>
+            <h1 className="text-5xl md:text-6xl font-medium" style={cinzel}>
+              <span className="text-brand-ink">Son</span>{" "}
               <span className="text-foreground">Nguyen</span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed">
@@ -67,7 +67,7 @@ export default function BrandBookPage() {
           <div className="glass rounded-2xl overflow-hidden">
             {/* Header bar */}
             <div className="bg-primary/5 border-b border-primary/10 px-8 py-4">
-              <h2 className="text-sm tracking-[0.3em] uppercase text-primary/70">The Story Behind the Mark</h2>
+              <h2 className="text-sm tracking-[0.3em] uppercase text-brand-ink/70">The Story Behind the Mark</h2>
             </div>
 
             <div className="p-8 md:p-12 md:flex gap-10">
@@ -79,13 +79,13 @@ export default function BrandBookPage() {
 
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-3xl font-bold mb-1" style={cinzel}>
-                    Sowilo — <span className="text-primary">ᛊ</span>
+                  <h3 className="text-3xl font-medium mb-1" style={cinzel}>
+                    Sowilo — <span className="text-brand-ink">ᛊ</span>
                   </h3>
                   <p className="text-muted-foreground italic text-sm">Old Norse: "Sol" — The Sun</p>
                 </div>
 
-                <div className="space-y-4 text-muted-foreground leading-relaxed text-[15px]">
+                <div className="space-y-4 text-muted-foreground leading-relaxed text-base">
                   <p>
                     The mark at the heart of this identity is <strong className="text-foreground">Sowilo (ᛊ)</strong>,
                     a rune from the Elder Futhark — the oldest runic alphabet used across Scandinavia over a thousand
@@ -105,7 +105,7 @@ export default function BrandBookPage() {
                     in Stockholm — the mark embodies resilience, adaptability, and the power of a well-told story.
                   </p>
                   <p>
-                    Set in <strong className="text-primary">Solar Gold</strong> against deep black, the Sowilo rune
+                    Set in <strong className="text-brand-ink">Solar Gold</strong> against deep black, the Sowilo rune
                     becomes both a personal signature and a brand promise: clarity through creativity, impact through
                     intention, and always — forward.
                   </p>
@@ -119,8 +119,8 @@ export default function BrandBookPage() {
       {/* Key Symbolism */}
       <section className="container mx-auto px-4 pb-24">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-10 text-center" style={cinzel}>
-            Key <span className="text-primary">Symbolism</span>
+          <h2 className="text-3xl font-medium mb-10 text-center" style={cinzel}>
+            Key <span className="text-brand-ink">Symbolism</span>
           </h2>
           <div className="grid md:grid-cols-2 gap-5">
             {[
@@ -130,7 +130,7 @@ export default function BrandBookPage() {
               { icon: <TrendingUp className="w-5 h-5" />, title: "Forward Motion", desc: "The stroke always resolves downward and forward — growth, progress, the next chapter." },
             ].map((item, i) => (
               <div key={i} className="glass rounded-xl p-5 flex items-start gap-4 hover:border-primary/20 transition-all group">
-                <div className="p-2.5 bg-primary/10 rounded-lg text-primary flex-shrink-0 group-hover:bg-primary/20 transition-colors">
+                <div className="p-2.5 bg-primary/10 rounded-lg text-brand-ink flex-shrink-0 group-hover:bg-primary/20 transition-colors">
                   {item.icon}
                 </div>
                 <div>
@@ -146,8 +146,8 @@ export default function BrandBookPage() {
       {/* Logo Variations */}
       <section className="container mx-auto px-4 pb-24">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold mb-10 text-center" style={cinzel}>
-            Logo <span className="text-primary">System</span>
+          <h2 className="text-3xl font-medium mb-10 text-center" style={cinzel}>
+            Logo <span className="text-brand-ink">System</span>
           </h2>
 
           {/* Primary Marks */}
@@ -189,12 +189,12 @@ export default function BrandBookPage() {
                   <SowiloSVG size={56} strokeWidth={4} />
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-primary tracking-[0.15em]" style={cinzel}>SON</div>
+                  <div className="text-3xl font-bold text-brand-ink tracking-[0.15em]" style={cinzel}>SON</div>
                   <div className="text-3xl font-light text-foreground/70 tracking-[0.15em]" style={cinzel}>NGUYEN</div>
                 </div>
               </div>
 
-              <div className="h-px bg-white/5" />
+              <div className="h-px bg-border" />
 
               {/* With tagline */}
               <div className="flex items-center justify-center gap-4 py-2">
@@ -202,8 +202,8 @@ export default function BrandBookPage() {
                   <SowiloSVG size={36} strokeWidth={3} />
                 </div>
                 <div>
-                  <div className="text-lg font-bold text-primary tracking-[0.15em]" style={cinzel}>SON NGUYEN</div>
-                  <div className="text-[10px] text-muted-foreground tracking-[0.25em]">GROWTH MARKETING MANAGER</div>
+                  <div className="text-lg font-bold text-brand-ink tracking-[0.15em]" style={cinzel}>SON NGUYEN</div>
+                  <div className="text-xs text-muted-foreground tracking-[0.25em]">GROWTH MARKETING MANAGER</div>
                 </div>
               </div>
             </div>
@@ -222,11 +222,11 @@ export default function BrandBookPage() {
                     <SowiloSVG size={72} strokeWidth={4} />
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-primary tracking-[0.25em]" style={cinzel}>SON</div>
+                    <div className="text-2xl font-bold text-brand-ink tracking-[0.25em]" style={cinzel}>SON</div>
                     <div className="text-2xl font-light text-foreground/70 tracking-[0.25em]" style={cinzel}>NGUYEN</div>
                   </div>
                   <div className="w-12 h-px bg-primary/30 mx-auto" />
-                  <div className="text-[10px] text-muted-foreground tracking-[0.3em] leading-relaxed">
+                  <div className="text-xs text-muted-foreground tracking-[0.3em] leading-relaxed">
                     GROWTH MARKETING<br/>STRATEGIST
                   </div>
                 </div>
@@ -239,17 +239,17 @@ export default function BrandBookPage() {
                 <p className="text-xs text-muted-foreground tracking-[0.2em] uppercase">Mark Only</p>
               </div>
               <div className="p-10 flex items-center justify-center gap-8">
-                <div className="text-center space-y-2">
+                <div className="text-center space-y-2 bg-[#111111] rounded-xl p-3">
                   <SowiloSVG size={64} strokeWidth={5} />
-                  <p className="text-[10px] text-muted-foreground">Gold</p>
+                  <p className="text-xs text-[#A8A29E]">Gold</p>
                 </div>
-                <div className="text-center space-y-2">
+                <div className="text-center space-y-2 bg-[#111111] rounded-xl p-3">
                   <SowiloSVG size={64} stroke="#FFFFFF" strokeWidth={5} />
-                  <p className="text-[10px] text-muted-foreground">White</p>
+                  <p className="text-xs text-[#A8A29E]">White</p>
                 </div>
-                <div className="text-center space-y-2 bg-[#F5F5F5] rounded-xl p-3">
+                <div className="text-center space-y-2 bg-[#F5F5F4] rounded-xl p-3 border border-border">
                   <SowiloSVG size={64} stroke="#1A1A1A" strokeWidth={5} />
-                  <p className="text-[10px] text-gray-500">Dark</p>
+                  <p className="text-xs text-[#57534E]">Dark</p>
                 </div>
               </div>
             </div>
@@ -257,68 +257,126 @@ export default function BrandBookPage() {
         </div>
       </section>
 
-      {/* Color Palette */}
-      <section className="container mx-auto px-4 pb-24">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-10 text-center" style={cinzel}>
-            Color <span className="text-primary">Palette</span>
+      {/* Design System – Solar Amber 2.0 */}
+      <section className="container mx-auto px-4 pb-24" aria-labelledby="palette-title">
+        <div className="max-w-5xl mx-auto">
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-brand-ink text-center mb-3">Solar Amber 2.0</p>
+          <h2 id="palette-title" className="text-3xl md:text-4xl font-medium mb-4 text-center" style={cinzel}>
+            Colour <span className="text-brand-ink">Palette</span>
           </h2>
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-3">
+          <p className="text-center text-muted-foreground mb-10 max-w-2xl mx-auto">
+            One loud colour, warm neutrals, and two real themes. Every colour has a token name and a job; the
+            website uses the names, never the hex values.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
-              { name: "Solar Gold", hex: "#F2C94C", role: "Primary" },
-              { name: "Amber", hex: "#F2994A", role: "Secondary" },
-              { name: "Warm Red", hex: "#EB5757", role: "Tertiary" },
-              { name: "Deep Black", hex: "#111111", role: "Background" },
-              { name: "Off White", hex: "#F5F5F5", role: "Light BG" },
-              { name: "Muted", hex: "#888888", role: "Body Text" },
-            ].map((color, i) => (
-              <div key={i} className="space-y-2">
-                <div
-                  className="aspect-square rounded-xl border border-white/10 shadow-inner"
-                  style={{ backgroundColor: color.hex }}
-                />
-                <div>
-                  <p className="text-xs font-semibold">{color.name}</p>
-                  <p className="text-[10px] text-muted-foreground">{color.hex}</p>
-                  <p className="text-[10px] text-muted-foreground">{color.role}</p>
+              { name: "Background", token: "--background", dark: "#111111", light: "#F5F5F4", use: "Page surface" },
+              { name: "Surface", token: "--card", dark: "#1A1817", light: "#FFFFFF", use: "Cards and panels" },
+              { name: "Border", token: "--border", dark: "#2E2A27", light: "#E2DED8", use: "Dividers and card edges" },
+              { name: "Text", token: "--foreground", dark: "#F5F5F4", light: "#1C1917", use: "Headings and body" },
+              { name: "Muted text", token: "--muted-foreground", dark: "#A8A29E", light: "#57534E", use: "Supporting text" },
+              { name: "Gold Ink", token: "--brand-ink", dark: "#F2C94C", light: "#8A6400", use: "Gold-coloured text and icons" },
+            ].map((c) => (
+              <div key={c.token} className="rounded-2xl border border-border bg-card overflow-hidden">
+                <div className="grid grid-cols-2 h-20">
+                  <div className="flex items-end p-2.5 text-xs font-semibold uppercase tracking-wider" style={{ backgroundColor: c.dark, color: c.dark === "#F5F5F4" || c.dark === "#F2C94C" ? "#1C1917" : "#F5F5F4" }}>Dark</div>
+                  <div className="flex items-end p-2.5 text-xs font-semibold uppercase tracking-wider" style={{ backgroundColor: c.light, color: c.light === "#1C1917" || c.light === "#57534E" || c.light === "#8A6400" ? "#F5F5F4" : "#1C1917" }}>Light</div>
+                </div>
+                <div className="p-4 space-y-1">
+                  <div className="flex items-baseline justify-between gap-2">
+                    <p className="font-semibold">{c.name}</p>
+                    <code className="text-xs text-hint">{c.token}</code>
+                  </div>
+                  <p className="text-xs text-muted-foreground tabular-nums">{c.dark} · {c.light}</p>
+                  <p className="text-sm text-muted-foreground">{c.use}</p>
                 </div>
               </div>
             ))}
           </div>
+
+          <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {[
+              { name: "Solar Gold", hex: "#F2C94C", use: "Primary. Fills: buttons, logo, focus ring. Sparingly." },
+              { name: "Amber", hex: "#F2994A", use: "Only in the amber-to-gold gradient." },
+              { name: "Warm Red", hex: "#EB5757", use: "Errors only. Not a decorative colour." },
+            ].map((c) => (
+              <div key={c.name} className="rounded-2xl border border-border bg-card p-4 flex items-center gap-4">
+                <div className="size-14 shrink-0 rounded-xl" style={{ backgroundColor: c.hex }} />
+                <div className="min-w-0">
+                  <p className="font-semibold">{c.name} <span className="text-xs text-hint font-normal">{c.hex}</span></p>
+                  <p className="text-sm text-muted-foreground">{c.use}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* The one rule that keeps gold readable in light mode */}
+          <div className="mt-6 grid md:grid-cols-2 rounded-2xl overflow-hidden border border-border">
+            <div className="bg-[#F5F5F4] p-6 space-y-2">
+              <p className="text-xs font-semibold text-[#B42318]">1.5 : 1 · fails WCAG</p>
+              <p className="text-2xl font-medium text-[#F2C94C]" style={cinzel}>Growth marketing</p>
+              <p className="text-sm text-[#57534E]">Solar Gold as text on a light background.</p>
+            </div>
+            <div className="bg-[#F5F5F4] p-6 space-y-2 border-t md:border-t-0 md:border-l border-[#E2DED8]">
+              <p className="text-xs font-semibold text-[#1E7A4C]">4.9 : 1 · passes AA</p>
+              <p className="text-2xl font-medium text-[#8A6400]" style={cinzel}>Growth marketing</p>
+              <p className="text-sm text-[#57534E]">Gold Ink, used automatically for gold text in light mode.</p>
+            </div>
+          </div>
+          <p className="mt-3 text-sm text-muted-foreground text-center">
+            <strong className="text-foreground">Gold is a fill, or text on dark. Never text on light.</strong>
+          </p>
         </div>
       </section>
 
       {/* Typography */}
-      <section className="container mx-auto px-4 pb-24">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-10 text-center" style={cinzel}>
-            Typo<span className="text-primary">graphy</span>
+      <section className="container mx-auto px-4 pb-24" aria-labelledby="type-title">
+        <div className="max-w-5xl mx-auto">
+          <h2 id="type-title" className="text-3xl md:text-4xl font-medium mb-10 text-center" style={cinzel}>
+            Typo<span className="text-brand-ink">graphy</span>
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="glass rounded-2xl overflow-hidden">
-              <div className="bg-primary/5 border-b border-primary/10 px-6 py-3">
+            <div className="rounded-2xl border border-border bg-card overflow-hidden">
+              <div className="bg-primary/5 border-b border-border px-6 py-3">
                 <p className="text-xs text-muted-foreground tracking-[0.2em] uppercase">Display — Cinzel</p>
               </div>
               <div className="p-8 space-y-4">
-                <p className="text-4xl text-primary" style={cinzel}>Aa Bb Cc</p>
-                <p className="text-2xl text-foreground/80" style={cinzel}>Headlines & Brand Name</p>
+                <p className="text-4xl text-brand-ink" style={cinzel}>Aa Bb Cc</p>
+                <p className="text-2xl text-foreground/80" style={cinzel}>Headlines &amp; Brand Name</p>
                 <p className="text-sm text-muted-foreground">
-                  Cinzel — inspired by Roman inscriptions, with the monumental weight that echoes carved runes.
-                  Used for the brand name, section titles, and display text.
+                  Roman-inscription capitals that echo the carved rune. Used for h1 and h2 at medium weight; elegance
+                  comes from size, not bold.
+                </p>
+                <p className="text-2xl text-foreground/80" style={{ fontFamily: "'Cormorant SC', Georgia, serif" }}>Sơn Nguyễn · Hội An</p>
+                <p className="text-sm text-muted-foreground">
+                  Cinzel has no Vietnamese glyphs, so Cormorant SC takes over for those characters automatically.
                 </p>
               </div>
             </div>
 
-            <div className="glass rounded-2xl overflow-hidden">
-              <div className="bg-primary/5 border-b border-primary/10 px-6 py-3">
+            <div className="rounded-2xl border border-border bg-card overflow-hidden">
+              <div className="bg-primary/5 border-b border-border px-6 py-3">
                 <p className="text-xs text-muted-foreground tracking-[0.2em] uppercase">Body — Inter</p>
               </div>
-              <div className="p-8 space-y-4">
-                <p className="text-4xl text-primary font-bold">Aa Bb Cc</p>
-                <p className="text-2xl text-foreground/80 font-light">Subheadings & Body</p>
-                <p className="text-sm text-muted-foreground">
-                  Inter — clean, modern, highly legible. Used for body copy, UI elements, descriptions,
-                  and all functional text throughout the brand.
+              <div className="p-8">
+                <dl className="divide-y divide-border">
+                  {[
+                    { role: "Display", spec: "Cinzel 40 → 72px" },
+                    { role: "Section heading", spec: "Cinzel 30 → 44px" },
+                    { role: "Card heading", spec: "Inter 600, 18 → 20px" },
+                    { role: "Body", spec: "Inter 400, 16 → 18px" },
+                    { role: "Small", spec: "Inter 400, 14px" },
+                    { role: "Label", spec: "Inter 600, 12px caps" },
+                  ].map((t) => (
+                    <div key={t.role} className="flex items-baseline justify-between gap-4 py-2.5">
+                      <dt className="text-sm font-semibold">{t.role}</dt>
+                      <dd className="text-sm text-muted-foreground tabular-nums">{t.spec}</dd>
+                    </div>
+                  ))}
+                </dl>
+                <p className="text-sm text-muted-foreground mt-4">
+                  Inter for everything else: body, buttons, labels. 12px is the smallest size on the site.
                 </p>
               </div>
             </div>
@@ -326,142 +384,42 @@ export default function BrandBookPage() {
         </div>
       </section>
 
-      {/* Brand in Action — Website */}
-      <section className="container mx-auto px-4 pb-24">
+      {/* Principles */}
+      <section className="container mx-auto px-4 pb-24" aria-labelledby="principles-title">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold mb-4 text-center" style={cinzel}>
-            Brand in <span className="text-primary">Action</span>
+          <h2 id="principles-title" className="text-3xl md:text-4xl font-medium mb-4 text-center" style={cinzel}>
+            Brand in <span className="text-brand-ink">Action</span>
           </h2>
-          <p className="text-center text-muted-foreground mb-10 max-w-xl mx-auto text-sm">
-            The brand system comes to life across this portfolio website — every element reflects the Sowilo identity.
+          <p className="text-center text-muted-foreground mb-10 max-w-xl mx-auto">
+            How the system shows up across this website.
           </p>
-
-          {/* Website mockup */}
-          <div className="glass rounded-2xl overflow-hidden mb-6">
-            <div className="bg-primary/5 border-b border-primary/10 px-6 py-3 flex items-center justify-between">
-              <p className="text-xs text-muted-foreground tracking-[0.2em] uppercase">Portfolio Website</p>
-              <a href="/" className="text-xs text-primary hover:text-primary/80 flex items-center gap-1 transition-colors">
-                Visit <ExternalLink className="w-3 h-3" />
-              </a>
-            </div>
-
-            {/* Desktop mockup */}
-            <div className="p-8 pb-4">
-              <div className="flex items-center gap-2 mb-3">
-                <Monitor className="w-4 h-4 text-muted-foreground" />
-                <span className="text-xs text-muted-foreground">Desktop</span>
-              </div>
-              <div className="rounded-xl overflow-hidden border border-white/10 bg-[#0a0a0a]">
-                {/* Browser chrome */}
-                <div className="bg-[#1a1a1a] px-4 py-2.5 flex items-center gap-2 border-b border-white/5">
-                  <div className="flex gap-1.5">
-                    <div className="w-2.5 h-2.5 rounded-full bg-red-500/60" />
-                    <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/60" />
-                    <div className="w-2.5 h-2.5 rounded-full bg-green-500/60" />
-                  </div>
-                  <div className="flex-1 mx-8">
-                    <div className="bg-[#111] rounded-md px-3 py-1 text-[10px] text-muted-foreground text-center">
-                      sonnguyen.dev
-                    </div>
-                  </div>
-                </div>
-                {/* Page content mockup */}
-                <div className="p-6 space-y-4">
-                  {/* Header */}
-                  <div className="flex items-center justify-between">
-                    <div className="bg-[#111] rounded-lg p-1.5 border border-primary/20">
-                      <SowiloSVG size={20} strokeWidth={2} />
-                    </div>
-                    <div className="flex gap-4">
-                      {["About", "Projects", "Services", "Contact"].map(item => (
-                        <span key={item} className="text-[9px] text-muted-foreground">{item}</span>
-                      ))}
-                    </div>
-                  </div>
-                  {/* Hero */}
-                  <div className="text-center py-6 space-y-2">
-                    <p className="text-[9px] text-primary/60">Xin Chao!</p>
-                    <p className="text-lg font-bold">Hi, I'm <span className="text-primary" style={cinzel}>Son Nguyen</span></p>
-                    <p className="text-xs text-primary/70" style={cinzel}>Marketing Manager</p>
-                    <p className="text-[9px] text-muted-foreground max-w-xs mx-auto mt-2">
-                      I create content that doesn't just convert, it connects.
-                    </p>
-                  </div>
-                  {/* Cards */}
-                  <div className="grid grid-cols-4 gap-2">
-                    {["About Me", "Projects", "Services", "Contact"].map(card => (
-                      <div key={card} className="rounded-lg bg-white/[0.03] border border-white/5 p-2 text-center">
-                        <div className="w-4 h-4 rounded bg-primary/10 mx-auto mb-1" />
-                        <p className="text-[8px] text-muted-foreground">{card}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Mobile mockup */}
-            <div className="p-8 pt-4">
-              <div className="flex items-center gap-2 mb-3">
-                <Smartphone className="w-4 h-4 text-muted-foreground" />
-                <span className="text-xs text-muted-foreground">Mobile</span>
-              </div>
-              <div className="flex justify-center">
-                <div className="w-[200px] rounded-2xl overflow-hidden border border-white/10 bg-[#0a0a0a]">
-                  {/* Status bar */}
-                  <div className="bg-[#0a0a0a] px-4 py-1.5 flex items-center justify-between">
-                    <span className="text-[7px] text-muted-foreground">9:41</span>
-                    <div className="flex gap-1">
-                      <div className="w-2 h-1.5 rounded-sm bg-muted-foreground/40" />
-                      <div className="w-2 h-1.5 rounded-sm bg-muted-foreground/40" />
-                    </div>
-                  </div>
-                  {/* Header */}
-                  <div className="px-3 py-2 flex items-center justify-between border-b border-white/5">
-                    <div className="bg-[#111] rounded p-1 border border-primary/20">
-                      <SowiloSVG size={14} strokeWidth={1.5} />
-                    </div>
-                    <div className="flex flex-col gap-0.5">
-                      <div className="w-3 h-[1px] bg-muted-foreground" />
-                      <div className="w-3 h-[1px] bg-muted-foreground" />
-                    </div>
-                  </div>
-                  {/* Content */}
-                  <div className="px-3 py-4 text-center space-y-1.5">
-                    <p className="text-[7px] text-primary/60">Xin Chao!</p>
-                    <p className="text-[10px] font-bold">Hi, I'm <span className="text-primary">Son</span></p>
-                    <p className="text-[7px] text-primary/70" style={cinzel}>Marketing Manager</p>
-                    <p className="text-[6px] text-muted-foreground leading-relaxed mt-1">
-                      Where growth marketing meets sustainable impact.
-                    </p>
-                  </div>
-                  {/* Cards */}
-                  <div className="px-3 pb-4 grid grid-cols-2 gap-1.5">
-                    {["About", "Projects", "Services", "Contact"].map(card => (
-                      <div key={card} className="rounded bg-white/[0.03] border border-white/5 p-1.5 text-center">
-                        <div className="w-2.5 h-2.5 rounded bg-primary/10 mx-auto mb-0.5" />
-                        <p className="text-[6px] text-muted-foreground">{card}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Brand elements callout */}
-          <div className="grid md:grid-cols-3 gap-4">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
-              { label: "Sowilo Mark", desc: "Logo in header and footer, linking to home" },
-              { label: "Solar Gold Accents", desc: "Primary color for CTAs, highlights, and interactive elements" },
-              { label: "Cinzel + Inter", desc: "Display font for headings, Inter for body — inscribed meets modern" },
-            ].map((item, i) => (
-              <div key={i} className="glass rounded-xl p-4 text-center">
-                <p className="text-sm font-semibold text-primary" style={cinzel}>{item.label}</p>
-                <p className="text-xs text-muted-foreground mt-1">{item.desc}</p>
+              { label: "One loud colour", desc: "Solar Gold marks the main action and the brand. Everything else stays calm and warm." },
+              { label: "Promise, proof, ask", desc: "Pages open with one clear promise, show real work as evidence, then make one ask." },
+              { label: "Two real themes", desc: "Light and dark are both designed. The site follows the visitor's setting." },
+              { label: "Designed for the thumb", desc: "On phones, buttons stack, work shows in two columns and \"Let's talk\" stays in view." },
+              { label: "Accessible by default", desc: "Colour pairs pass WCAG AA, focus is always visible and motion respects reduced-motion settings." },
+              { label: "The Sowilo mark", desc: "Gold on a dark tile in the header and footer, in both themes, linking home." },
+            ].map((item) => (
+              <div key={item.label} className="rounded-2xl border border-border bg-card p-5">
+                <p className="font-semibold text-brand-ink" style={cinzel}>{item.label}</p>
+                <p className="text-sm text-muted-foreground mt-1.5 leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
+          <p className="mt-6 text-center text-sm text-muted-foreground">
+            The full rulebook is in{" "}
+            <a
+              href="https://github.com/JensonNg/jensonng.github.io/blob/master/DESIGN.md"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-brand-ink underline-offset-4 hover:underline"
+            >
+              DESIGN.md <ExternalLink className="inline w-3 h-3" />
+            </a>
+            .
+          </p>
         </div>
       </section>
 
@@ -472,14 +430,14 @@ export default function BrandBookPage() {
             <div className="inline-block bg-[#111] rounded-2xl p-4 border border-primary/20">
               <SowiloSVG size={48} strokeWidth={3.5} />
             </div>
-            <h3 className="text-2xl font-bold" style={cinzel}>Download Brand Assets</h3>
+            <h3 className="text-2xl font-medium" style={cinzel}>Download Brand Assets</h3>
             <p className="text-sm text-muted-foreground max-w-md mx-auto">
               Full logo kit with all variations, color palette, typography, and brand story — ready to import into Figma.
             </p>
             <a
               href="/brand/son-nguyen-logo-kit.svg"
               download="son-nguyen-logo-kit.svg"
-              className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground rounded-xl font-semibold hover:bg-primary/90 transition-colors"
+              className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground rounded-full font-semibold hover:bg-primary-hover transition-colors"
             >
               <Download className="w-4 h-4" />
               Download Logo Kit (.svg)

@@ -57,13 +57,13 @@ function PdfPreviewModal({
 
       {/* Modal */}
       <div
-        className="relative w-full max-w-5xl h-[85vh] rounded-2xl overflow-hidden shadow-2xl shadow-primary/20 animate-in fade-in zoom-in-95 duration-300 flex flex-col bg-[#1a1a1a] border border-white/10"
+        className="relative w-full max-w-5xl h-[85vh] rounded-2xl overflow-hidden shadow-2xl shadow-primary/20 animate-in fade-in zoom-in-95 duration-300 flex flex-col bg-card border border-border"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="flex items-center justify-between px-5 py-3 border-b border-white/10 bg-[#111111]">
+        <div className="flex items-center justify-between px-5 py-3 border-b border-border bg-background">
           <div className="flex items-center gap-3">
-            <Eye className="w-4 h-4 text-primary" />
+            <Eye className="w-4 h-4 text-brand-ink" />
             <span className="text-sm font-medium">{title}</span>
           </div>
           <div className="flex items-center gap-2">
@@ -71,7 +71,7 @@ function PdfPreviewModal({
               <Button
                 variant="ghost"
                 size="sm"
-                className="text-xs h-7 text-muted-foreground hover:text-primary"
+                className="text-xs h-7 text-muted-foreground hover:text-brand-ink"
               >
                 <ExternalLink className="w-3 h-3 mr-1.5" />
                 Open in new tab
@@ -80,7 +80,7 @@ function PdfPreviewModal({
             <a href={filePath} download>
               <Button
                 size="sm"
-                className="text-xs h-7 bg-gradient-to-r from-[#f2994a] to-[#f2c94c] hover:from-[#e0893e] hover:to-[#e0b93e] text-black font-semibold"
+                className="text-xs h-7 bg-gradient-to-r from-secondary to-primary hover:from-secondary/90 hover:to-primary/90 text-primary-foreground font-semibold"
               >
                 <Download className="w-3 h-3 mr-1.5" />
                 Download
@@ -88,7 +88,7 @@ function PdfPreviewModal({
             </a>
             <button
               onClick={onClose}
-              className="p-1.5 text-muted-foreground hover:text-white hover:bg-white/10 rounded-lg transition-colors ml-1"
+              className="p-1.5 text-muted-foreground hover:text-foreground hover:bg-foreground/10 rounded-lg transition-colors ml-1"
               aria-label="Close preview"
             >
               <X className="w-5 h-5" />
@@ -97,7 +97,7 @@ function PdfPreviewModal({
         </div>
 
         {/* PDF Viewer */}
-        <div className="flex-1 bg-[#2a2a2a]">
+        <div className="flex-1 bg-surface-2">
           <iframe
             src={`${filePath}#toolbar=1&navpanes=0`}
             className="w-full h-full border-0"
@@ -142,7 +142,7 @@ function DocumentCard({ title, description, fileName, icon, accentColor, glowCol
         <a href={filePath} download className="flex-1">
           <Button
             size="sm"
-            className="w-full bg-gradient-to-r from-[#f2994a] to-[#f2c94c] hover:from-[#e0893e] hover:to-[#e0b93e] text-black font-semibold"
+            className="w-full bg-gradient-to-r from-secondary to-primary hover:from-secondary/90 hover:to-primary/90 text-primary-foreground font-semibold"
           >
             <Download className="w-4 h-4 mr-2" />
             Download
@@ -168,7 +168,7 @@ export function CVSection() {
           <div className="space-y-4">
             <div className="flex items-center gap-3 mb-6">
               <div className="h-px flex-1 bg-gradient-to-r from-primary/30 to-transparent"></div>
-              <h2 className="text-xl font-semibold text-primary">Resume & Cover Letter</h2>
+              <h2 className="text-xl font-medium text-brand-ink">Resume & Cover Letter</h2>
               <div className="h-px flex-1 bg-gradient-to-l from-primary/30 to-transparent"></div>
             </div>
 
@@ -177,7 +177,7 @@ export function CVSection() {
                 title="Resume / CV"
                 description="Full professional background, skills, and project outcomes"
                 fileName="Son-Nguyen-Resume-2026.pdf"
-                icon={<FileText className="w-6 h-6 text-primary" />}
+                icon={<FileText className="w-6 h-6 text-brand-ink" />}
                 accentColor="bg-primary/10"
                 glowColor="rgba(242,201,76,0.15)"
                 date="Updated November 2026"
@@ -187,7 +187,7 @@ export function CVSection() {
                 title="Cover Letter"
                 description="My motivation, approach, and what I bring to the table"
                 fileName="Son-Nguyen-Cover-Letter.pdf"
-                icon={<FileText className="w-6 h-6 text-secondary" />}
+                icon={<FileText className="w-6 h-6 text-brand-ink" />}
                 accentColor="bg-secondary/10"
                 glowColor="rgba(242,153,74,0.15)"
                 date="Updated November 2026"
@@ -200,7 +200,7 @@ export function CVSection() {
           <div className="space-y-4">
             <div className="flex items-center gap-3 mb-6">
               <div className="h-px flex-1 bg-gradient-to-r from-secondary/30 to-transparent"></div>
-              <h2 className="text-xl font-semibold text-secondary">Upskill Diplomas</h2>
+              <h2 className="text-xl font-medium text-brand-ink">Upskill Diplomas</h2>
               <div className="h-px flex-1 bg-gradient-to-l from-secondary/30 to-transparent"></div>
             </div>
 
@@ -209,7 +209,7 @@ export function CVSection() {
                 title="Emerging Tech for Creatives"
                 description="Hyper Island Upskill Diploma in Emerging Tech for Creatives – AI tools and workflows, digital storytelling, XR and immersive experiences, and building a creative brand"
                 fileName="Diploma-Emerging-Tech-for-Creatives.pdf"
-                icon={<Award className="w-6 h-6 text-primary" />}
+                icon={<Award className="w-6 h-6 text-brand-ink" />}
                 accentColor="bg-primary/10"
                 glowColor="rgba(242,201,76,0.15)"
                 date="Hyper Island · 2026"
@@ -229,7 +229,7 @@ export function CVSection() {
                 title="Sustainability Change Leadership"
                 description="Hyper Island Upskill Diploma in leading sustainable change – strategy, impact measurement, and organizational transformation"
                 fileName="Diploma-Sustainability-Change-Leadership.pdf"
-                icon={<Award className="w-6 h-6 text-primary" />}
+                icon={<Award className="w-6 h-6 text-brand-ink" />}
                 accentColor="bg-primary/10"
                 glowColor="rgba(242,201,76,0.15)"
                 date="Hyper Island"
@@ -239,7 +239,7 @@ export function CVSection() {
                 title="Future Scenarios"
                 description="Hyper Island Upskill Diploma in Future Scenarios – foresight, trend analysis, and scenario planning"
                 fileName="Diploma-Future-Scenarios.pdf"
-                icon={<Award className="w-6 h-6 text-secondary" />}
+                icon={<Award className="w-6 h-6 text-brand-ink" />}
                 accentColor="bg-secondary/10"
                 glowColor="rgba(242,153,74,0.15)"
                 date="Hyper Island"

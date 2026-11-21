@@ -125,7 +125,7 @@ export function CreativeWork() {
         {/* Instagram Header */}
         <div className="flex items-center gap-3 mb-6">
           <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-            <InstagramIcon className="w-6 h-6 text-primary" />
+            <InstagramIcon className="w-6 h-6 text-brand-ink" />
           </div>
           <div>
             <h2 className="text-2xl">Instagram Reels</h2>
@@ -201,7 +201,7 @@ export function CreativeWork() {
         {/* LinkedIn Header */}
         <div className="flex items-center gap-3 mb-6">
           <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-            <LinkedinIcon className="w-6 h-6 text-primary" />
+            <LinkedinIcon className="w-6 h-6 text-brand-ink" />
           </div>
           <div>
             <h2 className="text-2xl">LinkedIn Posts</h2>
@@ -275,7 +275,7 @@ export function CreativeWork() {
             <div className="space-y-4">
               <DialogHeader>
                 <DialogTitle className="flex items-center gap-2">
-                  <InstagramIcon className="w-5 h-5 text-primary" />
+                  <InstagramIcon className="w-5 h-5 text-brand-ink" />
                   {selectedInstagram.title}
                 </DialogTitle>
                 <DialogDescription className="text-sm text-muted-foreground">
@@ -314,7 +314,7 @@ export function CreativeWork() {
             <div className="space-y-4">
               <DialogHeader>
                 <DialogTitle className="flex items-center gap-2">
-                  <LinkedinIcon className="w-5 h-5 text-primary" />
+                  <LinkedinIcon className="w-5 h-5 text-brand-ink" />
                   {selectedLinkedIn.title}
                 </DialogTitle>
                 <DialogDescription className="text-sm text-muted-foreground">
@@ -354,7 +354,7 @@ export function CreativeWork() {
         transition={{ delay: 0.6 }}
       >
         <p className="text-xs text-muted-foreground leading-relaxed text-center">
-          <span className="font-medium text-primary">📹 More Content Available:</span> Additional video samples, 
+          <span className="font-medium text-brand-ink">📹 More Content Available:</span> Additional video samples, 
           raw footage, specific Reels, and detailed case studies available upon request. 
           I can provide examples tailored to your specific content needs. 🎬✨
         </p>

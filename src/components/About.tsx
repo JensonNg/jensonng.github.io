@@ -48,7 +48,7 @@ export function About() {
 
             <div className="space-y-4">
               <h3 className="text-xl">
-                My <span className="bg-gradient-to-r from-[#f2994a] to-[#f2c94c] bg-clip-text text-transparent">Creative Approach</span>
+                My <span className="text-brand-ink">Creative Approach</span>
               </h3>
               <p className="text-muted-foreground leading-relaxed">
                 As the sole hands-on marketer at Mitigram, a B2B trade finance platform, I own positioning, content,
@@ -85,7 +85,7 @@ export function About() {
             <div className="grid grid-cols-2 gap-6">
               {achievements.map((achievement, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-4xl text-primary font-bold">
+                  <div className="text-4xl text-brand-ink font-bold">
                     {achievement.number}
                   </div>
                   <p className="text-sm text-muted-foreground mt-1">
@@ -102,7 +102,7 @@ export function About() {
 
             <div className="space-y-3">
               <div className="flex items-start gap-3">
-                <Video className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                <Video className="w-4 h-4 text-brand-ink flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-xs font-medium text-foreground">Content Creation & Video Editing</p>
                   <p className="text-xs text-muted-foreground">Short-form video, Reels, and visual storytelling</p>
@@ -110,7 +110,7 @@ export function About() {
               </div>
 
               <div className="flex items-start gap-3">
-                <Target className="w-4 h-4 text-secondary flex-shrink-0 mt-0.5" />
+                <Target className="w-4 h-4 text-brand-ink flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-xs font-medium text-foreground">Strategic UX Writing</p>
                   <p className="text-xs text-muted-foreground">Converting copy that connects with users</p>
@@ -139,7 +139,7 @@ export function About() {
                 <Button
                   variant="outline"
                   size="sm"
-                  className="w-full border-primary text-primary hover:bg-primary hover:text-black"
+                  className="w-full border-primary text-brand-ink hover:bg-primary hover:text-primary-foreground"
                 >
                   See My Experience <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
@@ -154,7 +154,7 @@ export function About() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {skillGroups.map((group) => (
               <div key={group.title} className="space-y-2">
-                <p className="text-xs font-semibold text-primary">{group.title}</p>
+                <p className="text-xs font-semibold text-brand-ink">{group.title}</p>
                 <div className="flex flex-wrap gap-1.5">
                   {group.skills.map((skill) => (
                     <Badge key={skill} variant="secondary" className="text-xs">

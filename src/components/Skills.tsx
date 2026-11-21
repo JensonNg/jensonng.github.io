@@ -14,8 +14,8 @@ export function Skills() {
     {
       title: "Marketing & Communication",
       icon: Megaphone,
-      color: "text-primary",
-      bgColor: "bg-primary/10 border-primary/20 text-primary",
+      color: "text-brand-ink",
+      bgColor: "bg-primary/10 border-primary/20 text-brand-ink",
       skills: [
         "Content Creation", "Marketing Planning", "Branding Strategy",
         "Project Management", "Copywriting", "LinkedIn Ads",
@@ -25,8 +25,8 @@ export function Skills() {
     {
       title: "Design & Development",
       icon: Palette,
-      color: "text-secondary",
-      bgColor: "bg-secondary/10 border-secondary/20 text-secondary",
+      color: "text-brand-ink",
+      bgColor: "bg-secondary/10 border-secondary/20 text-brand-ink",
       skills: [
         "Canva", "Visual Communication", "Adobe Creative Suite",
         "UI/UX Design", "Figma", "HTML/CSS"
@@ -126,7 +126,7 @@ export function Skills() {
           <Card className="glass">
             <CardHeader>
               <CardTitle className="flex items-center gap-3 text-sm">
-                <div className="p-2 rounded-lg bg-muted text-primary">
+                <div className="p-2 rounded-lg bg-muted text-brand-ink">
                   <Languages className="w-4 h-4" />
                 </div>
                 Languages
@@ -150,7 +150,7 @@ export function Skills() {
           <Card className="glass">
             <CardHeader>
               <CardTitle className="flex items-center gap-3 text-sm">
-                <div className="p-2 rounded-lg bg-muted text-secondary">
+                <div className="p-2 rounded-lg bg-muted text-brand-ink">
                   <Award className="w-4 h-4" />
                 </div>
                 Certifications

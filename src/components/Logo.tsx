@@ -54,8 +54,8 @@ export function Logo({ size = 'md', variant = 'default' }: LogoProps) {
             <stop offset="1" stopColor="var(--color-secondary)" stopOpacity="0.3" />
           </linearGradient>
           <radialGradient id="bg-gradient" cx="0.3" cy="0.3" r="0.8">
-            <stop stopColor="rgba(242,201,76,0.06)" />
-            <stop offset="1" stopColor="rgba(17,17,17,0.98)" />
+            <stop stopColor="#1f1b12" />
+            <stop offset="1" stopColor="#111111" />
           </radialGradient>
         </defs>
       </svg>
