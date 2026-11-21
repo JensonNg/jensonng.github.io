@@ -247,7 +247,7 @@ export function BlogPostPage() {
               <p style={display} className="text-base tracking-[2px]">
                 <span className="font-bold text-brand-ink">SON</span> <span className="text-foreground/80">NGUYEN</span>
               </p>
-              <p className="text-xs tracking-[3px] text-muted-foreground">BRAND &amp; GROWTH MARKETING MANAGER</p>
+              <p className="text-xs tracking-[3px] text-muted-foreground">MARKETING MANAGER</p>
               <p className="mt-1 text-[15px] leading-6 text-muted-foreground">
                 Growth marketer and storyteller in Stockholm. MSc in Environmental Science, with roots in marine
                 management and a habit of designing for people first.
