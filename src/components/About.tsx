@@ -48,7 +48,7 @@ export function About() {
 
             <div className="space-y-4">
               <h3 className="text-xl">
-                My <span className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">Creative Approach</span>
+                My <span className="text-brand-ink">Creative Approach</span>
               </h3>
               <p className="text-muted-foreground leading-relaxed">
                 As the sole hands-on marketer at Mitigram, a B2B trade finance platform, I own positioning, content,
