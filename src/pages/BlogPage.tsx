@@ -1,17 +1,51 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import { blogPosts, languageLabel } from "../data/blogPosts";
+import { Link, useSearchParams } from "react-router-dom";
+import { BlogPost, blogPosts, languageLabel } from "../data/blogPosts";
 import { PostCard, PostMeta, SectionHeader, SowiloStroke, display, displayFor } from "../components/blog/BlogParts";
 
 const ALL = "All";
+type Lang = BlogPost["lang"];
+const LANGS = Array.from(new Set(blogPosts.map((p) => p.lang))) as Lang[];
+const TOPICS = Array.from(new Set(blogPosts.map((p) => p.category)));
+
+function FilterButton({ on, onClick, children, lang }: { on: boolean; onClick: () => void; children: React.ReactNode; lang?: string }) {
+  return (
+    <button
+      type="button"
+      lang={lang}
+      aria-pressed={on}
+      onClick={onClick}
+      className={`min-h-11 rounded-full border px-[18px] text-[13px] font-medium tracking-[1px] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f2c94c] ${
+        on
+          ? "border-[#f2c94c] bg-[#f2c94c] text-[#111111]"
+          : "border-[#333333] bg-transparent text-[#cccccc] hover:border-[#f2c94c] hover:text-[#f2c94c]"
+      }`}
+    >
+      {children}
+    </button>
+  );
+}
 
 export function BlogPage() {
-  const featured = blogPosts.find((p) => p.featured) ?? blogPosts[0];
-  const rest = blogPosts.filter((p) => p !== featured);
+  // Filters live in the URL (/blog?lang=vi&topic=Sustainability) so a filtered view can be shared.
+  const [params, setParams] = useSearchParams();
+  const lang = LANGS.includes(params.get("lang") as Lang) ? (params.get("lang") as Lang) : null;
+  const topic = TOPICS.includes(params.get("topic") ?? "") ? params.get("topic") : null;
+  const filtering = lang !== null || topic !== null;
 
-  const topics = [ALL, ...Array.from(new Set(rest.map((p) => p.category)))];
-  const [topic, setTopic] = useState(ALL);
-  const visible = rest.filter((p) => topic === ALL || p.category === topic);
+  const setFilter = (key: "lang" | "topic", value: string | null) => {
+    const next = new URLSearchParams(params);
+    if (value) next.set(key, value);
+    else next.delete(key);
+    setParams(next, { replace: true, preventScrollReset: true });
+  };
+  const clearFilters = () => setParams(new URLSearchParams(), { replace: true, preventScrollReset: true });
+
+  const featured = blogPosts.find((p) => p.featured) ?? blogPosts[0];
+  // Unfiltered: the featured story sits on top and the grid shows the rest.
+  // Filtered: the grid shows every matching story, featured included.
+  const pool = filtering ? blogPosts : blogPosts.filter((p) => p !== featured);
+  const visible = pool.filter((p) => (!lang || p.lang === lang) && (!topic || p.category === topic));
+  const countIn = (l: Lang | null) => blogPosts.filter((p) => !l || p.lang === l).length;
 
   // Number posts by their place in the full list so numbers stay stable while filtering.
   const numberOf = (slug: string) => String(blogPosts.findIndex((p) => p.slug === slug) + 1).padStart(2, "0");
@@ -45,7 +79,7 @@ export function BlogPage() {
       </section>
 
       {/* Featured */}
-      {featured && (
+      {featured && !filtering && (
         <section aria-labelledby="featured-title" className="container mx-auto px-4 pb-20 md:pb-24">
           <Link
             to={`/blog/${featured.slug}`}
@@ -102,32 +136,60 @@ export function BlogPage() {
           }
         />
 
-        <div role="group" aria-label="Filter stories by topic" className="flex flex-wrap gap-2.5 pt-7 pb-8">
-          {topics.map((t) => {
-            const on = t === topic;
-            return (
-              <button
-                key={t}
-                type="button"
-                aria-pressed={on}
-                onClick={() => setTopic(t)}
-                className={`min-h-11 rounded-full border px-[18px] text-[13px] font-medium tracking-[1px] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f2c94c] ${
-                  on
-                    ? "border-[#f2c94c] bg-[#f2c94c] text-[#111111]"
-                    : "border-[#333333] bg-transparent text-[#cccccc] hover:border-[#f2c94c] hover:text-[#f2c94c]"
-                }`}
-              >
-                {t}
-              </button>
-            );
-          })}
+        <div className="flex flex-col gap-5 pt-7 pb-8 lg:flex-row lg:items-start lg:justify-between lg:gap-10">
+          <div role="group" aria-labelledby="filter-topic" className="flex flex-col gap-2.5">
+            <span id="filter-topic" className="text-[10px] tracking-[2px] text-[#808080]">
+              TOPIC
+            </span>
+            <div className="flex flex-wrap gap-2.5">
+              <FilterButton on={!topic} onClick={() => setFilter("topic", null)}>
+                {ALL}
+              </FilterButton>
+              {TOPICS.map((t) => (
+                <FilterButton key={t} on={t === topic} onClick={() => setFilter("topic", t)}>
+                  {t}
+                </FilterButton>
+              ))}
+            </div>
+          </div>
+
+          <div role="group" aria-labelledby="filter-lang" className="flex shrink-0 flex-col gap-2.5">
+            <span id="filter-lang" className="text-[10px] tracking-[2px] text-[#808080]">
+              LANGUAGE
+            </span>
+            <div className="flex flex-wrap gap-2.5">
+              <FilterButton on={!lang} onClick={() => setFilter("lang", null)}>
+                {ALL} ({countIn(null)})
+              </FilterButton>
+              {LANGS.map((l) => (
+                <FilterButton key={l} lang={l} on={l === lang} onClick={() => setFilter("lang", l)}>
+                  {languageLabel[l]} ({countIn(l)})
+                </FilterButton>
+              ))}
+            </div>
+          </div>
         </div>
 
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {visible.map((post) => (
-            <PostCard key={post.slug} post={post} number={numberOf(post.slug)} />
-          ))}
-        </div>
+        {visible.length > 0 ? (
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {visible.map((post) => (
+              <PostCard key={post.slug} post={post} number={numberOf(post.slug)} />
+            ))}
+          </div>
+        ) : (
+          <div className="flex flex-col items-start gap-4 rounded-lg border border-[#222222] bg-[#111111] p-8">
+            <p className="text-base leading-[26px] text-[#aaaaaa]">
+              No {lang ? languageLabel[lang] : ""} stories on {topic} yet.
+            </p>
+            <button
+              type="button"
+              onClick={clearFilters}
+              className="min-h-11 rounded-lg border border-[#f2c94c] px-5 text-[13px] font-semibold tracking-[1px] text-[#f2c94c] transition-colors hover:bg-[#f2c94c] hover:text-[#111111]"
+            >
+              Clear filters
+            </button>
+          </div>
+        )}
       </section>
 
       {/* Follow along */}
