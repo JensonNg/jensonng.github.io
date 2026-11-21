@@ -3,6 +3,10 @@ import { Logo } from "./Logo";
 import { Linkedin, Mail, Instagram, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { posts } from "../lib/blog";
+
+// The Blog link appears in the menu once the first post is published.
+const showBlog = posts.length > 0;
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -10,7 +14,8 @@ export function Header() {
 
   const closeMobile = () => setIsMobileMenuOpen(false);
 
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = (path: string) =>
+    path === "/blog" ? location.pathname.startsWith("/blog") : location.pathname === path;
 
   const navLinkClass = (path: string) =>
     `text-sm font-medium transition-colors hover:text-primary ${
@@ -42,6 +47,11 @@ export function Header() {
           <Link to="/services" className={navLinkClass("/services")}>
             Services
           </Link>
+          {showBlog && (
+            <Link to="/blog" className={navLinkClass("/blog")}>
+              Blog
+            </Link>
+          )}
         </nav>
 
         {/* Desktop Social Links and CTA */}
@@ -141,6 +151,19 @@ export function Header() {
             >
               Services
             </Link>
+            {showBlog && (
+              <Link
+                to="/blog"
+                onClick={closeMobile}
+                className={`py-3 px-3 rounded-lg transition-colors ${
+                  isActive("/blog")
+                    ? "bg-primary/10 text-primary"
+                    : "hover:bg-muted"
+                }`}
+              >
+                Blog
+              </Link>
+            )}
 
             {/* Mobile Social Links */}
             <div className="flex items-center gap-3 pt-4 border-t border-white/[0.08]">

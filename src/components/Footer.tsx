@@ -1,6 +1,7 @@
 import { MapPin, Linkedin, Mail, Instagram } from "lucide-react";
 import { Logo } from "./Logo";
 import { Link } from "react-router-dom";
+import { posts } from "../lib/blog";
 
 export function Footer() {
   return (
@@ -74,9 +75,12 @@ export function Footer() {
               <Link to="/brand-book" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                 Brand Book
               </Link>
-              <span className="text-sm text-muted-foreground/50 flex items-center gap-1.5">
-                Blog <span className="text-[10px] text-primary/60 border border-primary/20 rounded-full px-1.5 py-0.5">Coming Soon</span>
-              </span>
+              <Link to="/blog" className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-1.5">
+                Blog
+                {posts.length === 0 && (
+                  <span className="text-[10px] text-primary/60 border border-primary/20 rounded-full px-1.5 py-0.5">Coming Soon</span>
+                )}
+              </Link>
               <Link to="/privacy" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                 Privacy Policy
               </Link>

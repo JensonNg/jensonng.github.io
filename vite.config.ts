@@ -3,9 +3,74 @@
   import react from '@vitejs/plugin-react';
   import tailwindcss from '@tailwindcss/vite';
   import path from 'path';
+  import fs from 'fs';
+  import type { Plugin } from 'vite';
+  import { parseFrontmatter } from './src/lib/frontmatter';
+
+  // After each build, write a small HTML page per published blog post
+  // (dist/blog/<slug>/index.html) with the post's title, summary and cover
+  // baked in. LinkedIn and other link previews don't run JavaScript, so this
+  // is what makes shared post links show the right preview.
+  function blogSharePages(): Plugin {
+    const SITE = 'https://jensonng.github.io';
+    const esc = (v: string) =>
+      v.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    const setTag = (html: string, pattern: RegExp, replacement: string) =>
+      pattern.test(html) ? html.replace(pattern, replacement) : html.replace('</head>', `  ${replacement}\n  </head>`);
+
+    function page(template: string, title: string, description: string, url: string, image: string, type: string) {
+      let html = template.replace(/<title>[^<]*<\/title>/, `<title>${esc(title)}</title>`);
+      html = setTag(html, /<meta name="description"[^>]*>/, `<meta name="description" content="${esc(description)}" />`);
+      html = setTag(html, /<meta property="og:title"[^>]*>/, `<meta property="og:title" content="${esc(title)}" />`);
+      html = setTag(html, /<meta property="og:description"[^>]*>/, `<meta property="og:description" content="${esc(description)}" />`);
+      html = setTag(html, /<meta property="og:image"[^>]*>/, `<meta property="og:image" content="${esc(image)}" />`);
+      html = setTag(html, /<meta property="og:url"[^>]*>/, `<meta property="og:url" content="${esc(url)}" />`);
+      html = setTag(html, /<meta property="og:type"[^>]*>/, `<meta property="og:type" content="${type}" />`);
+      html = setTag(html, /<meta name="twitter:image"[^>]*>/, `<meta name="twitter:image" content="${esc(image)}" />`);
+      return html;
+    }
+
+    return {
+      name: 'blog-share-pages',
+      apply: 'build',
+      closeBundle() {
+        const dist = path.resolve(__dirname, 'dist');
+        const postsDir = path.resolve(__dirname, 'src/content/blog');
+        const indexFile = path.join(dist, 'index.html');
+        if (!fs.existsSync(indexFile) || !fs.existsSync(postsDir)) return;
+        const template = fs.readFileSync(indexFile, 'utf8');
+        const defaultImage = `${SITE}/images/og-thumbnail.png`;
+
+        const write = (rel: string, html: string) => {
+          const dir = path.join(dist, rel);
+          fs.mkdirSync(dir, { recursive: true });
+          fs.writeFileSync(path.join(dir, 'index.html'), html);
+        };
+
+        write('blog', page(template, 'Blog – Son Nguyen',
+          'Recipes, food notes and lessons from marketing: a marketer who cooks, and a cook who thinks like a marketer.',
+          `${SITE}/blog`, defaultImage, 'website'));
+
+        let count = 0;
+        for (const file of fs.readdirSync(postsDir)) {
+          if (!file.endsWith('.md') || file.startsWith('_')) continue;
+          const { data } = parseFrontmatter(fs.readFileSync(path.join(postsDir, file), 'utf8'));
+          if (String(data.draft).toLowerCase() === 'true') continue;
+          const slug = file.replace(/\.md$/, '');
+          const cover = typeof data.cover === 'string' && data.cover ? data.cover : '';
+          const image = cover ? (cover.startsWith('http') ? cover : SITE + cover) : defaultImage;
+          const title = `${typeof data.title === 'string' ? data.title : slug} – Son Nguyen`;
+          const summary = typeof data.summary === 'string' ? data.summary : '';
+          write(`blog/${slug}`, page(template, title, summary, `${SITE}/blog/${slug}`, image, 'article'));
+          count++;
+        }
+        console.log(`blog-share-pages: wrote share pages for ${count} published post(s)`);
+      },
+    };
+  }
 
   export default defineConfig({
-    plugins: [react(), tailwindcss()],
+    plugins: [react(), tailwindcss(), blogSharePages()],
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
       alias: {

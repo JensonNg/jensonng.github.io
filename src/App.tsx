@@ -9,6 +9,8 @@ import { ContactPage } from "./pages/ContactPage";
 import { ServicesPage } from "./pages/ServicesPage";
 import { PrivacyPage } from "./pages/PrivacyPage";
 import BrandBookPage from "./pages/BrandBookPage";
+import { BlogPage } from "./pages/BlogPage";
+import { BlogPostPage } from "./pages/BlogPostPage";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -44,6 +46,8 @@ function AppContent() {
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/privacy" element={<PrivacyPage />} />
           <Route path="/brand-book" element={<BrandBookPage />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:slug" element={<BlogPostPage />} />
         </Routes>
         <Footer />
       </div>
