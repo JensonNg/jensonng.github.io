@@ -16,21 +16,21 @@ export function Education() {
       institution: "Hyper Island",
       degree: "Emerging Tech for Creatives (HVE, 65 credits)",
       specialization: "Pass with distinction in 4 of 7 modules",
-      period: "2025 – 2026",
+      period: "2025 - 2026",
       location: "Stockholm, Sweden",
     },
     {
       institution: "Hyper Island",
       degree: "UX Design (HVE, 80 credits)",
       specialization: "Pass with distinction in 5 of 7 modules",
-      period: "2023 – 2024",
+      period: "2023 - 2024",
       location: "Stockholm, Sweden",
     },
     {
       institution: "Hyper Island",
       degree: "Sustainability Change Leadership (HVE, 55 credits)",
       specialization: "Pass with distinction in Leading in Complexity",
-      period: "2023 – 2024",
+      period: "2023 - 2024",
       location: "Stockholm, Sweden",
     },
     {
@@ -43,7 +43,7 @@ export function Education() {
     {
       institution: "Södertörn University",
       degree: "MSc Environmental Science, Communications for Public Health",
-      period: "2021 – 2023",
+      period: "2021 - 2023",
       location: "Stockholm, Sweden",
       description: "Combines environmental science with communication strategy, with a focus on public health and sustainability communication.",
       achievements: [
@@ -61,7 +61,7 @@ export function Education() {
     {
       institution: "Hanoi University of Natural Resources and Environment",
       degree: "Bachelor of Engineering in Marine Management",
-      period: "2014 – 2018",
+      period: "2014 - 2018",
       location: "Hanoi, Vietnam",
     }
   ];

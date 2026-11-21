@@ -126,7 +126,7 @@ export function Testimonials() {
           </div>
         </div>
 
-        {/* Cards — swipeable */}
+        {/* Cards - swipeable */}
         <div
           ref={dragRef}
           className="overflow-hidden cursor-grab active:cursor-grabbing touch-pan-y"

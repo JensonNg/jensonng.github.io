@@ -77,7 +77,7 @@ export function About() {
           </div>
         </div>
 
-        {/* Bottom: Stats + What Makes Me Different – full width */}
+        {/* Bottom: Stats + What Makes Me Different - full width */}
         <div className="grid md:grid-cols-2 gap-6">
           {/* Achievement Stats */}
           <div className="glass glass-highlight rounded-xl p-6">

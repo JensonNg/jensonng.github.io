@@ -35,13 +35,13 @@ const experiences: TimelineEntry[] = [
     positions: [
       {
         title: "Marketing Manager",
-        period: "Aug 2024 – Present",
+        period: "Aug 2024 - Present",
         responsibilities: [
           "Built the brand guidelines and tone of voice; designed a Communication Hierarchy that governs messaging across teams",
           "Co-own the Alfred for Banks AI product launch: 30+ SQLs and two banks onboarded since June 2026",
           "Delivered ~4.8M paid impressions at SEK 38.56 CPM (LinkedIn, Google)",
-          "Run the webinar programme: ~120 registrations per session, ~90% attendance, 60–70% converting to MQLs",
-          "Run media relations via Cision: 6–7 releases in six months, earning 4 articles and 12 further mentions",
+          "Run the webinar programme: ~120 registrations per session, ~90% attendance, 60-70% converting to MQLs",
+          "Run media relations via Cision: 6-7 releases in six months, earning 4 articles and 12 further mentions",
           "Wrote the first customer case study (UniCredit and Brückner Group, ~80% shorter guarantee processing)",
           "Run presence at Sibos and GTR; build battlecards, one-pagers and decks for sales and account management",
           "Own employer branding and NPS; mentored five marketing interns; built an AI knowledge hub for content",
@@ -79,7 +79,7 @@ const experiences: TimelineEntry[] = [
     positions: [
       {
         title: "Social Media & Content Producer",
-        period: "Aug 2026 – Present",
+        period: "Aug 2026 - Present",
         responsibilities: [
           "Film, photograph and edit short-form video for TikTok and Instagram for a baking creator and her pop-up brand",
           "Grew Melt'd to 1,500 organic followers from 15 posts; three pop-ups, each sold out; videos peak at 18K views",
@@ -97,7 +97,7 @@ const experiences: TimelineEntry[] = [
     positions: [
       {
         title: "Copyright Screener",
-        period: "Oct 2024 – Aug 2025",
+        period: "Oct 2024 - Aug 2025",
         responsibilities: [
           "Reviewed and validated music licensing compliance, ensuring copyright integrity across global content platforms",
           "Collaborating with team to optimize claims on YouTube, increasing revenue",
@@ -116,7 +116,7 @@ const experiences: TimelineEntry[] = [
     positions: [
       {
         title: "Senior Sales Advisor",
-        period: "Sep 2024 – May 2025",
+        period: "Sep 2024 - May 2025",
         responsibilities: [
           "Drove sales growth and enhanced customer experience through personalized styling",
           "Showcasing fashion expertise to enhance customer experience and promote new brand vision",
@@ -136,7 +136,7 @@ const experiences: TimelineEntry[] = [
     positions: [
       {
         title: "Communications Officer & Content Creator",
-        period: "Aug 2022 – Dec 2023",
+        period: "Aug 2022 - Dec 2023",
         responsibilities: [
           "Marketed B2B inclusion training with IKEA, Cevera and Humble Brands",
           "Grew organic social following by 300%+ in three months; produced six campaign videos and three photoshoots",
@@ -156,7 +156,7 @@ const experiences: TimelineEntry[] = [
     positions: [
       {
         title: "Digital Marketing Specialist (Internship)",
-        period: "Jan 2024 – Mar 2024",
+        period: "Jan 2024 - Mar 2024",
         responsibilities: [
           "Contributed to UX wireframe design for a new Generative AI service landing page",
           "Developed content strategy and a podcast template to showcase client case studies",
@@ -172,7 +172,7 @@ const experiences: TimelineEntry[] = [
     positions: [
       {
         title: "Content Developer",
-        period: "Feb 2023 – Apr 2023",
+        period: "Feb 2023 - Apr 2023",
         responsibilities: [],
       },
     ],
@@ -184,7 +184,7 @@ const experiences: TimelineEntry[] = [
     positions: [
       {
         title: "Marketing & Sales Manager",
-        period: "Jul 2021 – Mar 2022",
+        period: "Jul 2021 - Mar 2022",
         responsibilities: [],
       },
     ],
@@ -196,7 +196,7 @@ const experiences: TimelineEntry[] = [
     positions: [
       {
         title: "Marketing Team Lead & Community Coordinator",
-        period: "Nov 2019 – Apr 2022",
+        period: "Nov 2019 - Apr 2022",
         responsibilities: [
           "Built and led a team of four marketers across six campaigns",
           "Created brand guidelines, key visuals and sponsorship proposals",
@@ -215,7 +215,7 @@ const experiences: TimelineEntry[] = [
     positions: [
       {
         title: "Communications Manager",
-        period: "Jan 2019 – Jun 2020",
+        period: "Jan 2019 - Jun 2020",
         responsibilities: [
           "Led major media campaigns on social media; recruited and supervised communications staff and volunteers",
           "Represented the organisation with 20+ press and media partners",
@@ -231,7 +231,7 @@ const experiences: TimelineEntry[] = [
     positions: [
       {
         title: "Digital Marketing & Communications Officer",
-        period: "May 2018 – Jul 2020",
+        period: "May 2018 - Jul 2020",
         responsibilities: [
           "Co-designed and delivered Vietnam's first Zero Waste Academy, training 60 environmental officers in three cities",
           "Ran Facebook campaigns for social enterprise brands; wrote quarterly reports for international donors",

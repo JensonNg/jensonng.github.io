@@ -54,7 +54,7 @@
     <rect x="0" y="0" width="48" height="48" rx="12" fill="url(#bg-dark)" stroke="url(#ring-grad)" stroke-width="1"/>
     <path d="M12 4 L26 19 L12 19 L26 44" stroke="url(#gold-gradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
     <text x="62" y="20" fill="#F2C94C" font-family="Cinzel, Georgia, serif" font-size="18" font-weight="700" letter-spacing="1">SON NGUYEN</text>
-    <text x="62" y="40" fill="#888" font-family="Inter, sans-serif" font-size="9" letter-spacing="3">GROWTH MARKETING MANAGER</text>
+    <text x="62" y="40" fill="#888" font-family="Inter, sans-serif" font-size="9" letter-spacing="3">MARKETING MANAGER</text>
   </g>
 
   <!-- Stacked -->
@@ -197,32 +197,32 @@
     <path d="M0 0 L50 55 L0 55 L50 130" stroke="url(#gold-gradient)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.12"/>
   </g>
 
-  <text x="180" y="1460" fill="#F2C94C" font-family="Cinzel, Georgia, serif" font-size="24" font-weight="700">The Sowilo Rune  —  ᛊ</text>
-  <text x="180" y="1485" fill="#CCC" font-family="Cinzel, Georgia, serif" font-size="13" font-weight="400" font-style="italic">Old Norse: "Sol" — The Sun</text>
+  <text x="180" y="1460" fill="#F2C94C" font-family="Cinzel, Georgia, serif" font-size="24" font-weight="700">The Sowilo Rune - ᛊ</text>
+  <text x="180" y="1485" fill="#CCC" font-family="Cinzel, Georgia, serif" font-size="13" font-weight="400" font-style="italic">Old Norse: "Sol" - The Sun</text>
 
   <text x="180" y="1525" fill="#AAA" font-family="Inter, sans-serif" font-size="13" font-weight="400" letter-spacing="0.3">
-    <tspan x="180" dy="0">The mark at the heart of this identity is Sowilo (ᛊ), a rune from the Elder Futhark — the oldest</tspan>
+    <tspan x="180" dy="0">The mark at the heart of this identity is Sowilo (ᛊ), a rune from the Elder Futhark - the oldest</tspan>
     <tspan x="180" dy="20">runic alphabet used across Scandinavia over a thousand years ago. Sowilo represents the sun,</tspan>
     <tspan x="180" dy="20">and its angular, lightning-bolt form carries meanings of energy, victory, and forward motion.</tspan>
   </text>
 
   <text x="180" y="1610" fill="#AAA" font-family="Inter, sans-serif" font-size="13" font-weight="400" letter-spacing="0.3">
-    <tspan x="180" dy="0">For Son, this symbol bridges two worlds. It is the letter S — his initial — rendered in the language</tspan>
+    <tspan x="180" dy="0">For Son, this symbol bridges two worlds. It is the letter S - his initial - rendered in the language</tspan>
     <tspan x="180" dy="20">of his adopted home, Sweden. A Vietnamese storyteller who found his creative voice in Stockholm,</tspan>
     <tspan x="180" dy="20">Son chose the Sowilo rune because it speaks to who he is: someone who brings light and</tspan>
     <tspan x="180" dy="20">momentum to every brand he touches.</tspan>
   </text>
 
   <text x="180" y="1710" fill="#AAA" font-family="Inter, sans-serif" font-size="13" font-weight="400" letter-spacing="0.3">
-    <tspan x="180" dy="0">The shape itself tells a story of transformation — a single stroke that changes direction twice,</tspan>
+    <tspan x="180" dy="0">The shape itself tells a story of transformation - a single stroke that changes direction twice,</tspan>
     <tspan x="180" dy="20">moving upward, pivoting, and surging forward again. Much like a growth marketing career built</tspan>
-    <tspan x="180" dy="20">across continents — from grassroots NGOs in Hanoi to global brands in Stockholm — the mark</tspan>
+    <tspan x="180" dy="20">across continents - from grassroots NGOs in Hanoi to global brands in Stockholm - the mark</tspan>
     <tspan x="180" dy="20">embodies resilience, adaptability, and the power of a well-told story.</tspan>
   </text>
 
   <text x="180" y="1800" fill="#AAA" font-family="Inter, sans-serif" font-size="13" font-weight="400" letter-spacing="0.3">
     <tspan x="180" dy="0">Set in Solar Gold against deep black, the Sowilo rune becomes both a personal signature and a</tspan>
-    <tspan x="180" dy="20">brand promise: clarity through creativity, impact through intention, and always — forward.</tspan>
+    <tspan x="180" dy="20">brand promise: clarity through creativity, impact through intention, and always - forward.</tspan>
   </text>
 
 
@@ -239,15 +239,15 @@
 
   <rect x="600" y="1950" width="480" height="70" rx="8" fill="#111" stroke="#222" stroke-width="1"/>
   <text x="630" y="1982" fill="#F2C94C" font-family="Cinzel, Georgia, serif" font-size="14" font-weight="600">⚡   Energy &amp; Momentum</text>
-  <text x="630" y="2002" fill="#AAA" font-family="Inter, sans-serif" font-size="11">Kinetic energy — campaigns that move, content that strikes.</text>
+  <text x="630" y="2002" fill="#AAA" font-family="Inter, sans-serif" font-size="11">Kinetic energy - campaigns that move, content that strikes.</text>
 
   <rect x="100" y="2040" width="480" height="70" rx="8" fill="#111" stroke="#222" stroke-width="1"/>
   <text x="130" y="2072" fill="#F2C94C" font-family="Cinzel, Georgia, serif" font-size="14" font-weight="600">🌏   East Meets North</text>
-  <text x="130" y="2092" fill="#AAA" font-family="Inter, sans-serif" font-size="11">A Vietnamese name initialed in Viking script — two cultures, one mark.</text>
+  <text x="130" y="2092" fill="#AAA" font-family="Inter, sans-serif" font-size="11">A Vietnamese name initialed in Viking script - two cultures, one mark.</text>
 
   <rect x="600" y="2040" width="480" height="70" rx="8" fill="#111" stroke="#222" stroke-width="1"/>
   <text x="630" y="2072" fill="#F2C94C" font-family="Cinzel, Georgia, serif" font-size="14" font-weight="600">↗   Forward Motion</text>
-  <text x="630" y="2092" fill="#AAA" font-family="Inter, sans-serif" font-size="11">The stroke resolves forward — growth, progress, the next chapter.</text>
+  <text x="630" y="2092" fill="#AAA" font-family="Inter, sans-serif" font-size="11">The stroke resolves forward - growth, progress, the next chapter.</text>
 
 
   <!-- ============================================ -->
@@ -258,7 +258,7 @@
     <path d="M-8 -12 L4 0 L-8 0 L4 16" stroke="url(#gold-gradient)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
   </g>
   <text x="600" y="2275" text-anchor="middle" fill="#F2C94C" font-family="Cinzel, Georgia, serif" font-size="14" font-weight="600" letter-spacing="3">SON NGUYEN</text>
-  <text x="600" y="2300" text-anchor="middle" fill="#666" font-family="Inter, sans-serif" font-size="10" letter-spacing="2">GROWTH MARKETING MANAGER</text>
+  <text x="600" y="2300" text-anchor="middle" fill="#666" font-family="Inter, sans-serif" font-size="10" letter-spacing="2">MARKETING MANAGER</text>
   <text x="600" y="2325" text-anchor="middle" fill="#444" font-family="Inter, sans-serif" font-size="10">Stockholm, Sweden</text>
   </g>
 

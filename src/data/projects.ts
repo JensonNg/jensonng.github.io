@@ -49,7 +49,7 @@ export const projects: Project[] = [
   },
   {
     title: "Personal Brand Identity - The Sowilo Mark",
-    description: "Designed a personal brand identity rooted in Norse mythology. The Sowilo rune (ᛊ) — the Elder Futhark symbol for 'S' meaning 'sun' — becomes a lightning bolt mark that bridges Vietnamese heritage with Scandinavian home. Developed a complete brand system including logo variations, color palette, typography, and brand narrative.",
+    description: "Designed a personal brand identity rooted in Norse mythology. The Sowilo rune (ᛊ) - the Elder Futhark symbol for 'S' meaning 'sun' - becomes a lightning bolt mark that bridges Vietnamese heritage with Scandinavian home. Developed a complete brand system including logo variations, color palette, typography, and brand narrative.",
     brand: {
       name: "Son Nguyen",
       initials: "ᛊ",
@@ -61,7 +61,7 @@ export const projects: Project[] = [
     period: "2026",
     organization: "Personal Brand",
     role: "Brand Designer & Strategist",
-    quote: "A Vietnamese name initialed in Viking script — two cultures woven into one mark.",
+    quote: "A Vietnamese name initialed in Viking script - two cultures woven into one mark.",
     readMoreUrl: "/brand-book",
     featured: true,
     metrics: [
@@ -81,16 +81,16 @@ export const projects: Project[] = [
       bgTo: "#312e81",
     },
     technologies: ["UX Design", "Design Systems", "Usability Testing", "AI/UX Integration"],
-    period: "Mar – Jun 2024",
+    period: "Mar - Jun 2024",
     organization: "Team Project",
     role: "UX Designer & Strategist",
-    quote: "Structure meets story – and strategy leads both.",
+    quote: "Structure meets story - and strategy leads both.",
     readMoreUrl: "https://www.hampusdesign.com/projekt/asekio",
     featured: true,
     metrics: [],
   },
   {
-    title: "RFSL Utbildning – Digital Marketing & Communication",
+    title: "RFSL Utbildning - Digital Marketing & Communication",
     description: "Created portfolios and general offers for the company to bring to workshops and conferences. Collaborated with clients and stakeholders to get testimonials and interviews. Designed sales materials and built brand guidelines and key visuals for the products.",
     brand: {
       name: "RFSL Utbildning",
@@ -100,7 +100,7 @@ export const projects: Project[] = [
       bgTo: "#2d0a1e",
     },
     technologies: ["Digital Marketing", "Brand Guidelines", "Sales Materials", "Stakeholder Relations"],
-    period: "Aug 2022 – Jun 2023",
+    period: "Aug 2022 - Jun 2023",
     organization: "RFSL",
     role: "Digital Marketing & Communication",
     quote: "Building brand visibility that amplifies voices for equal rights.",
@@ -113,7 +113,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    title: "Hanoi Pride 2019 – Internal Secretary for Communication",
+    title: "Hanoi Pride 2019 - Internal Secretary for Communication",
     description: "Oversaw all communication activities and controlled quality of media including images, videos, and articles. Responsible for communicating with external media outlets, resulting in significant press coverage and donor engagement.",
     brand: {
       name: "Hanoi Pride",
@@ -123,10 +123,10 @@ export const projects: Project[] = [
       bgTo: "#500724",
     },
     technologies: ["Media Relations", "PR & Press", "Event Communication", "Campaign Management"],
-    period: "Apr 2019 – Jun 2020",
+    period: "Apr 2019 - Jun 2020",
     organization: "Hanoi Pride",
     role: "Internal Secretary for Communication",
-    quote: "164K people reached – amplifying visibility through strategic storytelling.",
+    quote: "164K people reached - amplifying visibility through strategic storytelling.",
     readMoreUrl: "#",
     featured: false,
     metrics: [
@@ -137,7 +137,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    title: "Seed Planter – Marketing Lead",
+    title: "Seed Planter - Marketing Lead",
     description: "Established and maintained Facebook fanpage and monitored campaigns. Designed and implemented strategic plans for social enterprise projects. Recruited delegates for workshops, supervised volunteers, and prepared content and press for stakeholders.",
     brand: {
       name: "Seed Planter",
@@ -147,7 +147,7 @@ export const projects: Project[] = [
       bgTo: "#14532d",
     },
     technologies: ["Marketing Strategy", "Social Media", "Content Creation", "Stakeholder Communication"],
-    period: "Jun 2020 – Feb 2021",
+    period: "Jun 2020 - Feb 2021",
     organization: "Seed Planter",
     role: "Marketing Lead",
     quote: "Revamped branding and led teams for impactful social enterprise projects.",
@@ -160,7 +160,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    title: "Hanoi Queer – Communication Team Leader",
+    title: "Hanoi Queer - Communication Team Leader",
     description: "Allocated human resources and supported project communication. Supervised all communication activities, controlled quality of media including images, videos, and articles. Managed marketing campaigns and the organization's website.",
     brand: {
       name: "Hanoi Queer",
@@ -173,7 +173,7 @@ export const projects: Project[] = [
     period: "Communication Team",
     organization: "Hanoi Queer",
     role: "Communication Team Leader",
-    quote: "150K people reached – building community through strategic digital presence.",
+    quote: "150K people reached - building community through strategic digital presence.",
     readMoreUrl: "#",
     featured: false,
     metrics: [
@@ -184,7 +184,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    title: "GreenHub – Communication Officer",
+    title: "GreenHub - Communication Officer",
     description: "Allocated human resources and supported project communication for environmental initiatives. Supervised communication activities, controlled quality of media, and managed marketing campaigns while building a new website for the organization.",
     brand: {
       name: "GreenHub",
@@ -194,7 +194,7 @@ export const projects: Project[] = [
       bgTo: "#134e4a",
     },
     technologies: ["Environmental Communication", "Digital Marketing", "Website Development", "Storytelling"],
-    period: "Sep 2019 – Jul 2020",
+    period: "Sep 2019 - Jul 2020",
     organization: "GreenHub",
     role: "Communication Officer",
     quote: "Elevating ethnic minority start-ups through digital marketing and impactful storytelling.",
@@ -207,7 +207,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    title: "Ara-Tay Coffee – Digital Marketing Manager",
+    title: "Ara-Tay Coffee - Digital Marketing Manager",
     description: "Created portfolios and applications to call for sponsorship. Collected stories and information from local people and stakeholders. Managed marketing campaigns and built brand guidelines and key visuals for the products.",
     brand: {
       name: "Ara-Tay Coffee",

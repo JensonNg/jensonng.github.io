@@ -32,7 +32,7 @@ export function AboutPage() {
             About <span className="text-brand-ink">Me</span>
           </h1>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Brand, content, campaigns and PR – learn about my background and approach
+            Brand, content, campaigns and PR - learn about my background and approach
           </p>
         </div>
       </div>
@@ -56,7 +56,7 @@ export function AboutPage() {
               <Zap className="w-6 h-6" />
             </div>
             <div className="flex-1 min-w-0">
-              <h3 className="font-semibold text-lg">The Sowilo Mark — Personal Brand Identity</h3>
+              <h3 className="font-semibold text-lg">The Sowilo Mark - Personal Brand Identity</h3>
               <p className="text-sm text-muted-foreground mt-1">
                 Norse mythology meets Vietnamese heritage. Explore my complete brand system with logo variations, color palette, typography, and narrative.
               </p>

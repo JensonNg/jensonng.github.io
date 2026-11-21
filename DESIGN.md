@@ -47,7 +47,7 @@ Tints are computed from `--primary`, not typed by hand:
 |------|------|------|--------|
 | Display (h1) | Cinzel | 40 → 72px | 500 |
 | Section heading (h2) | Cinzel | 30 → 44px | 500 |
-| Card heading (h3–h4) | Inter | 18 → 20px | 600 |
+| Card heading (h3-h4) | Inter | 18 → 20px | 600 |
 | Body | Inter | 16 → 18px, line-height 1.6 | 400 |
 | Small | Inter | 14px | 400 |
 | Label / eyebrow | Inter | 12px, uppercase, 0.14em tracking | 600 |
@@ -62,7 +62,7 @@ Tints are computed from `--primary`, not typed by hand:
 - Every page starts with `<main className="pt-24">` so its content clears the fixed header, which is transparent at the top of the page.
 - Container: `max-w-7xl`, side padding 16px (mobile) / 24px (desktop).
 - Section rhythm: `py-16 md:py-24`.
-- Radius: `rounded-full` for buttons and chips, `rounded-2xl` for cards, `rounded-3xl` for large bands and media frames, `rounded-xl` for images inside cards (nested 8–12px inset).
+- Radius: `rounded-full` for buttons and chips, `rounded-2xl` for cards, `rounded-3xl` for large bands and media frames, `rounded-xl` for images inside cards (nested 8-12px inset).
 
 ## Component Patterns
 - **Section header:** `SectionHeader` component. Eyebrow (brand ink, 12px caps), Cinzel h2, one muted lead sentence. Use it for every section.

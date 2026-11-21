@@ -26,7 +26,7 @@ function ScrollToTop() {
 function AppContent() {
   return (
     <div className="min-h-screen relative overflow-x-hidden">
-      {/* Ambient glow orbs – Solar Amber radial glows */}
+      {/* Ambient glow orbs - Solar Amber radial glows */}
       <div className="fixed inset-0 pointer-events-none z-0">
         <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] rounded-full bg-primary/8 blur-[120px] motion-safe:animate-pulse" style={{ animationDuration: '8s' }} />
         <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-primary/5 blur-[100px] motion-safe:animate-pulse" style={{ animationDuration: '12s' }} />
