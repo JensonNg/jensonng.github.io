@@ -85,7 +85,7 @@ export function Projects() {
       technologies: ["Brand Strategy", "Messaging", "Onboarding Content", "Product Storytelling"],
       period: "Oct 2025 - Present",
       organization: "Bachable.io",
-      role: "Marketing Lead",
+      role: "Marketing & Branding",
       quote: "Write, engrave and share scores together.",
       readMoreUrl: "https://bachable.io",
       featured: true,

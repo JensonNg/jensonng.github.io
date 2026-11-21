@@ -59,7 +59,7 @@ const experiences: TimelineEntry[] = [
     location: "Self-employed · Remote, Sweden",
     positions: [
       {
-        title: "Marketing Lead",
+        title: "Marketing & Branding",
         period: "Oct 2025 - Present",
         responsibilities: [
           "Lead brand strategy and messaging for a new collaborative online music-notation platform",
