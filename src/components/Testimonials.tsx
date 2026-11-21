@@ -95,9 +95,9 @@ export function Testimonials() {
         {/* Header */}
         <div className="flex items-end justify-between mb-10">
           <div>
-            <p className="text-primary/60 text-sm tracking-[0.3em] uppercase mb-2">Testimonials</p>
+            <p className="text-brand-ink/60 text-sm tracking-[0.3em] uppercase mb-2">Testimonials</p>
             <h2 className="text-2xl md:text-3xl font-bold">
-              What People <span className="text-primary">Say</span>
+              What People <span className="text-brand-ink">Say</span>
             </h2>
           </div>
           <div className="flex items-center gap-2">
@@ -105,21 +105,21 @@ export function Testimonials() {
               href="https://linkedin.com/in/soninsthlm"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs text-muted-foreground hover:text-primary flex items-center gap-1 transition-colors mr-3"
+              className="text-xs text-muted-foreground hover:text-brand-ink flex items-center gap-1 transition-colors mr-3"
             >
               <Linkedin className="w-3.5 h-3.5" /> View all on LinkedIn
             </a>
             <button
               onClick={prev}
               disabled={current === 0}
-              className="p-2 rounded-full border border-white/10 hover:border-primary/40 hover:bg-primary/5 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+              className="p-2 rounded-full border border-border hover:border-primary/40 hover:bg-primary/5 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
             >
               <ChevronLeft className="w-4 h-4" />
             </button>
             <button
               onClick={next}
               disabled={current >= maxIndex}
-              className="p-2 rounded-full border border-white/10 hover:border-primary/40 hover:bg-primary/5 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+              className="p-2 rounded-full border border-border hover:border-primary/40 hover:bg-primary/5 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
             >
               <ChevronRight className="w-4 h-4" />
             </button>
@@ -145,19 +145,19 @@ export function Testimonials() {
                   isMobile ? "w-full" : "w-[calc(50%-12px)]"
                 }`}
               >
-                <Quote className="w-8 h-8 text-primary/20 mb-4 flex-shrink-0" />
+                <Quote className="w-8 h-8 text-brand-ink/20 mb-4 flex-shrink-0" />
                 <p className="text-muted-foreground text-sm leading-relaxed flex-1 mb-6">
                   {t.text}
                 </p>
-                <div className="flex items-center gap-3 pt-4 border-t border-white/5">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center text-xs font-bold text-primary flex-shrink-0">
+                <div className="flex items-center gap-3 pt-4 border-t border-border">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center text-xs font-bold text-brand-ink flex-shrink-0">
                     {t.initials}
                   </div>
                   <div className="min-w-0">
                     <p className="text-sm font-semibold truncate">{t.name}</p>
                     <p className="text-xs text-muted-foreground truncate">{t.role} @ {t.company}</p>
                   </div>
-                  <span className="ml-auto text-[10px] text-primary/50 border border-primary/15 rounded-full px-2 py-0.5 flex-shrink-0">
+                  <span className="ml-auto text-[10px] text-brand-ink/50 border border-primary/15 rounded-full px-2 py-0.5 flex-shrink-0">
                     {t.relation}
                   </span>
                 </div>
@@ -173,7 +173,7 @@ export function Testimonials() {
               key={i}
               onClick={() => setCurrent(i)}
               className={`h-1.5 rounded-full transition-all duration-300 ${
-                i === current ? "w-6 bg-primary" : "w-1.5 bg-white/20 hover:bg-white/40"
+                i === current ? "w-6 bg-primary" : "w-1.5 bg-foreground/20 hover:bg-foreground/40"
               }`}
             />
           ))}

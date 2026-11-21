@@ -182,7 +182,7 @@ function PackageCard({
           >
             <ArrowRight
               className={`w-5 h-5 transition-colors ${
-                isExpanded ? "text-primary" : "text-muted-foreground"
+                isExpanded ? "text-brand-ink" : "text-muted-foreground"
               }`}
             />
           </div>
@@ -196,12 +196,12 @@ function PackageCard({
         }`}
       >
         <div className="px-6 pb-6 space-y-5">
-          <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+          <div className="h-px bg-gradient-to-r from-transparent via-foreground/10 to-transparent" />
 
           {/* Deliverables */}
           <div>
             <h4 className="text-sm font-semibold mb-3 flex items-center gap-2">
-              <Layers className="w-4 h-4 text-primary" />
+              <Layers className="w-4 h-4 text-brand-ink" />
               What You Get
             </h4>
             <ul className="grid sm:grid-cols-2 gap-2">
@@ -223,14 +223,14 @@ function PackageCard({
           {/* Tools */}
           <div>
             <h4 className="text-sm font-semibold mb-3 flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-primary" />
+              <Sparkles className="w-4 h-4 text-brand-ink" />
               Tools & Platforms
             </h4>
             <div className="flex flex-wrap gap-2">
               {pkg.tools.map((tool, i) => (
                 <span
                   key={i}
-                  className="text-xs px-3 py-1.5 rounded-full border border-white/10 text-muted-foreground"
+                  className="text-xs px-3 py-1.5 rounded-full border border-border text-muted-foreground"
                 >
                   {tool}
                 </span>
@@ -240,9 +240,9 @@ function PackageCard({
 
           {/* Ideal For */}
           <div className="flex items-start gap-2 p-3 rounded-xl bg-primary/5 border border-primary/10">
-            <Target className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+            <Target className="w-4 h-4 text-brand-ink mt-0.5 flex-shrink-0" />
             <div>
-              <span className="text-xs font-medium text-primary">Ideal for: </span>
+              <span className="text-xs font-medium text-brand-ink">Ideal for: </span>
               <span className="text-xs text-muted-foreground">{pkg.idealFor}</span>
             </div>
           </div>
@@ -278,12 +278,12 @@ export function ServicesPage() {
       <div className="container mx-auto px-4">
         {/* Page Header */}
         <div className="text-center mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5 text-primary text-sm font-medium mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5 text-brand-ink text-sm font-medium mb-4">
             <Sparkles className="w-4 h-4" />
             Creative Services
           </div>
           <h1 className="text-4xl md:text-5xl font-bold">
-            What I Can <span className="text-primary">Offer</span>
+            What I Can <span className="text-brand-ink">Offer</span>
           </h1>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
             Flexible creative packages tailored to your needs – from growth marketing strategy
@@ -312,11 +312,11 @@ export function ServicesPage() {
               },
             ].map((step, i) => (
               <div key={i} className="text-center space-y-3">
-                <div className="mx-auto w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                <div className="mx-auto w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-brand-ink">
                   {step.icon}
                 </div>
                 <div className="flex items-center justify-center gap-2">
-                  <span className="text-xs font-bold text-primary">0{i + 1}</span>
+                  <span className="text-xs font-bold text-brand-ink">0{i + 1}</span>
                   <h3 className="font-semibold">{step.title}</h3>
                 </div>
                 <p className="text-sm text-muted-foreground">{step.description}</p>
@@ -329,7 +329,7 @@ export function ServicesPage() {
         <div className="max-w-3xl mx-auto space-y-4">
           <div className="flex items-center gap-3 mb-8">
             <div className="h-px flex-1 bg-gradient-to-r from-primary/30 to-transparent" />
-            <h2 className="text-xl font-semibold text-primary">Service Packages</h2>
+            <h2 className="text-xl font-semibold text-brand-ink">Service Packages</h2>
             <div className="h-px flex-1 bg-gradient-to-l from-primary/30 to-transparent" />
           </div>
 
@@ -346,8 +346,8 @@ export function ServicesPage() {
         {/* Custom Package Note */}
         <div className="max-w-3xl mx-auto mt-12">
           <div className="glass glass-highlight rounded-2xl p-8 text-center space-y-4">
-            <div className="mx-auto w-14 h-14 rounded-full bg-gradient-to-r from-[#f2994a]/20 to-[#f2c94c]/20 flex items-center justify-center">
-              <Megaphone className="w-6 h-6 text-primary" />
+            <div className="mx-auto w-14 h-14 rounded-full bg-gradient-to-r from-secondary/20 to-primary/20 flex items-center justify-center">
+              <Megaphone className="w-6 h-6 text-brand-ink" />
             </div>
             <h3 className="text-xl font-bold">Need a Custom Package?</h3>
             <p className="text-muted-foreground text-sm max-w-lg mx-auto">
@@ -355,7 +355,7 @@ export function ServicesPage() {
               elements from multiple services to perfectly fit your needs and budget.
             </p>
             <Link to="/contact">
-              <Button className="bg-gradient-to-r from-[#f2994a] to-[#f2c94c] hover:from-[#e0893e] hover:to-[#e0b93e] text-black font-semibold mt-2">
+              <Button className="bg-gradient-to-r from-secondary to-primary hover:from-secondary/90 hover:to-primary/90 text-primary-foreground font-semibold mt-2">
                 Let's Chat About Your Project
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>

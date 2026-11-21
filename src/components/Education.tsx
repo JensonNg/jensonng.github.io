@@ -94,10 +94,10 @@ export function Education() {
               <div className="flex items-start justify-between">
                 <div className="space-y-2 flex-1">
                   <CardTitle className="flex items-center gap-2 text-sm">
-                    <GraduationCap className="w-4 h-4 text-primary" />
+                    <GraduationCap className="w-4 h-4 text-brand-ink" />
                     {edu.degree}
                   </CardTitle>
-                  <div className="text-sm text-primary font-medium">{edu.institution}</div>
+                  <div className="text-sm text-brand-ink font-medium">{edu.institution}</div>
                   {edu.specialization && (
                     <p className="text-muted-foreground text-sm">{edu.specialization}</p>
                   )}
@@ -124,7 +124,7 @@ export function Education() {
               {edu.achievements && (
               <div className="space-y-2">
                 <div className="font-medium flex items-center gap-2 text-xs">
-                  <Award className="w-3 h-3 text-secondary" />
+                  <Award className="w-3 h-3 text-brand-ink" />
                   Key Focus Areas
                 </div>
                 <div className="flex flex-wrap gap-2">
@@ -156,7 +156,7 @@ export function Education() {
                 <Badge 
                   key={index} 
                   variant="outline" 
-                  className="border-primary/50 text-primary hover:bg-primary hover:text-black transition-colors text-xs"
+                  className="border-primary/50 text-brand-ink hover:bg-primary hover:text-primary-foreground transition-colors text-xs"
                 >
                   {cert}
                 </Badge>
@@ -175,7 +175,7 @@ export function Education() {
             <div className="grid sm:grid-cols-3 gap-4 text-center">
               {languages.map((lang) => (
                 <div key={lang.name}>
-                  <div className="text-sm font-medium text-primary">{lang.name}</div>
+                  <div className="text-sm font-medium text-brand-ink">{lang.name}</div>
                   <div className="text-xs text-muted-foreground">{lang.level}</div>
                 </div>
               ))}

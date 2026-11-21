@@ -14,10 +14,10 @@ function FilterButton({ on, onClick, children, lang }: { on: boolean; onClick: (
       lang={lang}
       aria-pressed={on}
       onClick={onClick}
-      className={`min-h-11 rounded-full border px-[18px] text-[13px] font-medium tracking-[1px] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f2c94c] ${
+      className={`min-h-11 rounded-full border px-[18px] text-[13px] font-medium tracking-[1px] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary ${
         on
-          ? "border-[#f2c94c] bg-[#f2c94c] text-[#111111]"
-          : "border-[#333333] bg-transparent text-[#cccccc] hover:border-[#f2c94c] hover:text-[#f2c94c]"
+          ? "border-primary bg-primary text-primary-foreground"
+          : "border-border bg-transparent text-foreground/80 hover:border-primary hover:text-brand-ink"
       }`}
     >
       {children}
@@ -51,27 +51,27 @@ export function BlogPage() {
   const numberOf = (slug: string) => String(blogPosts.findIndex((p) => p.slug === slug) + 1).padStart(2, "0");
 
   return (
-    <main className="pt-24 text-[#cccccc]">
+    <main className="pt-24 text-foreground/80">
       {/* Hero */}
       <section className="relative overflow-hidden">
         <SowiloStroke
           strokeWidth={2.6}
-          className="pointer-events-none absolute -right-24 -top-6 h-[420px] w-[420px] text-[#f2c94c] opacity-[0.12] md:h-[520px] md:w-[520px]"
+          className="pointer-events-none absolute -right-24 -top-6 h-[420px] w-[420px] text-brand-ink opacity-[0.12] md:h-[520px] md:w-[520px]"
         />
         <div className="container relative mx-auto flex flex-col gap-6 px-4 pt-16 pb-16 md:pt-20 md:pb-20">
-          <p style={display} className="text-xs font-semibold tracking-[3px] text-[#f2c94c]">
+          <p style={display} className="text-xs font-semibold tracking-[3px] text-brand-ink">
             THE JOURNAL · ᛊ
           </p>
           <h1
             style={display}
-            className="max-w-4xl text-4xl leading-[1.12] font-bold text-[#f2c94c] md:text-6xl"
+            className="max-w-4xl text-4xl leading-[1.12] font-bold text-brand-ink md:text-6xl"
           >
             Stories that move - on brand, growth and a circular future.
           </h1>
-          <p style={display} className="text-lg italic text-[#cccccc]">
+          <p style={display} className="text-lg italic text-foreground/80">
             Notes from a Vietnamese storyteller in Stockholm.
           </p>
-          <p className="max-w-2xl text-base leading-7 tracking-[0.3px] text-[#aaaaaa] md:text-[17px]">
+          <p className="max-w-2xl text-base leading-7 tracking-[0.3px] text-muted-foreground md:text-[17px]">
             I write about building trusted brands, growth that lasts, and design that starts with people -
             and with the planet they live on.
           </p>
@@ -83,10 +83,10 @@ export function BlogPage() {
         <section aria-labelledby="featured-title" className="container mx-auto px-4 pb-20 md:pb-24">
           <Link
             to={`/blog/${featured.slug}`}
-            className="group block rounded-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f2c94c]"
+            className="group block rounded-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
           >
-            <div className="grid overflow-hidden rounded-xl border border-[#222222] bg-[#111111] transition-colors group-hover:border-[rgba(242,201,76,0.45)] lg:grid-cols-2">
-              <div className="relative aspect-[1200/630] overflow-hidden border-b border-[#222222] bg-[#0d0d0d] lg:aspect-auto lg:min-h-[380px] lg:border-r lg:border-b-0">
+            <div className="grid overflow-hidden rounded-xl border border-border bg-background transition-colors group-hover:border-primary/45 lg:grid-cols-2">
+              <div className="relative aspect-[1200/630] overflow-hidden border-b border-border bg-surface-2 lg:aspect-auto lg:min-h-[380px] lg:border-r lg:border-b-0">
                 <img
                   src={featured.cover}
                   alt={featured.coverAlt}
@@ -95,28 +95,28 @@ export function BlogPage() {
                 />
                 <span
                   style={display}
-                  className="absolute left-5 top-4 rounded bg-[#0a0a0a]/85 px-2 py-0.5 text-base font-semibold tracking-[2px] text-[#f2c94c]"
+                  className="absolute left-5 top-4 rounded bg-black/80 px-2 py-0.5 text-base font-semibold tracking-[2px] text-primary"
                 >
                   {String(blogPosts.indexOf(featured) + 1).padStart(2, "0")}
                 </span>
               </div>
               <div className="flex flex-col justify-center gap-4 p-8 md:p-12">
-                <p style={display} className="text-[11px] font-semibold tracking-[2px] text-[#f2c94c] uppercase">
+                <p style={display} className="text-[11px] font-semibold tracking-[2px] text-brand-ink uppercase">
                   Featured · {featured.category}
                 </p>
                 <h2
                   id="featured-title"
                   lang={featured.lang}
                   style={displayFor(featured.lang, featured.title)}
-                  className="text-3xl leading-[1.15] font-bold text-[#f2c94c] transition-colors group-hover:text-[#f2994a] md:text-[38px]"
+                  className="text-3xl leading-[1.15] font-bold text-brand-ink transition-colors group-hover:text-brand-ink md:text-[38px]"
                 >
                   {featured.title}
                 </h2>
-                <p lang={featured.lang} className="text-base leading-[26px] text-[#aaaaaa]">
+                <p lang={featured.lang} className="text-base leading-[26px] text-muted-foreground">
                   {featured.excerpt}
                 </p>
                 <PostMeta post={featured} className="text-xs" />
-                <span className="text-sm font-semibold tracking-[1px] text-[#f2c94c]">Read the story ↗</span>
+                <span className="text-sm font-semibold tracking-[1px] text-brand-ink">Read the story ↗</span>
               </div>
             </div>
           </Link>
@@ -130,7 +130,7 @@ export function BlogPage() {
           label="Latest stories"
           id="latest-label"
           aside={
-            <span className="text-xs tracking-[1px] text-[#808080]" aria-live="polite">
+            <span className="text-xs tracking-[1px] text-hint" aria-live="polite">
               {visible.length} {visible.length === 1 ? "STORY" : "STORIES"}
             </span>
           }
@@ -138,7 +138,7 @@ export function BlogPage() {
 
         <div className="flex flex-col gap-5 pt-7 pb-8 lg:flex-row lg:items-start lg:justify-between lg:gap-10">
           <div role="group" aria-labelledby="filter-topic" className="flex flex-col gap-2.5">
-            <span id="filter-topic" className="text-[10px] tracking-[2px] text-[#808080]">
+            <span id="filter-topic" className="text-[10px] tracking-[2px] text-hint">
               TOPIC
             </span>
             <div className="flex flex-wrap gap-2.5">
@@ -155,7 +155,7 @@ export function BlogPage() {
 
           {isMultilingual && (
           <div role="group" aria-labelledby="filter-lang" className="flex shrink-0 flex-col gap-2.5">
-            <span id="filter-lang" className="text-[10px] tracking-[2px] text-[#808080]">
+            <span id="filter-lang" className="text-[10px] tracking-[2px] text-hint">
               LANGUAGE
             </span>
             <div className="flex flex-wrap gap-2.5">
@@ -179,14 +179,14 @@ export function BlogPage() {
             ))}
           </div>
         ) : (
-          <div className="flex flex-col items-start gap-4 rounded-lg border border-[#222222] bg-[#111111] p-8">
-            <p className="text-base leading-[26px] text-[#aaaaaa]">
+          <div className="flex flex-col items-start gap-4 rounded-lg border border-border bg-background p-8">
+            <p className="text-base leading-[26px] text-muted-foreground">
               No {lang ? languageLabel[lang] : ""} stories on {topic} yet.
             </p>
             <button
               type="button"
               onClick={clearFilters}
-              className="min-h-11 rounded-lg border border-[#f2c94c] px-5 text-[13px] font-semibold tracking-[1px] text-[#f2c94c] transition-colors hover:bg-[#f2c94c] hover:text-[#111111]"
+              className="min-h-11 rounded-lg border border-primary px-5 text-[13px] font-semibold tracking-[1px] text-brand-ink transition-colors hover:bg-primary hover:text-primary-foreground"
             >
               Clear filters
             </button>
@@ -197,12 +197,12 @@ export function BlogPage() {
       {/* Follow along */}
       <section aria-labelledby="follow-title" className="container mx-auto px-4 pb-24 md:pb-28">
         <SectionHeader number="02" label="Follow along" />
-        <div className="mt-8 flex flex-wrap items-center justify-between gap-8 rounded-xl border border-[#222222] bg-[#111111] p-8 md:p-12">
+        <div className="mt-8 flex flex-wrap items-center justify-between gap-8 rounded-xl border border-border bg-background p-8 md:p-12">
           <div className="flex max-w-xl flex-col gap-3">
-            <h2 id="follow-title" style={display} className="text-3xl font-bold text-[#f2c94c]">
+            <h2 id="follow-title" style={display} className="text-3xl font-bold text-brand-ink">
               Always - forward.
             </h2>
-            <p className="text-base leading-[26px] text-[#aaaaaa]">
+            <p className="text-base leading-[26px] text-muted-foreground">
               New stories land on LinkedIn first. Food reviews live on Instagram.
             </p>
           </div>
@@ -211,13 +211,13 @@ export function BlogPage() {
               href="https://www.linkedin.com/in/soninsthlm/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex min-h-12 items-center rounded-lg bg-[#f2c94c] px-6 text-sm font-semibold tracking-[1px] text-[#111111] transition-colors hover:bg-[#f2994a]"
+              className="inline-flex min-h-12 items-center rounded-lg bg-primary px-6 text-sm font-semibold tracking-[1px] text-primary-foreground transition-colors hover:bg-secondary"
             >
               Follow on LinkedIn ↗
             </a>
             <Link
               to="/contact"
-              className="inline-flex min-h-12 items-center rounded-lg border border-[#f2c94c] px-6 text-sm font-semibold tracking-[1px] text-[#f2c94c] transition-colors hover:bg-[#f2c94c] hover:text-[#111111]"
+              className="inline-flex min-h-12 items-center rounded-lg border border-primary px-6 text-sm font-semibold tracking-[1px] text-brand-ink transition-colors hover:bg-primary hover:text-primary-foreground"
             >
               Let’s talk
             </Link>

@@ -46,7 +46,7 @@ function DocumentCard({ title, description, fileName, icon, accentColor, glowCol
         <a href={filePath} download className="flex-1">
           <Button
             size="sm"
-            className="w-full bg-gradient-to-r from-[#f2994a] to-[#f2c94c] hover:from-[#e0893e] hover:to-[#e0b93e] text-black font-semibold"
+            className="w-full bg-gradient-to-r from-secondary to-primary hover:from-secondary/90 hover:to-primary/90 text-primary-foreground font-semibold"
           >
             <Download className="w-4 h-4 mr-2" />
             Download
@@ -64,7 +64,7 @@ export function CVPage() {
         {/* Page Header */}
         <div className="text-center mb-12 space-y-4">
           <h1 className="text-4xl md:text-5xl font-bold">
-            CV & <span className="text-primary">Certificates</span>
+            CV & <span className="text-brand-ink">Certificates</span>
           </h1>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Download my resume, cover letter, and professional certifications
@@ -76,7 +76,7 @@ export function CVPage() {
           <div className="space-y-4">
             <div className="flex items-center gap-3 mb-6">
               <div className="h-px flex-1 bg-gradient-to-r from-primary/30 to-transparent"></div>
-              <h2 className="text-xl font-semibold text-primary">Resume & Cover Letter</h2>
+              <h2 className="text-xl font-semibold text-brand-ink">Resume & Cover Letter</h2>
               <div className="h-px flex-1 bg-gradient-to-l from-primary/30 to-transparent"></div>
             </div>
 
@@ -85,7 +85,7 @@ export function CVPage() {
                 title="Resume / CV"
                 description="Full professional background, skills, and project outcomes"
                 fileName="Son-Nguyen-Resume-2026.pdf"
-                icon={<FileText className="w-6 h-6 text-primary" />}
+                icon={<FileText className="w-6 h-6 text-brand-ink" />}
                 accentColor="bg-primary/10"
                 glowColor="rgba(242,201,76,0.15)"
                 date="Updated 2026"
@@ -94,7 +94,7 @@ export function CVPage() {
                 title="Cover Letter"
                 description="My motivation, approach, and what I bring to the table"
                 fileName="Son-Nguyen-Cover-Letter.pdf"
-                icon={<FileText className="w-6 h-6 text-secondary" />}
+                icon={<FileText className="w-6 h-6 text-brand-ink" />}
                 accentColor="bg-secondary/10"
                 glowColor="rgba(242,153,74,0.15)"
                 date="Updated 2026"
@@ -106,7 +106,7 @@ export function CVPage() {
           <div className="space-y-4">
             <div className="flex items-center gap-3 mb-6">
               <div className="h-px flex-1 bg-gradient-to-r from-secondary/30 to-transparent"></div>
-              <h2 className="text-xl font-semibold text-secondary">Upskill Diplomas</h2>
+              <h2 className="text-xl font-semibold text-brand-ink">Upskill Diplomas</h2>
               <div className="h-px flex-1 bg-gradient-to-l from-secondary/30 to-transparent"></div>
             </div>
 
@@ -124,7 +124,7 @@ export function CVPage() {
                 title="Sustainability Change Leadership"
                 description="Hyper Island Upskill Diploma in leading sustainable change – strategy, impact measurement, and organizational transformation"
                 fileName="Diploma-Sustainability-Change-Leadership.pdf"
-                icon={<Award className="w-6 h-6 text-primary" />}
+                icon={<Award className="w-6 h-6 text-brand-ink" />}
                 accentColor="bg-primary/10"
                 glowColor="rgba(242,201,76,0.15)"
                 date="Hyper Island"
@@ -133,7 +133,7 @@ export function CVPage() {
                 title="Future Scenarios"
                 description="Hyper Island Upskill Diploma in Future Scenarios – foresight, trend analysis, and scenario planning"
                 fileName="Diploma-Future-Scenarios.pdf"
-                icon={<Award className="w-6 h-6 text-secondary" />}
+                icon={<Award className="w-6 h-6 text-brand-ink" />}
                 accentColor="bg-secondary/10"
                 glowColor="rgba(242,153,74,0.15)"
                 date="Hyper Island"

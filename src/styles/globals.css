@@ -7,97 +7,131 @@
   max-width: 1280px;
 }
 
+/*
+ * Solar Amber 2.0 - see DESIGN.md for usage rules.
+ * Light values live on :root, dark values on .dark. Components only use the
+ * token classes, so every colour switches with the theme.
+ */
 :root {
   --font-size: 16px;
 
-  /* Solar Amber Design System */
-  --background: #111111;
-  --foreground: #e0e0e0;
-  --card: rgba(255, 255, 255, 0.05);
-  --card-foreground: #e0e0e0;
-  --popover: #1a1a1a;
-  --popover-foreground: #e0e0e0;
+  --background: #f5f5f4;
+  --foreground: #1c1917;
+  --card: #ffffff;
+  --card-foreground: #1c1917;
+  --surface-2: #efede9;
+  --popover: #ffffff;
+  --popover-foreground: #1c1917;
+
   --primary: #f2c94c;
-  --primary-foreground: #000000;
+  --primary-foreground: #1c1917;
+  --primary-hover: color-mix(in oklab, var(--primary) 90%, #000000 10%);
+  /* Solar Gold is 1.5:1 on the light background, so gold text uses Gold Ink. */
+  --brand-ink: #8a6400;
   --secondary: #f2994a;
-  --secondary-foreground: #000000;
-  --tertiary: #d4a843;
-  --tertiary-foreground: #000000;
-  --quaternary: #b8860b;
+  --secondary-foreground: #1c1917;
+  /* Kept as aliases so older components stay on the single gold accent. */
+  --tertiary: var(--brand-ink);
+  --tertiary-foreground: #ffffff;
+  --quaternary: var(--brand-ink);
   --quaternary-foreground: #ffffff;
-  --muted: rgba(255, 255, 255, 0.06);
-  --muted-foreground: #9ca3af;
-  --accent: rgba(242, 201, 76, 0.1);
-  --accent-foreground: #f2c94c;
-  --destructive: #ef4444;
+
+  --muted: #efede9;
+  --muted-foreground: #57534e;
+  --hint: #6b655f;
+  --accent: color-mix(in oklab, var(--primary) 14%, transparent);
+  --accent-foreground: var(--brand-ink);
+  --destructive: #b42318;
   --destructive-foreground: #ffffff;
-  --border: rgba(255, 255, 255, 0.1);
-  --input: rgba(255, 255, 255, 0.06);
-  --input-background: rgba(255, 255, 255, 0.05);
-  --switch-background: rgba(255, 255, 255, 0.15);
+  --border: #e2ded8;
+  --input: #e2ded8;
+  --input-background: #ffffff;
+  --switch-background: #d6d3cf;
+  --ring: color-mix(in oklab, var(--primary) 60%, transparent);
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --ring: rgba(242, 201, 76, 0.4);
+  --radius: 0.75rem;
+
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  --radius: 0.75rem;
-  --sidebar: rgba(17, 17, 17, 0.8);
-  --sidebar-foreground: #e0e0e0;
-  --sidebar-primary: #f2c94c;
-  --sidebar-primary-foreground: #000000;
-  --sidebar-accent: rgba(255, 255, 255, 0.06);
-  --sidebar-accent-foreground: #e0e0e0;
-  --sidebar-border: rgba(255, 255, 255, 0.1);
-  --sidebar-ring: rgba(242, 201, 76, 0.4);
 
-  /* Liquid glass custom properties – Solar Amber */
-  --glass-bg: rgba(255, 255, 255, 0.05);
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  --sidebar: #ffffff;
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--muted);
+  --sidebar-accent-foreground: var(--foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+
+  --glow: rgb(242 201 76 / 22%);
+  --glow-strong: rgb(242 201 76 / 45%);
+
+  --glass-bg: rgb(255 255 255 / 72%);
+  --glass-bg-strong: rgb(255 255 255 / 85%);
+  --glass-bg-subtle: rgb(255 255 255 / 50%);
+  --glass-border: rgb(28 25 23 / 8%);
+  --glass-shadow: 0 1px 2px rgb(28 25 23 / 4%), 0 8px 24px rgb(28 25 23 / 6%);
+  --glass-shadow-strong: 0 2px 6px rgb(28 25 23 / 5%), 0 14px 32px rgb(28 25 23 / 8%);
   --glass-blur: 20px;
-  --glass-highlight: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, transparent 50%, rgba(255,255,255,0.02) 100%);
+  --glass-highlight: linear-gradient(135deg, rgb(255 255 255 / 60%) 0%, transparent 50%);
 }
 
 .dark {
+  color-scheme: dark;
+
   --background: #111111;
-  --foreground: #e0e0e0;
-  --card: rgba(255, 255, 255, 0.05);
-  --card-foreground: #e0e0e0;
-  --popover: rgba(17, 17, 17, 0.95);
-  --popover-foreground: #e0e0e0;
-  --primary: #f2c94c;
-  --primary-foreground: #000000;
-  --secondary: #f2994a;
-  --secondary-foreground: #000000;
-  --tertiary: #d4a843;
-  --tertiary-foreground: #000000;
-  --quaternary: #b8860b;
-  --quaternary-foreground: #ffffff;
-  --muted: rgba(255, 255, 255, 0.06);
-  --muted-foreground: #9ca3af;
-  --accent: rgba(242, 201, 76, 0.1);
-  --accent-foreground: #f2c94c;
-  --destructive: #ef4444;
-  --destructive-foreground: #ffffff;
-  --border: rgba(255, 255, 255, 0.1);
-  --input: rgba(255, 255, 255, 0.06);
-  --ring: rgba(242, 201, 76, 0.4);
-  --font-weight-medium: 500;
-  --font-weight-normal: 400;
+  --foreground: #f5f5f4;
+  --card: #1a1817;
+  --card-foreground: #f5f5f4;
+  --surface-2: #24211f;
+  --popover: #1a1817;
+  --popover-foreground: #f5f5f4;
+
+  --primary-hover: color-mix(in oklab, var(--primary) 88%, #ffffff 12%);
+  --brand-ink: #f2c94c;
+
+  --muted: #24211f;
+  --muted-foreground: #a8a29e;
+  --hint: #78716c;
+  --destructive: #eb5757;
+  --border: #2e2a27;
+  --input: rgb(255 255 255 / 8%);
+  --input-background: rgb(255 255 255 / 5%);
+  --switch-background: rgb(255 255 255 / 15%);
+
+  --sidebar: rgb(17 17 17 / 80%);
+
+  --glow: rgb(242 201 76 / 15%);
+  --glow-strong: rgb(242 201 76 / 40%);
+
+  --glass-bg: rgb(255 255 255 / 5%);
+  --glass-bg-strong: rgb(255 255 255 / 6%);
+  --glass-bg-subtle: rgb(255 255 255 / 2%);
+  --glass-border: rgb(255 255 255 / 10%);
+  --glass-shadow: 0 8px 32px rgb(0 0 0 / 40%), inset 0 1px 0 rgb(255 255 255 / 5%);
+  --glass-shadow-strong: 0 8px 32px rgb(0 0 0 / 50%), inset 0 1px 0 rgb(255 255 255 / 8%);
+  --glass-highlight: linear-gradient(135deg, rgb(255 255 255 / 6%) 0%, transparent 50%, rgb(255 255 255 / 2%) 100%);
 }
 
 @theme inline {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Cinzel", "Cormorant SC", Georgia, serif;
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
+  --color-surface-2: var(--surface-2);
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
+  --color-primary-hover: var(--primary-hover);
+  --color-brand-ink: var(--brand-ink);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
   --color-tertiary: var(--tertiary);
@@ -106,6 +140,7 @@
   --color-quaternary-foreground: var(--quaternary-foreground);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
+  --color-hint: var(--hint);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
   --color-destructive: var(--destructive);
@@ -132,6 +167,9 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+
+  --shadow-glow: 0 0 30px var(--glow);
+  --shadow-glow-strong: 0 0 20px var(--glow-strong);
 }
 
 @layer base {
@@ -141,7 +179,7 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-sans);
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -149,7 +187,7 @@
   }
 }
 
-/* Liquid Glass utility classes */
+/* Glass panels - values come from the --glass-* tokens so they work in both themes. */
 @layer utilities {
   .glass {
     background: var(--glass-bg);
@@ -160,23 +198,22 @@
   }
 
   .glass-strong {
-    background: rgba(255, 255, 255, 0.06);
+    background: var(--glass-bg-strong);
     backdrop-filter: blur(30px) saturate(1.5);
     -webkit-backdrop-filter: blur(30px) saturate(1.5);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow-strong);
   }
 
   .glass-subtle {
-    background: rgba(255, 255, 255, 0.02);
+    background: var(--glass-bg-subtle);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--glass-border);
   }
 
   .glass-glow {
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 40px rgba(242, 201, 76, 0.08);
+    box-shadow: var(--glass-shadow), 0 0 40px var(--glow);
   }
 
   .glass-highlight {

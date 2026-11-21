@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/[0.06] bg-[#0a0a0a]">
+    <footer className="border-t border-border bg-background">
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-8">
           {/* Brand */}
@@ -21,7 +21,7 @@ export function Footer() {
                 href="https://www.linkedin.com/in/soninsthlm/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center hover:border-primary/40 hover:bg-primary/5 transition-all"
+                className="w-9 h-9 rounded-full border border-border flex items-center justify-center hover:border-primary/40 hover:bg-primary/5 transition-all"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-4 h-4" />
@@ -30,14 +30,14 @@ export function Footer() {
                 href="https://instagram.com/foodstuckers.sthlm"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center hover:border-primary/40 hover:bg-primary/5 transition-all"
+                className="w-9 h-9 rounded-full border border-border flex items-center justify-center hover:border-primary/40 hover:bg-primary/5 transition-all"
                 aria-label="Instagram"
               >
                 <Instagram className="w-4 h-4" />
               </a>
               <a
                 href="mailto:sonngoc.nguyen@hyperisland.se"
-                className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center hover:border-primary/40 hover:bg-primary/5 transition-all"
+                className="w-9 h-9 rounded-full border border-border flex items-center justify-center hover:border-primary/40 hover:bg-primary/5 transition-all"
                 aria-label="Email"
               >
                 <Mail className="w-4 h-4" />
@@ -49,16 +49,16 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="text-sm font-semibold tracking-wide uppercase text-foreground">Quick Links</h3>
             <nav className="flex flex-col space-y-2.5">
-              <Link to="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              <Link to="/about" className="text-sm text-muted-foreground hover:text-brand-ink transition-colors">
                 About Me
               </Link>
-              <Link to="/projects" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              <Link to="/projects" className="text-sm text-muted-foreground hover:text-brand-ink transition-colors">
                 Projects
               </Link>
-              <Link to="/services" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              <Link to="/services" className="text-sm text-muted-foreground hover:text-brand-ink transition-colors">
                 Services
               </Link>
-              <Link to="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              <Link to="/contact" className="text-sm text-muted-foreground hover:text-brand-ink transition-colors">
                 Contact
               </Link>
             </nav>
@@ -68,16 +68,16 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="text-sm font-semibold tracking-wide uppercase text-foreground">Explore</h3>
             <nav className="flex flex-col space-y-2.5">
-              <Link to="/about#cv" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              <Link to="/about#cv" className="text-sm text-muted-foreground hover:text-brand-ink transition-colors">
                 CV & Certificates
               </Link>
-              <Link to="/brand-book" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              <Link to="/brand-book" className="text-sm text-muted-foreground hover:text-brand-ink transition-colors">
                 Brand Book
               </Link>
-              <Link to="/blog" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              <Link to="/blog" className="text-sm text-muted-foreground hover:text-brand-ink transition-colors">
                 Blog
               </Link>
-              <Link to="/privacy" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              <Link to="/privacy" className="text-sm text-muted-foreground hover:text-brand-ink transition-colors">
                 Privacy Policy
               </Link>
             </nav>
@@ -89,7 +89,7 @@ export function Footer() {
             <div className="flex flex-col space-y-3">
               <a
                 href="mailto:sonngoc.nguyen@hyperisland.se"
-                className="flex items-center gap-2.5 text-sm text-muted-foreground hover:text-primary transition-colors"
+                className="flex items-center gap-2.5 text-sm text-muted-foreground hover:text-brand-ink transition-colors"
               >
                 <Mail className="w-4 h-4 flex-shrink-0" />
                 sonngoc.nguyen@hyperisland.se
@@ -104,9 +104,9 @@ export function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-white/[0.06]">
+      <div className="border-t border-border">
         <div className="container mx-auto px-4 py-5 flex items-center justify-center text-xs text-muted-foreground/60">
-          <p>&copy; {new Date().getFullYear()} Son Nguyen. Made with Love <span className="text-primary">&#9829;</span></p>
+          <p>&copy; {new Date().getFullYear()} Son Nguyen. Made with Love <span className="text-brand-ink">&#9829;</span></p>
         </div>
       </div>
     </footer>

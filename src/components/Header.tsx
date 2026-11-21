@@ -14,12 +14,12 @@ export function Header() {
     path === "/blog" ? location.pathname.startsWith("/blog") : location.pathname === path;
 
   const navLinkClass = (path: string) =>
-    `text-sm font-medium transition-colors hover:text-primary ${
-      isActive(path) ? "text-primary" : "text-muted-foreground"
+    `text-sm font-medium transition-colors hover:text-brand-ink ${
+      isActive(path) ? "text-brand-ink" : "text-muted-foreground"
     }`;
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#111111]/95 backdrop-blur-xl border-b border-white/[0.08] shadow-lg shadow-black/20">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-xl border-b border-border shadow-lg shadow-black/20">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <Link
           to="/"
@@ -99,14 +99,14 @@ export function Header() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-[#111111]/95 backdrop-blur-xl border-b border-white/[0.08] shadow-2xl shadow-black/30">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-border shadow-2xl shadow-black/30">
           <nav className="container mx-auto px-4 py-4 flex flex-col space-y-1">
             <Link
               to="/"
               onClick={closeMobile}
               className={`py-3 px-3 rounded-lg transition-colors ${
                 isActive("/")
-                  ? "bg-primary/10 text-primary"
+                  ? "bg-primary/10 text-brand-ink"
                   : "hover:bg-muted"
               }`}
             >
@@ -117,7 +117,7 @@ export function Header() {
               onClick={closeMobile}
               className={`py-3 px-3 rounded-lg transition-colors ${
                 isActive("/about")
-                  ? "bg-primary/10 text-primary"
+                  ? "bg-primary/10 text-brand-ink"
                   : "hover:bg-muted"
               }`}
             >
@@ -128,7 +128,7 @@ export function Header() {
               onClick={closeMobile}
               className={`py-3 px-3 rounded-lg transition-colors ${
                 isActive("/projects")
-                  ? "bg-primary/10 text-primary"
+                  ? "bg-primary/10 text-brand-ink"
                   : "hover:bg-muted"
               }`}
             >
@@ -139,7 +139,7 @@ export function Header() {
               onClick={closeMobile}
               className={`py-3 px-3 rounded-lg transition-colors ${
                 isActive("/services")
-                  ? "bg-primary/10 text-primary"
+                  ? "bg-primary/10 text-brand-ink"
                   : "hover:bg-muted"
               }`}
             >
@@ -150,7 +150,7 @@ export function Header() {
               onClick={closeMobile}
               className={`py-3 px-3 rounded-lg transition-colors ${
                 isActive("/blog")
-                  ? "bg-primary/10 text-primary"
+                  ? "bg-primary/10 text-brand-ink"
                   : "hover:bg-muted"
               }`}
             >
@@ -158,7 +158,7 @@ export function Header() {
             </Link>
 
             {/* Mobile Social Links */}
-            <div className="flex items-center gap-3 pt-4 border-t border-white/[0.08]">
+            <div className="flex items-center gap-3 pt-4 border-t border-border">
               <a
                 href="https://www.linkedin.com/in/soninsthlm/"
                 target="_blank"

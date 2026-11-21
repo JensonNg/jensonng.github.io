@@ -9,7 +9,7 @@ export function PrivacyPage() {
         {/* Back link */}
         <Link
           to="/contact"
-          className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-8"
+          className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-brand-ink transition-colors mb-8"
         >
           <ArrowLeft className="w-4 h-4" />
           Back to Contact
@@ -19,7 +19,7 @@ export function PrivacyPage() {
         <div className="max-w-3xl mx-auto">
           <div className="flex items-center gap-3 mb-6">
             <div className="p-3 bg-primary/10 rounded-xl">
-              <Shield className="w-6 h-6 text-primary" />
+              <Shield className="w-6 h-6 text-brand-ink" />
             </div>
             <div>
               <h1 className="text-3xl md:text-4xl font-bold">Privacy Policy</h1>
@@ -41,7 +41,7 @@ export function PrivacyPage() {
             {/* What data */}
             <section className="space-y-3">
               <div className="flex items-center gap-2">
-                <Eye className="w-5 h-5 text-primary" />
+                <Eye className="w-5 h-5 text-brand-ink" />
                 <h2 className="text-lg font-semibold text-foreground">What Data I Collect</h2>
               </div>
               <p>When you submit the contact form, I collect:</p>
@@ -68,7 +68,7 @@ export function PrivacyPage() {
             {/* How data is processed */}
             <section className="space-y-3">
               <div className="flex items-center gap-2">
-                <Lock className="w-5 h-5 text-primary" />
+                <Lock className="w-5 h-5 text-brand-ink" />
                 <h2 className="text-lg font-semibold text-foreground">How Your Data Is Processed</h2>
               </div>
               <ul className="space-y-2 ml-4">
@@ -105,7 +105,7 @@ export function PrivacyPage() {
             {/* Your rights */}
             <section className="space-y-3">
               <div className="flex items-center gap-2">
-                <Trash2 className="w-5 h-5 text-primary" />
+                <Trash2 className="w-5 h-5 text-brand-ink" />
                 <h2 className="text-lg font-semibold text-foreground">Your Rights</h2>
               </div>
               <p>Under GDPR, you have the right to:</p>
@@ -136,7 +136,7 @@ export function PrivacyPage() {
             {/* Contact */}
             <section className="space-y-3">
               <div className="flex items-center gap-2">
-                <Mail className="w-5 h-5 text-primary" />
+                <Mail className="w-5 h-5 text-brand-ink" />
                 <h2 className="text-lg font-semibold text-foreground">Data Controller & Contact</h2>
               </div>
               <div className="glass rounded-xl p-4 space-y-1">
@@ -144,7 +144,7 @@ export function PrivacyPage() {
                 <p>Stockholm, Sweden</p>
                 <a
                   href="mailto:sonngoc.nguyen@hyperisland.se"
-                  className="text-primary hover:underline"
+                  className="text-brand-ink hover:underline"
                 >
                   sonngoc.nguyen@hyperisland.se
                 </a>

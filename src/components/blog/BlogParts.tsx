@@ -65,11 +65,11 @@ export function SectionHeader({
   aside?: React.ReactNode;
 }) {
   return (
-    <div className="flex items-baseline gap-4 pb-4 border-b-[0.5px] border-[#333333]">
-      <span style={display} className="text-base font-semibold tracking-[2px] text-[#f2c94c]">
+    <div className="flex items-baseline gap-4 pb-4 border-b-[0.5px] border-border">
+      <span style={display} className="text-base font-semibold tracking-[2px] text-brand-ink">
         {number}
       </span>
-      <h2 id={id} className="m-0 font-['Inter',sans-serif] text-sm font-medium tracking-[2px] text-[#888888] uppercase">
+      <h2 id={id} className="m-0 font-['Inter',sans-serif] text-sm font-medium tracking-[2px] text-muted-foreground uppercase">
         {label}
       </h2>
       {aside && <div className="ml-auto">{aside}</div>}
@@ -79,7 +79,7 @@ export function SectionHeader({
 
 export function PostMeta({ post, className = "" }: { post: BlogPost; className?: string }) {
   return (
-    <p className={`text-[11px] tracking-[2px] text-[#808080] ${className}`}>
+    <p className={`text-[11px] tracking-[2px] text-hint ${className}`}>
       {formatDate(post.date)} · {readingTime(post)} MIN READ
       {isMultilingual && ` · ${languageLabel[post.lang].toUpperCase()}`}
     </p>
@@ -90,10 +90,10 @@ export function PostCard({ post, number }: { post: BlogPost; number: string }) {
   return (
     <Link
       to={`/blog/${post.slug}`}
-      className="group block h-full rounded-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f2c94c]"
+      className="group block h-full rounded-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
     >
-      <article className="h-full flex flex-col overflow-hidden rounded-lg border border-[#222222] bg-[#111111] transition-colors group-hover:border-[rgba(242,201,76,0.45)]">
-        <div className="relative aspect-[1200/630] overflow-hidden border-b border-[#222222] bg-[#0d0d0d]">
+      <article className="h-full flex flex-col overflow-hidden rounded-lg border border-border bg-background transition-colors group-hover:border-primary/45">
+        <div className="relative aspect-[1200/630] overflow-hidden border-b border-border bg-surface-2">
           <img
             src={post.cover}
             alt=""
@@ -103,23 +103,23 @@ export function PostCard({ post, number }: { post: BlogPost; number: string }) {
           />
           <span
             style={display}
-            className="absolute left-4 top-3 rounded bg-[#0a0a0a]/85 px-2 py-0.5 text-sm font-semibold tracking-[2px] text-[#f2c94c]"
+            className="absolute left-4 top-3 rounded bg-black/80 px-2 py-0.5 text-sm font-semibold tracking-[2px] text-primary"
           >
             {number}
           </span>
         </div>
         <div className="flex flex-1 flex-col gap-3 p-6 md:p-[30px]">
-          <p style={display} className="text-[11px] font-semibold tracking-[2px] text-[#f2c94c] uppercase">
+          <p style={display} className="text-[11px] font-semibold tracking-[2px] text-brand-ink uppercase">
             {post.category}
           </p>
           <h3
             lang={post.lang}
             style={displayFor(post.lang, post.title)}
-            className="text-xl leading-snug font-semibold text-[#cccccc] transition-colors group-hover:text-[#f2994a]"
+            className="text-xl leading-snug font-semibold text-foreground/80 transition-colors group-hover:text-brand-ink"
           >
             {post.title}
           </h3>
-          <p lang={post.lang} className="flex-1 text-sm leading-[22px] text-[#aaaaaa] line-clamp-3">
+          <p lang={post.lang} className="flex-1 text-sm leading-[22px] text-muted-foreground line-clamp-3">
             {post.excerpt}
           </p>
           <PostMeta post={post} className="mt-2" />

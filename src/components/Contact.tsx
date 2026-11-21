@@ -110,14 +110,14 @@ export function Contact() {
                 <CardContent className="p-3">
                   <div className="flex items-center gap-3">
                     <div className="p-2 bg-primary/10 rounded-lg">
-                      <info.icon className="w-4 h-4 text-primary" />
+                      <info.icon className="w-4 h-4 text-brand-ink" />
                     </div>
                     <div>
                       <p className="text-xs text-muted-foreground">{info.label}</p>
                       {info.link ? (
                         <a
                           href={info.link}
-                          className="font-medium text-sm hover:text-primary transition-colors"
+                          className="font-medium text-sm hover:text-brand-ink transition-colors"
                         >
                           {info.value}
                         </a>
@@ -134,11 +134,11 @@ export function Contact() {
           <div className="space-y-3">
             <div className="text-xs font-medium">Areas of Collaboration</div>
             <div className="flex flex-wrap gap-2">
-              <Badge variant="outline" className="border-primary text-primary text-xs">Growth Marketing</Badge>
-              <Badge variant="outline" className="border-secondary text-secondary text-xs">Sustainability Strategy</Badge>
+              <Badge variant="outline" className="border-primary text-brand-ink text-xs">Growth Marketing</Badge>
+              <Badge variant="outline" className="border-secondary text-brand-ink text-xs">Sustainability Strategy</Badge>
               <Badge variant="outline" className="border-tertiary text-tertiary text-xs">UX Research</Badge>
               <Badge variant="outline" className="border-accent text-accent-foreground text-xs">Content Creation</Badge>
-              <Badge variant="outline" className="border-secondary text-secondary text-xs">Brand Development</Badge>
+              <Badge variant="outline" className="border-secondary text-brand-ink text-xs">Brand Development</Badge>
             </div>
           </div>
         </div>
@@ -208,14 +208,14 @@ export function Contact() {
                     type="checkbox"
                     checked={consentGiven}
                     onChange={(e) => setConsentGiven(e.target.checked)}
-                    className="mt-0.5 w-4 h-4 rounded border-white/20 bg-white/5 text-primary focus:ring-primary/50 accent-[#f2c94c]"
+                    className="mt-0.5 w-4 h-4 rounded border-foreground/20 bg-foreground/5 text-brand-ink focus:ring-primary/50 accent-primary"
                     required
                   />
                   <span className="text-[11px] text-muted-foreground leading-relaxed">
                     I consent to Son Nguyen collecting my name and email to respond to this inquiry.
                     My data will only be used for this purpose and will not be shared with third parties.
                     I can request deletion of my data at any time.{" "}
-                    <Link to="/privacy" className="text-primary hover:underline">
+                    <Link to="/privacy" className="text-brand-ink hover:underline">
                       Privacy Policy
                     </Link>
                   </span>
@@ -225,7 +225,7 @@ export function Contact() {
               {submitStatus.type && (
                 <div className={`flex items-center gap-2 p-3 rounded-lg text-xs ${
                   submitStatus.type === 'success'
-                    ? 'bg-primary/10 text-primary'
+                    ? 'bg-primary/10 text-brand-ink'
                     : 'bg-destructive/10 text-destructive'
                 }`}>
                   {submitStatus.type === 'success' ? (

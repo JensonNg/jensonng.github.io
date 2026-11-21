@@ -41,20 +41,20 @@ function BrandLogo({ brand, size = "normal" }: { brand: LogoBrand; size?: "norma
       {/* Logo content */}
       <div className="relative z-10 flex flex-col items-center gap-3">
         {brand.initials === 'ᛊ' ? (
-          <div className="w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg border border-primary/30 bg-[#111]">
+          <div className="w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg border border-primary/30 bg-background">
             <svg width="36" height="36" viewBox="0 0 48 48" fill="none">
               <path d="M14 4 L28 20 L14 20 L28 44" stroke="#F2C94C" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
             </svg>
           </div>
         ) : (
           <div
-            className="w-16 h-16 rounded-2xl flex items-center justify-center text-2xl font-bold shadow-lg border border-white/10"
+            className="w-16 h-16 rounded-2xl flex items-center justify-center text-2xl font-bold shadow-lg border border-border"
             style={{ backgroundColor: brand.color, color: '#000' }}
           >
             {brand.initials}
           </div>
         )}
-        <span className="text-sm font-semibold tracking-wide text-white/90">{brand.name}</span>
+        <span className="text-sm font-semibold tracking-wide text-foreground/90">{brand.name}</span>
       </div>
     </div>
   );
@@ -367,7 +367,7 @@ export function Projects() {
                           key={i}
                           className="text-center p-2 rounded-lg bg-primary/5 border border-primary/10"
                         >
-                          <div className="text-sm font-bold text-primary">{metric.value}</div>
+                          <div className="text-sm font-bold text-brand-ink">{metric.value}</div>
                           <div className="text-[10px] text-muted-foreground leading-tight">{metric.label}</div>
                         </div>
                       ))}
@@ -376,7 +376,7 @@ export function Projects() {
 
                   <div className="space-y-2">
                     <div className="text-xs font-medium">Role: {project.role}</div>
-                    <blockquote className="text-xs italic text-primary border-l-2 border-primary/30 pl-3">
+                    <blockquote className="text-xs italic text-brand-ink border-l-2 border-primary/30 pl-3">
                       "{project.quote}"
                     </blockquote>
                   </div>
@@ -448,7 +448,7 @@ export function Projects() {
                           key={i}
                           className="text-center p-2 rounded-lg bg-primary/5 border border-primary/10"
                         >
-                          <div className="text-sm font-bold text-primary">{metric.value}</div>
+                          <div className="text-sm font-bold text-brand-ink">{metric.value}</div>
                           <div className="text-[10px] text-muted-foreground leading-tight">{metric.label}</div>
                         </div>
                       ))}
@@ -457,7 +457,7 @@ export function Projects() {
 
                   <div className="space-y-2">
                     <div className="text-xs font-medium">Role: {project.role}</div>
-                    <blockquote className="text-xs italic text-primary border-l-2 border-primary/30 pl-3">
+                    <blockquote className="text-xs italic text-brand-ink border-l-2 border-primary/30 pl-3">
                       "{project.quote}"
                     </blockquote>
                   </div>
