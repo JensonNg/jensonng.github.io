@@ -3,10 +3,52 @@ import { Link, Navigate, useParams } from "react-router-dom";
 import { Block, BlogPost, blogPosts, getPost } from "../data/blogPosts";
 import { PostCard, PostMeta, SectionHeader, SowiloStroke, display, displayFor } from "../components/blog/BlogParts";
 
+/** Renders **bold** and [link](https://...) inside paragraph text. */
+function Inline({ text }: { text: string }) {
+  const parts = text.split(/(\*\*[^*]+\*\*|\[[^\]]+\]\([^)\s]+\))/g);
+  return (
+    <>
+      {parts.map((part, i) => {
+        const bold = part.match(/^\*\*([^*]+)\*\*$/);
+        if (bold) return <strong key={i} className="font-semibold text-[#cccccc]">{bold[1]}</strong>;
+        const link = part.match(/^\[([^\]]+)\]\(([^)\s]+)\)$/);
+        if (link)
+          return (
+            <a key={i} href={link[2]} target="_blank" rel="noopener noreferrer" className="text-[#f2c94c] underline decoration-[rgba(242,201,76,0.4)] underline-offset-4 hover:text-[#f2994a]">
+              {link[1]}
+            </a>
+          );
+        return part;
+      })}
+    </>
+  );
+}
+
 function BodyBlock({ block, lang }: { block: Block; lang: string }) {
   switch (block.type) {
     case "p":
-      return <p className="m-0">{block.text}</p>;
+      return (
+        <p className="m-0">
+          <Inline text={block.text} />
+        </p>
+      );
+    case "callouts":
+      return (
+        <ul className="my-2 flex list-none flex-col gap-3 p-0">
+          {block.items.map((item, i) => (
+            <li key={i} className="rounded-lg border border-[#222222] bg-[#111111] p-5 md:px-[30px] md:py-6">
+              {item.label && (
+                <p style={display} className="m-0 mb-2 text-[13px] font-semibold tracking-[1.5px] text-[#f2c94c] uppercase">
+                  {item.label}
+                </p>
+              )}
+              <p className="m-0 text-base leading-[27px] text-[#cccccc] md:text-[17px] md:leading-[28px]">
+                <Inline text={item.text} />
+              </p>
+            </li>
+          ))}
+        </ul>
+      );
     case "h2":
       return (
         <h2 style={displayFor(lang, block.text)} className="mt-6 text-2xl leading-[1.3] font-bold text-[#f2c94c] md:text-[26px]">
@@ -165,6 +207,9 @@ export function BlogPostPage() {
             alt={post.coverAlt}
             className="mx-auto h-auto w-full max-w-[1100px] rounded-xl border border-[#222222]"
           />
+          {post.coverCaption && (
+            <p className="mx-auto max-w-[1100px] pt-3 text-xs tracking-[0.5px] text-[#888888]">{post.coverCaption}</p>
+          )}
         </div>
 
         {/* Body */}
