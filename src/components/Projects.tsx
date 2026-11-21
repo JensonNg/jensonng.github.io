@@ -73,8 +73,8 @@ export function Projects() {
 
   const projects = [
     {
-      title: "Bachable.io - Brand & Alpha Launch",
-      description: "Shaping the brand of Bachable.io, a new collaborative online music-notation platform where musicians write, engrave and share scores together. Leading brand strategy and messaging, writing onboarding content, and telling the product's story for the alpha launch.",
+      title: "Bachable.io - Brand & Launch",
+      description: "Shaping the brand of Bachable.io, a new collaborative online music-notation platform where musicians write, engrave and share scores together. Leading brand strategy and messaging, writing onboarding content, and telling the product's story from alpha to public launch.",
       brand: {
         name: "Bachable.io",
         initials: "b",
@@ -90,7 +90,7 @@ export function Projects() {
       readMoreUrl: "https://bachable.io",
       featured: true,
       metrics: [
-        { value: "~300", label: "Alpha users" },
+        { value: "~300", label: "Users" },
       ] as Metric[],
     },
     {

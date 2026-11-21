@@ -63,14 +63,14 @@ const experiences: TimelineEntry[] = [
         period: "Oct 2025 - Present",
         responsibilities: [
           "Lead brand strategy and messaging for a new collaborative online music-notation platform",
-          "Write onboarding content and product storytelling for the alpha launch",
-          "Support the alpha launch as it approaches 300 users",
+          "Write onboarding content and product storytelling, from alpha through public launch",
+          "Support growth since the public launch, now approaching 300 users",
         ],
       },
     ],
     description:
       "A collaborative online music-notation platform where musicians write, engrave and share scores together.",
-    impact: "Alpha launch approaching 300 users",
+    impact: "Publicly launched, now approaching 300 users",
     accentColor: "#f2994a",
   },
   {
