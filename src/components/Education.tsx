@@ -151,16 +151,32 @@ export function Education() {
                 Continuous learning in digital marketing, advertising and AI
               </p>
             </div>
+            {/* Certificates with an issuer read as a list; short course names stay as pills. */}
+            <ul className="mb-4 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+              {certifications
+                .filter((cert) => cert.includes(" · "))
+                .map((cert) => {
+                  const [name, source] = cert.split(" · ");
+                  return (
+                    <li key={cert} className="rounded-xl border border-primary/20 bg-primary/5 px-4 py-3 text-left">
+                      <p className="text-sm font-medium text-foreground">{name}</p>
+                      <p className="text-xs text-muted-foreground mt-0.5">{source}</p>
+                    </li>
+                  );
+                })}
+            </ul>
             <div className="flex flex-wrap justify-center gap-2">
-              {certifications.map((cert, index) => (
-                <Badge 
-                  key={index} 
-                  variant="outline" 
-                  className="border-primary/50 text-brand-ink hover:bg-primary hover:text-primary-foreground transition-colors text-xs"
-                >
-                  {cert}
-                </Badge>
-              ))}
+              {certifications
+                .filter((cert) => !cert.includes(" · "))
+                .map((cert) => (
+                  <Badge
+                    key={cert}
+                    variant="outline"
+                    className="border-primary/50 text-brand-ink text-xs"
+                  >
+                    {cert}
+                  </Badge>
+                ))}
             </div>
           </CardContent>
         </Card>

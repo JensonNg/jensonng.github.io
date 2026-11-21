@@ -59,7 +59,7 @@ export function SectionWrapper({
           <Button
             variant="ghost"
             onClick={toggleExpanded}
-            className="w-full p-4 md:p-6 h-auto flex items-center justify-between hover:bg-accent/50 transition-colors rounded-none gap-2"
+            className="w-full p-4 md:p-6 h-auto flex items-center justify-between whitespace-normal hover:bg-accent/50 transition-colors rounded-none gap-2"
           >
             <div className="flex items-center gap-3 md:gap-4 min-w-0 flex-1">
               <div className="flex items-center gap-2 md:gap-3 flex-shrink-0">
@@ -79,7 +79,7 @@ export function SectionWrapper({
                   {title}
                 </h2>
                 {description && (
-                  <p className="text-muted-foreground text-xs md:text-sm max-w-2xl line-clamp-2">
+                  <p className="text-muted-foreground text-xs md:text-sm max-w-2xl">
                     {description}
                   </p>
                 )}
