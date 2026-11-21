@@ -45,7 +45,8 @@ The original design is available in [Figma](https://www.figma.com/design/j4F5z5S
 `npm run build` pre-renders every public page to plain HTML, so search engines and AI assistants can read the content without running JavaScript. It also writes `sitemap.xml` and `llms.txt` (a plain-text summary of the site for AI tools).
 
 - Page titles, descriptions and structured data live in `src/lib/seo.ts`.
-- **Adding a new page:** add it to `STATIC_PAGES` in `src/lib/seo.ts`, or it will not be pre-rendered, listed in the sitemap or described in `llms.txt`. Blog posts are picked up automatically.
+- **Adding a new page:** add it to `STATIC_PAGES` in `src/lib/seo.ts`, or it will not be pre-rendered, listed in the sitemap or described in `llms.txt`. Blog posts and published case studies are picked up automatically.
+- **Adding a case study:** copy an entry in `src/data/caseStudies.ts`. New ones start in the `drafts` list: they show in `npm run dev` (with red "To fill in" marks for any `[[notes]]`) but are left out of the live site completely. When the text is final, move the entry to the `published` list.
 - `public/robots.txt` welcomes search and AI answer tools and blocks AI training crawlers.
 
 ## Project structure

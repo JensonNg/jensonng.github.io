@@ -1,6 +1,9 @@
 import { Projects } from "../components/Projects";
 import { SectionWrapper } from "../components/SectionWrapper";
 import { ContactCTA } from "../components/ContactCTA";
+import { SectionHeader } from "../components/SectionHeader";
+import { CaseStudyCard } from "../components/CaseStudyCard";
+import { caseStudies } from "../data/caseStudies";
 
 export function ProjectsPage() {
   return (
@@ -16,6 +19,27 @@ export function ProjectsPage() {
           </p>
         </div>
       </div>
+
+      {/* Case studies */}
+      {caseStudies.length > 0 && (
+        <section aria-labelledby="case-studies-title" className="px-4 pb-16 md:pb-24">
+          <div className="container mx-auto max-w-6xl">
+            <SectionHeader
+              id="case-studies-title"
+              eyebrow="Case studies"
+              title="The full story"
+              lead="The challenge, what I did, and what changed."
+            />
+            <ul className="m-0 grid list-none gap-5 p-0 md:grid-cols-2 lg:grid-cols-3">
+              {caseStudies.map((study) => (
+                <li key={study.slug} className="min-w-0">
+                  <CaseStudyCard study={study} />
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
 
       {/* Projects */}
       <SectionWrapper

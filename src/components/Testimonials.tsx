@@ -1,56 +1,47 @@
 import { useState, useEffect, useRef } from "react";
-import { ChevronLeft, ChevronRight, Quote, Linkedin } from "lucide-react";
+import { ChevronLeft, ChevronRight, Linkedin } from "lucide-react";
+import { testimonials, type Testimonial } from "../data/testimonials";
+import { SectionHeader } from "./SectionHeader";
 
-const testimonials = [
-  {
-    name: "Karl Yves Vallin",
-    role: "Managing Director",
-    company: "RFSL Utbildning AB",
-    relation: "Mentor",
-    text: "Son has a great willingness to learn and managed to pick up tasks quickly and efficiently. Even with cultural differences and his short time in Sweden, he managed to perform excellently in Swedish working culture. During his short internship with RFSL Utbildning, he has managed to create remarkable results for the organization.",
-    initials: "KV",
-  },
-  {
-    name: "Nathalie Sajda",
-    role: "Founder",
-    company: "FractalEight | Impact Consultancy",
-    relation: "Client",
-    text: "During 5 weeks I witnessed his insatiable curiosity and problem-solving mindset, while his diligence ensures high-quality results. As a team player, he seamlessly collaborates, fostering a positive and productive environment. Son is a reliable and dedicated professional in all aspects, and I am confident in his ability to excel in any endeavor.",
-    initials: "NS",
-  },
-  {
-    name: "Nicholas Kelly",
-    role: "Marketing Manager | Growth & Strategy",
-    company: "RFSL Utbildning",
-    relation: "Manager",
-    text: "Son has excellent design and marketing skills that can capture any audience. He has been a highly appreciated co-worker since he manages to deliver great results within set deadlines and never complains about the workload. At RFSL Utbildning, Son has helped us create a graphic design and branding profile.",
-    initials: "NK",
-  },
-  {
-    name: "Nguyen Vo",
-    role: "ESG | Sustainability | Partnership",
-    company: "Unilever",
-    relation: "Collaborator",
-    text: "I had the pleasure of working with Son for 6 months for the Vietnam Zero-Waste Academy. Son has been a great resource to our team with his knowledge and experience working with zero-waste projects. He has been always the first to jump in if any trainee ran into issues. Anyone looking to hire or work with him will love it, too.",
-    initials: "NV",
-  },
-  {
-    name: "Nhu Que Thanh Le",
-    role: "Marketing Manager | SEO & Brand Growth",
-    company: "Seed Planter",
-    relation: "Teammate",
-    text: "Son is a friendly and considerate person. He is always cheerful and easy to talk with. Professionally, I learned a lot from his management and marketing skills. Son amazed me how organized and careful he is with all the tracking documents and resources. I adore him as a friend and respect him as a coworker.",
-    initials: "NL",
-  },
-  {
-    name: "Dailet Naila Soriano",
-    role: "Communicator & Event Coordinator",
-    company: "Stockholm Dual Career Network",
-    relation: "Mentee",
-    text: "Son has the personality of a leader: he is charismatic, resourceful, likeable, comprehensive. He has an open mind to all the things that require his attention and his kindness. Son is a great addition to any team because he knows how to seize the good things in every situation.",
-    initials: "DS",
-  },
-];
+function CompanyMark({ t }: { t: Testimonial }) {
+  if (t.logo) {
+    return (
+      <span className="flex size-10 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-border bg-white p-1">
+        <img src={t.logo} alt={`${t.company} logo`} loading="lazy" className="max-h-full max-w-full object-contain" />
+      </span>
+    );
+  }
+  return (
+    <span
+      aria-hidden="true"
+      className="flex size-10 shrink-0 items-center justify-center rounded-xl border border-primary/30 bg-primary/10 text-xs font-bold text-brand-ink"
+    >
+      {t.initials}
+    </span>
+  );
+}
+
+/** One testimonial: headline, quote, then who said it. Used on the homepage and on case study pages. */
+export function TestimonialCard({ t, className = "" }: { t: Testimonial; className?: string }) {
+  return (
+    <figure className={`glass m-0 flex flex-col rounded-2xl p-6 md:p-8 ${className}`}>
+      <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-brand-ink">{t.relation}</p>
+      <h3 className="mb-3 text-lg font-semibold leading-snug md:text-xl">"{t.headline}"</h3>
+      <blockquote className="m-0 mb-6 flex-1 text-sm leading-relaxed text-muted-foreground">
+        <p className="m-0">{t.text}</p>
+      </blockquote>
+      <figcaption className="flex items-center gap-3 border-t border-border pt-4">
+        <CompanyMark t={t} />
+        <div className="min-w-0">
+          <p className="text-sm font-semibold">{t.name}</p>
+          <p className="break-words text-xs text-muted-foreground">
+            {t.role} @ {t.company}
+          </p>
+        </div>
+      </figcaption>
+    </figure>
+  );
+}
 
 export function Testimonials() {
   const [current, setCurrent] = useState(0);
@@ -65,6 +56,8 @@ export function Testimonials() {
 
   const visibleCount = isMobile ? 1 : 2;
   const maxIndex = testimonials.length - visibleCount;
+
+  useEffect(() => setCurrent((c) => Math.min(c, maxIndex)), [maxIndex]);
 
   const prev = () => setCurrent((c) => Math.max(0, c - 1));
   const next = () => setCurrent((c) => Math.min(maxIndex, c + 1));
@@ -89,93 +82,72 @@ export function Testimonials() {
     else if (diff < -threshold) prev();
   };
 
+  const navButton =
+    "flex size-11 items-center justify-center rounded-full border border-border transition-colors hover:border-primary/40 hover:bg-primary/5 disabled:cursor-not-allowed disabled:opacity-30";
+
   return (
-    <section className="py-20 px-4">
-      <div className="container mx-auto max-w-5xl">
-        {/* Header */}
-        <div className="flex items-end justify-between mb-10">
-          <div>
-            <p className="text-brand-ink/60 text-sm tracking-[0.3em] uppercase mb-2">Testimonials</p>
-            <h2 className="text-2xl md:text-3xl font-medium">
-              What People <span className="text-brand-ink">Say</span>
-            </h2>
-          </div>
-          <div className="flex items-center gap-2">
-            <a
-              href="https://linkedin.com/in/soninsthlm"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xs text-muted-foreground hover:text-brand-ink flex items-center gap-1 transition-colors mr-3"
-            >
-              <Linkedin className="w-3.5 h-3.5" /> View all on LinkedIn
-            </a>
-            <button
-              onClick={prev}
-              disabled={current === 0}
-              className="p-2 rounded-full border border-border hover:border-primary/40 hover:bg-primary/5 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
-            >
-              <ChevronLeft className="w-4 h-4" />
-            </button>
-            <button
-              onClick={next}
-              disabled={current >= maxIndex}
-              className="p-2 rounded-full border border-border hover:border-primary/40 hover:bg-primary/5 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
-            >
-              <ChevronRight className="w-4 h-4" />
-            </button>
-          </div>
-        </div>
+    <section aria-labelledby="testimonials-title" className="px-4 py-16 md:py-24">
+      <div className="container mx-auto max-w-6xl">
+        <SectionHeader
+          id="testimonials-title"
+          eyebrow="Testimonials"
+          title="What people say"
+          lead="Managers, clients and teammates from Sweden and Vietnam."
+          action={
+            <div className="flex items-center gap-2">
+              <a
+                href="https://linkedin.com/in/soninsthlm"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mr-2 inline-flex min-h-11 items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-brand-ink"
+              >
+                <Linkedin className="size-4" /> All on LinkedIn
+              </a>
+              <button type="button" onClick={prev} disabled={current === 0} aria-label="Previous testimonial" className={navButton}>
+                <ChevronLeft className="size-4" />
+              </button>
+              <button type="button" onClick={next} disabled={current >= maxIndex} aria-label="Next testimonial" className={navButton}>
+                <ChevronRight className="size-4" />
+              </button>
+            </div>
+          }
+        />
 
         {/* Cards - swipeable */}
         <div
           ref={dragRef}
-          className="overflow-hidden cursor-grab active:cursor-grabbing touch-pan-y"
+          className="cursor-grab touch-pan-y overflow-hidden active:cursor-grabbing"
           onPointerDown={handlePointerDown}
           onPointerUp={handlePointerUp}
           onPointerCancel={handlePointerUp}
         >
           <div
-            className="flex gap-6 transition-transform duration-500 ease-out select-none"
-            style={{ transform: `translateX(-${current * (isMobile ? 106 : 52.5)}%)` }}
+            className="flex select-none gap-6 transition-transform duration-500 ease-out motion-reduce:transition-none"
+            style={{ transform: `translateX(calc(-${current} * (${isMobile ? "100%" : "50%"} + ${isMobile ? 24 : 12}px)))` }}
           >
-            {testimonials.map((t, i) => (
-              <div
-                key={i}
-                className={`glass rounded-2xl p-6 md:p-8 flex-shrink-0 flex flex-col ${
-                  isMobile ? "w-full" : "w-[calc(50%-12px)]"
-                }`}
-              >
-                <Quote className="w-8 h-8 text-brand-ink/20 mb-4 flex-shrink-0" />
-                <p className="text-muted-foreground text-sm leading-relaxed flex-1 mb-6">
-                  {t.text}
-                </p>
-                <div className="flex items-center gap-3 pt-4 border-t border-border">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center text-xs font-bold text-brand-ink flex-shrink-0">
-                    {t.initials}
-                  </div>
-                  <div className="min-w-0">
-                    <p className="text-sm font-semibold">{t.name}</p>
-                    <p className="text-xs text-muted-foreground break-words">{t.role} @ {t.company}</p>
-                  </div>
-                  <span className="ml-auto text-xs text-brand-ink/50 border border-primary/15 rounded-full px-2 py-0.5 flex-shrink-0">
-                    {t.relation}
-                  </span>
-                </div>
-              </div>
+            {testimonials.map((t) => (
+              <TestimonialCard key={t.id} t={t} className={`shrink-0 ${isMobile ? "w-full" : "w-[calc(50%-12px)]"}`} />
             ))}
           </div>
         </div>
 
         {/* Dots */}
-        <div className="flex justify-center gap-1.5 mt-6">
+        <div className="mt-6 flex justify-center">
           {Array.from({ length: maxIndex + 1 }).map((_, i) => (
             <button
               key={i}
+              type="button"
               onClick={() => setCurrent(i)}
-              className={`h-1.5 rounded-full transition-all duration-300 ${
-                i === current ? "w-6 bg-primary" : "w-1.5 bg-foreground/20 hover:bg-foreground/40"
-              }`}
-            />
+              aria-label={`Show testimonial ${i + 1}`}
+              aria-current={i === current ? "true" : undefined}
+              className="flex size-6 items-center justify-center"
+            >
+              <span
+                className={`h-1.5 rounded-full transition-all duration-300 ${
+                  i === current ? "w-6 bg-primary" : "w-1.5 bg-foreground/20 hover:bg-foreground/40"
+                }`}
+              />
+            </button>
           ))}
         </div>
       </div>

@@ -1,6 +1,7 @@
 import { blogPosts, type BlogPost } from "../data/blogPosts";
 import { FAQS } from "../data/faqs";
 import { projects } from "../data/projects";
+import { caseStudies, type CaseStudy } from "../data/caseStudies";
 
 export const SITE_URL = "https://jensonng.github.io";
 export const SITE_NAME = "Son Nguyen";
@@ -50,8 +51,8 @@ export const STATIC_PAGES: StaticPage[] = [
     path: "/projects",
     title: "Projects - Son Nguyen",
     description:
-      "Marketing, brand and communication projects by Son Nguyen, from the Bachable.io launch to campaigns that reached 350K people for social enterprises in Vietnam.",
-    summary: "case studies with roles, periods and results",
+      "Case studies and projects by Son Nguyen, from the Alfred for Banks AI launch at Mitigram to campaigns that reached 350K people for social enterprises in Vietnam.",
+    summary: "case studies and projects with roles, periods and results",
   },
   {
     path: "/services",
@@ -178,6 +179,22 @@ function blogPostingJsonLd(post: BlogPost): Record<string, unknown> {
   };
 }
 
+function caseStudyJsonLd(study: CaseStudy): Record<string, unknown> {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: study.title,
+    description: study.summary,
+    dateModified: study.updated,
+    image: study.cover ? absolute(study.cover) : DEFAULT_IMAGE,
+    inLanguage: "en",
+    url: `${SITE_URL}/work/${study.slug}`,
+    mainEntityOfPage: `${SITE_URL}/work/${study.slug}`,
+    about: { "@type": "Organization", name: study.client },
+    author: { "@id": PERSON_ID, "@type": "Person", name: "Son Nguyen", url: SITE_URL },
+  };
+}
+
 function clip(text: string, max = 160): string {
   const plain = text.replace(/[“”]/g, '"').replace(/\s+/g, " ").trim();
   if (plain.length <= max) return plain;
@@ -211,6 +228,20 @@ export function getPageMeta(pathname: string): PageMeta | null {
     };
   }
 
+  const workSlug = path.startsWith("/work/") ? path.slice("/work/".length) : null;
+  const study = workSlug ? caseStudies.find((c) => c.slug === workSlug) : undefined;
+  if (study) {
+    return {
+      path,
+      title: `${study.title} | Case study by Son Nguyen`,
+      description: clip(study.summary),
+      image: study.cover ? absolute(study.cover) : DEFAULT_IMAGE,
+      type: "article",
+      jsonLd: [...base, caseStudyJsonLd(study)],
+      modified: study.updated,
+    };
+  }
+
   const slug = path.startsWith("/blog/") ? path.slice("/blog/".length) : null;
   const post = slug ? blogPosts.find((p) => p.slug === slug) : undefined;
   if (post) {
@@ -229,7 +260,11 @@ export function getPageMeta(pathname: string): PageMeta | null {
 
 /** Every public path, for prerendering and the sitemap. */
 export function publicPaths(): string[] {
-  return [...STATIC_PAGES.map((p) => p.path), ...blogPosts.map((p) => `/blog/${p.slug}`)];
+  return [
+    ...STATIC_PAGES.map((p) => p.path),
+    ...caseStudies.map((c) => `/work/${c.slug}`),
+    ...blogPosts.map((p) => `/blog/${p.slug}`),
+  ];
 }
 
 function escapeHtml(value: string): string {
@@ -290,6 +325,13 @@ export function llmsTxt(): string {
     ...STATIC_PAGES.filter((p) => p.path !== "/privacy").map(
       (p) => `- [${p.title.split(" | ")[0]}](${SITE_URL}${p.path === "/" ? "/" : p.path}): ${p.summary}`,
     ),
+    "",
+    "## Case studies",
+    "",
+    ...caseStudies.map((c) => {
+      const results = c.metrics.map((m) => `${m.value} ${m.label}`).join(", ");
+      return `- [${c.title}](${SITE_URL}/work/${c.slug}): ${clip(c.summary, 200)}${results ? ` Results: ${results}.` : ""}`;
+    }),
     "",
     "## Selected work",
     "",
