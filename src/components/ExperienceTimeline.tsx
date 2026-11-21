@@ -20,175 +20,168 @@ interface TimelineEntry {
   company: string;
   location: string;
   positions: Position[];
-  description: string;
-  impact: string;
+  description?: string;
+  impact?: string;
   logo?: string;
   linkedinUrl?: string;
   accentColor: string;
 }
 
 const experiences: TimelineEntry[] = [
-  // === LATEST EMPLOYMENTS ===
+  // === LATEST EXPERIENCE ===
   {
     company: "Mitigram",
-    location: "Mitigram AB, Stockholm",
+    location: "B2B Fintech & AI · Stockholm",
     positions: [
       {
-        title: "Creative Marketing Strategist",
-        period: "August 2024 - Present",
+        title: "Marketing Manager",
+        period: "Aug 2024 – Present",
         responsibilities: [
-          "Leads brand and growth strategy, bridging data-driven insights with design to elevate Mitigram's positioning in digital trade finance",
-          "Coordinating all projects within Marketing and Communications to ensure consistency and alignment with brand vision",
-          "Collaborating with Executive Team to build a new Communication Hierarchy for unified messaging",
-          "Developing brand guidelines for cohesive storytelling and visual identity across all channels",
+          "Built the brand guidelines and tone of voice; designed a Communication Hierarchy that governs messaging across teams",
+          "Co-own the Alfred for Banks AI product launch: 30+ SQLs and two banks onboarded since June 2026",
+          "Delivered ~4.8M impressions at a CPM of SEK 38.56 on LinkedIn and Google Ads",
+          "Run the webinar programme: ~120 registrations per session, ~90% attendance, 60–70% converting to MQLs",
+          "Run media relations via Cision: 6–7 releases in six months, earning 4 articles and 12 further mentions",
+          "Wrote the first customer case study (UniCredit and Brückner Group, ~80% shorter guarantee processing)",
+          "Run presence at Sibos and GTR; build battlecards, one-pagers and decks for sales and account management",
+          "Own employer branding and NPS; mentored five marketing interns; built an AI knowledge hub for content",
         ],
       },
     ],
     description:
-      "A digital platform streamlining trade finance by connecting corporations, financial institutions, and insurers.",
+      "A B2B trade finance platform connecting corporates, banks and insurers. As the sole hands-on marketer, I own positioning, content, paid media, media relations, events and sales enablement end to end.",
     impact:
-      "Built comprehensive communication hierarchy and enhanced brand consistency across all channels",
+      "30+ SQLs and two banks onboarded from the Alfred for Banks AI launch; ~4.8M paid impressions at SEK 38.56 CPM",
     accentColor: "#f2c94c",
   },
   {
-    company: "Epidemic Sound",
+    company: "Voluntarily Baking / Melt'd",
     location: "Stockholm, Sweden",
     positions: [
       {
-        title: "Copyright Screener",
-        period: "October 2024 - August 2025",
+        title: "Social Media & Content Producer",
+        period: "Aug 2026 – Present",
         responsibilities: [
-          "Reviewed and validated music licensing compliance, ensuring copyright integrity across global content platforms",
-          "Collaborating with team to optimize claims on YouTube, increasing revenue",
-          "Demonstrating understanding of copyright laws related to music and content creation",
+          "Film, photograph and edit short-form video for TikTok and Instagram for a baking creator and her pop-up brand",
+          "Grew Melt'd to 1,500 organic followers from 15 posts; three pop-ups, each sold out; videos peak at 18K views",
         ],
       },
     ],
     description:
-      "Leading music and sound effects platform for content creators worldwide.",
-    impact: "Optimized YouTube claims process resulting in measurable revenue increases",
+      "A baking creator and her pop-up dessert brand in Stockholm.",
+    impact: "1,500 organic followers from 15 posts and three sold-out pop-ups",
     accentColor: "#f2994a",
   },
   {
-    company: "H&M",
-    location: "H&M, Stockholm",
+    company: "RFSL Utbildning",
+    location: "Stockholm, Sweden",
     positions: [
       {
-        title: "Senior Sales Advisor",
-        period: "September 2024 - May 2025",
+        title: "Communications Officer & Content Creator",
+        period: "Aug 2022 – Dec 2023",
         responsibilities: [
-          "Drove sales growth and enhanced customer experience through personalized styling",
-          "Showcasing fashion expertise to enhance customer experience and promote new brand vision",
-          "Collaborating with team members to achieve sales targets",
+          "Marketed B2B inclusion training; built partnerships with IKEA, Cevera and Humble Brands",
+          "Grew organic social following by 300%+ in three months; produced six campaign videos and three photoshoots",
+          "Created paid social, email and newsletter content; managed Salesforce for member communications",
         ],
       },
     ],
     description:
-      "Working at the second upgraded H&M store in the world, showcasing the new vision as a fashion brand.",
-    impact:
-      "Enhanced customer experience at flagship upgraded store showcasing H&M's new brand vision",
+      "The training arm of RFSL, Sweden's largest LGBTQ+ rights organisation, offering inclusion training to organisations.",
+    impact: "300%+ organic social growth in three months and partnerships with IKEA, Cevera and Humble Brands",
     accentColor: "#6fcf97",
   },
-  // === EARLIER CAREER ===
+  // === EARLIER EXPERIENCE ===
   {
-    company: "RFSL",
+    company: "Devoteam G Cloud",
     location: "Stockholm, Sweden",
     positions: [
       {
-        title: "Program Officer",
-        period: "April 2022 - December 2023",
+        title: "Digital Marketing Specialist (Internship)",
+        period: "Jan 2024 – Mar 2024",
         responsibilities: [
-          "Spearheaded sexual health interventions and boosted digital engagement",
-          "Collaborated with partners and clients for social media campaigns and press releases",
-          "Created content and visual posts for Facebook ads, LinkedIn ads, and webinars",
-          "Managed communication with members and donors through CRM (Salesforce)",
+          "Contributed to UX wireframe design for a new Generative AI service landing page",
+          "Developed content strategy and a podcast template to showcase client case studies",
         ],
       },
     ],
-    description:
-      "Sweden's largest LGBTQ+ rights organization working for equal rights and representation.",
-    impact:
-      "Spearheaded sexual health interventions and boosted digital engagement",
+    description: "Google Cloud partner helping organisations adopt cloud and AI.",
+    accentColor: "#f2c94c",
+  },
+  {
+    company: "ITAgenturen",
+    location: "Sweden",
+    positions: [
+      {
+        title: "Content Developer",
+        period: "Feb 2023 – Apr 2023",
+        responsibilities: [],
+      },
+    ],
     accentColor: "#f2994a",
+  },
+  {
+    company: "An Nam Restaurang",
+    location: "Uppsala, Sweden",
+    positions: [
+      {
+        title: "Marketing & Sales Manager",
+        period: "Jul 2021 – Mar 2022",
+        responsibilities: [],
+      },
+    ],
+    accentColor: "#6fcf97",
   },
   {
     company: "Seed Planter",
-    location: "Vietnam",
+    location: "Ho Chi Minh City, Vietnam",
     positions: [
       {
-        title: "Marketing Lead",
-        period: "June 2020 - February 2021",
+        title: "Marketing Team Lead & Community Coordinator",
+        period: "Nov 2019 – Apr 2022",
         responsibilities: [
-          "Revamped branding and led teams for impactful projects during the period",
-          "Establishing and maintaining Facebook fanpage, monitoring campaigns",
-          "Designing and implementing the strategic plan for projects",
-          "Recruiting delegates for workshops and supervising volunteers",
+          "Built and led a team of four marketers across six campaigns",
+          "Created brand guidelines, key visuals and sponsorship proposals",
+          "Ran community events with 20+ impact entrepreneurs and partners",
         ],
       },
     ],
-    description:
-      "Social enterprise focused on sustainable agriculture and community development.",
-    impact:
-      "Revamped branding and led teams delivering impactful social enterprise projects",
-    accentColor: "#f2994a",
-  },
-  {
-    company: "CARE",
-    location: "Vietnam",
-    positions: [
-      {
-        title: "Digital Marketer",
-        period: "September 2019 - July 2020",
-        responsibilities: [
-          "Elevated ethnic minority start-ups via digital marketing and storytelling",
-          "Spearheaded projects and website launch",
-          "Created content strategies for sustainable development programs",
-        ],
-      },
-    ],
-    description:
-      "International humanitarian organization dedicated to fighting global poverty and empowering communities.",
-    impact:
-      "Elevated ethnic minority start-ups through digital marketing and impactful storytelling",
-    accentColor: "#f2994a",
-  },
-  {
-    company: "Hanoi Pride",
-    location: "Hanoi, Vietnam",
-    positions: [
-      {
-        title: "Internal Secretary for Communications",
-        period: "April 2019 - June 2020",
-        responsibilities: [
-          "Led media campaigns and facilitated Pride Parade collaboration",
-          "Oversaw communication activities and controlled quality of media",
-          "Responsible for communicating with external media outlets",
-        ],
-      },
-    ],
-    description:
-      "Annual LGBTQ+ pride celebration promoting visibility and equality in Vietnam.",
-    impact: "Led media campaigns and successful Pride Parade collaborations",
+    description: "An impact enterprise community supporting social entrepreneurs in Vietnam.",
+    impact: "Led a team of four marketers across six campaigns",
     accentColor: "#f2c94c",
   },
   {
-    company: "GreenHub",
+    company: "Hanoi Queer Organization / Hanoi Pride",
+    location: "Hanoi, Vietnam",
+    positions: [
+      {
+        title: "Communications Manager",
+        period: "Jan 2019 – Jun 2020",
+        responsibilities: [
+          "Led major media campaigns on social media; recruited and supervised communications staff and volunteers",
+          "Represented the organisation with 20+ press and media partners",
+        ],
+      },
+    ],
+    description: "The organisers of Hanoi Pride, promoting LGBTQ+ visibility and equality in Vietnam.",
+    accentColor: "#f2994a",
+  },
+  {
+    company: "CARE International / GreenHub",
     location: "Vietnam",
     positions: [
       {
-        title: "Communications Officer",
-        period: "May 2018 - February 2019",
+        title: "Digital Marketing & Communications Officer",
+        period: "May 2018 – Jul 2020",
         responsibilities: [
-          "Spearheaded projects and website launch for environmental initiatives",
-          "Supervised communication activities and controlled quality of media",
-          "Managed marketing campaign and built new website",
+          "Co-designed and delivered Vietnam's first Zero Waste Academy, training 60 environmental officers in three cities",
+          "Ran Facebook campaigns for social enterprise brands; wrote quarterly reports for international donors",
         ],
       },
     ],
     description:
-      "Environmental NGO enabling sustainable communities through conservation and development.",
-    impact:
-      "Spearheaded projects and website launch for environmental initiatives",
+      "International humanitarian and environmental organisations working on poverty, sustainable communities and waste.",
+    impact: "Co-designed Vietnam's first Zero Waste Academy, training 60 environmental officers",
     accentColor: "#6fcf97",
   },
 ];
@@ -314,7 +307,7 @@ function TimelineItem({
             {/* Expanded content */}
             <div
               className={`overflow-hidden transition-all duration-500 ease-out ${
-                isExpanded ? "max-h-[800px] opacity-100" : "max-h-0 opacity-0"
+                isExpanded ? "max-h-[1600px] opacity-100" : "max-h-0 opacity-0"
               }`}
             >
               <div className="px-5 pb-5 space-y-4">
@@ -326,9 +319,11 @@ function TimelineItem({
                 />
 
                 {/* Company description */}
-                <p className="text-xs text-muted-foreground leading-relaxed">
-                  {entry.description}
-                </p>
+                {entry.description && (
+                  <p className="text-xs text-muted-foreground leading-relaxed">
+                    {entry.description}
+                  </p>
+                )}
 
                 {/* Responsibilities per position */}
                 {entry.positions.map((pos, posIdx) => (
@@ -360,6 +355,7 @@ function TimelineItem({
                 ))}
 
                 {/* Impact */}
+                {entry.impact && (
                 <div
                   className="flex items-start gap-2 p-3 rounded-xl"
                   style={{
@@ -383,6 +379,7 @@ function TimelineItem({
                     </span>
                   </div>
                 </div>
+                )}
               </div>
             </div>
           </div>
@@ -423,8 +420,8 @@ export function ExperienceTimeline() {
       {/* Career summary */}
       <div className="mt-12 text-center">
         <p className="text-sm text-muted-foreground">
-          <span className="text-primary font-medium">7+ years</span> of experience across
-          marketing, communications, and content creation in{" "}
+          <span className="text-primary font-medium">8 years</span> across brand, content,
+          campaigns, PR and events in{" "}
           <span className="text-primary font-medium">Sweden & Vietnam</span>
         </p>
       </div>

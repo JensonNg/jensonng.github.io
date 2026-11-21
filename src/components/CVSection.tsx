@@ -180,7 +180,7 @@ export function CVSection() {
                 icon={<FileText className="w-6 h-6 text-primary" />}
                 accentColor="bg-primary/10"
                 glowColor="rgba(242,201,76,0.15)"
-                date="Updated 2026"
+                date="Updated November 2026"
                 onPreview={openPreview}
               />
               <DocumentCard

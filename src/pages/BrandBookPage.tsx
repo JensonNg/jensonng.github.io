@@ -382,7 +382,7 @@ export default function BrandBookPage() {
                   <div className="text-center py-6 space-y-2">
                     <p className="text-[9px] text-primary/60">Xin Chao!</p>
                     <p className="text-lg font-bold">Hi, I'm <span className="text-primary" style={cinzel}>Son Nguyen</span></p>
-                    <p className="text-xs text-primary/70" style={cinzel}>Growth Marketing Manager</p>
+                    <p className="text-xs text-primary/70" style={cinzel}>Marketing Manager</p>
                     <p className="text-[9px] text-muted-foreground max-w-xs mx-auto mt-2">
                       I create content that doesn't just convert, it connects.
                     </p>
@@ -430,7 +430,7 @@ export default function BrandBookPage() {
                   <div className="px-3 py-4 text-center space-y-1.5">
                     <p className="text-[7px] text-primary/60">Xin Chao!</p>
                     <p className="text-[10px] font-bold">Hi, I'm <span className="text-primary">Son</span></p>
-                    <p className="text-[7px] text-primary/70" style={cinzel}>Growth Marketing Manager</p>
+                    <p className="text-[7px] text-primary/70" style={cinzel}>Marketing Manager</p>
                     <p className="text-[6px] text-muted-foreground leading-relaxed mt-1">
                       Where growth marketing meets sustainable impact.
                     </p>

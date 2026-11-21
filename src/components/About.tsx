@@ -8,10 +8,18 @@ import sonProfileImage from 'figma:asset/1e960cafd215c602f918461bdf659ed69ec10c2
 
 export function About() {
   const achievements = [
-    { number: "6+", label: "Years Experience" },
-    { number: "1500+", label: "Blog Followers" },
-    { number: "8+", label: "Organizations" },
+    { number: "8", label: "Years in Marketing" },
+    { number: "4.8M", label: "Paid Impressions" },
+    { number: "30+", label: "SQLs from AI Launch" },
     { number: "3", label: "Languages" }
+  ];
+
+  const skillGroups = [
+    { title: "Brand & Positioning", skills: ["Brand guidelines", "Tone of voice", "Messaging governance", "Battlecards"] },
+    { title: "Content & PR", skills: ["Case studies", "Thought leadership", "Press releases", "Media relations", "Employer branding"] },
+    { title: "Campaigns & Events", skills: ["LinkedIn & Google Ads", "Webinars", "Trade shows", "Product launches"] },
+    { title: "MarTech & AI", skills: ["HubSpot", "Salesforce", "GA4", "WordPress", "SEO & AI search", "AI content workflows"] },
+    { title: "Creative Tools", skills: ["Figma", "Canva", "Photoshop", "Illustrator", "Final Cut Pro", "Filming & photography"] },
   ];
 
   const scrollToSection = (id: string) => {
@@ -34,8 +42,8 @@ export function About() {
           {/* Left Side - Content */}
           <div className="space-y-6">
             <p className="text-muted-foreground text-lg leading-relaxed">
-              I'm a Growth Marketing Manager who bridges conversion-focused copy with sustainable brand building.
-              With expertise in UX Writing + Communications Strategy, I help purpose-driven brands scale authentically.
+              I'm a generalist marketer with eight years across brand, content, campaigns, PR and events in Sweden
+              and Vietnam. I turn complex products into clear stories, and I build from evidence.
             </p>
 
             <div className="space-y-4">
@@ -43,14 +51,13 @@ export function About() {
                 My <span className="bg-gradient-to-r from-[#f2994a] to-[#f2c94c] bg-clip-text text-transparent">Creative Approach</span>
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                I combine UX Writing principles with growth strategy to create messaging that converts and connects.
-                At Mitigram, I've built comprehensive communication hierarchies that drive user engagement while
-                maintaining authentic brand voice across all platforms.
+                As the sole hands-on marketer at Mitigram, a B2B trade finance platform, I own positioning, content,
+                paid media, media relations, events and sales enablement end to end. I built the brand guidelines and
+                the Communication Hierarchy, and I co-own the launch of Alfred for Banks, our AI product.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                My environmental science background gives me a unique lens for translating complex concepts into
-                compelling, actionable brand stories. I specialize in sustainable growth strategies for conscious brands,
-                leveraging user psychology to craft conversion-focused copy that resonates with purpose-driven consumers. ✨
+                Trained as an engineer and environmental scientist, I take concepts from idea to delivery on my own,
+                design my own materials and work well in international, cross-functional teams. ✨
               </p>
             </div>
           </div>
@@ -62,7 +69,7 @@ export function About() {
               <div className="relative w-full aspect-[3/4] overflow-hidden rounded-3xl shadow-lg bg-gradient-to-br from-primary/5 to-secondary/5">
                 <ImageWithFallback
                   src={sonProfileImage}
-                  alt="Son Nguyen - Growth Marketing Manager"
+                  alt="Son Nguyen - Marketing Manager"
                   className="w-full h-full object-cover object-top rounded-3xl"
                 />
               </div>
@@ -138,6 +145,25 @@ export function About() {
                 </Button>
               </Link>
             </div>
+          </div>
+        </div>
+
+        {/* Professional Skills */}
+        <div className="glass glass-highlight rounded-xl p-6 space-y-5">
+          <h4 className="text-base font-medium text-foreground text-center">Professional Skills</h4>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {skillGroups.map((group) => (
+              <div key={group.title} className="space-y-2">
+                <p className="text-xs font-semibold text-primary">{group.title}</p>
+                <div className="flex flex-wrap gap-1.5">
+                  {group.skills.map((skill) => (
+                    <Badge key={skill} variant="secondary" className="text-xs">
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
     </div>
