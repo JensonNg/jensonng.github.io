@@ -23,7 +23,7 @@ function ScrollToTop() {
   return null;
 }
 
-function AppContent() {
+export function AppContent() {
   return (
     <div className="min-h-screen relative overflow-x-hidden">
       {/* Ambient glow orbs - Solar Amber radial glows */}

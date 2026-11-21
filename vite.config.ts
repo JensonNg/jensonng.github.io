@@ -29,6 +29,11 @@
       target: 'esnext',
       outDir: 'dist',
     },
+    // The prerender build bundles every dependency so Node can run it without
+    // resolving the versioned import aliases above.
+    ssr: {
+      noExternal: true,
+    },
     server: {
       port: 3000,
       open: true,
