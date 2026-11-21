@@ -236,7 +236,7 @@ export default function BrandBookPage() {
               <div className="bg-primary/5 border-b border-primary/10 px-6 py-3">
                 <p className="text-xs text-muted-foreground tracking-[0.2em] uppercase">Mark Only</p>
               </div>
-              <div className="p-10 flex items-center justify-center gap-8">
+              <div className="p-6 md:p-10 flex flex-wrap items-center justify-center gap-3 md:gap-8">
                 <div className="text-center space-y-2 bg-[#111111] rounded-xl p-3">
                   <SowiloSVG size={64} strokeWidth={5} />
                   <p className="text-xs text-[#A8A29E]">Gold</p>

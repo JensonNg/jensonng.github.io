@@ -154,8 +154,8 @@ export function Testimonials() {
                     {t.initials}
                   </div>
                   <div className="min-w-0">
-                    <p className="text-sm font-semibold truncate">{t.name}</p>
-                    <p className="text-xs text-muted-foreground truncate">{t.role} @ {t.company}</p>
+                    <p className="text-sm font-semibold">{t.name}</p>
+                    <p className="text-xs text-muted-foreground break-words">{t.role} @ {t.company}</p>
                   </div>
                   <span className="ml-auto text-xs text-brand-ink/50 border border-primary/15 rounded-full px-2 py-0.5 flex-shrink-0">
                     {t.relation}
