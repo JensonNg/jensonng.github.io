@@ -5,7 +5,8 @@ const STATS = [
   { value: "3", label: "languages" },
 ];
 
-const PLACES = ["Mitigram", "Bachable.io", "RFSL Utbildning", "Hanoi Pride", "GreenHub"];
+// Best-known names first, then current work.
+const PLACES = ["H&M", "Epidemic Sound", "CARE International", "Mitigram", "Bachable.io", "RFSL Utbildning"];
 
 export function ProofStrip() {
   return (
