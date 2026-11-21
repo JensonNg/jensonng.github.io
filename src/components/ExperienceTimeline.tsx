@@ -55,6 +55,25 @@ const experiences: TimelineEntry[] = [
     accentColor: "#f2c94c",
   },
   {
+    company: "Bachable.io",
+    location: "Self-employed · Remote, Sweden",
+    positions: [
+      {
+        title: "Marketing & Branding",
+        period: "Oct 2025 - Present",
+        responsibilities: [
+          "Lead brand strategy and messaging for a new collaborative online music-notation platform",
+          "Write onboarding content and product storytelling, from alpha through public launch",
+          "Support growth since the public launch, now approaching 300 users",
+        ],
+      },
+    ],
+    description:
+      "A collaborative online music-notation platform where musicians write, engrave and share scores together.",
+    impact: "Publicly launched, now approaching 300 users",
+    accentColor: "#f2994a",
+  },
+  {
     company: "Voluntarily Baking / Melt'd",
     location: "Stockholm, Sweden",
     positions: [

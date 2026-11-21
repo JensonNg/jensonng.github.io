@@ -73,6 +73,27 @@ export function Projects() {
 
   const projects = [
     {
+      title: "Bachable.io - Brand & Launch",
+      description: "Shaping the brand of Bachable.io, a new collaborative online music-notation platform where musicians write, engrave and share scores together. Leading brand strategy and messaging, writing onboarding content, and telling the product's story from alpha to public launch.",
+      brand: {
+        name: "Bachable.io",
+        initials: "b",
+        color: "#f54900",
+        bgFrom: "#18181b",
+        bgTo: "#431407",
+      } as LogoBrand,
+      technologies: ["Brand Strategy", "Messaging", "Onboarding Content", "Product Storytelling"],
+      period: "Oct 2025 - Present",
+      organization: "Bachable.io",
+      role: "Marketing & Branding",
+      quote: "Write, engrave and share scores together.",
+      readMoreUrl: "https://bachable.io",
+      featured: true,
+      metrics: [
+        { value: "~300", label: "Users" },
+      ] as Metric[],
+    },
+    {
       title: "Personal Brand Identity - The Sowilo Mark",
       description: "Designed a personal brand identity rooted in Norse mythology. The Sowilo rune (ᛊ) — the Elder Futhark symbol for 'S' meaning 'sun' — becomes a lightning bolt mark that bridges Vietnamese heritage with Scandinavian home. Developed a complete brand system including logo variations, color palette, typography, and brand narrative.",
       brand: {
