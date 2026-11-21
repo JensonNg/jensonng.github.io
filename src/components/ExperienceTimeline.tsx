@@ -39,7 +39,7 @@ const experiences: TimelineEntry[] = [
         responsibilities: [
           "Built the brand guidelines and tone of voice; designed a Communication Hierarchy that governs messaging across teams",
           "Co-own the Alfred for Banks AI product launch: 30+ SQLs and two banks onboarded since June 2026",
-          "Delivered ~4.8M impressions at a CPM of SEK 38.56 on LinkedIn and Google Ads",
+          "Delivered ~4.8M paid impressions at SEK 38.56 CPM (LinkedIn, Google)",
           "Run the webinar programme: ~120 registrations per session, ~90% attendance, 60–70% converting to MQLs",
           "Run media relations via Cision: 6–7 releases in six months, earning 4 articles and 12 further mentions",
           "Wrote the first customer case study (UniCredit and Brückner Group, ~80% shorter guarantee processing)",
@@ -119,7 +119,7 @@ const experiences: TimelineEntry[] = [
         title: "Communications Officer & Content Creator",
         period: "Aug 2022 – Dec 2023",
         responsibilities: [
-          "Marketed B2B inclusion training; built partnerships with IKEA, Cevera and Humble Brands",
+          "Marketed B2B inclusion training with IKEA, Cevera and Humble Brands",
           "Grew organic social following by 300%+ in three months; produced six campaign videos and three photoshoots",
           "Created paid social, email and newsletter content; managed Salesforce for member communications",
         ],
@@ -127,7 +127,7 @@ const experiences: TimelineEntry[] = [
     ],
     description:
       "The training arm of RFSL, Sweden's largest LGBTQ+ rights organisation, offering inclusion training to organisations.",
-    impact: "300%+ organic social growth in three months and partnerships with IKEA, Cevera and Humble Brands",
+    impact: "300%+ organic social growth in three months; B2B inclusion training with IKEA, Cevera and Humble Brands",
     accentColor: "#f2c94c",
   },
   // === EARLIER EXPERIENCE ===
@@ -181,6 +181,7 @@ const experiences: TimelineEntry[] = [
         responsibilities: [
           "Built and led a team of four marketers across six campaigns",
           "Created brand guidelines, key visuals and sponsorship proposals",
+          "Ran Facebook Ads and email campaigns for the community",
           "Ran community events with 20+ impact entrepreneurs and partners",
         ],
       },

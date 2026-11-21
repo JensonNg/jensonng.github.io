@@ -34,6 +34,13 @@ export function Education() {
       location: "Stockholm, Sweden",
     },
     {
+      institution: "Hyper Island",
+      degree: "Future Scenarios (HVE, 15 credits)",
+      specialization: "Strategic foresight & scenario planning",
+      period: "2023",
+      location: "Stockholm, Sweden",
+    },
+    {
       institution: "Södertörn University",
       degree: "MSc Environmental Science, Communications for Public Health",
       period: "2021 – 2023",
@@ -67,7 +74,9 @@ export function Education() {
     "SEO Foundations & Keyword Strategy",
     "Introduction to Generative AI",
     "Figma for UX Design",
-    "Master Digital Marketing"
+    "Master Digital Marketing",
+    "LinkedIn Sales Navigator Best Practices",
+    "Search Inside Yourself"
   ];
 
   const languages = [

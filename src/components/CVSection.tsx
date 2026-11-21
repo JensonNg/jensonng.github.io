@@ -190,7 +190,7 @@ export function CVSection() {
                 icon={<FileText className="w-6 h-6 text-secondary" />}
                 accentColor="bg-secondary/10"
                 glowColor="rgba(242,153,74,0.15)"
-                date="Updated 2026"
+                date="Updated November 2026"
                 onPreview={openPreview}
               />
             </div>
