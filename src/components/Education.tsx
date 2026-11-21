@@ -3,44 +3,86 @@ import { Badge } from "./ui/badge";
 import { GraduationCap, Calendar, MapPin, Award } from "lucide-react";
 
 export function Education() {
-  const education = [
+  const education: {
+    institution: string;
+    degree: string;
+    specialization?: string;
+    period: string;
+    location: string;
+    description?: string;
+    achievements?: string[];
+  }[] = [
     {
-      institution: "Malmö Universitet",
-      degree: "Master's Degree in Communication for Development",
-      specialization: "Digital Communication & Social Change",
-      period: "2024 - 2026",
-      location: "Malmö, Sweden",
-      description: "Advanced studies in strategic communication for development and social change, focusing on digital transformation and human-centered communication strategies in international contexts.",
-      achievements: [
-        "Strategic communication for social impact",
-        "Digital transformation methodologies",
-        "Cross-cultural communication strategies",
-        "Development communication theory"
-      ]
+      institution: "Hyper Island",
+      degree: "Emerging Tech for Creatives (HVE, 65 credits)",
+      specialization: "Pass with distinction in 4 of 7 modules",
+      period: "2025 – 2026",
+      location: "Stockholm, Sweden",
     },
     {
-      institution: "Södertörn Högskolan",
-      degree: "Master's Degree in Environmental Science in Communications",
-      specialization: "Environmental Communication & Sustainability",
-      period: "2021 - 2023",
+      institution: "Hyper Island",
+      degree: "UX Design (HVE, 80 credits)",
+      specialization: "Pass with distinction in 5 of 7 modules",
+      period: "2023 – 2024",
       location: "Stockholm, Sweden",
-      description: "Specialized program combining environmental science with communication strategies, focusing on sustainability communication and environmental advocacy in digital contexts.",
+    },
+    {
+      institution: "Hyper Island",
+      degree: "Sustainability Change Leadership (HVE, 55 credits)",
+      specialization: "Pass with distinction in Leading in Complexity",
+      period: "2023 – 2024",
+      location: "Stockholm, Sweden",
+    },
+    {
+      institution: "Hyper Island",
+      degree: "Future Scenarios (HVE, 15 credits)",
+      specialization: "Strategic foresight & scenario planning",
+      period: "2023",
+      location: "Stockholm, Sweden",
+    },
+    {
+      institution: "Södertörn University",
+      degree: "MSc Environmental Science, Communications for Public Health",
+      period: "2021 – 2023",
+      location: "Stockholm, Sweden",
+      description: "Combines environmental science with communication strategy, with a focus on public health and sustainability communication.",
       achievements: [
         "Environmental communication strategies",
         "Sustainability advocacy",
         "Research methodology",
-        "Digital storytelling for environmental causes"
       ]
+    },
+    {
+      institution: "Silliman University",
+      degree: "Academic Fellowship, Environmental Education",
+      period: "2018",
+      location: "Philippines",
+    },
+    {
+      institution: "Hanoi University of Natural Resources and Environment",
+      degree: "Bachelor of Engineering in Marine Management",
+      period: "2014 – 2018",
+      location: "Hanoi, Vietnam",
     }
   ];
 
   const certifications = [
-    "Front-end Development (Mar-23)",
-    "Learning Local SEO (Oct-22)",
-    "Facebook Digital Marketing (Apr-22)",
-    "Google Ads Essential Training (Aug-22)",
-    "SEO Keyword Strategy (Aug-22)",
-    "SEO Foundations (Aug-22)"
+    "LinkedIn Content & Creative Design · LinkedIn Marketing Academy (2026)",
+    "LinkedIn Advertising Fundamentals · LinkedIn Marketing Academy (2026)",
+    "English for Digital Marketers · Linköping University, pass with distinction (2023)",
+    "Google Ads Essential Training",
+    "SEO Foundations & Keyword Strategy",
+    "Introduction to Generative AI",
+    "Figma for UX Design",
+    "Master Digital Marketing",
+    "LinkedIn Sales Navigator Best Practices",
+    "Search Inside Yourself"
+  ];
+
+  const languages = [
+    { name: "English", level: "Full professional proficiency" },
+    { name: "Swedish", level: "Intermediate (B1/B2)" },
+    { name: "Vietnamese", level: "Native" },
   ];
 
   return (
@@ -56,7 +98,9 @@ export function Education() {
                     {edu.degree}
                   </CardTitle>
                   <div className="text-sm text-primary font-medium">{edu.institution}</div>
-                  <p className="text-muted-foreground text-sm">{edu.specialization}</p>
+                  {edu.specialization && (
+                    <p className="text-muted-foreground text-sm">{edu.specialization}</p>
+                  )}
                   <div className="flex flex-wrap items-center gap-4 text-xs text-muted-foreground">
                     <div className="flex items-center gap-1">
                       <Calendar className="w-3 h-3" />
@@ -71,11 +115,13 @@ export function Education() {
               </div>
             </CardHeader>
             
+            {edu.description && (
             <CardContent className="space-y-4">
               <p className="text-muted-foreground text-sm leading-relaxed">
                 {edu.description}
               </p>
               
+              {edu.achievements && (
               <div className="space-y-2">
                 <div className="font-medium flex items-center gap-2 text-xs">
                   <Award className="w-3 h-3 text-secondary" />
@@ -89,7 +135,9 @@ export function Education() {
                   ))}
                 </div>
               </div>
+              )}
             </CardContent>
+            )}
           </Card>
         ))}
       </div>
@@ -100,7 +148,7 @@ export function Education() {
             <div className="text-center mb-4">
               <div className="font-medium mb-2 text-sm">Additional Certifications</div>
               <p className="text-xs text-muted-foreground">
-                Continuous learning in digital marketing and development
+                Continuous learning in digital marketing, advertising and AI
               </p>
             </div>
             <div className="flex flex-wrap justify-center gap-2">
@@ -112,6 +160,24 @@ export function Education() {
                 >
                   {cert}
                 </Badge>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+
+      <div className="mt-6">
+        <Card className="glass glass-highlight border-primary/20">
+          <CardContent className="pt-6">
+            <div className="text-center mb-4">
+              <div className="font-medium text-sm">Languages</div>
+            </div>
+            <div className="grid sm:grid-cols-3 gap-4 text-center">
+              {languages.map((lang) => (
+                <div key={lang.name}>
+                  <div className="text-sm font-medium text-primary">{lang.name}</div>
+                  <div className="text-xs text-muted-foreground">{lang.level}</div>
+                </div>
               ))}
             </div>
           </CardContent>

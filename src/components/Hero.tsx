@@ -13,10 +13,10 @@ function RoleTitle() {
   return (
     <div className="space-y-2">
       <span className="block bg-gradient-to-r from-[#f2994a] to-[#f2c94c] bg-clip-text text-transparent">
-        Growth Marketing Manager
+        Marketing Manager
       </span>
       <p className="text-sm md:text-base text-muted-foreground tracking-wide">
-        Content Strategy · UX Writing · Brand Communications
+        Brand · Content · Campaigns · PR
       </p>
     </div>
   );
@@ -61,7 +61,7 @@ function VideoModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
           width="100%"
           height="100%"
           src="https://www.youtube.com/embed/s7e06VN60JY?rel=0&modestbranding=1&autoplay=1"
-          title="Son Nguyen - Growth Marketing Manager"
+          title="Son Nguyen - Marketing Manager"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"

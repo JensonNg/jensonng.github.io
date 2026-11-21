@@ -180,7 +180,7 @@ export function CVSection() {
                 icon={<FileText className="w-6 h-6 text-primary" />}
                 accentColor="bg-primary/10"
                 glowColor="rgba(242,201,76,0.15)"
-                date="Updated 2026"
+                date="Updated November 2026"
                 onPreview={openPreview}
               />
               <DocumentCard
@@ -190,7 +190,7 @@ export function CVSection() {
                 icon={<FileText className="w-6 h-6 text-secondary" />}
                 accentColor="bg-secondary/10"
                 glowColor="rgba(242,153,74,0.15)"
-                date="Updated 2026"
+                date="Updated November 2026"
                 onPreview={openPreview}
               />
             </div>
@@ -205,6 +205,16 @@ export function CVSection() {
             </div>
 
             <div className="space-y-4">
+              <DocumentCard
+                title="Emerging Tech for Creatives"
+                description="Hyper Island Upskill Diploma in Emerging Tech for Creatives – AI tools and workflows, digital storytelling, XR and immersive experiences, and building a creative brand"
+                fileName="Diploma-Emerging-Tech-for-Creatives.pdf"
+                icon={<Award className="w-6 h-6 text-primary" />}
+                accentColor="bg-primary/10"
+                glowColor="rgba(242,201,76,0.15)"
+                date="Hyper Island · 2026"
+                onPreview={openPreview}
+              />
               <DocumentCard
                 title="UX Design"
                 description="Hyper Island Upskill Diploma in UX Design – user research, prototyping, and design thinking methodologies"

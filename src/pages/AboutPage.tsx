@@ -32,7 +32,7 @@ export function AboutPage() {
             About <span className="text-primary">Me</span>
           </h1>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Growth Marketing meets Sustainable Impact – learn about my background and approach
+            Brand, content, campaigns and PR – learn about my background and approach
           </p>
         </div>
       </div>
@@ -41,7 +41,7 @@ export function AboutPage() {
       <SectionWrapper
         sectionId="about"
         title="Who I Am"
-        description="Growth Marketing Manager bridging conversion-focused copy with sustainable brand building"
+        description="Marketing Manager turning complex B2B products into clear stories"
         badge="About"
         defaultExpanded={true}
       >
@@ -70,7 +70,7 @@ export function AboutPage() {
       <SectionWrapper
         sectionId="education"
         title="Education"
-        description="Academic background in Environmental Science and Creative Writing"
+        description="Environmental science, engineering and Hyper Island upskilling"
         badge="Education"
         defaultExpanded={false}
       >
@@ -81,7 +81,7 @@ export function AboutPage() {
       <SectionWrapper
         sectionId="experience"
         title="Experience"
-        description="Click on each role to explore my journey in Growth Marketing and Communications"
+        description="Click on each role to explore my journey in marketing and communications"
         badge="Experience"
         defaultExpanded={false}
       >

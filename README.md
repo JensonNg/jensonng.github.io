@@ -25,7 +25,7 @@ The original design is available in [Figma](https://www.figma.com/design/j4F5z5S
    npm install
    ```
 
-4. Start the local preview, then open the link it prints (usually http://localhost:5173):
+4. Start the local preview, then open the link it prints (http://localhost:3000; it usually opens automatically):
 
    ```bash
    npm run dev

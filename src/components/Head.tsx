@@ -8,8 +8,8 @@ interface HeadProps {
 }
 
 export function Head({ 
-  title = "Son Nguyen - Growth Marketing Manager | Sustainable Brand Growth",
-  description = "Welcome to my journey where growth marketing meets sustainable impact. Expert in UX Writing & Communications Strategy, helping brands grow authentically while making a positive difference. 🌱📈",
+  title = "Son Nguyen - Marketing Manager | Brand, Content & Campaigns",
+  description = "Marketing Manager in Stockholm with eight years across brand, content, campaigns, PR and events in Sweden and Vietnam. I turn complex B2B products into clear stories.",
   image = "https://jensonng.github.io/images/og-thumbnail.png",
   url = window.location.href
 }: HeadProps) {
@@ -34,7 +34,7 @@ export function Head({
 
     // Basic meta tags
     setMetaTag('description', description, false);
-    setMetaTag('keywords', 'Growth Marketing Manager, UX Writing, Communications Strategy, Sustainable Marketing, Brand Growth, Environmental Science, Stockholm, Son Nguyen', false);
+    setMetaTag('keywords', 'Marketing Manager, B2B Marketing, Brand Strategy, Content Marketing, PR, Campaigns, Fintech, Stockholm, Son Nguyen', false);
     setMetaTag('author', 'Son Nguyen', false);
 
     // Open Graph meta tags (Facebook, LinkedIn, etc.)
@@ -63,7 +63,11 @@ export function Head({
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Son Nguyen",
-      "jobTitle": "Growth Marketing Manager",
+      "jobTitle": "Marketing Manager",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Mitigram"
+      },
       "description": description,
       "url": url,
       "image": image,
@@ -77,10 +81,10 @@ export function Head({
         "addressCountry": "Sweden"
       },
       "knowsAbout": [
-        "Growth Marketing",
-        "UX Writing", 
-        "Communications Strategy",
-        "Sustainable Marketing",
+        "Brand Strategy",
+        "Content Marketing",
+        "Public Relations",
+        "B2B Campaigns",
         "Environmental Science"
       ]
     };
