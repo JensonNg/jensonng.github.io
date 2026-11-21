@@ -20,7 +20,7 @@ const SOCIAL_LINKS = [
 ];
 
 const ctaClass =
-  "inline-flex min-h-10 items-center justify-center rounded-full bg-primary px-5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-hover";
+  "inline-flex min-h-10 items-center justify-center whitespace-nowrap rounded-full bg-primary px-5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-hover";
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -52,9 +52,21 @@ export function Header() {
       }`}
     >
       <div className="container mx-auto px-4 py-3 md:py-4 flex items-center justify-between gap-3">
-        <Link to="/" className="rounded-lg" aria-label="Go to home">
-          <Logo size="md" />
-        </Link>
+        <div className="flex items-center gap-1 min-w-0">
+          <Link to="/" className="rounded-lg shrink-0" aria-label="Go to home">
+            <Logo size="md" />
+          </Link>
+          {/* On phones the blog sits next to the logo, one tap away instead of inside the menu. */}
+          <Link
+            to="/blog"
+            aria-current={isActive("/blog") ? "page" : undefined}
+            className={`md:hidden inline-flex min-h-10 items-center px-3 text-sm font-medium transition-colors hover:text-foreground ${
+              isActive("/blog") ? "text-brand-ink" : "text-muted-foreground"
+            }`}
+          >
+            Blog
+          </Link>
+        </div>
 
         <nav className="hidden md:flex items-center gap-8" aria-label="Main">
           {NAV_LINKS.map(({ to, label }) => (

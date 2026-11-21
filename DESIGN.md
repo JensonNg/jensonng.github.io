@@ -79,7 +79,7 @@ Tints are computed from `--primary`, not typed by hand:
 
 ## Mobile
 - Design phones as their own layout: type steps down (`text-4xl sm:text-5xl md:text-7xl`), buttons stack (`flex-col sm:flex-row`) at full width.
-- The main action ("Let's talk") stays visible in the mobile header; only secondary links go in the menu.
+- The mobile header shows the logo, a Blog link, "Let's talk", the theme toggle and the menu. Only the remaining pages go in the menu.
 - Tap targets are at least 44px.
 - Use `min-h-dvh` / `h-dvh`, not `h-screen`, for full-height sections.
 - No hover-only feedback. Anything shown on hover must also show on focus.
