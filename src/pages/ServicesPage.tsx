@@ -23,9 +23,6 @@ interface ServicePackage {
   subtitle: string;
   description: string;
   icon: React.ReactNode;
-  accentFrom: string;
-  accentTo: string;
-  glowColor: string;
   deliverables: string[];
   tools: string[];
   idealFor: string;
@@ -39,9 +36,6 @@ const packages: ServicePackage[] = [
     description:
       "End-to-end marketing strategy that bridges data-driven insights with creative storytelling. From audience research to campaign execution, I help brands grow sustainably.",
     icon: <TrendingUp className="w-7 h-7" />,
-    accentFrom: "#f2994a",
-    accentTo: "#f2c94c",
-    glowColor: "rgba(242,201,76,0.2)",
     deliverables: [
       "Marketing strategy & roadmap",
       "Audience research & segmentation",
@@ -59,9 +53,6 @@ const packages: ServicePackage[] = [
     description:
       "Compelling short-form video content, social media assets, and visual storytelling that captures attention and drives engagement across platforms.",
     icon: <Video className="w-7 h-7" />,
-    accentFrom: "#f2994a",
-    accentTo: "#eb5757",
-    glowColor: "rgba(242,153,74,0.2)",
     deliverables: [
       "Short-form video production (Reels, TikTok)",
       "Social media content calendar",
@@ -79,9 +70,6 @@ const packages: ServicePackage[] = [
     description:
       "Microcopy, product copy, and conversion-focused writing that guides users through seamless digital experiences while maintaining brand voice consistency.",
     icon: <PenTool className="w-7 h-7" />,
-    accentFrom: "#f2c94c",
-    accentTo: "#6fcf97",
-    glowColor: "rgba(111,207,151,0.2)",
     deliverables: [
       "UX microcopy & interface text",
       "Landing page copy & CTAs",
@@ -99,9 +87,6 @@ const packages: ServicePackage[] = [
     description:
       "Strategic communications that build brand authority and stakeholder trust. From press releases to internal comms, I craft messaging that resonates.",
     icon: <MessageSquare className="w-7 h-7" />,
-    accentFrom: "#6fcf97",
-    accentTo: "#f2c94c",
-    glowColor: "rgba(242,201,76,0.2)",
     deliverables: [
       "Communication hierarchy & framework",
       "Press releases & media kits",
@@ -127,8 +112,8 @@ function PackageCard({
     <div
       className={`glass rounded-2xl overflow-hidden transition-all duration-500 ${
         isExpanded
-          ? "ring-1 ring-primary/30 shadow-[0_0_40px_" + pkg.glowColor + "]"
-          : "glass-highlight hover:shadow-[0_0_30px_" + pkg.glowColor + "]"
+          ? "ring-1 ring-primary/30 shadow-glow"
+          : "glass-highlight hover:ring-1 hover:ring-primary/40"
       }`}
     >
       {/* Card Header */}
@@ -138,33 +123,14 @@ function PackageCard({
       >
         <div className="flex items-start gap-4">
           {/* Icon */}
-          <div
-            className="p-3 rounded-xl flex-shrink-0"
-            style={{
-              background: `linear-gradient(135deg, ${pkg.accentFrom}15, ${pkg.accentTo}15)`,
-            }}
-          >
-            <span
-              style={{
-                background: `linear-gradient(135deg, ${pkg.accentFrom}, ${pkg.accentTo})`,
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              }}
-            >
-              {pkg.icon}
-            </span>
+          <div className="p-3 rounded-xl flex-shrink-0 bg-primary/10 text-brand-ink">
+            {pkg.icon}
           </div>
 
           {/* Title & Subtitle */}
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2 mb-1">
-              <span
-                className="text-xs font-medium px-2 py-0.5 rounded-full"
-                style={{
-                  background: `linear-gradient(135deg, ${pkg.accentFrom}20, ${pkg.accentTo}20)`,
-                  color: pkg.accentFrom,
-                }}
-              >
+              <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-primary/10 text-brand-ink">
                 {pkg.subtitle}
               </span>
             </div>
@@ -210,10 +176,7 @@ function PackageCard({
                   key={i}
                   className="flex items-start gap-2 text-sm text-muted-foreground"
                 >
-                  <Check
-                    className="w-4 h-4 mt-0.5 flex-shrink-0"
-                    style={{ color: pkg.accentFrom }}
-                  />
+                  <Check className="w-4 h-4 mt-0.5 flex-shrink-0 text-brand-ink" />
                   {item}
                 </li>
               ))}
@@ -249,13 +212,7 @@ function PackageCard({
 
           {/* CTA */}
           <Link to="/contact">
-            <Button
-              className="w-full mt-2 font-semibold"
-              style={{
-                background: `linear-gradient(135deg, ${pkg.accentFrom}, ${pkg.accentTo})`,
-                color: "#000",
-              }}
-            >
+            <Button className="w-full mt-2 min-h-11 rounded-full font-semibold hover:bg-primary-hover">
               Let's Discuss This Package
               <ArrowRight className="w-4 h-4 ml-2" />
             </Button>

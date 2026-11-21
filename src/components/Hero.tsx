@@ -1,25 +1,10 @@
-import { Button } from "./ui/button";
-import { Instagram, Linkedin, Mail, ArrowDown, Play, X } from "lucide-react";
+import { ArrowDown, Play, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function scrollToSection(id: string) {
   const element = document.getElementById(id);
   element?.scrollIntoView({ behavior: 'smooth' });
-}
-
-// Static role title with supporting specialties
-function RoleTitle() {
-  return (
-    <div className="space-y-2">
-      <span className="block bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">
-        Marketing Manager
-      </span>
-      <p className="text-sm md:text-base text-muted-foreground tracking-wide">
-        Brand · Content · Campaigns · PR
-      </p>
-    </div>
-  );
 }
 
 // Video Modal
@@ -78,7 +63,7 @@ export function Hero() {
 
   return (
     <>
-      <section id="hero" className="min-h-[85vh] flex items-center justify-center px-4 pt-24 pb-16 relative">
+      <section id="hero" className="min-h-[85dvh] flex items-center justify-center px-4 pt-24 pb-12 md:pb-16 relative">
         {/* Subtle grid background */}
         <div className="absolute inset-0 opacity-[0.04] pointer-events-none"
           style={{
@@ -98,7 +83,7 @@ export function Hero() {
           ].map((dot, i) => (
             <div
               key={i}
-              className={`absolute ${dot.size} bg-primary/40 rounded-full animate-pulse`}
+              className={`absolute ${dot.size} bg-primary/40 rounded-full motion-safe:animate-pulse`}
               style={{
                 top: dot.top,
                 left: dot.left,
@@ -133,27 +118,40 @@ export function Hero() {
             </div>
 
             {/* Centered content */}
-            <div className="max-w-2xl text-center space-y-8 flex-shrink">
-              {/* Greeting + Name */}
-              <div className="space-y-4">
-                <p className="text-muted-foreground text-lg tracking-wide">Xin Chào!</p>
-                <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-medium leading-[1.1]">
-                  Hi, I'm <span className="text-brand-ink">Son Nguyen</span>
+            <div className="max-w-2xl text-center space-y-7 flex-shrink min-w-0">
+              <div className="space-y-5">
+                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-brand-ink">
+                  Xin chào, I'm Son Nguyen
+                </p>
+                <h1 className="text-4xl sm:text-5xl xl:text-6xl font-medium leading-[1.1]">
+                  I turn complex B2B products into <span className="text-brand-ink">clear stories</span>.
                 </h1>
+                <p className="text-muted-foreground text-base md:text-lg max-w-xl mx-auto leading-relaxed">
+                  Marketing Manager in Stockholm with eight years across brand, content, campaigns and PR
+                  in Sweden and Vietnam. I create content that doesn't just convert, it connects.
+                </p>
               </div>
 
-              {/* Role Title */}
-              <div className="text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-bold">
-                <RoleTitle />
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3">
+                <Link
+                  to="/projects"
+                  className="inline-flex min-h-12 items-center justify-center rounded-full bg-gradient-to-r from-secondary to-primary px-8 text-sm font-semibold text-primary-foreground shadow-glow-strong transition-[filter] hover:brightness-105"
+                >
+                  See my work
+                </Link>
+                <button
+                  type="button"
+                  onClick={() => setVideoOpen(true)}
+                  className="inline-flex min-h-12 items-center justify-center gap-2.5 rounded-full border border-border px-6 text-sm font-medium transition-colors hover:border-primary/50 hover:bg-primary/10"
+                >
+                  <span className="flex size-7 items-center justify-center rounded-full bg-primary text-primary-foreground">
+                    <Play className="size-3.5 ml-0.5" fill="currentColor" />
+                  </span>
+                  Get to know me
+                </button>
               </div>
 
-              {/* Tagline */}
-              <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-                I create content that doesn't just convert, it connects.
-                Where <span className="text-brand-ink font-medium">growth marketing meets sustainable impact</span>.
-              </p>
-
-              {/* Mobile photos – show below tagline on small screens */}
+              {/* Phones show the photos after the call to action, so the promise comes first. */}
               <div className="flex md:hidden items-end justify-center gap-4 pt-2">
                 <div className="relative w-[140px]">
                   <img
@@ -171,56 +169,6 @@ export function Hero() {
                   />
                   <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-background via-background/80 to-transparent z-[11]" />
                 </div>
-              </div>
-
-              {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-                <button
-                  onClick={() => setVideoOpen(true)}
-                  className="group flex items-center gap-3 px-6 py-3 rounded-full border border-primary/30 hover:border-primary/60 bg-primary/5 hover:bg-primary/10 transition-all duration-300"
-                >
-                  <span className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-secondary to-primary shadow-glow-strong group-hover:shadow-glow-strong transition-all duration-300">
-                    <Play className="w-4 h-4 text-primary-foreground ml-0.5" fill="currentColor" />
-                  </span>
-                  <span className="text-sm font-medium">Get to know me</span>
-                </button>
-
-                <Link to="/projects">
-                  <Button
-                    className="bg-gradient-to-r from-secondary to-primary hover:from-secondary/90 hover:to-primary/90 text-primary-foreground font-semibold shadow-glow-strong px-8"
-                  >
-                    View My Work
-                  </Button>
-                </Link>
-              </div>
-
-              {/* Social Links */}
-              <div className="flex justify-center gap-4 pt-2">
-                <a
-                  href="https://linkedin.com/in/soninsthlm"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2.5 border border-border rounded-full hover:border-primary/50 hover:bg-primary/10 text-muted-foreground hover:text-brand-ink transition-all"
-                  title="LinkedIn"
-                >
-                  <Linkedin className="w-5 h-5" />
-                </a>
-                <a
-                  href="mailto:sonngoc.nguyen@hyperisland.se"
-                  className="p-2.5 border border-border rounded-full hover:border-primary/50 hover:bg-primary/10 text-muted-foreground hover:text-brand-ink transition-all"
-                  title="Email"
-                >
-                  <Mail className="w-5 h-5" />
-                </a>
-                <a
-                  href="https://instagram.com/foodstuckers.sthlm"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2.5 border border-border rounded-full hover:border-primary/50 hover:bg-primary/10 text-muted-foreground hover:text-brand-ink transition-all"
-                  title="Instagram @foodstuckers.sthlm"
-                >
-                  <Instagram className="w-5 h-5" />
-                </a>
               </div>
             </div>
 
@@ -247,9 +195,9 @@ export function Hero() {
           {/* Scroll indicator */}
           <div className="flex justify-center mt-6">
             <button
-              onClick={() => scrollToSection('explore')}
-              className="p-2 hover:bg-muted rounded-full transition-colors animate-bounce"
-              aria-label="Scroll to explore section"
+              onClick={() => scrollToSection('work')}
+              className="hidden md:inline-flex p-2 hover:bg-muted rounded-full transition-colors motion-safe:animate-bounce"
+              aria-label="Scroll to selected work"
             >
               <ArrowDown className="w-6 h-6" />
             </button>
