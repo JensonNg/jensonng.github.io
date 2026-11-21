@@ -94,8 +94,8 @@ export function Contact() {
   ];
 
   return (
-    <div className="p-6">
-      <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+    <div className="py-6 md:p-6">
+      <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto [&>*]:min-w-0">
         <div className="space-y-6">
           <div>
             <p className="text-muted-foreground text-sm">
@@ -117,7 +117,7 @@ export function Contact() {
                       {info.link ? (
                         <a
                           href={info.link}
-                          className="font-medium text-sm hover:text-brand-ink transition-colors"
+                          className="font-medium text-sm break-all hover:text-brand-ink transition-colors"
                         >
                           {info.value}
                         </a>
@@ -135,10 +135,10 @@ export function Contact() {
             <div className="text-xs font-medium">Areas of Collaboration</div>
             <div className="flex flex-wrap gap-2">
               <Badge variant="outline" className="border-primary text-brand-ink text-xs">Growth Marketing</Badge>
-              <Badge variant="outline" className="border-secondary text-brand-ink text-xs">Sustainability Strategy</Badge>
-              <Badge variant="outline" className="border-tertiary text-tertiary text-xs">UX Research</Badge>
-              <Badge variant="outline" className="border-accent text-accent-foreground text-xs">Content Creation</Badge>
-              <Badge variant="outline" className="border-secondary text-brand-ink text-xs">Brand Development</Badge>
+              <Badge variant="outline" className="border-primary text-brand-ink text-xs">Sustainability Strategy</Badge>
+              <Badge variant="outline" className="border-primary text-brand-ink text-xs">UX Research</Badge>
+              <Badge variant="outline" className="border-primary text-brand-ink text-xs">Content Creation</Badge>
+              <Badge variant="outline" className="border-primary text-brand-ink text-xs">Brand Development</Badge>
             </div>
           </div>
         </div>

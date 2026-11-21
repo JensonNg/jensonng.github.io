@@ -49,15 +49,15 @@ export function PrivacyPage() {
               <ul className="space-y-2 ml-4">
                 <li className="flex items-start gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span><strong className="text-foreground">Name</strong> – to address you personally</span>
+                  <span><strong className="text-foreground">Name</strong> - to address you personally</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span><strong className="text-foreground">Email address</strong> – to respond to your message</span>
+                  <span><strong className="text-foreground">Email address</strong> - to respond to your message</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span><strong className="text-foreground">Subject & message</strong> – the content of your inquiry</span>
+                  <span><strong className="text-foreground">Subject & message</strong> - the content of your inquiry</span>
                 </li>
               </ul>
             </section>
@@ -101,7 +101,7 @@ export function PrivacyPage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span>Formsubmit forwards the data directly to my email – <strong className="text-foreground">it does not store your submissions</strong></span>
+                  <span>Formsubmit forwards the data directly to my email - <strong className="text-foreground">it does not store your submissions</strong></span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
@@ -135,19 +135,19 @@ export function PrivacyPage() {
               <ul className="space-y-2 ml-4">
                 <li className="flex items-start gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span><strong className="text-foreground">Access</strong> – request a copy of any personal data I hold about you</span>
+                  <span><strong className="text-foreground">Access</strong> - request a copy of any personal data I hold about you</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span><strong className="text-foreground">Rectification</strong> – request correction of inaccurate data</span>
+                  <span><strong className="text-foreground">Rectification</strong> - request correction of inaccurate data</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span><strong className="text-foreground">Erasure</strong> – request deletion of your data ("right to be forgotten")</span>
+                  <span><strong className="text-foreground">Erasure</strong> - request deletion of your data ("right to be forgotten")</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span><strong className="text-foreground">Withdraw consent</strong> – at any time, without affecting the lawfulness of prior processing</span>
+                  <span><strong className="text-foreground">Withdraw consent</strong> - at any time, without affecting the lawfulness of prior processing</span>
                 </li>
               </ul>
               <p>

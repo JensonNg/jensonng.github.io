@@ -98,14 +98,14 @@ export function Hero() {
         <div className="container mx-auto relative z-10">
           {/* 3-column layout: photo | content | photo */}
           <div className="flex items-center justify-center gap-0 md:gap-4 lg:gap-8">
-            {/* Left photo – composed look */}
+            {/* Left photo - composed look */}
             <div className="hidden md:block flex-shrink-0 w-[200px] lg:w-[280px] xl:w-[320px] relative">
               <img
                 src="/images/son-hero-left.png"
                 alt="Son Nguyen"
                 className="w-full h-auto object-contain drop-shadow-[0_0_40px_var(--glow)] relative z-10"
               />
-              {/* Keyword cloud – bottom fade */}
+              {/* Keyword cloud - bottom fade */}
               <div className="absolute bottom-0 left-0 right-0 z-20 flex flex-wrap justify-center gap-1.5 px-2 pb-2">
                 <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-primary/10 text-brand-ink/80 border border-primary/20 backdrop-blur-sm">Storyteller</span>
                 <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-foreground/5 text-foreground/60 border border-border backdrop-blur-sm">Strategist</span>
@@ -172,14 +172,14 @@ export function Hero() {
               </div>
             </div>
 
-            {/* Right photo – laughing */}
+            {/* Right photo - laughing */}
             <div className="hidden md:block flex-shrink-0 w-[200px] lg:w-[280px] xl:w-[320px] relative">
               <img
                 src="/images/son-hero-right.png"
                 alt="Son Nguyen laughing"
                 className="w-full h-auto object-contain drop-shadow-[0_0_40px_var(--glow)] relative z-10"
               />
-              {/* Keyword cloud – bottom fade */}
+              {/* Keyword cloud - bottom fade */}
               <div className="absolute bottom-0 left-0 right-0 z-20 flex flex-wrap justify-center gap-1.5 px-2 pb-2">
                 <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-foreground/5 text-foreground/60 border border-border backdrop-blur-sm">Food Blogger</span>
                 <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-primary/10 text-brand-ink/80 border border-primary/20 backdrop-blur-sm">Sweden 🇸🇪</span>

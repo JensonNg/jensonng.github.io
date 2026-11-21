@@ -6,9 +6,9 @@ The original design is available in [Figma](https://www.figma.com/design/j4F5z5S
 ## Set up on a new computer
 
 1. Install the tools (one time only):
-   - [Git](https://git-scm.com/downloads)
-   - [Node.js](https://nodejs.org/) version 20 or newer (the LTS version is fine)
-   - A code editor, for example [VS Code](https://code.visualstudio.com/)
+  - [Git](https://git-scm.com/downloads)
+  - [Node.js](https://nodejs.org/) version 20 or newer (the LTS version is fine)
+  - A code editor, for example [VS Code](https://code.visualstudio.com/)
 
 2. Open a terminal and download the project into a local folder:
 

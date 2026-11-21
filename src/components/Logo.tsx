@@ -67,13 +67,13 @@ export function Logo({ size = 'md', variant = 'default' }: LogoProps) {
 }
 
 /**
- * Sowilo rune (ᛊ) — the Elder Futhark rune for "S"
+ * Sowilo rune (ᛊ) - the Elder Futhark rune for "S"
  * Shaped like a lightning bolt / thunder strike
  */
 function SowiloRune() {
   return (
     <g>
-      {/* Main Sowilo rune — angular lightning bolt shape */}
+      {/* Main Sowilo rune - angular lightning bolt shape */}
       <path
         d="M18 8 L30 20 L18 20 L30 40"
         stroke="url(#rune-gradient)"

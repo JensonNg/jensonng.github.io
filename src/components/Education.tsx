@@ -16,21 +16,21 @@ export function Education() {
       institution: "Hyper Island",
       degree: "Emerging Tech for Creatives (HVE, 65 credits)",
       specialization: "Pass with distinction in 4 of 7 modules",
-      period: "2025 – 2026",
+      period: "2025 - 2026",
       location: "Stockholm, Sweden",
     },
     {
       institution: "Hyper Island",
       degree: "UX Design (HVE, 80 credits)",
       specialization: "Pass with distinction in 5 of 7 modules",
-      period: "2023 – 2024",
+      period: "2023 - 2024",
       location: "Stockholm, Sweden",
     },
     {
       institution: "Hyper Island",
       degree: "Sustainability Change Leadership (HVE, 55 credits)",
       specialization: "Pass with distinction in Leading in Complexity",
-      period: "2023 – 2024",
+      period: "2023 - 2024",
       location: "Stockholm, Sweden",
     },
     {
@@ -43,7 +43,7 @@ export function Education() {
     {
       institution: "Södertörn University",
       degree: "MSc Environmental Science, Communications for Public Health",
-      period: "2021 – 2023",
+      period: "2021 - 2023",
       location: "Stockholm, Sweden",
       description: "Combines environmental science with communication strategy, with a focus on public health and sustainability communication.",
       achievements: [
@@ -61,7 +61,7 @@ export function Education() {
     {
       institution: "Hanoi University of Natural Resources and Environment",
       degree: "Bachelor of Engineering in Marine Management",
-      period: "2014 – 2018",
+      period: "2014 - 2018",
       location: "Hanoi, Vietnam",
     }
   ];
@@ -151,16 +151,32 @@ export function Education() {
                 Continuous learning in digital marketing, advertising and AI
               </p>
             </div>
+            {/* Certificates with an issuer read as a list; short course names stay as pills. */}
+            <ul className="mb-4 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+              {certifications
+                .filter((cert) => cert.includes(" · "))
+                .map((cert) => {
+                  const [name, source] = cert.split(" · ");
+                  return (
+                    <li key={cert} className="rounded-xl border border-primary/20 bg-primary/5 px-4 py-3 text-left">
+                      <p className="text-sm font-medium text-foreground">{name}</p>
+                      <p className="text-xs text-muted-foreground mt-0.5">{source}</p>
+                    </li>
+                  );
+                })}
+            </ul>
             <div className="flex flex-wrap justify-center gap-2">
-              {certifications.map((cert, index) => (
-                <Badge 
-                  key={index} 
-                  variant="outline" 
-                  className="border-primary/50 text-brand-ink hover:bg-primary hover:text-primary-foreground transition-colors text-xs"
-                >
-                  {cert}
-                </Badge>
-              ))}
+              {certifications
+                .filter((cert) => !cert.includes(" · "))
+                .map((cert) => (
+                  <Badge
+                    key={cert}
+                    variant="outline"
+                    className="border-primary/50 text-brand-ink text-xs"
+                  >
+                    {cert}
+                  </Badge>
+                ))}
             </div>
           </CardContent>
         </Card>

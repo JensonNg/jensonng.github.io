@@ -106,7 +106,7 @@ export function Projects() {
         initial="hidden"
         animate="visible"
       >
-        {/* Featured projects – full width */}
+        {/* Featured projects - full width */}
         {projects.filter(p => p.featured).map((project, index) => (
           <motion.div
             key={index}
@@ -193,7 +193,7 @@ export function Projects() {
           </motion.div>
         ))}
 
-        {/* Non-featured projects – 2-column grid on desktop */}
+        {/* Non-featured projects - 2-column grid on desktop */}
         <div className="grid md:grid-cols-2 gap-6">
         {projects.filter(p => !p.featured).map((project, index) => (
           <motion.div

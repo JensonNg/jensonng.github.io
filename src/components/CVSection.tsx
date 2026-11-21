@@ -207,7 +207,7 @@ export function CVSection() {
             <div className="space-y-4">
               <DocumentCard
                 title="Emerging Tech for Creatives"
-                description="Hyper Island Upskill Diploma in Emerging Tech for Creatives – AI tools and workflows, digital storytelling, XR and immersive experiences, and building a creative brand"
+                description="Hyper Island Upskill Diploma in Emerging Tech for Creatives - AI tools and workflows, digital storytelling, XR and immersive experiences, and building a creative brand"
                 fileName="Diploma-Emerging-Tech-for-Creatives.pdf"
                 icon={<Award className="w-6 h-6 text-brand-ink" />}
                 accentColor="bg-primary/10"
@@ -217,7 +217,7 @@ export function CVSection() {
               />
               <DocumentCard
                 title="UX Design"
-                description="Hyper Island Upskill Diploma in UX Design – user research, prototyping, and design thinking methodologies"
+                description="Hyper Island Upskill Diploma in UX Design - user research, prototyping, and design thinking methodologies"
                 fileName="Diploma-UX-Design.pdf"
                 icon={<Award className="w-6 h-6 text-tertiary" />}
                 accentColor="bg-tertiary/10"
@@ -227,7 +227,7 @@ export function CVSection() {
               />
               <DocumentCard
                 title="Sustainability Change Leadership"
-                description="Hyper Island Upskill Diploma in leading sustainable change – strategy, impact measurement, and organizational transformation"
+                description="Hyper Island Upskill Diploma in leading sustainable change - strategy, impact measurement, and organizational transformation"
                 fileName="Diploma-Sustainability-Change-Leadership.pdf"
                 icon={<Award className="w-6 h-6 text-brand-ink" />}
                 accentColor="bg-primary/10"
@@ -237,7 +237,7 @@ export function CVSection() {
               />
               <DocumentCard
                 title="Future Scenarios"
-                description="Hyper Island Upskill Diploma in Future Scenarios – foresight, trend analysis, and scenario planning"
+                description="Hyper Island Upskill Diploma in Future Scenarios - foresight, trend analysis, and scenario planning"
                 fileName="Diploma-Future-Scenarios.pdf"
                 icon={<Award className="w-6 h-6 text-brand-ink" />}
                 accentColor="bg-secondary/10"

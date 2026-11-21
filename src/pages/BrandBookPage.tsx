@@ -1,5 +1,5 @@
 import { ArrowLeft, Download, Zap, Sun, Globe, TrendingUp, ExternalLink } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const cinzel = { fontFamily: "var(--font-display)" };
 
@@ -21,19 +21,17 @@ function SowiloSVG({ size = 120, stroke = "#F2C94C", strokeWidth = 8, className 
 }
 
 export default function BrandBookPage() {
-  const navigate = useNavigate();
-
   return (
-    <div className="min-h-screen">
+    <main className="min-h-screen pt-24">
       {/* Back nav */}
-      <div className="container mx-auto px-4 py-8">
-        <button
-          onClick={() => navigate('/projects')}
-          className="flex items-center gap-2 text-muted-foreground hover:text-brand-ink transition-colors"
+      <div className="container mx-auto px-4 pb-8">
+        <Link
+          to="/projects"
+          className="inline-flex min-h-11 items-center gap-2 text-muted-foreground hover:text-brand-ink transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
           Back to Projects
-        </button>
+        </Link>
       </div>
 
       {/* Hero */}
@@ -54,7 +52,7 @@ export default function BrandBookPage() {
               <span className="text-foreground">Nguyen</span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed">
-              A personal brand built on the Sowilo rune — the Elder Futhark symbol
+              A personal brand built on the Sowilo rune - the Elder Futhark symbol
               for the sun, rendered as a lightning bolt that bridges cultures.
             </p>
           </div>
@@ -80,34 +78,34 @@ export default function BrandBookPage() {
               <div className="space-y-6">
                 <div>
                   <h3 className="text-3xl font-medium mb-1" style={cinzel}>
-                    Sowilo — <span className="text-brand-ink">ᛊ</span>
+                    Sowilo - <span className="text-brand-ink">ᛊ</span>
                   </h3>
-                  <p className="text-muted-foreground italic text-sm">Old Norse: "Sol" — The Sun</p>
+                  <p className="text-muted-foreground italic text-sm">Old Norse: "Sol" - The Sun</p>
                 </div>
 
                 <div className="space-y-4 text-muted-foreground leading-relaxed text-base">
                   <p>
                     The mark at the heart of this identity is <strong className="text-foreground">Sowilo (ᛊ)</strong>,
-                    a rune from the Elder Futhark — the oldest runic alphabet used across Scandinavia over a thousand
+                    a rune from the Elder Futhark - the oldest runic alphabet used across Scandinavia over a thousand
                     years ago. Sowilo represents the sun, and its angular, lightning-bolt form carries meanings of
                     energy, victory, and forward motion.
                   </p>
                   <p>
-                    For Son, this symbol bridges two worlds. It is the letter <strong className="text-foreground">S</strong> — his
-                    initial — rendered in the language of his adopted home, Sweden. A Vietnamese storyteller who found
+                    For Son, this symbol bridges two worlds. It is the letter <strong className="text-foreground">S</strong> - his
+                    initial - rendered in the language of his adopted home, Sweden. A Vietnamese storyteller who found
                     his creative voice in Stockholm, Son chose the Sowilo rune because it speaks to who he is: someone
                     who brings light and momentum to every brand he touches.
                   </p>
                   <p>
-                    The shape itself tells a story of transformation — a single stroke that changes direction twice,
+                    The shape itself tells a story of transformation - a single stroke that changes direction twice,
                     moving upward, pivoting, and surging forward again. Much like a growth marketing career built
-                    across continents — from grassroots NGOs in Hanoi to global brands
-                    in Stockholm — the mark embodies resilience, adaptability, and the power of a well-told story.
+                    across continents - from grassroots NGOs in Hanoi to global brands
+                    in Stockholm - the mark embodies resilience, adaptability, and the power of a well-told story.
                   </p>
                   <p>
                     Set in <strong className="text-brand-ink">Solar Gold</strong> against deep black, the Sowilo rune
                     becomes both a personal signature and a brand promise: clarity through creativity, impact through
-                    intention, and always — forward.
+                    intention, and always - forward.
                   </p>
                 </div>
               </div>
@@ -124,10 +122,10 @@ export default function BrandBookPage() {
           </h2>
           <div className="grid md:grid-cols-2 gap-5">
             {[
-              { icon: <Sun className="w-5 h-5" />, title: "Sun & Light", desc: "Sowilo literally means \"sun\" — illumination, warmth, and the power to make things grow." },
-              { icon: <Zap className="w-5 h-5" />, title: "Energy & Momentum", desc: "The angular lightning-bolt shape conveys kinetic energy — campaigns that move, content that strikes." },
-              { icon: <Globe className="w-5 h-5" />, title: "East Meets North", desc: "A Vietnamese name initialed in Viking script — two cultures woven into one mark." },
-              { icon: <TrendingUp className="w-5 h-5" />, title: "Forward Motion", desc: "The stroke always resolves downward and forward — growth, progress, the next chapter." },
+              { icon: <Sun className="w-5 h-5" />, title: "Sun & Light", desc: "Sowilo literally means \"sun\" - illumination, warmth, and the power to make things grow." },
+              { icon: <Zap className="w-5 h-5" />, title: "Energy & Momentum", desc: "The angular lightning-bolt shape conveys kinetic energy - campaigns that move, content that strikes." },
+              { icon: <Globe className="w-5 h-5" />, title: "East Meets North", desc: "A Vietnamese name initialed in Viking script - two cultures woven into one mark." },
+              { icon: <TrendingUp className="w-5 h-5" />, title: "Forward Motion", desc: "The stroke always resolves downward and forward - growth, progress, the next chapter." },
             ].map((item, i) => (
               <div key={i} className="glass rounded-xl p-5 flex items-start gap-4 hover:border-primary/20 transition-all group">
                 <div className="p-2.5 bg-primary/10 rounded-lg text-brand-ink flex-shrink-0 group-hover:bg-primary/20 transition-colors">
@@ -155,7 +153,7 @@ export default function BrandBookPage() {
             {/* Dark mark */}
             <div className="glass rounded-2xl overflow-hidden">
               <div className="bg-primary/5 border-b border-primary/10 px-6 py-3">
-                <p className="text-xs text-muted-foreground tracking-[0.2em] uppercase">Primary Mark — Dark</p>
+                <p className="text-xs text-muted-foreground tracking-[0.2em] uppercase">Primary Mark - Dark</p>
               </div>
               <div className="p-10 flex justify-center bg-[#0a0a0a]">
                 <div className="rounded-[28px] p-6 border border-primary/20 bg-[#111]">
@@ -167,7 +165,7 @@ export default function BrandBookPage() {
             {/* Light mark */}
             <div className="glass rounded-2xl overflow-hidden">
               <div className="bg-primary/5 border-b border-primary/10 px-6 py-3">
-                <p className="text-xs text-muted-foreground tracking-[0.2em] uppercase">Primary Mark — Light</p>
+                <p className="text-xs text-muted-foreground tracking-[0.2em] uppercase">Primary Mark - Light</p>
               </div>
               <div className="p-10 flex justify-center bg-[#F5F5F5]">
                 <div className="rounded-[28px] p-6 border border-gray-200 bg-white shadow-sm">
@@ -203,7 +201,7 @@ export default function BrandBookPage() {
                 </div>
                 <div>
                   <div className="text-lg font-bold text-brand-ink tracking-[0.15em]" style={cinzel}>SON NGUYEN</div>
-                  <div className="text-xs text-muted-foreground tracking-[0.25em]">GROWTH MARKETING MANAGER</div>
+                  <div className="text-xs text-muted-foreground tracking-[0.25em]">MARKETING MANAGER</div>
                 </div>
               </div>
             </div>
@@ -227,7 +225,7 @@ export default function BrandBookPage() {
                   </div>
                   <div className="w-12 h-px bg-primary/30 mx-auto" />
                   <div className="text-xs text-muted-foreground tracking-[0.3em] leading-relaxed">
-                    GROWTH MARKETING<br/>STRATEGIST
+                    MARKETING<br/>MANAGER
                   </div>
                 </div>
               </div>
@@ -238,7 +236,7 @@ export default function BrandBookPage() {
               <div className="bg-primary/5 border-b border-primary/10 px-6 py-3">
                 <p className="text-xs text-muted-foreground tracking-[0.2em] uppercase">Mark Only</p>
               </div>
-              <div className="p-10 flex items-center justify-center gap-8">
+              <div className="p-6 md:p-10 flex flex-wrap items-center justify-center gap-3 md:gap-8">
                 <div className="text-center space-y-2 bg-[#111111] rounded-xl p-3">
                   <SowiloSVG size={64} strokeWidth={5} />
                   <p className="text-xs text-[#A8A29E]">Gold</p>
@@ -257,7 +255,7 @@ export default function BrandBookPage() {
         </div>
       </section>
 
-      {/* Design System – Solar Amber 2.0 */}
+      {/* Design System - Solar Amber 2.0 */}
       <section className="container mx-auto px-4 pb-24" aria-labelledby="palette-title">
         <div className="max-w-5xl mx-auto">
           <p className="text-xs font-semibold uppercase tracking-[0.14em] text-brand-ink text-center mb-3">Solar Amber 2.0</p>
@@ -339,7 +337,7 @@ export default function BrandBookPage() {
           <div className="grid md:grid-cols-2 gap-6">
             <div className="rounded-2xl border border-border bg-card overflow-hidden">
               <div className="bg-primary/5 border-b border-border px-6 py-3">
-                <p className="text-xs text-muted-foreground tracking-[0.2em] uppercase">Display — Cinzel</p>
+                <p className="text-xs text-muted-foreground tracking-[0.2em] uppercase">Display - Cinzel</p>
               </div>
               <div className="p-8 space-y-4">
                 <p className="text-4xl text-brand-ink" style={cinzel}>Aa Bb Cc</p>
@@ -357,7 +355,7 @@ export default function BrandBookPage() {
 
             <div className="rounded-2xl border border-border bg-card overflow-hidden">
               <div className="bg-primary/5 border-b border-border px-6 py-3">
-                <p className="text-xs text-muted-foreground tracking-[0.2em] uppercase">Body — Inter</p>
+                <p className="text-xs text-muted-foreground tracking-[0.2em] uppercase">Body - Inter</p>
               </div>
               <div className="p-8">
                 <dl className="divide-y divide-border">
@@ -432,7 +430,7 @@ export default function BrandBookPage() {
             </div>
             <h3 className="text-2xl font-medium" style={cinzel}>Download Brand Assets</h3>
             <p className="text-sm text-muted-foreground max-w-md mx-auto">
-              Full logo kit with all variations, color palette, typography, and brand story — ready to import into Figma.
+              Full logo kit with all variations, color palette, typography, and brand story - ready to import into Figma.
             </p>
             <a
               href="/brand/son-nguyen-logo-kit.svg"
@@ -445,6 +443,6 @@ export default function BrandBookPage() {
           </div>
         </div>
       </section>
-    </div>
+    </main>
   );
 }

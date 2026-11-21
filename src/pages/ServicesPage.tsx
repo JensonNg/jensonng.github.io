@@ -243,7 +243,7 @@ export function ServicesPage() {
             What I Can <span className="text-brand-ink">Offer</span>
           </h1>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
-            Flexible creative packages tailored to your needs – from growth marketing strategy
+            Flexible creative packages tailored to your needs - from growth marketing strategy
             to content creation and everything in between.
           </p>
         </div>
