@@ -89,4 +89,6 @@ Tints are computed from `--primary`, not typed by hand:
 
 ## Voice in the UI
 - Buttons say what happens: "See my work", "Let's talk", "Download CV".
+- Use a plain hyphen (-) for dashes, ranges and asides: "2019 - 2020", "Seed Planter - Marketing Lead". Never em (—) or en (–) dashes.
+- The title is "Marketing Manager" everywhere: site, lockups, logo files and the brand kit.
 - Lead with value, then the person: the eyebrow says hello ("Xin chào, I'm Son"), the headline says what you do for others.
