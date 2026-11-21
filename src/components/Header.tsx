@@ -10,7 +10,8 @@ export function Header() {
 
   const closeMobile = () => setIsMobileMenuOpen(false);
 
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = (path: string) =>
+    path === "/blog" ? location.pathname.startsWith("/blog") : location.pathname === path;
 
   const navLinkClass = (path: string) =>
     `text-sm font-medium transition-colors hover:text-primary ${
@@ -41,6 +42,9 @@ export function Header() {
           </Link>
           <Link to="/services" className={navLinkClass("/services")}>
             Services
+          </Link>
+          <Link to="/blog" className={navLinkClass("/blog")}>
+            Blog
           </Link>
         </nav>
 
@@ -140,6 +144,17 @@ export function Header() {
               }`}
             >
               Services
+            </Link>
+            <Link
+              to="/blog"
+              onClick={closeMobile}
+              className={`py-3 px-3 rounded-lg transition-colors ${
+                isActive("/blog")
+                  ? "bg-primary/10 text-primary"
+                  : "hover:bg-muted"
+              }`}
+            >
+              Blog
             </Link>
 
             {/* Mobile Social Links */}
