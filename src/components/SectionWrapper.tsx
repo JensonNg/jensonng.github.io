@@ -91,11 +91,10 @@ export function SectionWrapper({
           </Button>
 
           {/* Section Content - Collapsible */}
-          {isExpanded && (
-            <div className="border-t border-border/30">
-              {children}
-            </div>
-          )}
+          {/* Collapsed content stays in the HTML so crawlers and AI tools can read it. */}
+          <div className="border-t border-border/30" hidden={!isExpanded}>
+            {children}
+          </div>
         </Card>
       </div>
     </section>

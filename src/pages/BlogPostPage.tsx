@@ -122,15 +122,6 @@ export function BlogPostPage() {
   const post = getPost(slug);
   const [copied, setCopied] = useState(false);
 
-  useEffect(() => {
-    if (!post) return;
-    const previous = document.title;
-    document.title = `${post.title} | Son Nguyen`;
-    return () => {
-      document.title = previous;
-    };
-  }, [post]);
-
   useEffect(() => setCopied(false), [slug]);
 
   if (!post) return <Navigate to="/blog" replace />;

@@ -1,104 +1,58 @@
-import { useEffect } from 'react';
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import { SITE_NAME, SITE_URL, getPageMeta } from "../lib/seo";
 
-interface HeadProps {
-  title?: string;
-  description?: string;
-  image?: string;
-  url?: string;
+function setMeta(attribute: "name" | "property", key: string, content: string) {
+  let tag = document.head.querySelector<HTMLMetaElement>(`meta[${attribute}="${key}"]`);
+  if (!tag) {
+    tag = document.createElement("meta");
+    tag.setAttribute(attribute, key);
+    document.head.appendChild(tag);
+  }
+  tag.content = content;
 }
 
-export function Head({ 
-  title = "Son Nguyen - Marketing Manager | Brand, Content & Campaigns",
-  description = "Marketing Manager in Stockholm with eight years across brand, content, campaigns, PR and events in Sweden and Vietnam. I turn complex B2B products into clear stories.",
-  image = "https://jensonng.github.io/images/og-thumbnail.png",
-  url = window.location.href
-}: HeadProps) {
-  
+/**
+ * Keeps the document head in step with the route during client-side navigation.
+ * The first load already has the same tags, written into the prerendered HTML.
+ */
+export function Head() {
+  const { pathname } = useLocation();
+
   useEffect(() => {
-    // Set document title
-    document.title = title;
-    
-    // Helper function to set or update meta tag
-    const setMetaTag = (property: string, content: string, isProperty = true) => {
-      const attribute = isProperty ? 'property' : 'name';
-      let meta = document.querySelector(`meta[${attribute}="${property}"]`) as HTMLMetaElement;
-      
-      if (!meta) {
-        meta = document.createElement('meta');
-        meta.setAttribute(attribute, property);
-        document.head.appendChild(meta);
-      }
-      
-      meta.setAttribute('content', content);
-    };
+    const meta = getPageMeta(pathname);
+    if (!meta) return;
+    const url = `${SITE_URL}${meta.path === "/" ? "/" : meta.path}`;
 
-    // Basic meta tags
-    setMetaTag('description', description, false);
-    setMetaTag('keywords', 'Marketing Manager, B2B Marketing, Brand Strategy, Content Marketing, PR, Campaigns, Fintech, Stockholm, Son Nguyen', false);
-    setMetaTag('author', 'Son Nguyen', false);
+    document.title = meta.title;
+    setMeta("name", "description", meta.description);
+    setMeta("property", "og:site_name", SITE_NAME);
+    setMeta("property", "og:title", meta.title);
+    setMeta("property", "og:description", meta.description);
+    setMeta("property", "og:image", meta.image);
+    setMeta("property", "og:url", url);
+    setMeta("property", "og:type", meta.type);
+    setMeta("name", "twitter:card", "summary_large_image");
+    setMeta("name", "twitter:title", meta.title);
+    setMeta("name", "twitter:description", meta.description);
+    setMeta("name", "twitter:image", meta.image);
 
-    // Open Graph meta tags (Facebook, LinkedIn, etc.)
-    setMetaTag('og:title', title);
-    setMetaTag('og:description', description);
-    setMetaTag('og:image', image);
-    setMetaTag('og:url', url);
-    setMetaTag('og:type', 'website');
-    setMetaTag('og:site_name', 'Son Nguyen Portfolio');
-    setMetaTag('og:locale', 'en_US');
-
-    // Twitter Card meta tags
-    setMetaTag('twitter:card', 'summary_large_image');
-    setMetaTag('twitter:title', title);
-    setMetaTag('twitter:description', description);
-    setMetaTag('twitter:image', image);
-    setMetaTag('twitter:creator', '@sonngoc');
-
-    // Additional meta tags for better SEO
-    setMetaTag('viewport', 'width=device-width, initial-scale=1.0', false);
-    setMetaTag('robots', 'index, follow', false);
-    setMetaTag('theme-color', '#111111', false);
-
-    // Structured data for better search results
-    const structuredData = {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Son Nguyen",
-      "jobTitle": "Marketing Manager",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Mitigram"
-      },
-      "description": description,
-      "url": url,
-      "image": image,
-      "sameAs": [
-        "https://linkedin.com/in/soninsthlm",
-        "https://instagram.com/foodstuckers.sthlm"
-      ],
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Stockholm",
-        "addressCountry": "Sweden"
-      },
-      "knowsAbout": [
-        "Brand Strategy",
-        "Content Marketing",
-        "Public Relations",
-        "B2B Campaigns",
-        "Environmental Science"
-      ]
-    };
-
-    // Add or update structured data script
-    let structuredDataScript = document.querySelector('script[type="application/ld+json"]') as HTMLScriptElement;
-    if (!structuredDataScript) {
-      structuredDataScript = document.createElement('script');
-      structuredDataScript.type = 'application/ld+json';
-      document.head.appendChild(structuredDataScript);
+    let canonical = document.head.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.rel = "canonical";
+      document.head.appendChild(canonical);
     }
-    structuredDataScript.textContent = JSON.stringify(structuredData);
+    canonical.href = url;
 
-  }, [title, description, image, url]);
+    document.head.querySelectorAll('script[type="application/ld+json"]').forEach((el) => el.remove());
+    for (const data of meta.jsonLd) {
+      const script = document.createElement("script");
+      script.type = "application/ld+json";
+      script.textContent = JSON.stringify(data);
+      document.head.appendChild(script);
+    }
+  }, [pathname]);
 
-  return null; // This component doesn't render anything visible
+  return null;
 }
