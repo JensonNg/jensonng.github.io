@@ -45,7 +45,7 @@ function VideoModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
         <iframe
           width="100%"
           height="100%"
-          src="https://www.youtube.com/embed/s7e06VN60JY?rel=0&modestbranding=1&autoplay=1"
+          src="https://www.youtube-nocookie.com/embed/s7e06VN60JY?rel=0&modestbranding=1&autoplay=1"
           title="Son Nguyen - Marketing Manager"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

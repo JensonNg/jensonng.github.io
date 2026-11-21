@@ -54,6 +54,7 @@ Tints are computed from `--primary`, not typed by hand:
 
 - `font-display` = Cinzel with Cormorant SC as fallback. Cinzel has no Vietnamese glyphs, so headings with Vietnamese text (Sơn, Hội An) fall back to Cormorant SC automatically.
 - `font-sans` = Inter for everything else. No other families.
+- Fonts are bundled with the site through `@fontsource` packages (imported in `src/main.tsx`). Don't add Google Fonts links: they send visitor data to Google, which the Privacy page promises not to do.
 - Minimum text size is **12px**. No `text-[10px]` or smaller.
 - Headings use regular-to-medium weight. Elegance comes from size, not bold.
 
