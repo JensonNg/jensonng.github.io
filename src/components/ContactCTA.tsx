@@ -7,7 +7,7 @@ export function ContactCTA() {
     <section className="py-16 px-4">
       <div className="container mx-auto">
         <div className="glass glass-highlight rounded-2xl p-8 md:p-12 text-center max-w-3xl mx-auto space-y-6">
-          <h2 className="text-2xl md:text-3xl font-bold">
+          <h2 className="text-2xl md:text-3xl font-medium">
             Let's <span className="text-brand-ink">Work Together</span>
           </h2>
           <p className="text-muted-foreground max-w-lg mx-auto">

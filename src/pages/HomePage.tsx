@@ -12,7 +12,7 @@ export function HomePage() {
       {/* Quick Navigation Cards */}
       <section id="explore" className="py-16 px-4">
         <div className="container mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4">
+          <h2 className="text-2xl md:text-3xl font-medium text-center mb-4">
             Explore My <span className="text-brand-ink">Portfolio</span>
           </h2>
           <p className="text-muted-foreground text-center mb-12 max-w-xl mx-auto">

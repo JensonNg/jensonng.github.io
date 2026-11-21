@@ -28,7 +28,7 @@ export function AboutPage() {
       <div className="container mx-auto px-4">
         {/* Page Header */}
         <div className="text-center mb-12 space-y-4">
-          <h1 className="text-4xl md:text-5xl font-bold">
+          <h1 className="text-4xl md:text-5xl font-medium">
             About <span className="text-brand-ink">Me</span>
           </h1>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">

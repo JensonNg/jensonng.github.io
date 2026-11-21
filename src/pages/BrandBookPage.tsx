@@ -49,7 +49,7 @@ export default function BrandBookPage() {
 
           <div className="space-y-3">
             <p className="text-primary/60 text-sm tracking-[0.4em] uppercase">Brand Identity System</p>
-            <h1 className="text-5xl md:text-6xl font-bold" style={cinzel}>
+            <h1 className="text-5xl md:text-6xl font-medium" style={cinzel}>
               <span className="text-primary">Son</span>{" "}
               <span className="text-foreground">Nguyen</span>
             </h1>
@@ -119,7 +119,7 @@ export default function BrandBookPage() {
       {/* Key Symbolism */}
       <section className="container mx-auto px-4 pb-24">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-10 text-center" style={cinzel}>
+          <h2 className="text-3xl font-medium mb-10 text-center" style={cinzel}>
             Key <span className="text-primary">Symbolism</span>
           </h2>
           <div className="grid md:grid-cols-2 gap-5">
@@ -146,7 +146,7 @@ export default function BrandBookPage() {
       {/* Logo Variations */}
       <section className="container mx-auto px-4 pb-24">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold mb-10 text-center" style={cinzel}>
+          <h2 className="text-3xl font-medium mb-10 text-center" style={cinzel}>
             Logo <span className="text-primary">System</span>
           </h2>
 
@@ -260,7 +260,7 @@ export default function BrandBookPage() {
       {/* Color Palette */}
       <section className="container mx-auto px-4 pb-24">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-10 text-center" style={cinzel}>
+          <h2 className="text-3xl font-medium mb-10 text-center" style={cinzel}>
             Color <span className="text-primary">Palette</span>
           </h2>
           <div className="grid grid-cols-3 md:grid-cols-6 gap-3">
@@ -291,7 +291,7 @@ export default function BrandBookPage() {
       {/* Typography */}
       <section className="container mx-auto px-4 pb-24">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-10 text-center" style={cinzel}>
+          <h2 className="text-3xl font-medium mb-10 text-center" style={cinzel}>
             Typo<span className="text-primary">graphy</span>
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
@@ -329,7 +329,7 @@ export default function BrandBookPage() {
       {/* Brand in Action — Website */}
       <section className="container mx-auto px-4 pb-24">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold mb-4 text-center" style={cinzel}>
+          <h2 className="text-3xl font-medium mb-4 text-center" style={cinzel}>
             Brand in <span className="text-primary">Action</span>
           </h2>
           <p className="text-center text-muted-foreground mb-10 max-w-xl mx-auto text-sm">

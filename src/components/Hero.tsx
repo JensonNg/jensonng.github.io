@@ -122,11 +122,11 @@ export function Hero() {
               />
               {/* Keyword cloud – bottom fade */}
               <div className="absolute bottom-0 left-0 right-0 z-20 flex flex-wrap justify-center gap-1.5 px-2 pb-2">
-                <span className="px-2.5 py-1 rounded-full text-[10px] font-medium bg-primary/10 text-brand-ink/80 border border-primary/20 backdrop-blur-sm">Storyteller</span>
-                <span className="px-2.5 py-1 rounded-full text-[10px] font-medium bg-foreground/5 text-foreground/60 border border-border backdrop-blur-sm">Strategist</span>
-                <span className="px-2.5 py-1 rounded-full text-[10px] font-medium bg-primary/10 text-brand-ink/80 border border-primary/20 backdrop-blur-sm">Vietnam 🇻🇳</span>
-                <span className="px-2.5 py-1 rounded-full text-[10px] font-medium bg-foreground/5 text-foreground/60 border border-border backdrop-blur-sm">Coffee Lover</span>
-                <span className="px-2.5 py-1 rounded-full text-[10px] font-medium bg-primary/10 text-brand-ink/80 border border-primary/20 backdrop-blur-sm">UX Writer</span>
+                <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-primary/10 text-brand-ink/80 border border-primary/20 backdrop-blur-sm">Storyteller</span>
+                <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-foreground/5 text-foreground/60 border border-border backdrop-blur-sm">Strategist</span>
+                <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-primary/10 text-brand-ink/80 border border-primary/20 backdrop-blur-sm">Vietnam 🇻🇳</span>
+                <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-foreground/5 text-foreground/60 border border-border backdrop-blur-sm">Coffee Lover</span>
+                <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-primary/10 text-brand-ink/80 border border-primary/20 backdrop-blur-sm">UX Writer</span>
               </div>
               {/* Bottom gradient mask */}
               <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background via-background/80 to-transparent z-[11]" />
@@ -137,7 +137,7 @@ export function Hero() {
               {/* Greeting + Name */}
               <div className="space-y-4">
                 <p className="text-muted-foreground text-lg tracking-wide">Xin Chào!</p>
-                <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[1.1]">
+                <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-medium leading-[1.1]">
                   Hi, I'm <span className="text-brand-ink">Son Nguyen</span>
                 </h1>
               </div>
@@ -233,11 +233,11 @@ export function Hero() {
               />
               {/* Keyword cloud – bottom fade */}
               <div className="absolute bottom-0 left-0 right-0 z-20 flex flex-wrap justify-center gap-1.5 px-2 pb-2">
-                <span className="px-2.5 py-1 rounded-full text-[10px] font-medium bg-foreground/5 text-foreground/60 border border-border backdrop-blur-sm">Food Blogger</span>
-                <span className="px-2.5 py-1 rounded-full text-[10px] font-medium bg-primary/10 text-brand-ink/80 border border-primary/20 backdrop-blur-sm">Sweden 🇸🇪</span>
-                <span className="px-2.5 py-1 rounded-full text-[10px] font-medium bg-foreground/5 text-foreground/60 border border-border backdrop-blur-sm">iPhonegrapher</span>
-                <span className="px-2.5 py-1 rounded-full text-[10px] font-medium bg-primary/10 text-brand-ink/80 border border-primary/20 backdrop-blur-sm">Creative</span>
-                <span className="px-2.5 py-1 rounded-full text-[10px] font-medium bg-foreground/5 text-foreground/60 border border-border backdrop-blur-sm">AI Enthusiast</span>
+                <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-foreground/5 text-foreground/60 border border-border backdrop-blur-sm">Food Blogger</span>
+                <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-primary/10 text-brand-ink/80 border border-primary/20 backdrop-blur-sm">Sweden 🇸🇪</span>
+                <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-foreground/5 text-foreground/60 border border-border backdrop-blur-sm">iPhonegrapher</span>
+                <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-primary/10 text-brand-ink/80 border border-primary/20 backdrop-blur-sm">Creative</span>
+                <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-foreground/5 text-foreground/60 border border-border backdrop-blur-sm">AI Enthusiast</span>
               </div>
               {/* Bottom gradient mask */}
               <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background via-background/80 to-transparent z-[11]" />

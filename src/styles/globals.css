@@ -182,8 +182,16 @@
     font-family: var(--font-sans);
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', sans-serif;
+  /* Cinzel speaks (h1-h2), Inter explains (everything else). */
+  h1, h2 {
+    font-family: var(--font-display);
+    letter-spacing: 0.01em;
+    text-wrap: balance;
+  }
+
+  h3, h4, h5, h6 {
+    font-family: var(--font-sans);
+    font-weight: 600;
   }
 }
 
@@ -232,7 +240,7 @@
 }
 
 /**
- * Base typography – Poppins headings, Inter body.
+ * Base sizes for elements without their own text-* class.
  */
 @layer base {
   :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {

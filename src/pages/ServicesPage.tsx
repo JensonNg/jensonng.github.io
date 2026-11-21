@@ -282,7 +282,7 @@ export function ServicesPage() {
             <Sparkles className="w-4 h-4" />
             Creative Services
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold">
+          <h1 className="text-4xl md:text-5xl font-medium">
             What I Can <span className="text-brand-ink">Offer</span>
           </h1>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
@@ -329,7 +329,7 @@ export function ServicesPage() {
         <div className="max-w-3xl mx-auto space-y-4">
           <div className="flex items-center gap-3 mb-8">
             <div className="h-px flex-1 bg-gradient-to-r from-primary/30 to-transparent" />
-            <h2 className="text-xl font-semibold text-brand-ink">Service Packages</h2>
+            <h2 className="text-xl font-medium text-brand-ink">Service Packages</h2>
             <div className="h-px flex-1 bg-gradient-to-l from-primary/30 to-transparent" />
           </div>
 

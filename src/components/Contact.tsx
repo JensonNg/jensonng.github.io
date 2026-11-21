@@ -211,7 +211,7 @@ export function Contact() {
                     className="mt-0.5 w-4 h-4 rounded border-foreground/20 bg-foreground/5 text-brand-ink focus:ring-primary/50 accent-primary"
                     required
                   />
-                  <span className="text-[11px] text-muted-foreground leading-relaxed">
+                  <span className="text-xs text-muted-foreground leading-relaxed">
                     I consent to Son Nguyen collecting my name and email to respond to this inquiry.
                     My data will only be used for this purpose and will not be shared with third parties.
                     I can request deletion of my data at any time.{" "}

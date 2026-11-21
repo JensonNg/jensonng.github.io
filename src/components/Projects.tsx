@@ -368,7 +368,7 @@ export function Projects() {
                           className="text-center p-2 rounded-lg bg-primary/5 border border-primary/10"
                         >
                           <div className="text-sm font-bold text-brand-ink">{metric.value}</div>
-                          <div className="text-[10px] text-muted-foreground leading-tight">{metric.label}</div>
+                          <div className="text-xs text-muted-foreground leading-tight">{metric.label}</div>
                         </div>
                       ))}
                     </div>
@@ -449,7 +449,7 @@ export function Projects() {
                           className="text-center p-2 rounded-lg bg-primary/5 border border-primary/10"
                         >
                           <div className="text-sm font-bold text-brand-ink">{metric.value}</div>
-                          <div className="text-[10px] text-muted-foreground leading-tight">{metric.label}</div>
+                          <div className="text-xs text-muted-foreground leading-tight">{metric.label}</div>
                         </div>
                       ))}
                     </div>

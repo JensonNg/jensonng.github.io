@@ -63,7 +63,7 @@ export function CVPage() {
       <div className="container mx-auto px-4">
         {/* Page Header */}
         <div className="text-center mb-12 space-y-4">
-          <h1 className="text-4xl md:text-5xl font-bold">
+          <h1 className="text-4xl md:text-5xl font-medium">
             CV & <span className="text-brand-ink">Certificates</span>
           </h1>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
@@ -76,7 +76,7 @@ export function CVPage() {
           <div className="space-y-4">
             <div className="flex items-center gap-3 mb-6">
               <div className="h-px flex-1 bg-gradient-to-r from-primary/30 to-transparent"></div>
-              <h2 className="text-xl font-semibold text-brand-ink">Resume & Cover Letter</h2>
+              <h2 className="text-xl font-medium text-brand-ink">Resume & Cover Letter</h2>
               <div className="h-px flex-1 bg-gradient-to-l from-primary/30 to-transparent"></div>
             </div>
 
@@ -106,7 +106,7 @@ export function CVPage() {
           <div className="space-y-4">
             <div className="flex items-center gap-3 mb-6">
               <div className="h-px flex-1 bg-gradient-to-r from-secondary/30 to-transparent"></div>
-              <h2 className="text-xl font-semibold text-brand-ink">Upskill Diplomas</h2>
+              <h2 className="text-xl font-medium text-brand-ink">Upskill Diplomas</h2>
               <div className="h-px flex-1 bg-gradient-to-l from-secondary/30 to-transparent"></div>
             </div>
 

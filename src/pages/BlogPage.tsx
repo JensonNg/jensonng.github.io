@@ -64,7 +64,7 @@ export function BlogPage() {
           </p>
           <h1
             style={display}
-            className="max-w-4xl text-4xl leading-[1.12] font-bold text-brand-ink md:text-6xl"
+            className="max-w-4xl text-4xl leading-[1.12] font-medium text-brand-ink md:text-6xl"
           >
             Stories that move - on brand, growth and a circular future.
           </h1>
@@ -101,14 +101,14 @@ export function BlogPage() {
                 </span>
               </div>
               <div className="flex flex-col justify-center gap-4 p-8 md:p-12">
-                <p style={display} className="text-[11px] font-semibold tracking-[2px] text-brand-ink uppercase">
+                <p style={display} className="text-xs font-semibold tracking-[2px] text-brand-ink uppercase">
                   Featured · {featured.category}
                 </p>
                 <h2
                   id="featured-title"
                   lang={featured.lang}
                   style={displayFor(featured.lang, featured.title)}
-                  className="text-3xl leading-[1.15] font-bold text-brand-ink transition-colors group-hover:text-brand-ink md:text-[38px]"
+                  className="text-3xl leading-[1.15] font-medium text-brand-ink transition-colors group-hover:text-brand-ink md:text-[38px]"
                 >
                   {featured.title}
                 </h2>
@@ -138,7 +138,7 @@ export function BlogPage() {
 
         <div className="flex flex-col gap-5 pt-7 pb-8 lg:flex-row lg:items-start lg:justify-between lg:gap-10">
           <div role="group" aria-labelledby="filter-topic" className="flex flex-col gap-2.5">
-            <span id="filter-topic" className="text-[10px] tracking-[2px] text-hint">
+            <span id="filter-topic" className="text-xs tracking-[2px] text-hint">
               TOPIC
             </span>
             <div className="flex flex-wrap gap-2.5">
@@ -155,7 +155,7 @@ export function BlogPage() {
 
           {isMultilingual && (
           <div role="group" aria-labelledby="filter-lang" className="flex shrink-0 flex-col gap-2.5">
-            <span id="filter-lang" className="text-[10px] tracking-[2px] text-hint">
+            <span id="filter-lang" className="text-xs tracking-[2px] text-hint">
               LANGUAGE
             </span>
             <div className="flex flex-wrap gap-2.5">
@@ -199,7 +199,7 @@ export function BlogPage() {
         <SectionHeader number="02" label="Follow along" />
         <div className="mt-8 flex flex-wrap items-center justify-between gap-8 rounded-xl border border-border bg-background p-8 md:p-12">
           <div className="flex max-w-xl flex-col gap-3">
-            <h2 id="follow-title" style={display} className="text-3xl font-bold text-brand-ink">
+            <h2 id="follow-title" style={display} className="text-3xl font-medium text-brand-ink">
               Always - forward.
             </h2>
             <p className="text-base leading-[26px] text-muted-foreground">

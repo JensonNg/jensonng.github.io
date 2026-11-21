@@ -96,7 +96,7 @@ export function Testimonials() {
         <div className="flex items-end justify-between mb-10">
           <div>
             <p className="text-brand-ink/60 text-sm tracking-[0.3em] uppercase mb-2">Testimonials</p>
-            <h2 className="text-2xl md:text-3xl font-bold">
+            <h2 className="text-2xl md:text-3xl font-medium">
               What People <span className="text-brand-ink">Say</span>
             </h2>
           </div>
@@ -157,7 +157,7 @@ export function Testimonials() {
                     <p className="text-sm font-semibold truncate">{t.name}</p>
                     <p className="text-xs text-muted-foreground truncate">{t.role} @ {t.company}</p>
                   </div>
-                  <span className="ml-auto text-[10px] text-brand-ink/50 border border-primary/15 rounded-full px-2 py-0.5 flex-shrink-0">
+                  <span className="ml-auto text-xs text-brand-ink/50 border border-primary/15 rounded-full px-2 py-0.5 flex-shrink-0">
                     {t.relation}
                   </span>
                 </div>

@@ -51,7 +51,7 @@ function BodyBlock({ block, lang }: { block: Block; lang: string }) {
       );
     case "h2":
       return (
-        <h2 style={displayFor(lang, block.text)} className="mt-6 text-2xl leading-[1.3] font-bold text-brand-ink md:text-[26px]">
+        <h2 style={displayFor(lang, block.text)} className="mt-6 text-2xl leading-[1.3] font-medium text-brand-ink md:text-[26px]">
           {block.text}
         </h2>
       );
@@ -82,7 +82,7 @@ function BodyBlock({ block, lang }: { block: Block; lang: string }) {
         <dl className="my-2 grid grid-cols-1 gap-x-6 gap-y-4 rounded-lg border border-border bg-background p-6 sm:grid-cols-[repeat(auto-fit,minmax(140px,1fr))] md:p-[30px]">
           {block.items.map((item) => (
             <div key={item.label} className="flex flex-col gap-1">
-              <dt style={display} className="text-[11px] font-semibold tracking-[2px] text-brand-ink uppercase">
+              <dt style={display} className="text-xs font-semibold tracking-[2px] text-brand-ink uppercase">
                 {item.label}
               </dt>
               <dd className="m-0 text-[15px] leading-6 break-words text-foreground/80">
@@ -163,7 +163,7 @@ export function BlogPostPage() {
           <h1
             lang={post.lang}
             style={displayFor(post.lang, post.title)}
-            className="text-[34px] leading-[1.15] font-bold text-brand-ink md:text-5xl"
+            className="text-[34px] leading-[1.15] font-medium text-brand-ink md:text-5xl"
           >
             {post.title}
           </h1>
@@ -247,7 +247,7 @@ export function BlogPostPage() {
               <p style={display} className="text-base tracking-[2px]">
                 <span className="font-bold text-brand-ink">SON</span> <span className="text-foreground/80">NGUYEN</span>
               </p>
-              <p className="text-[11px] tracking-[3px] text-muted-foreground">BRAND &amp; GROWTH MARKETING MANAGER</p>
+              <p className="text-xs tracking-[3px] text-muted-foreground">BRAND &amp; GROWTH MARKETING MANAGER</p>
               <p className="mt-1 text-[15px] leading-6 text-muted-foreground">
                 Growth marketer and storyteller in Stockholm. MSc in Environmental Science, with roots in marine
                 management and a habit of designing for people first.

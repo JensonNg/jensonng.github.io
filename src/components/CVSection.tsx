@@ -168,7 +168,7 @@ export function CVSection() {
           <div className="space-y-4">
             <div className="flex items-center gap-3 mb-6">
               <div className="h-px flex-1 bg-gradient-to-r from-primary/30 to-transparent"></div>
-              <h2 className="text-xl font-semibold text-brand-ink">Resume & Cover Letter</h2>
+              <h2 className="text-xl font-medium text-brand-ink">Resume & Cover Letter</h2>
               <div className="h-px flex-1 bg-gradient-to-l from-primary/30 to-transparent"></div>
             </div>
 
@@ -200,7 +200,7 @@ export function CVSection() {
           <div className="space-y-4">
             <div className="flex items-center gap-3 mb-6">
               <div className="h-px flex-1 bg-gradient-to-r from-secondary/30 to-transparent"></div>
-              <h2 className="text-xl font-semibold text-brand-ink">Upskill Diplomas</h2>
+              <h2 className="text-xl font-medium text-brand-ink">Upskill Diplomas</h2>
               <div className="h-px flex-1 bg-gradient-to-l from-secondary/30 to-transparent"></div>
             </div>
 

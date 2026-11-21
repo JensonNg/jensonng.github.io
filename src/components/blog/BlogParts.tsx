@@ -79,7 +79,7 @@ export function SectionHeader({
 
 export function PostMeta({ post, className = "" }: { post: BlogPost; className?: string }) {
   return (
-    <p className={`text-[11px] tracking-[2px] text-hint ${className}`}>
+    <p className={`text-xs tracking-[2px] text-hint ${className}`}>
       {formatDate(post.date)} · {readingTime(post)} MIN READ
       {isMultilingual && ` · ${languageLabel[post.lang].toUpperCase()}`}
     </p>
@@ -109,7 +109,7 @@ export function PostCard({ post, number }: { post: BlogPost; number: string }) {
           </span>
         </div>
         <div className="flex flex-1 flex-col gap-3 p-6 md:p-[30px]">
-          <p style={display} className="text-[11px] font-semibold tracking-[2px] text-brand-ink uppercase">
+          <p style={display} className="text-xs font-semibold tracking-[2px] text-brand-ink uppercase">
             {post.category}
           </p>
           <h3
