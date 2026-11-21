@@ -1,5 +1,5 @@
 import { ArrowLeft, Download, Zap, Sun, Globe, TrendingUp, ExternalLink } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const cinzel = { fontFamily: "var(--font-display)" };
 
@@ -21,19 +21,17 @@ function SowiloSVG({ size = 120, stroke = "#F2C94C", strokeWidth = 8, className 
 }
 
 export default function BrandBookPage() {
-  const navigate = useNavigate();
-
   return (
-    <div className="min-h-screen">
+    <main className="min-h-screen pt-24">
       {/* Back nav */}
-      <div className="container mx-auto px-4 py-8">
-        <button
-          onClick={() => navigate('/projects')}
-          className="flex items-center gap-2 text-muted-foreground hover:text-brand-ink transition-colors"
+      <div className="container mx-auto px-4 pb-8">
+        <Link
+          to="/projects"
+          className="inline-flex min-h-11 items-center gap-2 text-muted-foreground hover:text-brand-ink transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
           Back to Projects
-        </button>
+        </Link>
       </div>
 
       {/* Hero */}
@@ -445,6 +443,6 @@ export default function BrandBookPage() {
           </div>
         </div>
       </section>
-    </div>
+    </main>
   );
 }

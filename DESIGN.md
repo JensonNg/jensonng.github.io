@@ -59,6 +59,7 @@ Tints are computed from `--primary`, not typed by hand:
 - Headings use regular-to-medium weight. Elegance comes from size, not bold.
 
 ## Spacing and Shape
+- Every page starts with `<main className="pt-24">` so its content clears the fixed header, which is transparent at the top of the page.
 - Container: `max-w-7xl`, side padding 16px (mobile) / 24px (desktop).
 - Section rhythm: `py-16 md:py-24`.
 - Radius: `rounded-full` for buttons and chips, `rounded-2xl` for cards, `rounded-3xl` for large bands and media frames, `rounded-xl` for images inside cards (nested 8–12px inset).
