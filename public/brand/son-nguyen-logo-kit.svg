@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="2800" viewBox="0 0 1200 2800">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="2620" viewBox="0 0 1200 2620">
   <defs>
     <linearGradient id="gold-gradient" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#F2C94C"/>
@@ -16,7 +16,7 @@
   </defs>
 
   <!-- Background -->
-  <rect width="1200" height="2800" fill="#0A0A0A"/>
+  <rect width="1200" height="2620" fill="#0A0A0A"/>
 
   <!-- ============================================ -->
   <!-- HEADER -->
@@ -104,31 +104,55 @@
   <text x="140" y="660" fill="#999" font-family="Inter, sans-serif" font-size="14" font-weight="500" letter-spacing="2">COLOR PALETTE</text>
   <line x1="100" y1="675" x2="1100" y2="675" stroke="#333" stroke-width="0.5"/>
 
-  <rect x="100" y="700" width="155" height="100" rx="10" fill="#F2C94C"/>
-  <text x="177" y="740" text-anchor="middle" fill="#111" font-family="Cinzel, Georgia, serif" font-size="14" font-weight="700">Solar Gold</text>
-  <text x="177" y="760" text-anchor="middle" fill="#333" font-family="Inter, sans-serif" font-size="10">#F2C94C</text>
+  <text x="1100" y="660" text-anchor="end" fill="#F2C94C" font-family="Inter, sans-serif" font-size="11" font-weight="600" letter-spacing="2">SOLAR AMBER 2.0</text>
+  <text x="100" y="700" fill="#777" font-family="Inter, sans-serif" font-size="10" letter-spacing="2">BRAND</text>
+  <rect x="100" y="712" width="235" height="100" rx="10" fill="#F2C94C"/>
+  <text x="217" y="750" text-anchor="middle" fill="#111" font-family="Cinzel, Georgia, serif" font-size="14" font-weight="700">Solar Gold</text>
+  <text x="217" y="770" text-anchor="middle" fill="#333" font-family="Inter, sans-serif" font-size="10">#F2C94C</text>
+  <text x="217" y="792" text-anchor="middle" fill="#333" font-family="Inter, sans-serif" font-size="11">Primary · buttons, logo, focus</text>
+  <rect x="355" y="712" width="235" height="100" rx="10" fill="#8A6400"/>
+  <text x="472" y="750" text-anchor="middle" fill="#FFF" font-family="Cinzel, Georgia, serif" font-size="14" font-weight="700">Gold Ink</text>
+  <text x="472" y="770" text-anchor="middle" fill="#F5E7C0" font-family="Inter, sans-serif" font-size="10">#8A6400</text>
+  <text x="472" y="792" text-anchor="middle" fill="#F5E7C0" font-family="Inter, sans-serif" font-size="11">Gold text on light backgrounds</text>
+  <rect x="610" y="712" width="235" height="100" rx="10" fill="#F2994A"/>
+  <text x="727" y="750" text-anchor="middle" fill="#111" font-family="Cinzel, Georgia, serif" font-size="14" font-weight="700">Amber</text>
+  <text x="727" y="770" text-anchor="middle" fill="#333" font-family="Inter, sans-serif" font-size="10">#F2994A</text>
+  <text x="727" y="792" text-anchor="middle" fill="#333" font-family="Inter, sans-serif" font-size="11">Only in the gold gradient</text>
+  <rect x="865" y="712" width="235" height="100" rx="10" fill="#EB5757"/>
+  <text x="982" y="750" text-anchor="middle" fill="#111" font-family="Cinzel, Georgia, serif" font-size="14" font-weight="700">Warm Red</text>
+  <text x="982" y="770" text-anchor="middle" fill="#222" font-family="Inter, sans-serif" font-size="10">#EB5757</text>
+  <text x="982" y="792" text-anchor="middle" fill="#222" font-family="Inter, sans-serif" font-size="11">Errors only</text>
 
-  <rect x="275" y="700" width="155" height="100" rx="10" fill="#F2994A"/>
-  <text x="352" y="740" text-anchor="middle" fill="#111" font-family="Cinzel, Georgia, serif" font-size="14" font-weight="700">Amber</text>
-  <text x="352" y="760" text-anchor="middle" fill="#333" font-family="Inter, sans-serif" font-size="10">#F2994A</text>
+  <text x="100" y="845" fill="#777" font-family="Inter, sans-serif" font-size="10" letter-spacing="2">NEUTRALS · DARK THEME / LIGHT THEME</text>
+  <path d="M110,857 H217.5 V947 H110 A10,10 0 0 1 100,937 V867 A10,10 0 0 1 110,857 Z" fill="#111111"/>
+  <path d="M217.5,857 H325 A10,10 0 0 1 335,867 V937 A10,10 0 0 1 325,947 H217.5 Z" fill="#F5F5F4"/>
+  <rect x="100" y="857" width="235" height="90" rx="10" fill="none" stroke="#333" stroke-width="1"/>
+  <text x="158.75" y="935" text-anchor="middle" fill="#EEE" font-family="Inter, sans-serif" font-size="10">#111111</text>
+  <text x="276.25" y="935" text-anchor="middle" fill="#111" font-family="Inter, sans-serif" font-size="10">#F5F5F4</text>
+  <text x="100" y="967" fill="#CCC" font-family="Inter, sans-serif" font-size="12" font-weight="500">Background</text>
+  <path d="M365,857 H472.5 V947 H365 A10,10 0 0 1 355,937 V867 A10,10 0 0 1 365,857 Z" fill="#1A1817"/>
+  <path d="M472.5,857 H580 A10,10 0 0 1 590,867 V937 A10,10 0 0 1 580,947 H472.5 Z" fill="#FFFFFF"/>
+  <rect x="355" y="857" width="235" height="90" rx="10" fill="none" stroke="#333" stroke-width="1"/>
+  <text x="413.75" y="935" text-anchor="middle" fill="#EEE" font-family="Inter, sans-serif" font-size="10">#1A1817</text>
+  <text x="531.25" y="935" text-anchor="middle" fill="#111" font-family="Inter, sans-serif" font-size="10">#FFFFFF</text>
+  <text x="355" y="967" fill="#CCC" font-family="Inter, sans-serif" font-size="12" font-weight="500">Surface</text>
+  <path d="M620,857 H727.5 V947 H620 A10,10 0 0 1 610,937 V867 A10,10 0 0 1 620,857 Z" fill="#F5F5F4"/>
+  <path d="M727.5,857 H835 A10,10 0 0 1 845,867 V937 A10,10 0 0 1 835,947 H727.5 Z" fill="#1C1917"/>
+  <rect x="610" y="857" width="235" height="90" rx="10" fill="none" stroke="#333" stroke-width="1"/>
+  <text x="668.75" y="935" text-anchor="middle" fill="#111" font-family="Inter, sans-serif" font-size="10">#F5F5F4</text>
+  <text x="786.25" y="935" text-anchor="middle" fill="#EEE" font-family="Inter, sans-serif" font-size="10">#1C1917</text>
+  <text x="610" y="967" fill="#CCC" font-family="Inter, sans-serif" font-size="12" font-weight="500">Text</text>
+  <path d="M875,857 H982.5 V947 H875 A10,10 0 0 1 865,937 V867 A10,10 0 0 1 875,857 Z" fill="#A8A29E"/>
+  <path d="M982.5,857 H1090 A10,10 0 0 1 1100,867 V937 A10,10 0 0 1 1090,947 H982.5 Z" fill="#57534E"/>
+  <rect x="865" y="857" width="235" height="90" rx="10" fill="none" stroke="#333" stroke-width="1"/>
+  <text x="923.75" y="935" text-anchor="middle" fill="#111" font-family="Inter, sans-serif" font-size="10">#A8A29E</text>
+  <text x="1041.25" y="935" text-anchor="middle" fill="#EEE" font-family="Inter, sans-serif" font-size="10">#57534E</text>
+  <text x="865" y="967" fill="#CCC" font-family="Inter, sans-serif" font-size="12" font-weight="500">Muted text</text>
 
-  <rect x="450" y="700" width="155" height="100" rx="10" fill="#EB5757"/>
-  <text x="527" y="740" text-anchor="middle" fill="#FFF" font-family="Cinzel, Georgia, serif" font-size="14" font-weight="700">Warm Red</text>
-  <text x="527" y="760" text-anchor="middle" fill="#EEE" font-family="Inter, sans-serif" font-size="10">#EB5757</text>
-
-  <rect x="625" y="700" width="155" height="100" rx="10" fill="#111111" stroke="#333" stroke-width="1"/>
-  <text x="702" y="740" text-anchor="middle" fill="#CCC" font-family="Cinzel, Georgia, serif" font-size="14" font-weight="700">Deep Black</text>
-  <text x="702" y="760" text-anchor="middle" fill="#888" font-family="Inter, sans-serif" font-size="10">#111111</text>
-
-  <rect x="800" y="700" width="155" height="100" rx="10" fill="#F5F5F5" stroke="#E0E0E0" stroke-width="1"/>
-  <text x="877" y="740" text-anchor="middle" fill="#333" font-family="Cinzel, Georgia, serif" font-size="14" font-weight="700">Off White</text>
-  <text x="877" y="760" text-anchor="middle" fill="#555" font-family="Inter, sans-serif" font-size="10">#F5F5F5</text>
-
-  <rect x="975" y="700" width="125" height="100" rx="10" fill="#888888"/>
-  <text x="1037" y="740" text-anchor="middle" fill="#111" font-family="Cinzel, Georgia, serif" font-size="14" font-weight="700">Muted</text>
-  <text x="1037" y="760" text-anchor="middle" fill="#222" font-family="Inter, sans-serif" font-size="10">#888888</text>
+  <text x="100" y="1005" fill="#AAA" font-family="Inter, sans-serif" font-size="12"><tspan fill="#F2C94C" font-weight="600">Gold is a fill, or text on dark. Never text on light</tspan> (1.5 : 1). Use Gold Ink for gold text on light backgrounds (4.9 : 1).</text>
 
 
+  <g transform="translate(0, 180)">
   <!-- ============================================ -->
   <!-- 03. TYPOGRAPHY -->
   <!-- ============================================ -->
@@ -140,7 +164,7 @@
   <g transform="translate(100, 930)">
     <text x="0" y="0" fill="#F2C94C" font-family="Cinzel, Georgia, serif" font-size="11" font-weight="600" letter-spacing="2">DISPLAY</text>
     <text x="0" y="42" fill="#F2C94C" font-family="Cinzel, Georgia, serif" font-size="40" font-weight="700">Cinzel</text>
-    <text x="0" y="72" fill="#888" font-family="Inter, sans-serif" font-size="12">Brand name, headlines, section titles. Inspired by Roman inscriptions.</text>
+    <text x="0" y="72" fill="#888" font-family="Inter, sans-serif" font-size="12">Brand name, headlines, section titles (Medium 500 on the website). Inspired by Roman inscriptions.</text>
     <text x="0" y="105" fill="#CCC" font-family="Cinzel, Georgia, serif" font-size="18" font-weight="700" letter-spacing="1">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</text>
     <text x="0" y="130" fill="#999" font-family="Cinzel, Georgia, serif" font-size="18" font-weight="400" letter-spacing="1">a b c d e f g h i j k l m n o p q r s t u v w x y z  0 1 2 3 4 5 6 7 8 9</text>
     <text x="0" y="168" fill="#AAA" font-family="Cinzel, Georgia, serif" font-size="20" font-weight="400">Regular 400</text>
@@ -236,5 +260,6 @@
   <text x="600" y="2275" text-anchor="middle" fill="#F2C94C" font-family="Cinzel, Georgia, serif" font-size="14" font-weight="600" letter-spacing="3">SON NGUYEN</text>
   <text x="600" y="2300" text-anchor="middle" fill="#666" font-family="Inter, sans-serif" font-size="10" letter-spacing="2">GROWTH MARKETING MANAGER</text>
   <text x="600" y="2325" text-anchor="middle" fill="#444" font-family="Inter, sans-serif" font-size="10">Stockholm, Sweden</text>
+  </g>
 
 </svg>
