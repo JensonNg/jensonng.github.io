@@ -73,6 +73,45 @@ const experiences: TimelineEntry[] = [
     accentColor: "#f2994a",
   },
   {
+    company: "Epidemic Sound",
+    location: "Stockholm, Sweden",
+    positions: [
+      {
+        title: "Copyright Screener",
+        period: "Oct 2024 – Aug 2025",
+        responsibilities: [
+          "Reviewed and validated music licensing compliance, ensuring copyright integrity across global content platforms",
+          "Collaborating with team to optimize claims on YouTube, increasing revenue",
+          "Demonstrating understanding of copyright laws related to music and content creation",
+        ],
+      },
+    ],
+    description:
+      "Leading music and sound effects platform for content creators worldwide.",
+    impact: "Optimized YouTube claims process resulting in measurable revenue increases",
+    accentColor: "#f2994a",
+  },
+  {
+    company: "H&M",
+    location: "H&M, Stockholm",
+    positions: [
+      {
+        title: "Senior Sales Advisor",
+        period: "Sep 2024 – May 2025",
+        responsibilities: [
+          "Drove sales growth and enhanced customer experience through personalized styling",
+          "Showcasing fashion expertise to enhance customer experience and promote new brand vision",
+          "Collaborating with team members to achieve sales targets",
+        ],
+      },
+    ],
+    description:
+      "Working at the second upgraded H&M store in the world, showcasing the new vision as a fashion brand.",
+    impact:
+      "Enhanced customer experience at flagship upgraded store showcasing H&M's new brand vision",
+    accentColor: "#6fcf97",
+  },
+  {
     company: "RFSL Utbildning",
     location: "Stockholm, Sweden",
     positions: [
@@ -89,7 +128,7 @@ const experiences: TimelineEntry[] = [
     description:
       "The training arm of RFSL, Sweden's largest LGBTQ+ rights organisation, offering inclusion training to organisations.",
     impact: "300%+ organic social growth in three months and partnerships with IKEA, Cevera and Humble Brands",
-    accentColor: "#6fcf97",
+    accentColor: "#f2c94c",
   },
   // === EARLIER EXPERIENCE ===
   {
