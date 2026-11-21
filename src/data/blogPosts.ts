@@ -5,6 +5,10 @@ import araTay from "../images/blog/aratay-son-la.webp";
 import foodStuckersCover from "../images/blog/food-stuckers-cover.webp";
 import yifangCover from "../images/blog/yifang-cover.webp";
 import yifangTea from "../images/blog/yifang-tea.webp";
+import financeCover from "../images/blog/young-adults-finance-cover.webp";
+import financeHypotheses from "../images/blog/young-adults-finance-hypotheses.webp";
+import financeInsights from "../images/blog/young-adults-finance-insights.webp";
+import financeRecommendations from "../images/blog/young-adults-finance-recommendations.webp";
 
 /**
  * Blog posts.
@@ -12,6 +16,8 @@ import yifangTea from "../images/blog/yifang-tea.webp";
  * To add a post: copy one entry, give it a unique `slug` (used in the URL:
  * /blog/<slug>), and write the body as a list of blocks. Posts are sorted by
  * date automatically; set `featured: true` on the one to show at the top.
+ *
+ * Paragraph and callout text supports **bold** and [links](https://...).
  */
 
 export type Block =
@@ -20,6 +26,8 @@ export type Block =
   | { type: "quote"; text: string }
   | { type: "image"; src: string; alt: string; caption?: string }
   | { type: "facts"; items: { label: string; value: string; href?: string }[] }
+  /** A group of highlighted statements, e.g. hypotheses, insights or recommendations. */
+  | { type: "callouts"; items: { label?: string; text: string }[] }
   | { type: "source"; text: string; label: string; href: string };
 
 export type BlogPost = {
@@ -38,11 +46,121 @@ export type BlogPost = {
   coverAlt: string;
   /** CSS object-position for cropped cover thumbnails, e.g. "center bottom" */
   coverPosition?: string;
+  /** Optional credit or note shown under the cover on the article page */
+  coverCaption?: string;
   featured?: boolean;
   body: Block[];
 };
 
 const posts: BlogPost[] = [
+  {
+    slug: "empowering-young-adults-in-sweden-financial-app",
+    title: "Empowering Young Adults in Sweden with Financial App Feature: An Inspirational View",
+    excerpt:
+      "How might we make financial management easier for young adults in Sweden during tough economic times? What I learned from my first UX research project: a survey of 66 people, five interviews and three recommendations for banking apps.",
+    date: "2023-11-20",
+    category: "UX research",
+    lang: "en",
+    authors: "Son Nguyen",
+    cover: financeCover,
+    coverAlt: "Illustration of young people in winter coats gathered around a desk covered in charts and documents",
+    coverCaption: "All pictures in this article were generated with Adobe Firefly.",
+    featured: true,
+    body: [
+      {
+        type: "p",
+        text: "Imagine being a young adult in Sweden, handling your money and spending during tough economic times in Europe. How might we make financial management easier and more stable during these times? That’s the story I jumped into! As a beginner in UX research, I wanted to make things easier for this group, representing myself while seeking insights to make banking apps more attractive to them. Let’s dive into what I discovered!",
+      },
+      { type: "h2", text: "Initial assumptions and user needs" },
+      {
+        type: "image",
+        src: financeHypotheses,
+        alt: "Illustration of three people in business attire, each in front of a page of notes",
+      },
+      {
+        type: "p",
+        text: "I began by thinking of ideas and guesses based on three hours of research and my own experiences. Then, I turned those ideas into hypotheses, shaping assumptions to capture what users might seek:",
+      },
+      {
+        type: "callouts",
+        items: [
+          { text: "I believe that users prefer an online platform to seek financial advice." },
+          { text: "I believe that our users want the app to include Expense Tracking and Optimization." },
+          { text: "I believe that there is a need for Sustainable Investment Guidance." },
+          { text: "I believe that users aim to be empowered and independent in their financial journey." },
+        ],
+      },
+      { type: "h2", text: "Quantitative and qualitative insights" },
+      {
+        type: "image",
+        src: financeInsights,
+        alt: "Line illustration of three people discussing charts and wireframes on a large wall",
+      },
+      {
+        type: "p",
+        text: "I gathered insights within only 1 week from 66 participants from **18-65 years old** who **live in Sweden**, who answered the survey, and delved into the minds of five individuals through **45-minute interviews**. Insights from the [screening survey](https://tally.so/r/w2A6QA) revealed that **70% of participants believed young people are more interested in financial advice** nowadays. Notably, **76% preferred seeking advice through online/own research** due to its **accessibility** and **convenience**. However, **only 19% turned to banking apps** for financial advice, signalling potential areas for improvement within these applications.",
+      },
+      {
+        type: "p",
+        text: "Combined with all the in-depth interviews with 5 interviewees, I realized there was a need to adjust the priority hypotheses, which aligned with the insights I got from most interviewees. And then, here are **three** key insights I chose:",
+      },
+      {
+        type: "callouts",
+        items: [
+          {
+            label: "Insight 1",
+            text: "Users prefer simple, easily navigable apps with fewer features, seeking empowerment and independence in their financial journey.",
+          },
+          {
+            label: "Insight 2",
+            text: "Users mentioned the convenience of creating term deposits directly within banking apps. This functionality was highlighted as a valuable feature, allowing users to quickly initiate term deposits without the need for additional processes or visits to physical branches.",
+          },
+          {
+            label: "Insight 3",
+            text: "Limited discussion on sustainable investment. This lack of emphasis suggests a potential gap in the users’ current financial considerations on eco-friendly investment.",
+          },
+        ],
+      },
+      { type: "h2", text: "Next steps: my recommendations" },
+      {
+        type: "image",
+        src: financeRecommendations,
+        alt: "Illustration of a smartphone showing a banking app, surrounded by coins, a piggy bank and finance icons",
+      },
+      {
+        type: "p",
+        text: "After analyzing the interview and screening results, combined with the card sorting result, I acknowledge that the study had a limited timeframe for researching more on the topic of **sustainable investment** in Sweden. By considering the economic challenges, it’s entirely valid to prioritize recommendations that are more immediate and pertinent to users’ current needs and behaviours. With that said, I defined 3 fundamental principles with recommendations for the improvement of the banking app:",
+      },
+      {
+        type: "callouts",
+        items: [
+          {
+            label: "Personalized financial dashboard for building trust",
+            text: "Offer users the ability to customize their financial dashboard, prioritising and selecting the financial metrics and insights they wish to monitor regularly. This makes the app more personal, giving them info that suits them best. Plus, they can adjust how much detail or suggestions they get, letting them control their money data.",
+          },
+          {
+            label: "Simplified interface and multilingual support",
+            text: "Redesign the banking app interface with a primary focus on simplicity and intuitive navigation, highlighting essential financial data such as account balances, upcoming payments, and investment values. Also, add English for people who don’t speak Swedish. This makes the app more inclusive and easier to understand for everyone.",
+          },
+          {
+            label: "Integrated term deposit creation",
+            text: "Considering that this feature already exists in many developing countries like Vietnam, India, etc., there’s a need to integrate a user-friendly feature within the app for term deposit creation. This feature allows users to quickly set up their savings, choose the duration they want to save for, view their anticipated interest, and start saving - all within the app, eliminating the need to visit a bank office. This simplicity encourages increased savings.",
+          },
+        ],
+      },
+      { type: "h2", text: "Conclusion" },
+      {
+        type: "p",
+        text: "While this research has limitations, it helps me understand more the financial usage experiences of people around my community. Even though sustainable investment remains crucial, as recognized by interviewees, my suggestions tend to prioritise practical enhancements for the current economic landscape and the user’s preferable features. Empowering young adults through intuitive design, personalized features, and effortless savings pathways, I am eager to see if any banking app can utilize these features to attract more young adult users in Sweden.",
+      },
+      {
+        type: "source",
+        text: "Originally published on Medium:",
+        label: "medium.com/@sonngoc.nguyen",
+        href: "https://medium.com/@sonngoc.nguyen/empowering-young-adults-in-sweden-with-financial-management-a-view-from-a-beginner-in-ux-research-b3f859506c1a",
+      },
+    ],
+  },
   {
     slug: "yifang-fruit-tea-stockholm",
     title: "YiFang Fruit Tea - New option for young couples",
@@ -252,7 +370,6 @@ const posts: BlogPost[] = [
     authors: "Son Nguyen",
     cover: circularCover,
     coverAlt: "Illustration comparing the linear, recycling and circular economy models, with the title in Vietnamese",
-    featured: true,
     body: [
       {
         type: "p",
@@ -290,7 +407,7 @@ export function getPost(slug: string | undefined): BlogPost | undefined {
 /** Estimated reading time in minutes (about 200 words a minute). */
 export function readingTime(post: BlogPost): number {
   const words = post.body
-    .map((b) => ("text" in b ? b.text : ""))
+    .map((b) => ("text" in b ? b.text : b.type === "callouts" ? b.items.map((i) => i.text).join(" ") : ""))
     .join(" ")
     .split(/\s+/)
     .filter(Boolean).length;
