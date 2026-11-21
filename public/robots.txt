@@ -1,0 +1,24 @@
+# robots.txt for jensonng.github.io
+#
+# Content Signals (contentsignals.org): search engines and AI assistants that
+# answer questions and cite this site are welcome; training AI models on its
+# content is not.
+User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+Allow: /
+
+# Crawlers that collect training data for AI models. Search and answer bots
+# (Googlebot, Bingbot, OAI-SearchBot, ChatGPT-User, Claude-SearchBot,
+# Claude-User, PerplexityBot) stay under the rules above. Google-Extended and
+# Applebot-Extended only control AI training; blocking them does not affect
+# Google or Apple search.
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: CCBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: Bytespider
+User-agent: meta-externalagent
+Disallow: /
+
+Sitemap: https://jensonng.github.io/sitemap.xml

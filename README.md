@@ -40,6 +40,14 @@ The original design is available in [Figma](https://www.figma.com/design/j4F5z5S
 - Check the production build: `npm run build`
 - Publish: commit and push to `master`. GitHub Actions builds the site and deploys it to GitHub Pages automatically.
 
+## Search engines and AI assistants
+
+`npm run build` pre-renders every public page to plain HTML, so search engines and AI assistants can read the content without running JavaScript. It also writes `sitemap.xml` and `llms.txt` (a plain-text summary of the site for AI tools).
+
+- Page titles, descriptions and structured data live in `src/lib/seo.ts`.
+- **Adding a new page:** add it to `STATIC_PAGES` in `src/lib/seo.ts`, or it will not be pre-rendered, listed in the sitemap or described in `llms.txt`. Blog posts are picked up automatically.
+- `public/robots.txt` welcomes search and AI answer tools and blocks AI training crawlers.
+
 ## Project structure
 
 | Folder | What lives there |
