@@ -1,8 +1,6 @@
 import asekioCover from "../images/projects/asekio-cover.webp";
 import bachableCover from "../images/work/bachable-cover.webp";
 import sowiloCover from "../images/work/sowilo-cover.webp";
-import alfredCover from "../images/work/alfred-cover.webp";
-import meltdCover from "../images/work/meltd-cover.webp";
 import rfslCover from "../images/work/rfsl-cover.webp";
 import seedPlanterCover from "../images/projects/seedplanter-cover.webp";
 import hanoiPrideCover from "../images/projects/hanoipride-cover.webp";
@@ -91,55 +89,6 @@ export const projects: Project[] = [
       { value: "8", label: "Logo variations" },
       { value: "6", label: "Brand colors" },
       { value: "4", label: "Key symbols" },
-    ],
-  },
-  {
-    title: "Mitigram - Alfred for Banks AI Launch",
-    description: "Co-owning the launch of Alfred, Mitigram's AI agent for trade finance. Working with Souk Agency on a visual identity and design system that help banks recognise and understand Alfred, then taking it to market through campaigns and sales materials.",
-    brand: {
-      name: "Alfred",
-      initials: "A",
-      color: "#49EED3",
-      bgFrom: "#0E1E1E",
-      bgTo: "#174545",
-    },
-    technologies: ["Brand Identity", "Design System", "Product Launch", "B2B Marketing"],
-    period: "2026",
-    organization: "Mitigram",
-    role: "Marketing Manager, co-owner of the launch",
-    quote: "Giving an AI agent a face.",
-    readMoreUrl: "/work/alfred-for-banks",
-    featured: false,
-    cover: alfredCover,
-    coverAlt: "The Alfred logo above the words Design System, on Aztec Green",
-    coverPosition: "left center",
-    metrics: [
-      { value: "30+", label: "SQLs since June 2026" },
-      { value: "2", label: "Banks onboarded" },
-    ],
-  },
-  {
-    title: "Melt'd - Pop-up Bakeshop",
-    description: "Supporting Melt'd, a pop-up bakeshop in Stockholm with Asian-inspired bakes, at three pop-ups: setting up at the host venues, filming and photographing the bakes for Instagram, and serving customers.",
-    brand: {
-      name: "Melt'd",
-      initials: "M",
-      color: "#EADBC5",
-      bgFrom: "#58191A",
-      bgTo: "#2a0c0d",
-    },
-    technologies: ["Event Set-up", "Photography", "Video", "Customer Service"],
-    period: "Sep - Nov 2026",
-    organization: "Melt'd",
-    role: "Pop-up support",
-    quote: "Asian-inspired bakes for Stockholm's fika scene.",
-    readMoreUrl: "/work/meltd-pop-up-bakeshop",
-    featured: false,
-    cover: meltdCover,
-    coverAlt: "The Melt'd script wordmark in cream on deep red",
-    metrics: [
-      { value: "3", label: "Pop-ups" },
-      { value: "3", label: "Partner venues" },
     ],
   },
   {
@@ -324,3 +273,6 @@ export const projects: Project[] = [
     ],
   },
 ];
+
+/** Projects without a case study. Those with one link to /work/ and are shown as case studies instead. */
+export const otherProjects: Project[] = projects.filter((p) => !p.readMoreUrl.startsWith("/work/"));
