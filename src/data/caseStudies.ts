@@ -1,4 +1,9 @@
 import alfredCover from "../images/work/alfred-cover.webp";
+import alfredColour from "../images/work/alfred-colour.webp";
+import alfredType from "../images/work/alfred-type.webp";
+import alfredLogo from "../images/work/alfred-logo.webp";
+import alfredPatterns from "../images/work/alfred-patterns.webp";
+import alfredIcons from "../images/work/alfred-icons.webp";
 
 /**
  * Case studies, shown at /work/<slug>, on the Projects page and in Selected work.
@@ -40,6 +45,8 @@ export interface CaseStudy {
   cardResult: string;
   cover?: string;
   coverAlt?: string;
+  /** CSS object-position for cropped cover thumbnails, e.g. "left center" */
+  coverPosition?: string;
   /** Fallback tile when there is no cover image */
   brand: { initials: string; color: string; bgFrom: string; bgTo: string };
   /** The "At a glance" panel, e.g. Role, Partner, Timeline, Scope */
@@ -51,7 +58,8 @@ export interface CaseStudy {
   learnings: string[];
   /** Who else made this, e.g. the agency behind the visual identity */
   credits?: string;
-  gallery?: { src: string; alt: string; caption?: string }[];
+  /** `wide` images span the full width of the gallery */
+  gallery?: { src: string; alt: string; caption?: string; wide?: boolean }[];
   /** ids from src/data/testimonials.ts */
   testimonials: string[];
   /** slugs from src/data/blogPosts.ts */
@@ -63,7 +71,7 @@ const published: CaseStudy[] = [
   {
     slug: "alfred-for-banks",
     status: "published",
-    updated: "2026-11-21",
+    updated: "2026-11-22",
     client: "Mitigram",
     category: "Brand identity & AI launch",
     title: "Alfred for Banks: giving an AI agent a face",
@@ -71,15 +79,16 @@ const published: CaseStudy[] = [
       "How Mitigram launched Alfred, an AI agent for trade finance, with a visual identity banks can recognise and a launch story they can understand.",
     cardResult: "30+ SQLs and two banks onboarded since June 2026",
     cover: alfredCover,
-    coverAlt: "Cover reading Alfred for Banks, brand identity and AI launch",
-    brand: { initials: "A", color: "#F2C94C", bgFrom: "#111111", bgTo: "#2a2216" },
+    coverAlt: "The Alfred logo above the words Design System, on Aztec Green with a teal particle pattern",
+    coverPosition: "left center",
+    brand: { initials: "A", color: "#49EED3", bgFrom: "#0E1E1E", bgTo: "#174545" },
     facts: [
       { label: "Client", value: "Mitigram, B2B trade finance platform" },
       { label: "My role", value: "Marketing Manager, co-owner of the launch" },
       { label: "Identity partner", value: "Souk Agency", href: "https://www.soukagency.com/cases/alfred" },
       { label: "Audience", value: "Banks and their trade finance teams" },
       { label: "Year", value: "2026" },
-      { label: "Scope", value: "Visual identity, launch story, campaigns" },
+      { label: "Scope", value: "Visual identity, design system, launch story, campaigns" },
     ],
     metrics: [
       { value: "30+", label: "Sales-qualified leads since June 2026" },
@@ -108,23 +117,56 @@ const published: CaseStudy[] = [
         text: "The result is a complete identity: a logo that gives the AI agent a clear face, a colour palette that sets Alfred apart while fitting with Mitigram, and usage guidelines so the team can apply it consistently across every channel.",
       },
       {
+        title: "A design system for every surface",
+        text: "Together with Souk, we turned the identity into the Alfred Design System, so it holds up on every surface, from a LinkedIn post to a product screen:",
+        points: [
+          "**Colour in a 60 / 30 / 10 split:** Aztec Green and White as the base, Light Sea Green and Cyprus for panels and layers, and Teal on one thing only: the call to action or the main message",
+          "**Sora for every word**, with clear rules for weights, tracking and sentence case",
+          "**A particle pattern** that adds texture without noise, and a teal wash for photos",
+          "**A 3D icon for every feature**, in steel and teal glass",
+          "**Ready-to-fill templates** for social posts in 1:1, 4:5, 16:9 and 9:16, plus UI components",
+        ],
+      },
+      {
         title: "From identity to launch",
         text: "As co-owner of the Alfred for Banks launch, my job was to make the identity work in the market: in the launch story, the campaigns and the materials sales uses with banks.",
       },
     ],
     results: [
       "Alfred went from a new AI agent to a recognisable brand. Mitigram now has a visual identity for marketing, sales and communication, and an easier way to show new customers what Alfred does.",
-      "With clear guidelines in place, the team keeps the brand consistent without going back to the agency for every new asset.",
+      "With clear guidelines and ready-made templates in place, the team keeps the brand consistent without going back to the agency for every new asset.",
       "Since June 2026, the launch has brought in **30+ sales-qualified leads** and **two banks** have been onboarded.",
     ],
     learnings: [
       "**New technology needs a face before it needs a feature list.** When the category is unfamiliar, recognition comes first and explanation follows.",
       "**Design around real use.** The identity got better because the agency saw how the team would actually use it, not just a brief.",
-      "**Guidelines are the handover.** Clear usage rules are what let a small marketing team scale a brand on its own.",
+      "**Guidelines are the handover, templates are the habit.** Clear rules and ready-to-fill templates are what let a small marketing team scale a brand on its own.",
     ],
     credits:
-      "Visual identity (logo, colour palette and usage guidelines) by [Souk Agency](https://www.soukagency.com/cases/alfred), in collaboration with the Mitigram team. Launch, campaigns and go-to-market by Mitigram marketing.",
-    gallery: [],
+      "Visual identity (logo, colour palette and usage guidelines) by [Souk Agency](https://www.soukagency.com/cases/alfred), in collaboration with the Mitigram team. The Alfred Design System (colour rules, typography, patterns, feature icons and templates) built by Souk Agency and Mitigram marketing together. Launch, campaigns and go-to-market by Mitigram marketing.",
+    gallery: [
+      {
+        src: alfredColour,
+        alt: "Alfred colour palette in a 60/30/10 split: Aztec Green #0E1E1E, White, Light Sea Green #279B93, Cyprus #174545 and Teal #49EED3, with brand and grey ramps",
+        wide: true,
+      },
+      {
+        src: alfredLogo,
+        alt: "The Alfred logo in horizontal, stacked and symbol-only versions, in black on light grey and white or teal on Aztec Green",
+      },
+      {
+        src: alfredType,
+        alt: "Sora typeface specimen in Light, Regular, Semibold and Bold",
+      },
+      {
+        src: alfredPatterns,
+        alt: "The Alfred particle pattern on Aztec Green, Cyprus and Teal backgrounds",
+      },
+      {
+        src: alfredIcons,
+        alt: "Eight 3D feature icons in steel and teal glass, including a shield, a funnel, a gauge and a magnifying glass",
+      },
+    ],
     testimonials: ["nicholas-kelly", "nathalie-sajda"],
     relatedPosts: ["your-ai-agent-needs-a-face", "why-b2b-fintech-brands-sound-the-same"],
   },

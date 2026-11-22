@@ -12,6 +12,7 @@ export function CaseStudyCover({ study, className = "", eager = false }: { study
           src={study.cover}
           alt={study.coverAlt ?? ""}
           loading={eager ? "eager" : "lazy"}
+          style={{ objectPosition: study.coverPosition }}
           className="h-full w-full object-cover"
         />
       </div>

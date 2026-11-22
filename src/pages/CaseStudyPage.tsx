@@ -155,8 +155,8 @@ export function CaseStudyPage() {
         {study.gallery && study.gallery.length > 0 && (
           <div className="container mx-auto mt-14 grid max-w-6xl gap-4 px-4 md:grid-cols-2">
             {study.gallery.map((img) => (
-              <figure key={img.src} className="m-0">
-                <img src={img.src} alt={img.alt} loading="lazy" className="w-full rounded-2xl border border-border" />
+              <figure key={img.src} className={`m-0 ${img.wide ? "md:col-span-2" : ""}`}>
+                <img src={img.src} alt={img.alt} loading="lazy" className="w-full rounded-2xl border border-border bg-white" />
                 {img.caption && <figcaption className="pt-3 text-xs text-muted-foreground">{img.caption}</figcaption>}
               </figure>
             ))}
