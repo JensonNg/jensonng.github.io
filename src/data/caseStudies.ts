@@ -5,6 +5,11 @@ import alfredLogo from "../images/work/alfred-logo.webp";
 import alfredPatterns from "../images/work/alfred-patterns.webp";
 import alfredIcons from "../images/work/alfred-icons.webp";
 import bachableCover from "../images/work/bachable-cover.webp";
+import bachableVoice from "../images/work/bachable-voice.webp";
+import bachableLogo from "../images/work/bachable-logo.webp";
+import bachableColour from "../images/work/bachable-colour.webp";
+import bachableType from "../images/work/bachable-type.webp";
+import bachableShape from "../images/work/bachable-shape.webp";
 import sowiloCover from "../images/work/sowilo-cover.webp";
 import sowiloLogo from "../images/work/sowilo-logo.webp";
 import sowiloPalette from "../images/work/sowilo-palette.webp";
@@ -181,63 +186,71 @@ const published: CaseStudy[] = [
     status: "published",
     updated: "2026-11-22",
     client: "Bachable.io",
-    category: "Brand & launch",
-    title: "Bachable: a human brand for a technical music tool",
+    category: "Email & social media",
+    title: "Bachable: bringing a musician's brand to email and social",
     summary:
-      "Shaping how Bachable, a browser-based music notation editor built on LilyPond, looks, feels and speaks to musicians, from alpha to public launch.",
-    cardResult: "From alpha to public launch, now approaching 300 users",
+      "Taking Bachable's brand, a browser-based music notation editor built on LilyPond, into the inbox and onto social media, in a voice that is friendly, plain-spoken and written for musicians.",
+    cardResult: "Email and social for a launch now approaching 300 users",
     cover: bachableCover,
-    coverAlt: "Cover reading bachable.io, write beautiful scores in your browser, above a five-line music staff",
+    coverAlt: "Bachable brand one-pager header: the script b logo, the line Write beautiful scores in your browser, and the editor showing Canon in D",
+    coverPosition: "left center",
     brand: { initials: "b", color: "#F54900", bgFrom: "#18181B", bgTo: "#431407" },
     facts: [
       { label: "Client", value: "Bachable.io, music notation editor built on LilyPond" },
-      { label: "My role", value: "Brand Lead" },
+      { label: "My role", value: "Brand Lead, focused on email and social media" },
       { label: "Team", value: "Erik Dao (Founder), Vivianne (Design Lead) and me" },
-      { label: "Audience", value: "Composers, performers, teachers and ensembles" },
+      { label: "Audience", value: "Musicians who create, compose and perform" },
       { label: "Timeline", value: "Oct 2025 - present" },
-      { label: "Scope", value: "Brand strategy, messaging, onboarding content, product storytelling" },
+      { label: "Channels", value: "Email and social media" },
     ],
     metrics: [{ value: "~300", label: "Users since the public launch, and growing" }],
     challenge: [
       "Bachable is a music notation editor in the browser, built on LilyPond, the open-source standard for publication-quality engraving. LilyPond produces beautiful scores, but writing music as text can feel technical to musicians who have never touched code.",
-      "The brand had to make a professional tool feel welcoming, without losing the credibility that engravers and professionals expect. And as a small team of three, Bachable needed one clear voice that could carry the product from alpha to public launch.",
+      "Email and social media are where many musicians meet Bachable between sessions in the editor. For a team of three, those channels had to sound and look like the product every time, and give people a reason to come back and write.",
     ],
     approach: [
       {
-        title: "Lead with the music, not the technology",
-        text: "The story starts with what musicians want: beautiful scores, written in the browser, with nothing to install. LilyPond stays in the story as proof of quality, not as the headline.",
+        title: "One voice, from the editor to the inbox",
+        text: "The Bachable voice is friendly, plain-spoken and written for musicians. I carry the same rules into every email and post:",
         points: [
-          "Headline: \"Write beautiful scores in your browser\"",
-          "Proof: publication-quality engraving, powered by LilyPond",
-          "Invitation: \"For everyone who creates, composes and performs\"",
+          "**Lowercase \"bachable\"** in running copy, as musicians would write it",
+          "**Warm, with a next step:** every message points to something to do, like starting a new score",
+          "**Musicians are the cast:** real composers and real scores, never lorem ipsum",
+          "**Music words used correctly:** score, slur, engraving, in sentence case",
         ],
       },
       {
-        title: "A belief worth sharing",
-        text: "Musicians care about craft, so the brand speaks from a belief rather than a feature list: \"Music deserves tools built with respect.\" Sheet music is not just output; it is how music is taught, rehearsed and preserved.",
+        title: "Neutral first, one hue",
+        text: "The visual system keeps zinc for every surface and saves orange for the one thing that matters. On social and email that means calm layouts, orange for a single call to action, SF Pro for text, and the script \"b\" only as the mark, never re-set or recoloured.",
       },
       {
-        title: "Onboarding that lets people try first",
-        text: "I write the onboarding content and product stories. The first step asks for nothing: visitors can try writing a score before they create an account, and the content guides them from a blank page to a finished score.",
-      },
-      {
-        title: "Plain answers to the worrying questions",
-        text: "Musicians want to know who owns their work and what it will cost. The brand answers in plain words: the tool is free today, you keep all rights to your music, and scores stay private until you choose to publish them.",
+        title: "Let the music be the hero",
+        text: "Bachable's strongest asset is what it produces: publication-quality scores. Posts and emails lead with real engraving and the people who make it, so the product shows its value before anyone reads a feature list.",
       },
     ],
     results: [
       "Bachable launched publicly in 2026 and is now **approaching 300 users**.",
-      "The product speaks with one voice across the website, onboarding and product updates, which keeps a team of three consistent as the product grows.",
+      "Email and social now follow the same brand system as the product, so musicians get one consistent bachable wherever they meet it.",
       "In November 2026, Bachable joined the Google for Startups Cloud Program.",
     ],
     learnings: [
-      "**Lead with the outcome, keep the technology as proof.** People buy beautiful scores, not a typesetting engine.",
-      "**Let people try before you ask.** A first score is the best onboarding message there is.",
-      "**Answer the worrying questions out loud.** Price, ownership and privacy are part of the brand, not the small print.",
+      "**A voice guide is only real when it reaches the inbox.** The rules matter most in the channels people see every week.",
+      "**One hue is enough.** Saving orange for one action per view keeps every post recognisable.",
+      "**Write for musicians, in musicians' words.** Getting a slur or an engraving term right builds more trust than any adjective.",
     ],
     credits:
-      "Product built by founder Erik Dao. Interface design by Vivianne, Design Lead. Brand strategy, messaging, onboarding content and product storytelling by me, as Brand Lead.",
-    gallery: [],
+      "Product built by founder Erik Dao. Interface design by Vivianne, Design Lead. Brand system by the Bachable team. Email and social media by me, as Brand Lead.",
+    gallery: [
+      { src: bachableVoice, alt: "Voice rules: friendly, plain-spoken, for musicians, with examples such as lowercase bachable and warm empty states" },
+      { src: bachableLogo, alt: "The Bachable logo, a script b in Yellowtail, shown on light, on dark and on orange" },
+      {
+        src: bachableColour,
+        alt: "Colour: orange-600 #F54900 as the single accent beside zinc neutrals from Zinc 950 to Snow, with the orange ramp",
+        wide: true,
+      },
+      { src: bachableType, alt: "Type: Inter in the UI, Yellowtail for the mark only, SF Pro for social and email, Noto Music for notation" },
+      { src: bachableShape, alt: "Shape and space: 8, 12 and 24px corner radii, full-pill buttons, a 4px spacing grid and an orange focus ring" },
+    ],
     testimonials: ["nathalie-sajda", "nguyen-vo"],
     relatedPosts: [],
     link: { label: "Visit bachable.io", href: "https://bachable.io" },
