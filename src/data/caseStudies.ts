@@ -132,51 +132,7 @@ const published: CaseStudy[] = [
 
 // `import.meta.env.DEV` is false in the production build, so this whole list is removed from it.
 const drafts: CaseStudy[] = import.meta.env.DEV ? [
-  {
-    slug: "mitigram-brand-refresh",
-    status: "draft",
-    updated: "2026-11-21",
-    client: "Mitigram",
-    category: "Brand refresh",
-    title: "Mitigram: one clear voice for a trade finance platform",
-    summary:
-      "Refreshing the Mitigram brand with new guidelines, a tone of voice and a Communication Hierarchy, so every team tells the same story.",
-    cardResult: "Brand guidelines, tone of voice and a Communication Hierarchy",
-    brand: { initials: "M", color: "#F2C94C", bgFrom: "#111111", bgTo: "#1f2a2a" },
-    facts: [
-      { label: "Client", value: "Mitigram, B2B trade finance platform" },
-      { label: "My role", value: "Marketing Manager, project lead" },
-      { label: "Worked with", value: "Executive team, Head of Marketing, sales, customer managers and agencies" },
-      { label: "Timeline", value: "[[e.g. Nov 2024 - Mar 2025]]" },
-      { label: "Deliverables", value: "Brand guidelines, tone of voice, Communication Hierarchy" },
-    ],
-    metrics: [],
-    challenge: [
-      "[[What was not working before the refresh? For example: messaging differed between sales, marketing and partners, or the visual identity felt dated next to the product.]]",
-      "[[Why now? For example: a new product, new markets, or growing from start-up to scale-up.]]",
-    ],
-    approach: [
-      {
-        title: "A Communication Hierarchy",
-        text: "Together with the executive team and the Head of Marketing, I built a Communication Hierarchy that sets the order of Mitigram's messages, so every team leads with the same story. [[Describe its levels in one or two sentences.]]",
-      },
-      {
-        title: "Brand guidelines and tone of voice",
-        text: "I wrote the brand guidelines and the tone of voice, covering [[which parts: logo use, colours, typography, imagery, writing rules]].",
-      },
-      {
-        title: "Rolling it out",
-        text: "I worked across agencies, sales, customer managers and partners to bring marketing content in line with the refreshed brand. [[Which touchpoints were updated first: website, sales deck, LinkedIn, events?]]",
-      },
-    ],
-    results: [
-      "[[What changed? Ideas: time saved creating materials, fewer off-brand assets, feedback from sales or leadership, website or LinkedIn numbers before and after.]]",
-    ],
-    learnings: ["[[One or two lessons, in your own words.]]"],
-    gallery: [],
-    testimonials: ["nicholas-kelly", "karl-yves-vallin"],
-    relatedPosts: ["why-b2b-fintech-brands-sound-the-same"],
-  },
+  // Add new case studies here while you write them.
 ] : [];
 
 /** Case studies visible in this build: drafts only show in `npm run dev`. */
