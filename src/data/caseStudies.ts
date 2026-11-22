@@ -177,48 +177,6 @@ const drafts: CaseStudy[] = import.meta.env.DEV ? [
     testimonials: ["nicholas-kelly", "karl-yves-vallin"],
     relatedPosts: ["why-b2b-fintech-brands-sound-the-same"],
   },
-  {
-    slug: "mitigram-presentation-template",
-    status: "draft",
-    updated: "2026-11-21",
-    client: "Mitigram",
-    category: "Sales enablement",
-    title: "Mitigram: a PowerPoint template the whole company uses",
-    summary:
-      "A presentation template that makes every Mitigram deck look on brand, so sales and leadership spend time on the story, not the formatting.",
-    cardResult: "[[Headline result, e.g. used in every sales deck since launch]]",
-    brand: { initials: "M", color: "#F2C94C", bgFrom: "#111111", bgTo: "#2a1f16" },
-    facts: [
-      { label: "Client", value: "Mitigram, B2B trade finance platform" },
-      { label: "My role", value: "[[e.g. Designer and project lead]]" },
-      { label: "Users", value: "[[e.g. Sales, customer success, leadership]]" },
-      { label: "Timeline", value: "[[e.g. 2025]]" },
-      { label: "Deliverables", value: "[[e.g. Master template, 30+ slide layouts, icon set, guide]]" },
-    ],
-    metrics: [],
-    challenge: [
-      "[[What did decks look like before? Who made them, and how long did it take?]]",
-    ],
-    approach: [
-      {
-        title: "Start from real decks",
-        text: "[[How you learned what people actually present: interviews with sales, an audit of existing decks?]]",
-      },
-      {
-        title: "Layouts for the stories people tell",
-        text: "[[Which layouts you designed and why: product, case study, pricing, team, agenda?]]",
-      },
-      {
-        title: "Easy to get right",
-        text: "[[How you made it hard to break: locked masters, colour theme, placeholder text, a short guide?]]",
-      },
-    ],
-    results: ["[[Adoption, time saved, or feedback from colleagues.]]"],
-    learnings: ["[[One or two lessons, in your own words.]]"],
-    gallery: [],
-    testimonials: ["nicholas-kelly", "nathalie-sajda"],
-    relatedPosts: [],
-  },
 ] : [];
 
 /** Case studies visible in this build: drafts only show in `npm run dev`. */
