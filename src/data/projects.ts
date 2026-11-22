@@ -88,7 +88,7 @@ export const projects: Project[] = [
       bgTo: "#312e81",
     },
     technologies: ["UX Design", "Design Systems", "Usability Testing", "AI/UX Integration"],
-    period: "Mar - Jun 2024",
+    period: "Apr - May 2024",
     organization: "Team Project",
     role: "UX Designer & Strategist",
     quote: "Structure meets story - and strategy leads both.",
