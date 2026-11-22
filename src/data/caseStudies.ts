@@ -10,6 +10,11 @@ import bachableLogo from "../images/work/bachable-logo.webp";
 import bachableColour from "../images/work/bachable-colour.webp";
 import bachableType from "../images/work/bachable-type.webp";
 import bachableShape from "../images/work/bachable-shape.webp";
+import rfslCover from "../images/work/rfsl-cover.webp";
+import rfslRollup from "../images/work/rfsl-rollup.webp";
+import rfslFair from "../images/work/rfsl-fair.webp";
+import rfslFlyer1 from "../images/work/rfsl-flyer-1.webp";
+import rfslFlyer2 from "../images/work/rfsl-flyer-2.webp";
 import meltdCover from "../images/work/meltd-cover.webp";
 import meltdStoryIntro from "../images/work/meltd-story-intro.webp";
 import meltdStoryPopups from "../images/work/meltd-story-popups.webp";
@@ -276,6 +281,82 @@ const published: CaseStudy[] = [
     testimonials: ["nathalie-sajda", "nguyen-vo"],
     relatedPosts: [],
     link: { label: "Visit bachable.io", href: "https://bachable.io" },
+  },
+  {
+    slug: "rfsl-utbildning",
+    status: "published",
+    updated: "2026-11-22",
+    client: "RFSL Utbildning",
+    category: "B2B marketing & events",
+    title: "RFSL Utbildning: selling inclusion training to Swedish businesses",
+    summary:
+      "Marketing inclusion training from RFSL Utbildning, the training arm of Sweden's largest LGBTQ+ rights organisation, to businesses: from social growth and campaign videos to a roll-up, a flyer and a stand at Väsby Promotion's business day.",
+    cardResult: "300%+ organic social growth in three months",
+    cover: rfslCover,
+    coverAlt: "The purple RFSL Utbildning roll-up in a bright room: Sweden's most experienced organisation in LGBTQI and inclusion, with 550+ certified organisations, 200+ assignments a year and 70+ years of experience",
+    brand: { initials: "R", color: "#e040a0", bgFrom: "#4a0e2e", bgTo: "#2d0a1e" },
+    facts: [
+      { label: "Client", value: "RFSL Utbildning, inclusion training for organisations" },
+      { label: "My role", value: "Communications Officer & Content Creator" },
+      { label: "Timeline", value: "Aug 2022 - Dec 2023" },
+      { label: "B2B work with", value: "IKEA, Cevera and Humble Brands" },
+      { label: "Channels", value: "LinkedIn, paid social, email, newsletters, events" },
+      { label: "Scope", value: "Social media, video, photography, sales materials, events" },
+    ],
+    metrics: [
+      { value: "300%+", label: "Organic social growth in three months" },
+      { value: "400", label: "New LinkedIn followers in three months" },
+      { value: "6", label: "Campaign videos, plus three photoshoots" },
+    ],
+    challenge: [
+      "RFSL Utbildning gives companies, organisations and leaders the knowledge and tools to become more inclusive, through training, process support and LGBTQI certification. The expertise is deep, but inclusion training is a considered purchase: buyers need to trust the expert and see the business case.",
+      "The brand had to speak to businesses, not only to the community, and show up where buyers are: on LinkedIn, in their inbox and at local business events.",
+    ],
+    approach: [
+      {
+        title: "Lead with authority",
+        text: "The roll-up opens with one claim and backs it up straight away: \"Sweden's most experienced organisation in LGBTQI and inclusion\", followed by the proof.",
+        points: [
+          "**550+** LGBTQI-certified organisations",
+          "**200+** assignments a year",
+          "**70+** years of experience",
+          "A promise in one line: \"When you talk about important questions, talk to someone who knows\"",
+        ],
+      },
+      {
+        title: "Make the business case, with a reason to act now",
+        text: "For Väsby Promotion's business day, a two-page flyer introduced RFSL Utbildning and opened with a business argument: companies with a good work environment are 14% more profitable. It came with an offer for visitors: 50% off the web courses until 16 December 2022, ordered with the code \"Väsby 2022\".",
+      },
+      {
+        title: "Meet buyers face to face",
+        text: "At the stand, the roll-up, the flyer and real conversations worked together: local business leaders could ask questions, take the offer home and order with the code.",
+      },
+      {
+        title: "Keep the conversation going online",
+        text: "Between events, I produced six campaign videos and three photoshoots, and created paid social, email and newsletter content, with member communications managed in Salesforce. LinkedIn events, such as the [session on norm criticism](https://www.linkedin.com/events/normkritik-ettverktygf-rattskap6993162585596436480/), brought the training to people where they already were.",
+      },
+    ],
+    results: [
+      "Organic social following grew by **300%+** in three months, including **400 new LinkedIn followers**.",
+      "The work reached **2,000 website visitors** and **300 event participants**, and supported B2B inclusion training with IKEA, Cevera and Humble Brands.",
+      "Six campaign videos and three photoshoots gave the team its own library of content for social, email and sales. See a [campaign post on LinkedIn](https://lnkd.in/p/ejfjS4qE).",
+    ],
+    learnings: [
+      "**Authority needs proof.** 550+ certified organisations says more than any adjective.",
+      "**Give buyers a reason to act now.** A dated offer with a code turns a good conversation at a fair into an order.",
+      "**Show up where buyers already are.** LinkedIn, the inbox and the local business day did more together than any one of them alone.",
+    ],
+    credits:
+      "Training delivered by RFSL Utbildning's trainers and process leaders. The fair photo is a still from Väsby Promotion's video of the day.",
+    gallery: [
+      { src: rfslRollup, alt: "The RFSL Utbildning roll-up: purple, with a rainbow arc, the claim Sweden's most experienced organisation in LGBTQI and inclusion, a quote and three proof numbers" },
+      { src: rfslFair, alt: "Talking with a visitor at the RFSL Utbildning stand at Väsby Promotion's business day, with balloons and other exhibitors' roll-ups behind" },
+      { src: rfslFlyer1, alt: "Flyer page one: RFSL Utbildning in rainbow letters, the quote about talking to someone who knows, and sections about the company, its services and contact details" },
+      { src: rfslFlyer2, alt: "Flyer page two: Diversity and inclusion, 50% off web courses for Väsby Promotion visitors until 16 December 2022, the courses on offer and a QR code" },
+    ],
+    testimonials: ["nicholas-kelly", "karl-yves-vallin"],
+    relatedPosts: [],
+    link: { label: "Visit RFSL Utbildning", href: "https://www.rfslutbildning.se" },
   },
   {
     slug: "meltd-pop-up-bakeshop",
