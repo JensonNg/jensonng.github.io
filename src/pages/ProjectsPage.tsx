@@ -30,7 +30,7 @@ export function ProjectsPage() {
               title="The full story"
               lead="The challenge, what I did, and what changed."
             />
-            <ul className="m-0 grid list-none gap-5 p-0 md:grid-cols-2 lg:grid-cols-3">
+            <ul className="m-0 grid list-none gap-5 p-0 md:grid-cols-2">
               {caseStudies.map((study) => (
                 <li key={study.slug} className="min-w-0">
                   <CaseStudyCard study={study} />

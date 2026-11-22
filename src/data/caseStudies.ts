@@ -10,6 +10,10 @@ import bachableLogo from "../images/work/bachable-logo.webp";
 import bachableColour from "../images/work/bachable-colour.webp";
 import bachableType from "../images/work/bachable-type.webp";
 import bachableShape from "../images/work/bachable-shape.webp";
+import meltdCover from "../images/work/meltd-cover.webp";
+import meltdStoryIntro from "../images/work/meltd-story-intro.webp";
+import meltdStoryPopups from "../images/work/meltd-story-popups.webp";
+import meltdFeed from "../images/work/meltd-feed.webp";
 import sowiloCover from "../images/work/sowilo-cover.webp";
 import sowiloLogo from "../images/work/sowilo-logo.webp";
 import sowiloPalette from "../images/work/sowilo-palette.webp";
@@ -71,6 +75,8 @@ export interface CaseStudy {
   credits?: string;
   /** `wide` images span the full width of the gallery */
   gallery?: { src: string; alt: string; caption?: string; wide?: boolean }[];
+  /** 2 (default) or 3 columns on desktop; use 3 for tall, phone-shaped images */
+  galleryColumns?: 2 | 3;
   /** ids from src/data/testimonials.ts */
   testimonials: string[];
   /** slugs from src/data/blogPosts.ts */
@@ -270,6 +276,70 @@ const published: CaseStudy[] = [
     testimonials: ["nathalie-sajda", "nguyen-vo"],
     relatedPosts: [],
     link: { label: "Visit bachable.io", href: "https://bachable.io" },
+  },
+  {
+    slug: "meltd-pop-up-bakeshop",
+    status: "published",
+    updated: "2026-11-22",
+    client: "Melt'd",
+    category: "Brand & social content",
+    title: "Melt'd: making a pop-up bakeshop worth finding",
+    summary:
+      "Helping Melt'd, a pop-up bakeshop in Stockholm with Asian-inspired bakes, with its brand and the photos and videos for its latest three pop-ups.",
+    cardResult: "Brand, photos and videos for three pop-ups in three months",
+    cover: meltdCover,
+    coverAlt: "The Melt'd script wordmark in cream on deep red, above the words Pop-up bakeshop, Stockholm",
+    brand: { initials: "M", color: "#EADBC5", bgFrom: "#58191A", bgTo: "#2a0c0d" },
+    facts: [
+      { label: "Client", value: "Melt'd, a pop-up bakeshop in Stockholm" },
+      { label: "My role", value: "Brand, photography and video support" },
+      { label: "Pop-ups", value: "Bollos Bakery, No.92 Tea House, A.B.Café" },
+      { label: "Timeline", value: "Sep - Nov 2026" },
+      { label: "Channel", value: "Instagram, @meltd.bakeshop", href: "https://www.instagram.com/meltd.bakeshop/" },
+      { label: "Scope", value: "Brand, food photography, short videos, pop-up announcements" },
+    ],
+    metrics: [
+      { value: "3", label: "Pop-ups in three months" },
+      { value: "3", label: "Partner venues around Stockholm" },
+    ],
+    challenge: [
+      "Melt'd has no shop of its own. It pops up in cafés, bakeries and stores around Stockholm, bringing Asian-inspired bakes to the local fika scene. Every pop-up has a slightly different menu: some favourites come back, others appear once and never return.",
+      "That makes Instagram the shop window. People need to know where Melt'd will be, when, and why it is worth the trip, before the bakes are gone.",
+    ],
+    approach: [
+      {
+        title: "A brand that feels handmade",
+        text: "Melt'd pairs a flowing script wordmark with typewriter text, in cream on deep red. It feels like a handwritten note from a baker, and it works as well on a paper bag as on a phone screen.",
+      },
+      {
+        title: "Every post is an invitation",
+        text: "Announcement posts put the three things people need right on the food: the wordmark, the venue and the time, for example \"Pop-up @ Bollos Bakery, Sun, Sep 27, 12:00\". One glance is enough to save the date.",
+      },
+      {
+        title: "Let the bakes be the hero",
+        text: "The photos and videos show real bakes in real places: hands holding a fresh bun, matcha and coffee pairings, branded paper bags, autumn leaves and Stockholm rain. Each pop-up gets its own set, so the feed tells the story of where Melt'd has been and where it goes next.",
+      },
+    ],
+    results: [
+      "Three pop-ups in three months, at **Bollos Bakery** (27 September), **No.92 Tea House** (25 October) and **A.B.Café** (15 November), each announced and documented on Instagram.",
+      "The feed now works as a living menu and calendar: what Melt'd bakes, where it has been, and where to find it next.",
+    ],
+    learnings: [
+      "**Scarcity is a story.** Bakes that might never return give people a reason to come this time.",
+      "**Shoot the place, not just the product.** The café table, the weather and the bag say where and when as clearly as the caption.",
+      "**Same frame, every time.** Repeating the wordmark and date format makes every announcement instantly recognisable.",
+    ],
+    credits:
+      "Bakes and concept by the Melt'd team, at partner venues Bollos Bakery, No.92 Tea House and A.B.Café. One photo in the feed is credited to @nattie.yah.",
+    gallery: [
+      { src: meltdStoryIntro, alt: "Melt'd intro story: Melt'd is a pop-up bakeshop in Stockholm, Sweden, bringing unique, creative and tasty flavours to the local fika scene" },
+      { src: meltdStoryPopups, alt: "Melt'd story explaining that pop-ups take place at cafés, bakeries and stores, and each menu is slightly different" },
+      { src: meltdFeed, alt: "The Melt'd Instagram feed: buns, matcha and coffee, branded paper bags, and pop-up announcements for Bollos Bakery, No.92 Tea House and A.B.Café" },
+    ],
+    galleryColumns: 3,
+    testimonials: ["nguyen-vo", "nhu-que-thanh-le"],
+    relatedPosts: [],
+    link: { label: "Follow @meltd.bakeshop", href: "https://www.instagram.com/meltd.bakeshop/" },
   },
   {
     slug: "sowilo-personal-brand",
