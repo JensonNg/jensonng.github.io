@@ -176,7 +176,7 @@ export const projects: Project[] = [
       bgTo: "#2d0a1e",
     },
     technologies: ["Digital Marketing", "Brand Guidelines", "Sales Materials", "Stakeholder Relations"],
-    period: "Aug 2022 - Jun 2023",
+    period: "Aug 2022 - Dec 2023",
     organization: "RFSL",
     role: "Digital Marketing & Communication",
     quote: "Building brand visibility that amplifies voices for equal rights.",

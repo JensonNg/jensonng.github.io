@@ -156,7 +156,19 @@ export function CaseStudyPage() {
           <div className={`container mx-auto mt-14 grid max-w-6xl gap-4 px-4 ${study.galleryColumns === 3 ? "sm:grid-cols-3" : "md:grid-cols-2"}`}>
             {study.gallery.map((img) => (
               <figure key={img.src} className={`m-0 ${img.wide ? "md:col-span-2" : ""}`}>
-                <img src={img.src} alt={img.alt} loading="lazy" className="w-full rounded-2xl border border-border bg-white" />
+                {img.video ? (
+                  <video
+                    src={img.video}
+                    poster={img.src}
+                    controls
+                    playsInline
+                    preload="none"
+                    aria-label={img.alt}
+                    className="w-full rounded-2xl border border-border bg-black"
+                  />
+                ) : (
+                  <img src={img.src} alt={img.alt} loading="lazy" className="w-full rounded-2xl border border-border bg-white" />
+                )}
                 {img.caption && <figcaption className="pt-3 text-xs text-muted-foreground">{img.caption}</figcaption>}
               </figure>
             ))}
