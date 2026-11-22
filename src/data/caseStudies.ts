@@ -282,21 +282,21 @@ const published: CaseStudy[] = [
     status: "published",
     updated: "2026-11-22",
     client: "Melt'd",
-    category: "Brand & social content",
-    title: "Melt'd: making a pop-up bakeshop worth finding",
+    category: "Pop-up events & content",
+    title: "Melt'd: bringing a pop-up bakeshop to life",
     summary:
-      "Helping Melt'd, a pop-up bakeshop in Stockholm with Asian-inspired bakes, with its brand and the photos and videos for its latest three pop-ups.",
-    cardResult: "Brand, photos and videos for three pop-ups in three months",
+      "Supporting Melt'd, a pop-up bakeshop in Stockholm with Asian-inspired bakes, at its latest three pop-ups: setting up, filming and photographing, and serving customers.",
+    cardResult: "Set-up, photos, video and customer service for three pop-ups",
     cover: meltdCover,
     coverAlt: "The Melt'd script wordmark in cream on deep red, above the words Pop-up bakeshop, Stockholm",
     brand: { initials: "M", color: "#EADBC5", bgFrom: "#58191A", bgTo: "#2a0c0d" },
     facts: [
       { label: "Client", value: "Melt'd, a pop-up bakeshop in Stockholm" },
-      { label: "My role", value: "Brand, photography and video support" },
+      { label: "My role", value: "Pop-up support: set-up, filming, photography and customer service" },
       { label: "Pop-ups", value: "Bollos Bakery, No.92 Tea House, A.B.Café" },
       { label: "Timeline", value: "Sep - Nov 2026" },
       { label: "Channel", value: "Instagram, @meltd.bakeshop", href: "https://www.instagram.com/meltd.bakeshop/" },
-      { label: "Scope", value: "Brand, food photography, short videos, pop-up announcements" },
+      { label: "Scope", value: "Event set-up, food photography, short videos, customer service" },
     ],
     metrics: [
       { value: "3", label: "Pop-ups in three months" },
@@ -304,33 +304,33 @@ const published: CaseStudy[] = [
     ],
     challenge: [
       "Melt'd has no shop of its own. It pops up in cafés, bakeries and stores around Stockholm, bringing Asian-inspired bakes to the local fika scene. Every pop-up has a slightly different menu: some favourites come back, others appear once and never return.",
-      "That makes Instagram the shop window. People need to know where Melt'd will be, when, and why it is worth the trip, before the bakes are gone.",
+      "Each pop-up is a shop for one afternoon, in someone else's space. It has to be set up, sold and captured on camera in a few hours, because Instagram is where people find out where Melt'd will be next.",
     ],
     approach: [
       {
-        title: "A brand that feels handmade",
-        text: "Melt'd pairs a flowing script wordmark with typewriter text, in cream on deep red. It feels like a handwritten note from a baker, and it works as well on a paper bag as on a phone screen.",
+        title: "Setting up the pop-up",
+        text: "I helped set up each pop-up in its host venue, so that for one afternoon a corner of a café, bakery or tea house felt like Melt'd: the bakes on display, the paper bags ready, and the line-up easy to see.",
       },
       {
-        title: "Every post is an invitation",
-        text: "Announcement posts put the three things people need right on the food: the wordmark, the venue and the time, for example \"Pop-up @ Bollos Bakery, Sun, Sep 27, 12:00\". One glance is enough to save the date.",
+        title: "Filming and photographing",
+        text: "I filmed and photographed the bakes in the places they were sold: hands holding a fresh bun, matcha and coffee pairings, branded paper bags, autumn leaves and Stockholm rain. Each pop-up got its own set, so the feed shows where Melt'd has been and makes people want to catch the next one.",
       },
       {
-        title: "Let the bakes be the hero",
-        text: "The photos and videos show real bakes in real places: hands holding a fresh bun, matcha and coffee pairings, branded paper bags, autumn leaves and Stockholm rain. Each pop-up gets its own set, so the feed tells the story of where Melt'd has been and where it goes next.",
+        title: "Serving customers",
+        text: "On the day, I helped with customer service, so every visitor got a warm welcome, an answer about the bakes, and their order packed and ready to take away.",
       },
     ],
     results: [
-      "Three pop-ups in three months, at **Bollos Bakery** (27 September), **No.92 Tea House** (25 October) and **A.B.Café** (15 November), each announced and documented on Instagram.",
-      "The feed now works as a living menu and calendar: what Melt'd bakes, where it has been, and where to find it next.",
+      "Three pop-ups in three months, at **Bollos Bakery** (27 September), **No.92 Tea House** (25 October) and **A.B.Café** (15 November), each set up, served and documented on Instagram.",
+      "The photos and videos fill the Melt'd feed, which now works as a living menu and calendar: what Melt'd bakes, where it has been, and where to find it next.",
     ],
     learnings: [
       "**Scarcity is a story.** Bakes that might never return give people a reason to come this time.",
       "**Shoot the place, not just the product.** The café table, the weather and the bag say where and when as clearly as the caption.",
-      "**Same frame, every time.** Repeating the wordmark and date format makes every announcement instantly recognisable.",
+      "**The counter is the best research.** Talking to customers shows which bakes people come back for, and what is worth photographing next.",
     ],
     credits:
-      "Bakes and concept by the Melt'd team, at partner venues Bollos Bakery, No.92 Tea House and A.B.Café. One photo in the feed is credited to @nattie.yah.",
+      "Concept, brand and bakes by the Melt'd team, at partner venues Bollos Bakery, No.92 Tea House and A.B.Café. I supported set-up, filming, photography and customer service. One photo in the feed is credited to @nattie.yah.",
     gallery: [
       { src: meltdStoryIntro, alt: "Melt'd intro story: Melt'd is a pop-up bakeshop in Stockholm, Sweden, bringing unique, creative and tasty flavours to the local fika scene" },
       { src: meltdStoryPopups, alt: "Melt'd story explaining that pop-ups take place at cafés, bakeries and stores, and each menu is slightly different" },
