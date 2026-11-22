@@ -1,11 +1,13 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { projects, type Project } from "../../data/projects";
+import { caseStudies } from "../../data/caseStudies";
+import { CaseStudyCover } from "../CaseStudyCard";
 import { SectionHeader } from "../SectionHeader";
 
-// One project per kind of work, each with a result a recruiter can scan.
+// Published case studies come first, then one project per kind of work,
+// each with a result a recruiter can scan. The grid shows four cards.
 const SELECTED = [
-  { title: "Bachable.io - Brand & Launch", category: "Brand & launch", result: "Brand, messaging and launch story for a music-tech platform" },
   { title: "Seed Planter - Marketing Lead", category: "Social impact", result: "350K people reached on Facebook" },
   { title: "Hanoi Pride 2019 - Internal Secretary for Communication", category: "PR & events", result: "164K reached, 7,000 parade participants" },
   { title: "RFSL Utbildning - Digital Marketing & Communication", category: "B2B marketing", result: "400 LinkedIn followers in 3 months" },
@@ -35,10 +37,11 @@ function BrandTile({ project }: { project: Project }) {
 }
 
 export function SelectedWork() {
+  const studies = caseStudies.filter((c) => c.status === "published");
   const items = SELECTED.flatMap(({ title, category, result }) => {
     const project = projects.find((p) => p.title === title);
     return project ? [{ project, category, result }] : [];
-  });
+  }).slice(0, Math.max(0, 4 - studies.length));
 
   return (
     <section id="work" aria-labelledby="work-title" className="px-4 py-16 md:py-24 scroll-mt-20">
@@ -59,6 +62,21 @@ export function SelectedWork() {
         />
 
         <ul className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5">
+          {studies.slice(0, 4).map((study) => (
+            <li key={study.slug} className="min-w-0">
+              <Link
+                to={`/work/${study.slug}`}
+                className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition-shadow hover:ring-2 hover:ring-primary focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none"
+              >
+                <CaseStudyCover study={study} className="mx-2 mt-2 aspect-[4/3] rounded-xl" />
+                <div className="flex flex-1 flex-col gap-1 p-3 md:p-4">
+                  <p className="text-xs font-semibold uppercase tracking-[0.1em] text-brand-ink">Case study</p>
+                  <h3 className="text-sm md:text-base font-semibold leading-snug">{study.title.split(":")[0]}</h3>
+                  <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{study.cardResult}</p>
+                </div>
+              </Link>
+            </li>
+          ))}
           {items.map(({ project, category, result }) => (
             <li key={project.title} className="min-w-0">
               <Link

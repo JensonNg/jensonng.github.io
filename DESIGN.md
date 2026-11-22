@@ -70,6 +70,9 @@ Tints are computed from `--primary`, not typed by hand:
 - **Cards:** `bg-card border border-border rounded-2xl`. Hover and keyboard focus = gold ring (`hover:ring-2 ring-primary`), not scaling.
 - **Work cards:** image inset 8px with `rounded-xl`, then eyebrow, title, one-line result. 2 columns on phones, 4 on desktop.
 - **Chips:** 12px, `rounded-full`. Gold variant = `bg-primary/10 text-brand-ink border-primary/30`; neutral = `bg-card text-muted-foreground border-border`.
+- **Case studies:** one template for every case study (`/work/<slug>`, data in `src/data/caseStudies.ts`). Order: eyebrow (client · category), title, one-sentence summary, cover, "At a glance" facts beside gold metric tiles, then numbered sections (The challenge, The approach as step cards, The results, What I learned), credits, testimonials, related reading, next case study, closing CTA. Lead with numbers wherever they exist. Always credit agencies and partners for what they made.
+- **Testimonials:** every quote has a 3-6 word headline taken from its own words, the relation as an eyebrow (Manager, Client...), and the company logo or initials. Use `TestimonialCard` wherever a quote appears.
+- **Opinion posts:** blog posts that argue a point end with a callout labelled "My take": the argument in three to five sentences.
 - **FAQ:** native `<details>` elements, no JavaScript.
 - **Glass:** `.glass` (default panel), `.glass-strong` (header, overlays), `.glass-subtle` (background chips). Values come from the `--glass-*` tokens and change per theme.
 - **Closing CTA band:** `rounded-3xl`, gold-tinted background (`bg-primary/5`), gold border at 30%, one primary action.

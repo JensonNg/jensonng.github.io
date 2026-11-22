@@ -11,6 +11,7 @@ import { PrivacyPage } from "./pages/PrivacyPage";
 import BrandBookPage from "./pages/BrandBookPage";
 import { BlogPage } from "./pages/BlogPage";
 import { BlogPostPage } from "./pages/BlogPostPage";
+import { CaseStudyPage } from "./pages/CaseStudyPage";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -41,6 +42,7 @@ export function AppContent() {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/work/:slug" element={<CaseStudyPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/cv" element={<Navigate to="/about#cv" replace />} />
           <Route path="/services" element={<ServicesPage />} />

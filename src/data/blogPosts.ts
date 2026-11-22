@@ -9,6 +9,9 @@ import financeCover from "../images/blog/young-adults-finance-cover.webp";
 import financeHypotheses from "../images/blog/young-adults-finance-hypotheses.webp";
 import financeInsights from "../images/blog/young-adults-finance-insights.webp";
 import financeRecommendations from "../images/blog/young-adults-finance-recommendations.webp";
+import aiAgentCover from "../images/blog/ai-agent-face-cover.webp";
+import fintechSoundCover from "../images/blog/fintech-sound-same-cover.webp";
+import greenTradeCover from "../images/blog/green-trade-finance-cover.webp";
 
 /**
  * Blog posts.
@@ -54,6 +57,189 @@ export type BlogPost = {
 
 const posts: BlogPost[] = [
   {
+    slug: "your-ai-agent-needs-a-face",
+    title: "Your AI agent needs a face before it needs a feature list",
+    excerpt:
+      "When a category is new, recognition comes before explanation. What launching Alfred, Mitigram's AI agent for trade finance, taught me about introducing AI to banks.",
+    date: "2026-11-21",
+    category: "B2B marketing",
+    lang: "en",
+    authors: "Son Nguyen",
+    cover: aiAgentCover,
+    coverAlt: "Cover reading: Your AI agent needs a face, before it needs a feature list",
+    featured: true,
+    body: [
+      {
+        type: "p",
+        text: "When a bank hears \"AI agent\" for the first time, it does not picture a product. It pictures a question mark. That is the starting point for anyone bringing AI into a conservative industry, and it is where we started with **Alfred**, Mitigram's AI agent for trade finance.",
+      },
+      {
+        type: "p",
+        text: "Alfred turns the manual, email-based work behind trade finance into an automated, agentic process. Impressive, but hard to picture. And what people cannot picture, they do not remember.",
+      },
+      { type: "h2", text: "Explaining is not the first job" },
+      {
+        type: "p",
+        text: "The instinct in B2B tech marketing is to explain: list the features, show the workflow, prove the return on investment. All of that matters. But when a category is new, people first need something to hold on to. A name, a face, a colour they recognise the next time they see it. Recognition comes first, understanding follows.",
+      },
+      { type: "p", text: "That is why the Alfred identity had three jobs, in this order:" },
+      {
+        type: "callouts",
+        items: [
+          { label: "1. Be recognised", text: "Alfred should be easy to spot in a LinkedIn feed, a conference hall or a sales deck." },
+          { label: "2. Explain", text: "The visuals should do part of the explaining, so a new customer gets what Alfred does before reading a word." },
+          { label: "3. Reassure", text: "It should feel modern without feeling risky. Banks buy trust first." },
+        ],
+      },
+      { type: "h2", text: "Its own product, borrowing trust from the family" },
+      {
+        type: "p",
+        text: "A new AI product has to stand on its own, or it disappears inside the parent brand. But it also needs to borrow trust from that brand. For Alfred, that meant its own logo and colour palette, designed to clearly belong to Mitigram. Not a sub-brand that blends in, and not a start-up that looks like it came from nowhere.",
+      },
+      { type: "h2", text: "Design for how the brand will actually be used" },
+      {
+        type: "p",
+        text: "We worked with [Souk Agency](https://www.soukagency.com/cases/alfred) as one team rather than as client and supplier. That changed the brief. Instead of \"make it look good\", the question became: where will Alfred show up next month, and who has to make that asset? Often the answer is a small marketing team on a deadline. So the identity came with usage guidelines that make the right choice the easy choice.",
+      },
+      {
+        type: "p",
+        text: "You can read the whole story, with results, in the [Alfred for Banks case study](/work/alfred-for-banks).",
+      },
+      { type: "h2", text: "Three questions before you launch an AI product" },
+      {
+        type: "callouts",
+        items: [
+          { label: "Can people recognise it?", text: "If someone cannot recognise it after seeing it once, you pay for every impression twice." },
+          { label: "Does the identity explain anything?", text: "A good identity carries part of the message, so your copy does not have to carry all of it." },
+          { label: "Can your team use it without you?", text: "Guidelines are not a PDF for the drawer. They are how a brand survives its first hundred assets." },
+        ],
+      },
+      {
+        type: "callouts",
+        items: [
+          {
+            label: "My take",
+            text: "Many AI products in finance struggle not because the technology is weak, but because nobody can picture them. Give your agent a face, make it feel like part of a brand people already trust, and let the feature list come second. Recognition earns you the meeting. The features win the deal.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "why-b2b-fintech-brands-sound-the-same",
+    title: "Why B2B fintech brands all sound the same (and how to sound like yourself)",
+    excerpt:
+      "Seamless, end-to-end, innovative, powered by AI. Why fintech messaging converges, and the Communication Hierarchy I use to make a brand sound like one company with something specific to say.",
+    date: "2026-11-21",
+    category: "Brand strategy",
+    lang: "en",
+    authors: "Son Nguyen",
+    cover: fintechSoundCover,
+    coverAlt: "Cover reading: Why B2B fintech brands sound the same",
+    body: [
+      {
+        type: "p",
+        text: "Open five fintech websites and read the headlines. Seamless. End-to-end. Innovative platform. Digital transformation. Powered by AI. Swap the logos and you would hardly notice.",
+      },
+      {
+        type: "p",
+        text: "I work in trade finance, one of the most complex corners of fintech, and I understand why this happens. It is not because marketers lack ideas. It is because of how B2B messaging gets made.",
+      },
+      { type: "h2", text: "Why it happens" },
+      {
+        type: "callouts",
+        items: [
+          { label: "Writing for the committee", text: "Every stakeholder adds a word they care about. The result is a sentence everyone agrees with and nobody remembers." },
+          { label: "Safety in sameness", text: "In a regulated industry, sounding like everyone else feels safe. If competitors say \"secure and compliant\", so do we." },
+          { label: "Describing the product, not the change", text: "We describe what the platform is. Customers care about what changes for them on Monday morning." },
+        ],
+      },
+      { type: "h2", text: "Start with a hierarchy, not a tagline" },
+      {
+        type: "p",
+        text: "The most useful tool I have built at Mitigram is not a tagline. It is a **Communication Hierarchy**: an agreed order of what we say first, second and third, and to whom. When sales, marketing, partners and leadership share that order, the brand starts to sound like one company instead of five.",
+      },
+      { type: "p", text: "A simple version has three levels:" },
+      {
+        type: "callouts",
+        items: [
+          { label: "1. One core promise", text: "The single change you make for your customer, in words they would use themselves." },
+          { label: "2. A few pillars", text: "Three or four reasons to believe that promise. Each one should be something a competitor cannot simply copy and paste." },
+          { label: "3. Proof for each audience", text: "Numbers, customer stories and examples, sorted by who is listening: a head of trade finance, an operations team, an IT buyer." },
+        ],
+      },
+      { type: "h2", text: "Then write like a person" },
+      {
+        type: "p",
+        text: "A hierarchy tells you what to say. Tone of voice tells you how. My test is simple: would a customer say this sentence out loud to a colleague? \"UniCredit and Brückner Group cut guarantee processing time by around 80%\" passes. \"We leverage innovative solutions to drive seamless digital transformation\" does not.",
+      },
+      { type: "p", text: "Specific beats impressive. Concrete beats clever. And a real customer's words beat both." },
+      {
+        type: "callouts",
+        items: [
+          {
+            label: "My take",
+            text: "Sounding different in B2B fintech is not about being louder or funnier. It is about being specific. Agree internally on what you say first, prove it with real numbers and real customers, and say it the way a person would. Most competitors will not do that work, which is exactly why it works.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "green-trade-finance-needs-better-storytellers",
+    title: "Green trade finance needs better storytellers",
+    excerpt:
+      "Trade finance moves the goods the green transition depends on, yet it talks about sustainability in abstractions. An environmental scientist turned fintech marketer on how to make it concrete and credible.",
+    date: "2026-11-21",
+    category: "Sustainability",
+    lang: "en",
+    authors: "Son Nguyen",
+    cover: greenTradeCover,
+    coverAlt: "Cover reading: Green trade finance needs better storytellers",
+    body: [
+      {
+        type: "p",
+        text: "Trade finance is the plumbing of global trade. Letters of credit, guarantees and supply chain finance help goods move between buyers and sellers who have never met. Most people never see it, which is exactly why its role in sustainability is so hard to communicate.",
+      },
+      {
+        type: "p",
+        text: "I came to marketing from environmental science, and today I work in trade finance. From where I sit, the sector has a real story to tell about the green transition, but it often tells it badly.",
+      },
+      { type: "h2", text: "The problem: abstract promises" },
+      {
+        type: "p",
+        text: "Green finance communication tends to stay at 30,000 feet: commitments, frameworks, percentages of a portfolio. All necessary, all hard to feel. And as regulators and customers get stricter about vague green claims, abstract language is not just forgettable. It is a risk.",
+      },
+      { type: "h2", text: "Tell the story of the goods" },
+      {
+        type: "p",
+        text: "Behind every trade finance transaction is something physical: solar panels on their way to a new plant, recycled steel, a shipment of coffee from a farming cooperative. That is where the story is. When a bank finances the trade, it helps something real happen.",
+      },
+      {
+        type: "callouts",
+        items: [
+          { label: "Follow one shipment", text: "Show the journey of a single transaction from order to delivery, and the people it touched along the way." },
+          { label: "Show what you removed", text: "Digital trade finance replaces paper, couriers and long email chains. Fewer documents and faster processes are concrete benefits, so measure them and say how much." },
+          { label: "Lead with proof, not adjectives", text: "If you cannot back a claim with a number or a named example, cut it." },
+        ],
+      },
+      { type: "h2", text: "Human-centred, even in finance" },
+      {
+        type: "p",
+        text: "Human-centred design taught me to start with people, not systems. In trade finance, that means the operations specialist chasing documents, the exporter waiting to get paid, and the community at the end of the supply chain. Sustainability becomes real when those people are in the story.",
+      },
+      {
+        type: "callouts",
+        items: [
+          {
+            label: "My take",
+            text: "The financial sector does not need more sustainability slogans. It needs storytellers who make the invisible parts of trade visible, and honest. Be specific, show the real goods and the real people, and let proof do the persuading. That is how green finance earns trust instead of scepticism.",
+          },
+        ],
+      },
+    ],
+  },
+  {
     slug: "empowering-young-adults-in-sweden-financial-app",
     title: "Empowering Young Adults in Sweden with Financial App Feature: An Inspirational View",
     excerpt:
@@ -65,7 +251,6 @@ const posts: BlogPost[] = [
     cover: financeCover,
     coverAlt: "Illustration of young people in winter coats gathered around a desk covered in charts and documents",
     coverCaption: "All pictures in this article were generated with Adobe Firefly.",
-    featured: true,
     body: [
       {
         type: "p",

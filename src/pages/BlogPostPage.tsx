@@ -1,28 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import { Block, BlogPost, blogPosts, getPost } from "../data/blogPosts";
+import { RichText as Inline } from "../components/RichText";
 import { PostCard, PostMeta, SectionHeader, SowiloStroke, display, displayFor } from "../components/blog/BlogParts";
-
-/** Renders **bold** and [link](https://...) inside paragraph text. */
-function Inline({ text }: { text: string }) {
-  const parts = text.split(/(\*\*[^*]+\*\*|\[[^\]]+\]\([^)\s]+\))/g);
-  return (
-    <>
-      {parts.map((part, i) => {
-        const bold = part.match(/^\*\*([^*]+)\*\*$/);
-        if (bold) return <strong key={i} className="font-semibold text-foreground/80">{bold[1]}</strong>;
-        const link = part.match(/^\[([^\]]+)\]\(([^)\s]+)\)$/);
-        if (link)
-          return (
-            <a key={i} href={link[2]} target="_blank" rel="noopener noreferrer" className="text-brand-ink underline decoration-primary/40 underline-offset-4 hover:text-brand-ink">
-              {link[1]}
-            </a>
-          );
-        return part;
-      })}
-    </>
-  );
-}
 
 function BodyBlock({ block, lang }: { block: Block; lang: string }) {
   switch (block.type) {
