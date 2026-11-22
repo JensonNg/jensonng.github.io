@@ -12,7 +12,7 @@ function BrandLogo({ brand, size = "normal", project }: { brand: LogoBrand; size
   if (project?.cover) {
     return (
       <div className={`${height} relative w-full overflow-hidden bg-surface-2`}>
-        <img src={project.cover} alt={project.coverAlt ?? ""} loading="lazy" className="h-full w-full object-cover" />
+        <img src={project.cover} alt={project.coverAlt ?? ""} loading="lazy" style={{ objectPosition: project.coverPosition }} className="h-full w-full object-cover" />
         {project.coverCredit && (
           <span className="absolute bottom-2 right-2 rounded-full bg-black/60 px-2 py-0.5 text-xs text-white">
             Image: {project.coverCredit}

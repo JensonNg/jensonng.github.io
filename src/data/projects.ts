@@ -1,4 +1,11 @@
 import asekioCover from "../images/projects/asekio-cover.webp";
+import bachableCover from "../images/work/bachable-cover.webp";
+import sowiloCover from "../images/work/sowilo-cover.webp";
+import seedPlanterCover from "../images/projects/seedplanter-cover.webp";
+import hanoiPrideCover from "../images/projects/hanoipride-cover.webp";
+import greenHubCover from "../images/projects/greenhub-cover.webp";
+import hanoiQueerCover from "../images/projects/hanoiqueer-cover.webp";
+import araTayCover from "../images/projects/aratay-cover.webp";
 
 export interface Metric {
   value: string;
@@ -27,6 +34,8 @@ export interface Project {
   /** Optional cover image; replaces the brand tile on the project card */
   cover?: string;
   coverAlt?: string;
+  /** CSS object-position for the cropped cover, e.g. "center 70%" */
+  coverPosition?: string;
   /** Who made the cover, shown on the image, e.g. "Hampus Sjöblom" */
   coverCredit?: string;
   metrics: Metric[];
@@ -50,6 +59,8 @@ export const projects: Project[] = [
     quote: "Write, engrave and share scores together.",
     readMoreUrl: "/work/bachable",
     featured: true,
+    cover: bachableCover,
+    coverAlt: "Bachable brand one-pager header: Write beautiful scores in your browser, beside the editor",
     metrics: [
       { value: "~300", label: "Users" },
     ],
@@ -71,6 +82,8 @@ export const projects: Project[] = [
     quote: "A Vietnamese name initialed in Viking script - two cultures woven into one mark.",
     readMoreUrl: "/work/sowilo-personal-brand",
     featured: true,
+    cover: sowiloCover,
+    coverAlt: "The gold Sowilo rune on a dark tile above the words The Sowilo mark",
     metrics: [
       { value: "8", label: "Logo variations" },
       { value: "6", label: "Brand colors" },
@@ -139,6 +152,9 @@ export const projects: Project[] = [
     quote: "164K people reached - amplifying visibility through strategic storytelling.",
     readMoreUrl: "#",
     featured: false,
+    cover: hanoiPrideCover,
+    coverAlt: "Hanoi Pride 2019 team and partners holding rainbow, trans and bisexual pride flags",
+    coverPosition: "center 60%",
     metrics: [
       { value: "164K", label: "People reached on Facebook" },
       { value: "7,000", label: "Pride Parade participants" },
@@ -163,6 +179,9 @@ export const projects: Project[] = [
     quote: "Revamped branding and led teams for impactful social enterprise projects.",
     readMoreUrl: "#",
     featured: false,
+    cover: seedPlanterCover,
+    coverAlt: "Seed Planter workshop participants holding up their sticky-note boards",
+    coverPosition: "center 40%",
     metrics: [
       { value: "350K", label: "People reached on Facebook" },
       { value: "6,000", label: "Organic likes & follows" },
@@ -186,6 +205,9 @@ export const projects: Project[] = [
     quote: "150K people reached - building community through strategic digital presence.",
     readMoreUrl: "#",
     featured: false,
+    cover: hanoiQueerCover,
+    coverAlt: "Hanoi Queer 2019 team at a community fundraiser, with the campaign graphic celebrating 44 million VND raised for the community",
+    coverPosition: "center 40%",
     metrics: [
       { value: "150K", label: "People reached on Facebook" },
       { value: "20,000", label: "Organic likes & follows" },
@@ -210,6 +232,9 @@ export const projects: Project[] = [
     quote: "Elevating ethnic minority start-ups through digital marketing and impactful storytelling.",
     readMoreUrl: "#",
     featured: false,
+    cover: greenHubCover,
+    coverAlt: "GreenHub beach clean-up volunteers with collected rubbish bags and a Join the fight for a healthy ocean banner",
+    coverPosition: "center 75%",
     metrics: [
       { value: "65K", label: "People reached on Facebook" },
       { value: "3,000", label: "Organic likes & follows" },
@@ -231,8 +256,11 @@ export const projects: Project[] = [
     organization: "Ara-Tay Coffee",
     role: "Digital Marketing Manager",
     quote: "Building brand identity from the ground up, rooted in local stories and community.",
-    readMoreUrl: "#",
+    readMoreUrl: "/blog/the-roots-of-ara-tay-coffee",
     featured: false,
+    cover: araTayCover,
+    coverAlt: "A Thai ethnic minority woman in Son La sorting coffee cherries, on the Ara-Tay Ngot & Dang cover",
+    coverPosition: "center 20%",
     metrics: [
       { value: "8,000", label: "People reached on Facebook" },
       { value: "1,681", label: "Organic likes & follows" },
