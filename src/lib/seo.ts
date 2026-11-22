@@ -1,6 +1,6 @@
 import { blogPosts, type BlogPost } from "../data/blogPosts";
 import { FAQS } from "../data/faqs";
-import { projects } from "../data/projects";
+import { otherProjects } from "../data/projects";
 import { caseStudies, type CaseStudy } from "../data/caseStudies";
 
 export const SITE_URL = "https://jensonng.github.io";
@@ -307,7 +307,7 @@ export function sitemapXml(today: string): string {
 
 /** A plain-text guide to the site for AI assistants (llmstxt.org). */
 export function llmsTxt(): string {
-  const featured = projects.filter((p) => p.metrics.length > 0 || p.featured).slice(0, 8);
+  const featured = otherProjects.slice(0, 8);
   const posts = [...blogPosts].sort((a, b) => b.date.localeCompare(a.date));
   const lines = [
     "# Son Nguyen",
@@ -333,7 +333,7 @@ export function llmsTxt(): string {
       return `- [${c.title}](${SITE_URL}/work/${c.slug}): ${clip(c.summary, 200)}${results ? ` Results: ${results}.` : ""}`;
     }),
     "",
-    "## Selected work",
+    "## Other projects",
     "",
     ...featured.map((p) => {
       const results = p.metrics.map((m) => `${m.value} ${m.label}`).join(", ");

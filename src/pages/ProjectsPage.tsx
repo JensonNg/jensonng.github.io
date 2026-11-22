@@ -44,8 +44,8 @@ export function ProjectsPage() {
       {/* Projects */}
       <SectionWrapper
         sectionId="projects"
-        title="Featured Projects"
-        description="Recent work in sustainable marketing and brand development"
+        title="Other Projects"
+        description="More campaigns, communication and UX work from Sweden and Vietnam"
         badge="Projects"
         defaultExpanded={true}
       >

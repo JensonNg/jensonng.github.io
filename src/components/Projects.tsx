@@ -4,7 +4,7 @@ import { Badge } from "./ui/badge";
 import { ExternalLink } from "lucide-react";
 import { motion } from "motion/react";
 import { useNavigate } from "react-router-dom";
-import { projects, type LogoBrand, type Project } from "../data/projects";
+import { otherProjects as projects, type LogoBrand, type Project } from "../data/projects";
 
 // Consistent logo thumbnail component
 function BrandLogo({ brand, size = "normal", project }: { brand: LogoBrand; size?: "normal" | "featured"; project?: Project }) {
