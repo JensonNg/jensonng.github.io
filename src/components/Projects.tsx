@@ -4,11 +4,23 @@ import { Badge } from "./ui/badge";
 import { ExternalLink } from "lucide-react";
 import { motion } from "motion/react";
 import { useNavigate } from "react-router-dom";
-import { projects, type LogoBrand } from "../data/projects";
+import { projects, type LogoBrand, type Project } from "../data/projects";
 
 // Consistent logo thumbnail component
-function BrandLogo({ brand, size = "normal" }: { brand: LogoBrand; size?: "normal" | "featured" }) {
+function BrandLogo({ brand, size = "normal", project }: { brand: LogoBrand; size?: "normal" | "featured"; project?: Project }) {
   const height = size === "featured" ? "h-[280px]" : "h-[160px]";
+  if (project?.cover) {
+    return (
+      <div className={`${height} relative w-full overflow-hidden bg-surface-2`}>
+        <img src={project.cover} alt={project.coverAlt ?? ""} loading="lazy" className="h-full w-full object-cover" />
+        {project.coverCredit && (
+          <span className="absolute bottom-2 right-2 rounded-full bg-black/60 px-2 py-0.5 text-xs text-white">
+            Image: {project.coverCredit}
+          </span>
+        )}
+      </div>
+    );
+  }
   return (
     <div className={`${height} w-full flex items-center justify-center relative overflow-hidden`}
       style={{ background: `linear-gradient(135deg, ${brand.bgFrom}, ${brand.bgTo})` }}
@@ -118,7 +130,7 @@ export function Projects() {
               variants={hoverVariants}
             >
               <div className="relative overflow-hidden">
-                <BrandLogo brand={project.brand} size="featured" />
+                <BrandLogo project={project} brand={project.brand} size="featured" />
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -206,7 +218,7 @@ export function Projects() {
               variants={hoverVariants}
             >
               <div className="relative overflow-hidden">
-                <BrandLogo brand={project.brand} size="normal" />
+                <BrandLogo project={project} brand={project.brand} size="normal" />
               </div>
 
               <CardContent className="p-4">

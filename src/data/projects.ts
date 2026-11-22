@@ -1,3 +1,5 @@
+import asekioCover from "../images/projects/asekio-cover.webp";
+
 export interface Metric {
   value: string;
   label: string;
@@ -22,6 +24,11 @@ export interface Project {
   quote: string;
   readMoreUrl: string;
   featured: boolean;
+  /** Optional cover image; replaces the brand tile on the project card */
+  cover?: string;
+  coverAlt?: string;
+  /** Who made the cover, shown on the image, e.g. "Hampus Sjöblom" */
+  coverCredit?: string;
   metrics: Metric[];
 }
 
@@ -87,6 +94,9 @@ export const projects: Project[] = [
     quote: "Structure meets story - and strategy leads both.",
     readMoreUrl: "https://www.hampusdesign.com/projekt/asekio",
     featured: true,
+    cover: asekioCover,
+    coverAlt: "Laptop mockup showing the Asekio UX research board in FigJam",
+    coverCredit: "Hampus Sjöblom",
     metrics: [],
   },
   {
