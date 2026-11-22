@@ -186,29 +186,44 @@ const published: CaseStudy[] = [
     status: "published",
     updated: "2026-11-22",
     client: "Bachable.io",
-    category: "Email & social media",
-    title: "Bachable: bringing a musician's brand to email and social",
+    category: "Brand, web & social",
+    title: "Bachable: a musician's brand, from the homepage to the inbox",
     summary:
-      "Taking Bachable's brand, a browser-based music notation editor built on LilyPond, into the inbox and onto social media, in a voice that is friendly, plain-spoken and written for musicians.",
-    cardResult: "Email and social for a launch now approaching 300 users",
+      "Shaping how Bachable, a browser-based music notation editor built on LilyPond, meets musicians: on the homepage, in product features, in the inbox and on social media.",
+    cardResult: "Homepage, email and social for a launch now approaching 300 users",
     cover: bachableCover,
     coverAlt: "Bachable brand one-pager header: the script b logo, the line Write beautiful scores in your browser, and the editor showing Canon in D",
     coverPosition: "left center",
     brand: { initials: "b", color: "#F54900", bgFrom: "#18181B", bgTo: "#431407" },
     facts: [
       { label: "Client", value: "Bachable.io, music notation editor built on LilyPond" },
-      { label: "My role", value: "Brand Lead, focused on email and social media" },
+      { label: "My role", value: "Brand Lead" },
       { label: "Team", value: "Erik Dao (Founder), Vivianne (Design Lead) and me" },
       { label: "Audience", value: "Musicians who create, compose and perform" },
       { label: "Timeline", value: "Oct 2025 - present" },
-      { label: "Channels", value: "Email and social media" },
+      { label: "Scope", value: "Homepage layout, product feature logic, email and social media" },
     ],
     metrics: [{ value: "~300", label: "Users since the public launch, and growing" }],
     challenge: [
       "Bachable is a music notation editor in the browser, built on LilyPond, the open-source standard for publication-quality engraving. LilyPond produces beautiful scores, but writing music as text can feel technical to musicians who have never touched code.",
-      "Email and social media are where many musicians meet Bachable between sessions in the editor. For a team of three, those channels had to sound and look like the product every time, and give people a reason to come back and write.",
+      "The homepage has to win musicians over in seconds, and email and social media are where many of them meet Bachable between sessions in the editor. For a team of three, every one of those touchpoints had to sound and look like the product, and give people a reason to come back and write.",
     ],
     approach: [
+      {
+        title: "A homepage that answers a musician's questions in order",
+        text: "I contributed to the homepage layout. It follows the questions a musician has, one section at a time:",
+        points: [
+          "**What is it?** \"Write beautiful scores in your browser\", with nothing to install",
+          "**Is it for me?** \"For everyone who creates, composes and performs\"",
+          "**What can it do?** Zero setup, publication-quality engraving, export to every format, publishing with a link",
+          "**Can I trust the result?** Real scores engraved with Bachable, from Pachelbel to Vivaldi",
+          "**What's the catch?** Plain answers on price, ownership and privacy, then one invitation to start writing",
+        ],
+      },
+      {
+        title: "Product features that make sense to musicians",
+        text: "Beyond the marketing channels, I contribute to the logic of product features, so each one works the way a musician expects and is easy to explain in a sentence.",
+      },
       {
         title: "One voice, from the editor to the inbox",
         text: "The Bachable voice is friendly, plain-spoken and written for musicians. I carry the same rules into every email and post:",
@@ -230,16 +245,17 @@ const published: CaseStudy[] = [
     ],
     results: [
       "Bachable launched publicly in 2026 and is now **approaching 300 users**.",
-      "Email and social now follow the same brand system as the product, so musicians get one consistent bachable wherever they meet it.",
+      "The homepage, email and social now follow the same brand system as the product, so musicians get one consistent bachable wherever they meet it.",
       "In November 2026, Bachable joined the Google for Startups Cloud Program.",
     ],
     learnings: [
+      "**Lay out the page in the order people ask questions.** What is it, is it for me, what can it do, can I trust it, what's the catch.",
       "**A voice guide is only real when it reaches the inbox.** The rules matter most in the channels people see every week.",
       "**One hue is enough.** Saving orange for one action per view keeps every post recognisable.",
       "**Write for musicians, in musicians' words.** Getting a slur or an engraving term right builds more trust than any adjective.",
     ],
     credits:
-      "Product built by founder Erik Dao. Interface design by Vivianne, Design Lead. Brand system by the Bachable team. Email and social media by me, as Brand Lead.",
+      "Product built by founder Erik Dao. Interface design by Vivianne, Design Lead. Brand system by the Bachable team. As Brand Lead, I contributed to the homepage layout and the logic of product features, and run email and social media.",
     gallery: [
       { src: bachableVoice, alt: "Voice rules: friendly, plain-spoken, for musicians, with examples such as lowercase bachable and warm empty states" },
       { src: bachableLogo, alt: "The Bachable logo, a script b in Yellowtail, shown on light, on dark and on orange" },
