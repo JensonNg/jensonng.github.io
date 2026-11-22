@@ -165,6 +165,24 @@ export function CaseStudyPage() {
 
         <Section number={num()} label="The results" id="results">
           <Paragraphs items={study.results} />
+          {study.link &&
+            (study.link.href.startsWith("/") ? (
+              <Link
+                to={study.link.href}
+                className="inline-flex min-h-12 items-center gap-2 self-start rounded-full border border-border px-6 text-sm font-medium transition-colors hover:border-primary/50 hover:bg-primary/10"
+              >
+                {study.link.label} <ArrowRight className="size-4" />
+              </Link>
+            ) : (
+              <a
+                href={study.link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-12 items-center gap-2 self-start rounded-full border border-border px-6 text-sm font-medium transition-colors hover:border-primary/50 hover:bg-primary/10"
+              >
+                {study.link.label} <ArrowUpRight className="size-4" />
+              </a>
+            ))}
         </Section>
 
         {study.learnings.length > 0 && (

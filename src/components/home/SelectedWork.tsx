@@ -8,7 +8,6 @@ import { SectionHeader } from "../SectionHeader";
 // Published case studies come first, then one project per kind of work,
 // each with a result a recruiter can scan. The grid shows four cards.
 const SELECTED = [
-  { title: "Bachable.io - Brand & Launch", category: "Brand & launch", result: "Brand, messaging and launch story for a music-tech platform" },
   { title: "Seed Planter - Marketing Lead", category: "Social impact", result: "350K people reached on Facebook" },
   { title: "Hanoi Pride 2019 - Internal Secretary for Communication", category: "PR & events", result: "164K reached, 7,000 parade participants" },
   { title: "RFSL Utbildning - Digital Marketing & Communication", category: "B2B marketing", result: "400 LinkedIn followers in 3 months" },

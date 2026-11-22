@@ -41,7 +41,7 @@ export const projects: Project[] = [
     organization: "Bachable.io",
     role: "Marketing & Branding",
     quote: "Write, engrave and share scores together.",
-    readMoreUrl: "https://bachable.io",
+    readMoreUrl: "/work/bachable",
     featured: true,
     metrics: [
       { value: "~300", label: "Users" },
@@ -62,7 +62,7 @@ export const projects: Project[] = [
     organization: "Personal Brand",
     role: "Brand Designer & Strategist",
     quote: "A Vietnamese name initialed in Viking script - two cultures woven into one mark.",
-    readMoreUrl: "/brand-book",
+    readMoreUrl: "/work/sowilo-personal-brand",
     featured: true,
     metrics: [
       { value: "8", label: "Logo variations" },
